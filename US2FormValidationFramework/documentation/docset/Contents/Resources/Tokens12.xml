@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/US2ValidatorNumeric.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorNumeric</TokenIdentifier>
+			<Abstract>The number validator checks for number string.</Abstract>
+			<DeclaredIn>US2ValidatorNumeric.h</DeclaredIn>
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

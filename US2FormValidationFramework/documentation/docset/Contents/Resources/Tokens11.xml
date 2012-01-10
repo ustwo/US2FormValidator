@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/US2ValidatorEmail.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorEmail</TokenIdentifier>
+			<Abstract>The email validator checks for email in a string.</Abstract>
+			<DeclaredIn>US2ValidatorEmail.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

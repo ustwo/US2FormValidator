@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C09FB4D149A346600C3E817 /* SubmitButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */; };
+		4CAC33A91490C6EA008B96FB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC33A01490C6EA008B96FB /* Default.png */; };
+		4CAC33AA1490C6EA008B96FB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC33A11490C6EA008B96FB /* Default@2x.png */; };
+		4CC9C13714910B5C00F7AF39 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9C13514910B5C00F7AF39 /* icon.png */; };
+		4CC9C13814910B5C00F7AF39 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9C13614910B5C00F7AF39 /* icon@2x.png */; };
+		4CC9C13E14910CF300F7AF39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */; };
+		4CCDDE69148CE2BA001F8FF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE68148CE2BA001F8FF1 /* UIKit.framework */; };
+		4CCDDE6B148CE2BA001F8FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE6A148CE2BA001F8FF1 /* Foundation.framework */; };
+		4CCDDE6D148CE2BA001F8FF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */; };
+		4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */; };
+		4CCDDEA1148CE2DE001F8FF1 /* FormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */; };
+		4CCDDEA2148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */; };
+		4CCDDEA3148CE2DE001F8FF1 /* FormTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */; };
+		4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE90148CE2DE001F8FF1 /* main.m */; };
+		4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */; };
+		4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */; };
+		4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */; };
+		4CCDDEAD148CE2DE001F8FF1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE98148CE2DE001F8FF1 /* TestView.m */; };
+		4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */; };
+		4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */; };
+		4CD03F2D148E27ED00B44198 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
+		4CE521B11491103A005E1105 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CE521B01491103A005E1105 /* Localization.bundle */; };
+		4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39E71490F309006699E6 /* InvalidTooltipView.m */; };
+		4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39EB1490F457006699E6 /* ValidTooltipView.m */; };
+		4CED39F11490F4D8006699E6 /* image_tooltip_invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39ED1490F4D8006699E6 /* image_tooltip_invalid.png */; };
+		4CED39F21490F4D8006699E6 /* image_tooltip_invalid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39EE1490F4D8006699E6 /* image_tooltip_invalid@2x.png */; };
+		4CED39F31490F4D8006699E6 /* image_tooltip_valid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39EF1490F4D8006699E6 /* image_tooltip_valid.png */; };
+		4CED39F41490F4D8006699E6 /* image_tooltip_valid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F01490F4D8006699E6 /* image_tooltip_valid@2x.png */; };
+		4CED39FB1490F751006699E6 /* image_icon_validation_invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F51490F751006699E6 /* image_icon_validation_invalid.png */; };
+		4CED39FC1490F751006699E6 /* image_icon_validation_invalid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F61490F751006699E6 /* image_icon_validation_invalid@2x.png */; };
+		4CED39FD1490F751006699E6 /* image_icon_validation_valid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F71490F751006699E6 /* image_icon_validation_valid.png */; };
+		4CED39FE1490F751006699E6 /* image_icon_validation_valid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F81490F751006699E6 /* image_icon_validation_valid@2x.png */; };
+		4CED39FF1490F751006699E6 /* image_icon_validation_waiting.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F91490F751006699E6 /* image_icon_validation_waiting.png */; };
+		4CED3A001490F751006699E6 /* image_icon_validation_waiting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39FA1490F751006699E6 /* image_icon_validation_waiting@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CD03F25148E260100B44198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C26FB89148CF4210087D957;
+			remoteInfo = US2FormValidationFrameworkStaticLibrary;
+		};
+		4CD03F27148E260100B44198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CDBC162148CF14300312190;
+			remoteInfo = US2FormValidationFrameworkTests;
+		};
+		4CD03F2B148E278C00B44198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BD39923147E9EBA00EB75DB;
+			remoteInfo = US2FormValidationFrameworkStaticLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C09FB4B149A346600C3E817 /* SubmitButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitButtonTableViewCell.h; sourceTree = "<group>"; };
+		4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitButtonTableViewCell.m; sourceTree = "<group>"; };
+		4CAC33A01490C6EA008B96FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4CAC33A11490C6EA008B96FB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4CC9C13514910B5C00F7AF39 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4CC9C13614910B5C00F7AF39 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		4CC9C13D14910CF300F7AF39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CCDDE64148CE2BA001F8FF1 /* US2FormValidationFrameworkSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = US2FormValidationFrameworkSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCDDE68148CE2BA001F8FF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CCDDE6A148CE2BA001F8FF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CCDDE84148CE2DE001F8FF1 /* FormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewCell.h; sourceTree = "<group>"; };
+		4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewCell.m; sourceTree = "<group>"; };
+		4CCDDE86148CE2DE001F8FF1 /* FormTableViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewCellPrivate.h; sourceTree = "<group>"; };
+		4CCDDE87148CE2DE001F8FF1 /* FormTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		4CCDDE89148CE2DE001F8FF1 /* FormTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTextViewTableViewCell.h; sourceTree = "<group>"; };
+		4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTextViewTableViewCell.m; sourceTree = "<group>"; };
+		4CCDDE90148CE2DE001F8FF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectConditionName.h; sourceTree = "<group>"; };
+		4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectConditionName.m; sourceTree = "<group>"; };
+		4CCDDE93148CE2DE001F8FF1 /* MyProjectValidatorAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectValidatorAbout.h; sourceTree = "<group>"; };
+		4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorAbout.m; sourceTree = "<group>"; };
+		4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectValidatorName.h; sourceTree = "<group>"; };
+		4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorName.m; sourceTree = "<group>"; };
+		4CCDDE97148CE2DE001F8FF1 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		4CCDDE98148CE2DE001F8FF1 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		4CCDDE99148CE2DE001F8FF1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4CCDDE9B148CE2DE001F8FF1 /* TooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipView.h; sourceTree = "<group>"; };
+		4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TooltipView.m; sourceTree = "<group>"; };
+		4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "US2FormValidationFrameworkSample-Info.plist"; sourceTree = "<group>"; };
+		4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "US2FormValidationFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
+		4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = US2FormValidationFramework.xcodeproj; path = ../US2FormValidationFramework/US2FormValidationFramework.xcodeproj; sourceTree = "<group>"; };
+		4CE521B01491103A005E1105 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Localization.bundle; path = ../../US2FormValidationFramework/source/Localization.bundle; sourceTree = "<group>"; };
+		4CED39E61490F309006699E6 /* InvalidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidTooltipView.h; sourceTree = "<group>"; };
+		4CED39E71490F309006699E6 /* InvalidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidTooltipView.m; sourceTree = "<group>"; };
+		4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipViewPrivate.h; sourceTree = "<group>"; };
+		4CED39EA1490F457006699E6 /* ValidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidTooltipView.h; sourceTree = "<group>"; };
+		4CED39EB1490F457006699E6 /* ValidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidTooltipView.m; sourceTree = "<group>"; };
+		4CED39ED1490F4D8006699E6 /* image_tooltip_invalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_tooltip_invalid.png; sourceTree = "<group>"; };
+		4CED39EE1490F4D8006699E6 /* image_tooltip_invalid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_invalid@2x.png"; sourceTree = "<group>"; };
+		4CED39EF1490F4D8006699E6 /* image_tooltip_valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_tooltip_valid.png; sourceTree = "<group>"; };
+		4CED39F01490F4D8006699E6 /* image_tooltip_valid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_valid@2x.png"; sourceTree = "<group>"; };
+		4CED39F51490F751006699E6 /* image_icon_validation_invalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_icon_validation_invalid.png; sourceTree = "<group>"; };
+		4CED39F61490F751006699E6 /* image_icon_validation_invalid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_icon_validation_invalid@2x.png"; sourceTree = "<group>"; };
+		4CED39F71490F751006699E6 /* image_icon_validation_valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_icon_validation_valid.png; sourceTree = "<group>"; };
+		4CED39F81490F751006699E6 /* image_icon_validation_valid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_icon_validation_valid@2x.png"; sourceTree = "<group>"; };
+		4CED39F91490F751006699E6 /* image_icon_validation_waiting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_icon_validation_waiting.png; sourceTree = "<group>"; };
+		4CED39FA1490F751006699E6 /* image_icon_validation_waiting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_icon_validation_waiting@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CCDDE61148CE2BA001F8FF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD03F2D148E27ED00B44198 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */,
+				4CCDDE69148CE2BA001F8FF1 /* UIKit.framework in Frameworks */,
+				4CCDDE6B148CE2BA001F8FF1 /* Foundation.framework in Frameworks */,
+				4CCDDE6D148CE2BA001F8FF1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CAC339F1490C6EA008B96FB /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				4CAC33A01490C6EA008B96FB /* Default.png */,
+				4CAC33A11490C6EA008B96FB /* Default@2x.png */,
+				4CC9C13514910B5C00F7AF39 /* icon.png */,
+				4CC9C13614910B5C00F7AF39 /* icon@2x.png */,
+				4CED39F51490F751006699E6 /* image_icon_validation_invalid.png */,
+				4CED39F61490F751006699E6 /* image_icon_validation_invalid@2x.png */,
+				4CED39F71490F751006699E6 /* image_icon_validation_valid.png */,
+				4CED39F81490F751006699E6 /* image_icon_validation_valid@2x.png */,
+				4CED39F91490F751006699E6 /* image_icon_validation_waiting.png */,
+				4CED39FA1490F751006699E6 /* image_icon_validation_waiting@2x.png */,
+				4CED39ED1490F4D8006699E6 /* image_tooltip_invalid.png */,
+				4CED39EE1490F4D8006699E6 /* image_tooltip_invalid@2x.png */,
+				4CED39EF1490F4D8006699E6 /* image_tooltip_valid.png */,
+				4CED39F01490F4D8006699E6 /* image_tooltip_valid@2x.png */,
+			);
+			path = graphics;
+			sourceTree = "<group>";
+		};
+		4CCDDE59148CE2BA001F8FF1 = {
+			isa = PBXGroup;
+			children = (
+				4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */,
+				4CCDDE7F148CE2DE001F8FF1 /* sample */,
+				4CCDDE67148CE2BA001F8FF1 /* Frameworks */,
+				4CCDDE65148CE2BA001F8FF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CCDDE65148CE2BA001F8FF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CCDDE64148CE2BA001F8FF1 /* US2FormValidationFrameworkSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CCDDE67148CE2BA001F8FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CCDDE68148CE2BA001F8FF1 /* UIKit.framework */,
+				4CCDDE6A148CE2BA001F8FF1 /* Foundation.framework */,
+				4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CCDDE7F148CE2DE001F8FF1 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				4CE521B01491103A005E1105 /* Localization.bundle */,
+				4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */,
+				4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */,
+				4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */,
+				4CCDDE90148CE2DE001F8FF1 /* main.m */,
+				4CAC339F1490C6EA008B96FB /* graphics */,
+				4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */,
+				4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */,
+				4C09FB4B149A346600C3E817 /* SubmitButtonTableViewCell.h */,
+				4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */,
+				4CCDDE84148CE2DE001F8FF1 /* FormTableViewCell.h */,
+				4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */,
+				4CCDDE86148CE2DE001F8FF1 /* FormTableViewCellPrivate.h */,
+				4CCDDE87148CE2DE001F8FF1 /* FormTextFieldTableViewCell.h */,
+				4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */,
+				4CCDDE89148CE2DE001F8FF1 /* FormTextViewTableViewCell.h */,
+				4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */,
+				4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */,
+				4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */,
+				4CCDDE93148CE2DE001F8FF1 /* MyProjectValidatorAbout.h */,
+				4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */,
+				4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */,
+				4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */,
+				4CCDDE97148CE2DE001F8FF1 /* TestView.h */,
+				4CCDDE98148CE2DE001F8FF1 /* TestView.m */,
+				4CCDDE99148CE2DE001F8FF1 /* TestViewController.h */,
+				4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */,
+				4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */,
+				4CCDDE9B148CE2DE001F8FF1 /* TooltipView.h */,
+				4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */,
+				4CED39E61490F309006699E6 /* InvalidTooltipView.h */,
+				4CED39E71490F309006699E6 /* InvalidTooltipView.m */,
+				4CED39EA1490F457006699E6 /* ValidTooltipView.h */,
+				4CED39EB1490F457006699E6 /* ValidTooltipView.m */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		4CD03F1D148E260100B44198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */,
+				4CD03F28148E260100B44198 /* US2FormValidationFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CCDDE63148CE2BA001F8FF1 /* US2FormValidationFrameworkSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCDDE7C148CE2BA001F8FF1 /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkSample" */;
+			buildPhases = (
+				4CCDDE60148CE2BA001F8FF1 /* Sources */,
+				4CCDDE61148CE2BA001F8FF1 /* Frameworks */,
+				4CCDDE62148CE2BA001F8FF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD03F2C148E278C00B44198 /* PBXTargetDependency */,
+			);
+			name = US2FormValidationFrameworkSample;
+			productName = US2FormValidationFrameworkSample;
+			productReference = 4CCDDE64148CE2BA001F8FF1 /* US2FormValidationFrameworkSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CCDDE5B148CE2BA001F8FF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4CCDDE5E148CE2BA001F8FF1 /* Build configuration list for PBXProject "US2FormValidationFrameworkSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 4CCDDE59148CE2BA001F8FF1;
+			productRefGroup = 4CCDDE65148CE2BA001F8FF1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4CD03F1D148E260100B44198 /* Products */;
+					ProjectRef = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				4CCDDE63148CE2BA001F8FF1 /* US2FormValidationFrameworkSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUS2FormValidationFrameworkStaticLibrary.a;
+			remoteRef = 4CD03F25148E260100B44198 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4CD03F28148E260100B44198 /* US2FormValidationFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = US2FormValidationFrameworkTests.octest;
+			remoteRef = 4CD03F27148E260100B44198 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CCDDE62148CE2BA001F8FF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAC33A91490C6EA008B96FB /* Default.png in Resources */,
+				4CAC33AA1490C6EA008B96FB /* Default@2x.png in Resources */,
+				4CED39F11490F4D8006699E6 /* image_tooltip_invalid.png in Resources */,
+				4CED39F21490F4D8006699E6 /* image_tooltip_invalid@2x.png in Resources */,
+				4CED39F31490F4D8006699E6 /* image_tooltip_valid.png in Resources */,
+				4CED39F41490F4D8006699E6 /* image_tooltip_valid@2x.png in Resources */,
+				4CED39FB1490F751006699E6 /* image_icon_validation_invalid.png in Resources */,
+				4CED39FC1490F751006699E6 /* image_icon_validation_invalid@2x.png in Resources */,
+				4CED39FD1490F751006699E6 /* image_icon_validation_valid.png in Resources */,
+				4CED39FE1490F751006699E6 /* image_icon_validation_valid@2x.png in Resources */,
+				4CED39FF1490F751006699E6 /* image_icon_validation_waiting.png in Resources */,
+				4CED3A001490F751006699E6 /* image_icon_validation_waiting@2x.png in Resources */,
+				4CC9C13714910B5C00F7AF39 /* icon.png in Resources */,
+				4CC9C13814910B5C00F7AF39 /* icon@2x.png in Resources */,
+				4CC9C13E14910CF300F7AF39 /* InfoPlist.strings in Resources */,
+				4CE521B11491103A005E1105 /* Localization.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CCDDE60148CE2BA001F8FF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */,
+				4CCDDEA1148CE2DE001F8FF1 /* FormTableViewCell.m in Sources */,
+				4CCDDEA2148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m in Sources */,
+				4CCDDEA3148CE2DE001F8FF1 /* FormTextViewTableViewCell.m in Sources */,
+				4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */,
+				4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */,
+				4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */,
+				4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */,
+				4CCDDEAD148CE2DE001F8FF1 /* TestView.m in Sources */,
+				4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */,
+				4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */,
+				4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */,
+				4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */,
+				4C09FB4D149A346600C3E817 /* SubmitButtonTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CD03F2C148E278C00B44198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = US2FormValidationFrameworkStaticLibrary;
+			targetProxy = 4CD03F2B148E278C00B44198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC9C13D14910CF300F7AF39 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CCDDE7A148CE2BA001F8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4CCDDE7B148CE2BA001F8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CCDDE7D148CE2BA001F8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sample/US2FormValidationFrameworkSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../US2FormValidationFramework/source/**";
+				INFOPLIST_FILE = "sample/US2FormValidationFrameworkSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = US2FormValidationFrameworkSample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CCDDE7E148CE2BA001F8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sample/US2FormValidationFrameworkSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../US2FormValidationFramework/source/**";
+				INFOPLIST_FILE = "sample/US2FormValidationFrameworkSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = US2FormValidationFrameworkSample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CCDDE5E148CE2BA001F8FF1 /* Build configuration list for PBXProject "US2FormValidationFrameworkSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCDDE7A148CE2BA001F8FF1 /* Debug */,
+				4CCDDE7B148CE2BA001F8FF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CCDDE7C148CE2BA001F8FF1 /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCDDE7D148CE2BA001F8FF1 /* Debug */,
+				4CCDDE7E148CE2BA001F8FF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CCDDE5B148CE2BA001F8FF1 /* Project object */;
+}

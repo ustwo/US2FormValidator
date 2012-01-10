@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'US2FormValidationFrameworkStaticLibrary' target in the 'US2FormValidationFrameworkStaticLibrary' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

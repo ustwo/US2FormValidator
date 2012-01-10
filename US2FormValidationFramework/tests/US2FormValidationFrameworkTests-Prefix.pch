@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'US2FormValidationFrameworkTests' target in the 'US2FormValidationFrameworkTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

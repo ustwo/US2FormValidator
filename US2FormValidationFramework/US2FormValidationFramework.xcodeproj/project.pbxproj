@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4CCDDEE5148CEBC4001F8FF1 /* US2FormValidationFrameworkDocumentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4CCDDEE8148CEBC4001F8FF1 /* Build configuration list for PBXAggregateTarget "US2FormValidationFrameworkDocumentation" */;
+			buildPhases = (
+				4CCDDEEA148CEBD0001F8FF1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = US2FormValidationFrameworkDocumentation;
+			productName = US2FormValidationFrameworkDocumentation;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
+		4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */; };
+		4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD401487BD7B0047C698 /* US2Condition.h */; };
+		4C59DD621487BD7B0047C698 /* US2Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD411487BD7B0047C698 /* US2Condition.m */; };
+		4C59DD631487BD7B0047C698 /* US2Validator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD421487BD7B0047C698 /* US2Validator.h */; };
+		4C59DD641487BD7B0047C698 /* US2Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD431487BD7B0047C698 /* US2Validator.m */; };
+		4C59DD651487BD7B0047C698 /* US2ValidatorTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD441487BD7B0047C698 /* US2ValidatorTextField.h */; };
+		4C59DD661487BD7B0047C698 /* US2ValidatorTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */; };
+		4C59DD671487BD7B0047C698 /* US2ValidatorTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */; };
+		4C59DD681487BD7B0047C698 /* US2ValidatorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */; };
+		4C59DD691487BD7B0047C698 /* US2ValidatorUIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */; };
+		4C59DD6A1487BD7B0047C698 /* US2ConditionAlphabetic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD4A1487BD7B0047C698 /* US2ConditionAlphabetic.h */; };
+		4C59DD6B1487BD7B0047C698 /* US2ConditionAlphabetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD4B1487BD7B0047C698 /* US2ConditionAlphabetic.m */; };
+		4C59DD6C1487BD7B0047C698 /* US2ConditionAlphanumeric.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD4C1487BD7B0047C698 /* US2ConditionAlphanumeric.h */; };
+		4C59DD6D1487BD7B0047C698 /* US2ConditionAlphanumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD4D1487BD7B0047C698 /* US2ConditionAlphanumeric.m */; };
+		4C59DD6E1487BD7B0047C698 /* US2ConditionCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD4E1487BD7B0047C698 /* US2ConditionCollection.h */; };
+		4C59DD6F1487BD7B0047C698 /* US2ConditionCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD4F1487BD7B0047C698 /* US2ConditionCollection.m */; };
+		4C59DD701487BD7B0047C698 /* US2ConditionEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD501487BD7B0047C698 /* US2ConditionEmail.h */; };
+		4C59DD711487BD7B0047C698 /* US2ConditionEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD511487BD7B0047C698 /* US2ConditionEmail.m */; };
+		4C59DD721487BD7B0047C698 /* US2ConditionNumeric.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD521487BD7B0047C698 /* US2ConditionNumeric.h */; };
+		4C59DD731487BD7B0047C698 /* US2ConditionNumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD531487BD7B0047C698 /* US2ConditionNumeric.m */; };
+		4C59DD741487BD7B0047C698 /* US2ConditionRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD541487BD7B0047C698 /* US2ConditionRange.h */; };
+		4C59DD751487BD7B0047C698 /* US2ConditionRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD551487BD7B0047C698 /* US2ConditionRange.m */; };
+		4C59DD761487BD7B0047C698 /* US2ValidatorAlphabetic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD571487BD7B0047C698 /* US2ValidatorAlphabetic.h */; };
+		4C59DD771487BD7B0047C698 /* US2ValidatorAlphabetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD581487BD7B0047C698 /* US2ValidatorAlphabetic.m */; };
+		4C59DD781487BD7B0047C698 /* US2ValidatorAlphanumeric.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD591487BD7B0047C698 /* US2ValidatorAlphanumeric.h */; };
+		4C59DD791487BD7B0047C698 /* US2ValidatorAlphanumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD5A1487BD7B0047C698 /* US2ValidatorAlphanumeric.m */; };
+		4C59DD7A1487BD7B0047C698 /* US2ValidatorEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD5B1487BD7B0047C698 /* US2ValidatorEmail.h */; };
+		4C59DD7B1487BD7B0047C698 /* US2ValidatorEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD5C1487BD7B0047C698 /* US2ValidatorEmail.m */; };
+		4C59DD7C1487BD7B0047C698 /* US2ValidatorNumeric.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD5D1487BD7B0047C698 /* US2ValidatorNumeric.h */; };
+		4C59DD7D1487BD7B0047C698 /* US2ValidatorNumeric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD5E1487BD7B0047C698 /* US2ValidatorNumeric.m */; };
+		4C59DD7E1487BD7B0047C698 /* US2ValidatorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */; };
+		4C59DD7F1487BD7B0047C698 /* US2ValidatorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */; };
+		4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */; };
+		4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */; };
+		4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */; };
+		4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4C8885BB14B456C9005E5934 /* US2ValidatorTextFieldPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */; };
+		4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */; };
+		4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */; };
+		4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */; };
+		4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
+		4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
+		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
+		5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
+		5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CDBC176148CF1EB00312190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BD39839147E98EF00EB75DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BD39923147E9EBA00EB75DB;
+			remoteInfo = US2FormValidationFrameworkStaticLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUS2FormValidationFrameworkStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIDelegate.h; sourceTree = "<group>"; };
+		4C59DD401487BD7B0047C698 /* US2Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Condition.h; sourceTree = "<group>"; };
+		4C59DD411487BD7B0047C698 /* US2Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Condition.m; sourceTree = "<group>"; };
+		4C59DD421487BD7B0047C698 /* US2Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validator.h; sourceTree = "<group>"; };
+		4C59DD431487BD7B0047C698 /* US2Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Validator.m; sourceTree = "<group>"; };
+		4C59DD441487BD7B0047C698 /* US2ValidatorTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextField.h; sourceTree = "<group>"; };
+		4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextField.m; sourceTree = "<group>"; };
+		4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextView.h; sourceTree = "<group>"; };
+		4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextView.m; sourceTree = "<group>"; };
+		4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIProtocol.h; sourceTree = "<group>"; };
+		4C59DD4A1487BD7B0047C698 /* US2ConditionAlphabetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAlphabetic.h; sourceTree = "<group>"; };
+		4C59DD4B1487BD7B0047C698 /* US2ConditionAlphabetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionAlphabetic.m; sourceTree = "<group>"; };
+		4C59DD4C1487BD7B0047C698 /* US2ConditionAlphanumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAlphanumeric.h; sourceTree = "<group>"; };
+		4C59DD4D1487BD7B0047C698 /* US2ConditionAlphanumeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionAlphanumeric.m; sourceTree = "<group>"; };
+		4C59DD4E1487BD7B0047C698 /* US2ConditionCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionCollection.h; sourceTree = "<group>"; };
+		4C59DD4F1487BD7B0047C698 /* US2ConditionCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionCollection.m; sourceTree = "<group>"; };
+		4C59DD501487BD7B0047C698 /* US2ConditionEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionEmail.h; sourceTree = "<group>"; };
+		4C59DD511487BD7B0047C698 /* US2ConditionEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionEmail.m; sourceTree = "<group>"; };
+		4C59DD521487BD7B0047C698 /* US2ConditionNumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionNumeric.h; sourceTree = "<group>"; };
+		4C59DD531487BD7B0047C698 /* US2ConditionNumeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionNumeric.m; sourceTree = "<group>"; };
+		4C59DD541487BD7B0047C698 /* US2ConditionRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionRange.h; sourceTree = "<group>"; };
+		4C59DD551487BD7B0047C698 /* US2ConditionRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionRange.m; sourceTree = "<group>"; };
+		4C59DD571487BD7B0047C698 /* US2ValidatorAlphabetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorAlphabetic.h; sourceTree = "<group>"; };
+		4C59DD581487BD7B0047C698 /* US2ValidatorAlphabetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorAlphabetic.m; sourceTree = "<group>"; };
+		4C59DD591487BD7B0047C698 /* US2ValidatorAlphanumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorAlphanumeric.h; sourceTree = "<group>"; };
+		4C59DD5A1487BD7B0047C698 /* US2ValidatorAlphanumeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorAlphanumeric.m; sourceTree = "<group>"; };
+		4C59DD5B1487BD7B0047C698 /* US2ValidatorEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorEmail.h; sourceTree = "<group>"; };
+		4C59DD5C1487BD7B0047C698 /* US2ValidatorEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorEmail.m; sourceTree = "<group>"; };
+		4C59DD5D1487BD7B0047C698 /* US2ValidatorNumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorNumeric.h; sourceTree = "<group>"; };
+		4C59DD5E1487BD7B0047C698 /* US2ValidatorNumeric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorNumeric.m; sourceTree = "<group>"; };
+		4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorRange.h; sourceTree = "<group>"; };
+		4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorRange.m; sourceTree = "<group>"; };
+		4C624334148CF2FB0084BC01 /* ConditionUnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConditionUnitTests.h; path = tests/ConditionUnitTests.h; sourceTree = SOURCE_ROOT; };
+		4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConditionUnitTests.m; path = tests/ConditionUnitTests.m; sourceTree = SOURCE_ROOT; };
+		4C624336148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "US2FormValidationFrameworkTests-Info.plist"; path = "tests/US2FormValidationFrameworkTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4C624337148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "US2FormValidationFrameworkTests-Prefix.pch"; path = "tests/US2FormValidationFrameworkTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		4C624338148CF2FB0084BC01 /* ValidatorUnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidatorUnitTests.h; path = tests/ValidatorUnitTests.h; sourceTree = SOURCE_ROOT; };
+		4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidatorUnitTests.m; path = tests/ValidatorUnitTests.m; sourceTree = SOURCE_ROOT; };
+		4C624343148CF31C0084BC01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = tests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextFieldPrivateDelegate.h; sourceTree = "<group>"; };
+		4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextFieldPrivate.h; sourceTree = "<group>"; };
+		4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextFieldPrivate.m; sourceTree = "<group>"; };
+		4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewPrivate.h; sourceTree = "<group>"; };
+		4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextViewPrivate.m; sourceTree = "<group>"; };
+		4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewPrivateDelegate.h; sourceTree = "<group>"; };
+		4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = US2FormValidationFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD39846147E98EF00EB75DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BD39848147E98EF00EB75DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BEA7205147FA7B800D03089 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Localization.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CDBC15E148CF14300312190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */,
+				4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */,
+				4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */,
+				4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BD39921147E9EBA00EB75DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */,
+				5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C59DD3F1487BD7B0047C698 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				4C59DD401487BD7B0047C698 /* US2Condition.h */,
+				4C59DD411487BD7B0047C698 /* US2Condition.m */,
+				4C59DD421487BD7B0047C698 /* US2Validator.h */,
+				4C59DD431487BD7B0047C698 /* US2Validator.m */,
+				4C59DD441487BD7B0047C698 /* US2ValidatorTextField.h */,
+				4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */,
+				4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */,
+				4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */,
+				4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */,
+				4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */,
+				4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */,
+				4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */,
+				4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */,
+				4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */,
+				4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */,
+				4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		4C59DD491487BD7B0047C698 /* conditions */ = {
+			isa = PBXGroup;
+			children = (
+				4C59DD4A1487BD7B0047C698 /* US2ConditionAlphabetic.h */,
+				4C59DD4B1487BD7B0047C698 /* US2ConditionAlphabetic.m */,
+				4C59DD4C1487BD7B0047C698 /* US2ConditionAlphanumeric.h */,
+				4C59DD4D1487BD7B0047C698 /* US2ConditionAlphanumeric.m */,
+				4C59DD4E1487BD7B0047C698 /* US2ConditionCollection.h */,
+				4C59DD4F1487BD7B0047C698 /* US2ConditionCollection.m */,
+				4C59DD501487BD7B0047C698 /* US2ConditionEmail.h */,
+				4C59DD511487BD7B0047C698 /* US2ConditionEmail.m */,
+				4C59DD521487BD7B0047C698 /* US2ConditionNumeric.h */,
+				4C59DD531487BD7B0047C698 /* US2ConditionNumeric.m */,
+				4C59DD541487BD7B0047C698 /* US2ConditionRange.h */,
+				4C59DD551487BD7B0047C698 /* US2ConditionRange.m */,
+			);
+			path = conditions;
+			sourceTree = "<group>";
+		};
+		4C59DD561487BD7B0047C698 /* validators */ = {
+			isa = PBXGroup;
+			children = (
+				4C59DD571487BD7B0047C698 /* US2ValidatorAlphabetic.h */,
+				4C59DD581487BD7B0047C698 /* US2ValidatorAlphabetic.m */,
+				4C59DD591487BD7B0047C698 /* US2ValidatorAlphanumeric.h */,
+				4C59DD5A1487BD7B0047C698 /* US2ValidatorAlphanumeric.m */,
+				4C59DD5B1487BD7B0047C698 /* US2ValidatorEmail.h */,
+				4C59DD5C1487BD7B0047C698 /* US2ValidatorEmail.m */,
+				4C59DD5D1487BD7B0047C698 /* US2ValidatorNumeric.h */,
+				4C59DD5E1487BD7B0047C698 /* US2ValidatorNumeric.m */,
+				4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */,
+				4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */,
+			);
+			path = validators;
+			sourceTree = "<group>";
+		};
+		4CDBC166148CF14300312190 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				4C624334148CF2FB0084BC01 /* ConditionUnitTests.h */,
+				4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */,
+				4C624338148CF2FB0084BC01 /* ValidatorUnitTests.h */,
+				4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */,
+				4C624342148CF31C0084BC01 /* InfoPlist.strings */,
+				4C624336148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Info.plist */,
+				4C624337148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Prefix.pch */,
+			);
+			name = tests;
+			path = US2FormValidationFrameworkTests;
+			sourceTree = "<group>";
+		};
+		5BD39837147E98EF00EB75DB = {
+			isa = PBXGroup;
+			children = (
+				5BD3989E147E9A5D00EB75DB /* source */,
+				4CDBC166148CF14300312190 /* tests */,
+				5BD39845147E98EF00EB75DB /* Frameworks */,
+				5BD39843147E98EF00EB75DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BD39843147E98EF00EB75DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */,
+				4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BD39845147E98EF00EB75DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BD39846147E98EF00EB75DB /* UIKit.framework */,
+				5BD39848147E98EF00EB75DB /* Foundation.framework */,
+				5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */,
+				4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BD3989E147E9A5D00EB75DB /* source */ = {
+			isa = PBXGroup;
+			children = (
+				4C59DD3F1487BD7B0047C698 /* base */,
+				4C59DD491487BD7B0047C698 /* conditions */,
+				4C59DD561487BD7B0047C698 /* validators */,
+				5BEA7205147FA7B800D03089 /* Localization.bundle */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5BD39922147E9EBA00EB75DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */,
+				4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */,
+				4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */,
+				4C59DD631487BD7B0047C698 /* US2Validator.h in Headers */,
+				4C59DD651487BD7B0047C698 /* US2ValidatorTextField.h in Headers */,
+				4C59DD671487BD7B0047C698 /* US2ValidatorTextView.h in Headers */,
+				4C59DD691487BD7B0047C698 /* US2ValidatorUIProtocol.h in Headers */,
+				4C59DD6A1487BD7B0047C698 /* US2ConditionAlphabetic.h in Headers */,
+				4C59DD6C1487BD7B0047C698 /* US2ConditionAlphanumeric.h in Headers */,
+				4C59DD6E1487BD7B0047C698 /* US2ConditionCollection.h in Headers */,
+				4C59DD701487BD7B0047C698 /* US2ConditionEmail.h in Headers */,
+				4C59DD721487BD7B0047C698 /* US2ConditionNumeric.h in Headers */,
+				4C59DD741487BD7B0047C698 /* US2ConditionRange.h in Headers */,
+				4C59DD761487BD7B0047C698 /* US2ValidatorAlphabetic.h in Headers */,
+				4C59DD781487BD7B0047C698 /* US2ValidatorAlphanumeric.h in Headers */,
+				4C59DD7A1487BD7B0047C698 /* US2ValidatorEmail.h in Headers */,
+				4C59DD7C1487BD7B0047C698 /* US2ValidatorNumeric.h in Headers */,
+				4C59DD7E1487BD7B0047C698 /* US2ValidatorRange.h in Headers */,
+				4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */,
+				4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */,
+				4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4CDBC161148CF14300312190 /* US2FormValidationFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDBC170148CF14300312190 /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkTests" */;
+			buildPhases = (
+				4CDBC15D148CF14300312190 /* Sources */,
+				4CDBC15E148CF14300312190 /* Frameworks */,
+				4CDBC15F148CF14300312190 /* Resources */,
+				4CDBC160148CF14300312190 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDBC177148CF1EB00312190 /* PBXTargetDependency */,
+			);
+			name = US2FormValidationFrameworkTests;
+			productName = US2FormValidationFrameworkTests;
+			productReference = 4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5BD39923147E9EBA00EB75DB /* US2FormValidationFrameworkStaticLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BD39929147E9EBA00EB75DB /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkStaticLibrary" */;
+			buildPhases = (
+				5BD39920147E9EBA00EB75DB /* Sources */,
+				5BD39921147E9EBA00EB75DB /* Frameworks */,
+				5BD39922147E9EBA00EB75DB /* Headers */,
+				5BEA7207147FAC7300D03089 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = US2FormValidationFrameworkStaticLibrary;
+			productName = US2FormValidationFrameworkStaticLibrary;
+			productReference = 4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BD39839147E98EF00EB75DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "ustwo™";
+			};
+			buildConfigurationList = 5BD3983C147E98EF00EB75DB /* Build configuration list for PBXProject "US2FormValidationFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 5BD39837147E98EF00EB75DB;
+			productRefGroup = 5BD39843147E98EF00EB75DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BD39923147E9EBA00EB75DB /* US2FormValidationFrameworkStaticLibrary */,
+				4CCDDEE5148CEBC4001F8FF1 /* US2FormValidationFrameworkDocumentation */,
+				4CDBC161148CF14300312190 /* US2FormValidationFrameworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CDBC15F148CF14300312190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BEA7207147FAC7300D03089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CCDDEEA148CEBD0001F8FF1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"US2FormValidationFramework\" \\\n--project-company \"ustwo™\" \\\n--company-id \"com.ustwo\" \\\n--docset-atom-filename \"US2FormValidationFramework\" \\\n--docset-feed-url \"http://ustwo.github.com/US2FormValidationFramework/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://ustwo.github.com/US2FormValidationFramework/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://ustwo.github.com/US2FormValidationFramework/\" \\\n--output \"documentation\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--ignore \"sample/*.h\" \\\n--ignore \"sample/*.*\" \\\n\"${PROJECT_DIR}/source\"";
+		};
+		4CDBC160148CF14300312190 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CDBC15D148CF14300312190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */,
+				4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BD39920147E9EBA00EB75DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C59DD621487BD7B0047C698 /* US2Condition.m in Sources */,
+				4C59DD641487BD7B0047C698 /* US2Validator.m in Sources */,
+				4C59DD661487BD7B0047C698 /* US2ValidatorTextField.m in Sources */,
+				4C59DD681487BD7B0047C698 /* US2ValidatorTextView.m in Sources */,
+				4C59DD6B1487BD7B0047C698 /* US2ConditionAlphabetic.m in Sources */,
+				4C59DD6D1487BD7B0047C698 /* US2ConditionAlphanumeric.m in Sources */,
+				4C59DD6F1487BD7B0047C698 /* US2ConditionCollection.m in Sources */,
+				4C59DD711487BD7B0047C698 /* US2ConditionEmail.m in Sources */,
+				4C59DD731487BD7B0047C698 /* US2ConditionNumeric.m in Sources */,
+				4C59DD751487BD7B0047C698 /* US2ConditionRange.m in Sources */,
+				4C59DD771487BD7B0047C698 /* US2ValidatorAlphabetic.m in Sources */,
+				4C59DD791487BD7B0047C698 /* US2ValidatorAlphanumeric.m in Sources */,
+				4C59DD7B1487BD7B0047C698 /* US2ValidatorEmail.m in Sources */,
+				4C59DD7D1487BD7B0047C698 /* US2ValidatorNumeric.m in Sources */,
+				4C59DD7F1487BD7B0047C698 /* US2ValidatorRange.m in Sources */,
+				4C8885BB14B456C9005E5934 /* US2ValidatorTextFieldPrivate.m in Sources */,
+				4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CDBC177148CF1EB00312190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BD39923147E9EBA00EB75DB /* US2FormValidationFrameworkStaticLibrary */;
+			targetProxy = 4CDBC176148CF1EB00312190 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C624342148CF31C0084BC01 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C624343148CF31C0084BC01 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CCDDEE6148CEBC4001F8FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4CCDDEE7148CEBC4001F8FF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4CDBC171148CF14300312190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/US2FormValidationFrameworkTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "tests/US2FormValidationFrameworkTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4CDBC172148CF14300312190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/US2FormValidationFrameworkTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "tests/US2FormValidationFrameworkTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		5BD39877147E98EF00EB75DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5BD39878147E98EF00EB75DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		5BD3992A147E9EBA00EB75DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DSTROOT = /tmp/US2FormValidationFrameworkStaticLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/US2FormValidationFrameworkStaticLibrary-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BD3992B147E9EBA00EB75DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DSTROOT = /tmp/US2FormValidationFrameworkStaticLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/US2FormValidationFrameworkStaticLibrary-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CCDDEE8148CEBC4001F8FF1 /* Build configuration list for PBXAggregateTarget "US2FormValidationFrameworkDocumentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCDDEE6148CEBC4001F8FF1 /* Debug */,
+				4CCDDEE7148CEBC4001F8FF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDBC170148CF14300312190 /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDBC171148CF14300312190 /* Debug */,
+				4CDBC172148CF14300312190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BD3983C147E98EF00EB75DB /* Build configuration list for PBXProject "US2FormValidationFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BD39877147E98EF00EB75DB /* Debug */,
+				5BD39878147E98EF00EB75DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BD39929147E9EBA00EB75DB /* Build configuration list for PBXNativeTarget "US2FormValidationFrameworkStaticLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BD3992A147E9EBA00EB75DB /* Debug */,
+				5BD3992B147E9EBA00EB75DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BD39839147E98EF00EB75DB /* Project object */;
+}

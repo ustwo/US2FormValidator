@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/US2ConditionAlphabetic.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionAlphabetic</TokenIdentifier>
+			<Abstract>The US2ConditionAlphabetic checks a string for occurrences of letters.</Abstract>
+			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

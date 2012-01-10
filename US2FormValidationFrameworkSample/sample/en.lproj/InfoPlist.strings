@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys*/
+
+"CFBundleDisplayName" = "US2Validator";
+"CFBundleName"        = "US2Validator";
