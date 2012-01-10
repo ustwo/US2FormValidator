@@ -31,8 +31,6 @@ Clone the project from the link above.
 How-To
 ------
 
-### Use default validator
-
 ### Add a condition to validator
 
     US2Validator *validator = [[US2Validator alloc] init];
