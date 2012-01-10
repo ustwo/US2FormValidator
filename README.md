@@ -21,11 +21,11 @@ Clone the project from the link above.
 
 ### Import the framework project into your project
 
-![Import framework screen](https://github.com/ustwo/FormValidator/raw/master/Documentation/Images/Import Framework.png)
+![Import framework screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Import Framework.png)
 
 ### Set target dependencies
 
-![Target dependencies screen](https://github.com/ustwo/FormValidator/raw/master/Documentation/Images/Target Dependencies.png)
+![Target dependencies screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Target Dependencies.png)
 
 
 How-To
