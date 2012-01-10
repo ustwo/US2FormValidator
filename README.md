@@ -1,3 +1,5 @@
+![Import framework screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Form Validator Sample Preview.png)
+
 ustwo™ iOS Form Validator
 =========================
 
