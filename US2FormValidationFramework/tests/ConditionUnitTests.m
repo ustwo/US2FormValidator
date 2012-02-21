@@ -31,6 +31,7 @@
 #import "US2ConditionEmail.h"
 #import "US2ConditionNumeric.h"
 #import "US2ConditionRange.h"
+#import "US2ConditionURL.h"
 
 
 @implementation ConditionUnitTests
@@ -144,6 +145,33 @@
     STAssertFalse([condition check:failureTestString7], @"The US2ConditionEmail should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString8], @"The US2ConditionEmail should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString9], @"The US2ConditionEmail should respond with FALSE and not TRUE", nil);
+}
+
+/**
+ Test US2ConditionURL check
+ */
+- (void)testUS2ConditionURL
+{
+    NSString *successTestString1 = @"http://www.example.com";
+    NSString *successTestString2 = @"http://localhost:8080";
+    NSString *successTestString3 = @"https://www.example.com";
+    NSString *successTestString4 = @"http://www.example.com/path";
+    
+    NSString *failureTestString1 = @"";
+    NSString *failureTestString2 = nil;
+    NSString *failureTestString3 = @"www.example.com";
+    NSString *failureTestString4 = @"http://";
+    
+    US2ConditionURL* condition = [[US2ConditionURL alloc] init];
+    STAssertTrue([condition check:successTestString1], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString2], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString3], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString4], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
+    
+    STAssertFalse([condition check:failureTestString1], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString2], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString3], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString4], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
 }
 
 /**

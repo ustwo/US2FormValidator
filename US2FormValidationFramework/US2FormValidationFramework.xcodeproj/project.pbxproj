@@ -68,6 +68,8 @@
 		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
+		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
+		F17CFB1314F351F200BB9D0F /* US2ConditionURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		5BD39848147E98EF00EB75DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5BEA7205147FA7B800D03089 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Localization.bundle; sourceTree = "<group>"; };
+		F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionURL.h; sourceTree = "<group>"; };
+		F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionURL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,8 @@
 				4C59DD531487BD7B0047C698 /* US2ConditionNumeric.m */,
 				4C59DD541487BD7B0047C698 /* US2ConditionRange.h */,
 				4C59DD551487BD7B0047C698 /* US2ConditionRange.m */,
+				F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */,
+				F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */,
 			);
 			path = conditions;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */,
 				4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */,
 				4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */,
+				F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +459,7 @@
 				4C59DD7F1487BD7B0047C698 /* US2ValidatorRange.m in Sources */,
 				4C8885BB14B456C9005E5934 /* US2ValidatorTextFieldPrivate.m in Sources */,
 				4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */,
+				F17CFB1314F351F200BB9D0F /* US2ConditionURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
