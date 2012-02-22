@@ -1,0 +1,26 @@
+<!--
+	BuildTools 0.1
+	Project-specific build script
+
+	DO NOT MODIFY!
+
+	Make sure to have the USTWO_BUILDTOOLS_HOME in your environment!
+-->
+
+<project name="iOSProject" default="main">
+
+	<property environment="env" />
+
+	<!-- Load the project related properties -->
+	<property file="${basedir}/project.properties" />
+
+	<!-- Path to the BuildTools directory -->
+	<property name="buildtools.root.dir" value="${env.USTWO_BUILDTOOLS_HOME}" />
+
+	<!-- Version of the BuildTools required for this script -->
+	<property name="buildtools.required.version" value="0.1" />
+
+	<!-- Call the BuildTools script for iOS -->
+    <import file="${buildtools.root.dir}/iOS/build.xml"/>
+
+</project>

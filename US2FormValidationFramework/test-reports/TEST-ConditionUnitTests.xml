@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite errors="0" failures="0" hostname="ustwo-ldn-alex-fish-macpro-9.local" name="ConditionUnitTests" tests="6" time="0.0" timestamp="Wed Feb 22 16:43:04 +0000 2012"><testcase classname='ConditionUnitTests' name='testUS2ConditionNumeric' time='0.0' />
+<testcase classname='ConditionUnitTests' name='testUS2ConditionCollection' time='0.0' />
+<testcase classname='ConditionUnitTests' name='testUS2ConditionRange' time='0.491' />
+<testcase classname='ConditionUnitTests' name='testUS2ConditionEmail' time='0.016' />
+<testcase classname='ConditionUnitTests' name='testUS2ConditionAlphanumeric' time='0.0' />
+<testcase classname='ConditionUnitTests' name='testUS2ConditionAlphabetic' time='0.005' />
+</testsuite>
