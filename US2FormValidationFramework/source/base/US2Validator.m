@@ -71,11 +71,11 @@
 /**
  Remove all conditions which are kind of specific class.
 */
-- (void)removeConditionOfClass:(id <US2ConditionProtocol>)conditionClass
+- (void)removeConditionOfClass:(Class <US2ConditionProtocol>)conditionClass
 {
     for (US2Condition *condition in _conditionCollection)
     {
-        if ([condition isKindOfClass:(id)conditionClass])
+        if ([condition isKindOfClass:conditionClass])
             [_conditionCollection removeCondition:condition];
     }
 }

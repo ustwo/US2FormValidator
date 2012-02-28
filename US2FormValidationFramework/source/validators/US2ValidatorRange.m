@@ -56,7 +56,7 @@
     _range = range;
     
     // Remove all added range coniditons
-    [self removeConditionOfClass:(id <US2ConditionProtocol>)[US2ConditionRange class]];
+    [self removeConditionOfClass:[US2ConditionRange class]];
     
     // Add new range condition
     US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
