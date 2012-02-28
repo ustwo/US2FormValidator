@@ -67,7 +67,7 @@
 */
 - (NSString *)description
 {
-    NSMutableString *description = [[NSMutableString new] autorelease];
+    NSMutableString *description = [NSMutableString string];
     [description appendString:@"<"];
     [description appendString:[super description]];
     [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];

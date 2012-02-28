@@ -39,7 +39,7 @@
     self = [super init];
     if (self)
     {
-        _array  = [NSMutableArray new];
+        _array  = [[NSMutableArray array] retain];
     }
     
     return self;
@@ -102,9 +102,11 @@
 */
 - (NSString *)description
 {
-    NSMutableString *description = [[NSMutableString new] autorelease];
+    NSMutableString *description = [NSMutableString string];
     for (US2Condition *condition in _array)
+    {
         [description appendString:condition.description];
+    }
     
     return description;
 }
