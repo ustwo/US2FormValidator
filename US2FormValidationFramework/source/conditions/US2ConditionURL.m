@@ -53,7 +53,7 @@
     NSString *key = @"US2KeyConditionViolationURL";
     
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
-    NSBundle *bundle = [[NSBundle bundleWithPath:path] retain];
+    NSBundle *bundle = [NSBundle bundleWithPath:path];
     
     if (bundle)
     {
