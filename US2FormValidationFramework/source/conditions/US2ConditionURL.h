@@ -1,4 +1,5 @@
 //
+//  US2ConditionURL.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -22,9 +23,25 @@
 //  SOFTWARE.
 //  
 
-"US2KeyConditionViolationRange"          = "Enter minimum %d, maximum %d characters";
-"US2KeyConditionViolationNumeric"        = "Enter numbers only";
-"US2KeyConditionViolationAlphanumeric"   = "Enter numbers and letters only";
-"US2KeyConditionViolationAlphabetic"     = "Enter letters only";
-"US2KeyConditionViolationEmail"          = "Enter valid email address in format example@example.com";
-"US2KeyConditionViolationURL"            = "Enter a valid URL in the format http(s)://www.example.com";
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
+
+/**
+ The US2ConditionURL checks a string for a valid URL
+ 
+ *Example:*
+ 
+ NSString *string = @"http://www.example.com";
+ 
+ US2ConditionURL *URLCondition = [[US2ConditionURL alloc] init];
+ 
+ US2Validator *URLValidator = [[US2Validator alloc] init];
+ [URLValidator addCondition:URLCondition];
+ [URLCondition release];
+ 
+ BOOL isValid = [URLValidator checkConditions:string] == nil;                     // isValid == YES
+ */
+
+@interface US2ConditionURL : US2Condition
+
+@end

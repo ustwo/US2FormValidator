@@ -1,4 +1,5 @@
 //
+//  US2ValidatorURL.m
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -22,9 +23,25 @@
 //  SOFTWARE.
 //  
 
-"US2KeyConditionViolationRange"          = "Enter minimum %d, maximum %d characters";
-"US2KeyConditionViolationNumeric"        = "Enter numbers only";
-"US2KeyConditionViolationAlphanumeric"   = "Enter numbers and letters only";
-"US2KeyConditionViolationAlphabetic"     = "Enter letters only";
-"US2KeyConditionViolationEmail"          = "Enter valid email address in format example@example.com";
-"US2KeyConditionViolationURL"            = "Enter a valid URL in the format http(s)://www.example.com";
+#import "US2ValidatorURL.h"
+#import "US2ConditionURL.h"
+
+
+@implementation US2ValidatorURL
+
+
+#pragma mark - Initialization
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self addCondition:[[[US2ConditionURL alloc] init] autorelease]];
+    }
+    
+    return self;
+}
+
+
+@end
