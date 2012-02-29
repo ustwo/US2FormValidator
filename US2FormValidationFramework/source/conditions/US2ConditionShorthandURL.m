@@ -1,5 +1,5 @@
 //
-//  US2ConditionURL.m
+//  US2ConditionShorthandURL.m
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,10 +23,10 @@
 //  SOFTWARE.
 //  
 
-#import "US2ConditionURL.h"
+#import "US2ConditionShorthandURL.h"
 
 
-@implementation US2ConditionURL
+@implementation US2ConditionShorthandURL
 
 
 - (BOOL)check:(NSString *)string
@@ -36,12 +36,11 @@
         return NO;
     }
     
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
-    NSTextCheckingResult *firstMatch = [detector firstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
+    NSError *error             = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^((https?)://)?[a-z0-9-]+(\\.[a-z0-9-]+)+([/?].*)?$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     
-    return [firstMatch.URL isKindOfClass:[NSURL class]]
-           && ![firstMatch.URL.scheme isEqualToString:@"mailto"]
-           && ![firstMatch.URL.scheme isEqualToString:@"ftp"];
+    return numberOfMatches == 1;
 }
 
 
@@ -57,7 +56,7 @@
 
 - (NSString *)localizedViolationString
 {
-    NSString *key = @"US2KeyConditionViolationURL";
+    NSString *key = @"US2KeyConditionViolationShorthandURL";
     
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:path];

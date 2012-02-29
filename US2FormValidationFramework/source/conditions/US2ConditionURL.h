@@ -27,19 +27,23 @@
 #import "US2Condition.h"
 
 /**
- The US2ConditionURL checks a string for a valid URL
+ The US2ConditionURL checks a string for a valid URL like
+ http://www.example.com
+ https://www.example.com
+ http://example.com
+ 
+ The scheme (protocol) is needed for a valid URL. If you want a check for shorthand URLs see US2ConditionShorthandURL.
  
  *Example:*
  
  NSString *string = @"http://www.example.com";
  
- US2ConditionURL *URLCondition = [[US2ConditionURL alloc] init];
+ US2ConditionURL *urlCondition = [[[US2ConditionURL alloc] init] autorelease];
  
- US2Validator *URLValidator = [[US2Validator alloc] init];
- [URLValidator addCondition:URLCondition];
- [URLCondition release];
+ US2Validator *urlValidator = [[US2Validator alloc] init];
+ [urlValidator addCondition:urlCondition];
  
- BOOL isValid = [URLValidator checkConditions:string] == nil;                     // isValid == YES
+ BOOL isValid = [urlValidator checkConditions:string] == nil;                     // isValid == YES
  */
 
 @interface US2ConditionURL : US2Condition

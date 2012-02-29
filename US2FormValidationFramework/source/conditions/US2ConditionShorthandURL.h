@@ -1,5 +1,5 @@
 //
-//  US2ConditionURL.m
+//  US2ConditionShorthandURL.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,51 +23,31 @@
 //  SOFTWARE.
 //  
 
-#import "US2ConditionURL.h"
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
 
+/**
+ The US2ConditionShorthandURL checks a string for a valid URL like:
+ http://www.example.com
+ https://www.example.com
+ www.example.com
+ example.com
+ subdomain.example.com
+ 
+ No scheme (protocol) is needed for a valid URL. If you want a check for more strict URLs see US2ConditionURL.
+ 
+ *Example:*
+ 
+ NSString *string = @"example.com";
+ 
+ US2ConditionURL *shorthandUrlCondition = [[[US2ConditionShorthandURL alloc] init] autorelease];
+ 
+ US2Validator *shorthandUrlValidator = [[US2Validator alloc] init];
+ [shorthandUrlValidator addCondition:shorthandUrlCondition];
+ 
+ BOOL isValid = [shorthandUrlValidator checkConditions:string] == nil;                     // isValid == YES
+ */
 
-@implementation US2ConditionURL
-
-
-- (BOOL)check:(NSString *)string
-{
-    if (nil == string)
-    {
-        return NO;
-    }
-    
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
-    NSTextCheckingResult *firstMatch = [detector firstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
-    
-    return [firstMatch.URL isKindOfClass:[NSURL class]]
-           && ![firstMatch.URL.scheme isEqualToString:@"mailto"]
-           && ![firstMatch.URL.scheme isEqualToString:@"ftp"];
-}
-
-
-#pragma mark - Allow violation
-
-- (BOOL)shouldAllowViolation
-{
-    return YES;
-}
-
-
-#pragma mark - Localization
-
-- (NSString *)localizedViolationString
-{
-    NSString *key = @"US2KeyConditionViolationURL";
-    
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    if (bundle)
-    {
-        return [bundle localizedStringForKey:key value:key table:nil];
-    }
-    
-    return nil;
-}
+@interface US2ConditionShorthandURL : US2Condition
 
 @end

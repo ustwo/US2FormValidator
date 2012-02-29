@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4C0DE68814FE4173005D93CB /* US2ConditionShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */; };
+		4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */; };
+		4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */; };
+		4C0DE68E14FE4B86005D93CB /* US2ValidatorShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */; };
 		4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
 		4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */; };
 		4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD401487BD7B0047C698 /* US2Condition.h */; };
@@ -85,6 +89,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionShorthandURL.h; sourceTree = "<group>"; };
+		4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionShorthandURL.m; sourceTree = "<group>"; };
+		4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorShorthandURL.h; sourceTree = "<group>"; };
+		4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorShorthandURL.m; sourceTree = "<group>"; };
 		4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUS2FormValidationFrameworkStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIDelegate.h; sourceTree = "<group>"; };
 		4C59DD401487BD7B0047C698 /* US2Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Condition.h; sourceTree = "<group>"; };
@@ -207,6 +215,8 @@
 				4C59DD551487BD7B0047C698 /* US2ConditionRange.m */,
 				F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */,
 				F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */,
+				4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */,
+				4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */,
 			);
 			path = conditions;
 			sourceTree = "<group>";
@@ -226,6 +236,8 @@
 				4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */,
 				F104D61E14F36131000DFC40 /* US2ValidatorURL.h */,
 				F104D61F14F36131000DFC40 /* US2ValidatorURL.m */,
+				4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */,
+				4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */,
 			);
 			path = validators;
 			sourceTree = "<group>";
@@ -316,6 +328,8 @@
 				4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */,
 				F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */,
 				F104D62014F36131000DFC40 /* US2ValidatorURL.h in Headers */,
+				4C0DE68814FE4173005D93CB /* US2ConditionShorthandURL.h in Headers */,
+				4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +482,8 @@
 				4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */,
 				F17CFB1314F351F200BB9D0F /* US2ConditionURL.m in Sources */,
 				F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */,
+				4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */,
+				4C0DE68E14FE4B86005D93CB /* US2ValidatorShorthandURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

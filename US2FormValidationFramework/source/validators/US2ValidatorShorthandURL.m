@@ -1,5 +1,5 @@
 //
-//  US2ConditionURL.m
+//  US2ValidatorShorthandURL.m
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,51 +23,25 @@
 //  SOFTWARE.
 //  
 
-#import "US2ConditionURL.h"
+#import "US2ValidatorShorthandURL.h"
+#import "US2ConditionShorthandURL.h"
 
 
-@implementation US2ConditionURL
+@implementation US2ValidatorShorthandURL
 
 
-- (BOOL)check:(NSString *)string
+#pragma mark - Initialization
+
+- (id)init
 {
-    if (nil == string)
+    self = [super init];
+    if (self)
     {
-        return NO;
+        [self addCondition:[[[US2ConditionShorthandURL alloc] init] autorelease]];
     }
     
-    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
-    NSTextCheckingResult *firstMatch = [detector firstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
-    
-    return [firstMatch.URL isKindOfClass:[NSURL class]]
-           && ![firstMatch.URL.scheme isEqualToString:@"mailto"]
-           && ![firstMatch.URL.scheme isEqualToString:@"ftp"];
+    return self;
 }
 
-
-#pragma mark - Allow violation
-
-- (BOOL)shouldAllowViolation
-{
-    return YES;
-}
-
-
-#pragma mark - Localization
-
-- (NSString *)localizedViolationString
-{
-    NSString *key = @"US2KeyConditionViolationURL";
-    
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    if (bundle)
-    {
-        return [bundle localizedStringForKey:key value:key table:nil];
-    }
-    
-    return nil;
-}
 
 @end
