@@ -57,6 +57,16 @@
 	return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+    [self _startUp];
+  }
+
+  return self;
+}
+
 
 #pragma mark - Deinitialization
 
