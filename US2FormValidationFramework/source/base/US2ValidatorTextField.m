@@ -59,13 +59,15 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-  self = [super initWithCoder:aDecoder];
-  if (self) {
-    [self _startUp];
-  }
-
-  return self;
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self _startUp];
+    }
+    
+    return self;
 }
+
 
 #pragma mark - Deinitialization
 
@@ -94,10 +96,10 @@
     super.delegate = (id)_validatorTextFieldPrivate;
     
     // Listen for update of inherited UITextField
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector: @selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self];
     
     // Listen for end of editing
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector: @selector(textFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector:@selector(textFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self];
 }
 
 
