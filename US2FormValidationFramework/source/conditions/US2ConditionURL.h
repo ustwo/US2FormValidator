@@ -1,5 +1,5 @@
 //
-//  US2ValidatorRange.m
+//  US2ConditionURL.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,47 +23,29 @@
 //  SOFTWARE.
 //  
 
-#import "US2ValidatorRange.h"
-#import "US2ConditionRange.h"
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
 
+/**
+ The US2ConditionURL checks a string for a valid URL like
+ http://www.example.com
+ https://www.example.com
+ http://example.com
+ 
+ The scheme (protocol) is needed for a valid URL. If you want a check for shorthand URLs see US2ConditionShorthandURL.
+ 
+ *Example:*
+ 
+ NSString *string = @"http://www.example.com";
+ 
+ US2ConditionURL *urlCondition = [[[US2ConditionURL alloc] init] autorelease];
+ 
+ US2Validator *urlValidator = [[US2Validator alloc] init];
+ [urlValidator addCondition:urlCondition];
+ 
+ BOOL isValid = [urlValidator checkConditions:string] == nil;                     // isValid == YES
+ */
 
-@implementation US2ValidatorRange
-
-
-@synthesize range = _range;
-
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-        [self addCondition:rangeCondition];
-        [rangeCondition release];
-    }
-    
-    return self;
-}
-
-
-#pragma mark - Range
-
-- (void)setRange:(NSRange)range
-{
-    _range = range;
-    
-    // Remove all added range coniditons
-    [self removeConditionOfClass:[US2ConditionRange class]];
-    
-    // Add new range condition
-    US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-    rangeCondition.range             = _range;
-    [self addCondition:rangeCondition];
-    [rangeCondition release];
-}
-
+@interface US2ConditionURL : US2Condition
 
 @end

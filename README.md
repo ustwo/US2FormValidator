@@ -13,7 +13,6 @@ Features
 * Create own conditions using regular expressions for example
 * Create own validators which contain a collection of conditions
 
-
 Installation
 ------------
 
@@ -29,6 +28,15 @@ Clone the project from the link above.
 
 ![Target dependencies screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Target Dependencies.png)
 
+Installation using CocoaPods
+----------------------------
+
+How to use CocoaPods? Go to:
+https://github.com/CocoaPods/CocoaPods
+
+Add the following line to your pod file:
+
+    dependency 'US2FormValidator', '~> 1.0.0'
 
 How-To
 ------

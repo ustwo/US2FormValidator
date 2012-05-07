@@ -1,5 +1,5 @@
 //
-//  US2ValidatorRange.m
+//  US2ValidatorShorthandURL.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,47 +23,18 @@
 //  SOFTWARE.
 //  
 
-#import "US2ValidatorRange.h"
-#import "US2ConditionRange.h"
+#import <Foundation/Foundation.h>
+#import "US2Validator.h"
 
 
-@implementation US2ValidatorRange
+#pragma mark - Validator interface
 
-
-@synthesize range = _range;
-
-
-#pragma mark - Initialization
-
-- (id)init
+/**
+ The URL validator contains a URL condition (see US2ConditionShorthandURL).
+ A valid string does only contain a valid URL
+ */
+@interface US2ValidatorShorthandURL : US2Validator
 {
-    self = [super init];
-    if (self)
-    {
-        US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-        [self addCondition:rangeCondition];
-        [rangeCondition release];
-    }
-    
-    return self;
 }
-
-
-#pragma mark - Range
-
-- (void)setRange:(NSRange)range
-{
-    _range = range;
-    
-    // Remove all added range coniditons
-    [self removeConditionOfClass:[US2ConditionRange class]];
-    
-    // Add new range condition
-    US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-    rangeCondition.range             = _range;
-    [self addCondition:rangeCondition];
-    [rangeCondition release];
-}
-
 
 @end

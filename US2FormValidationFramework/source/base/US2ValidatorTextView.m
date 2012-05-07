@@ -57,6 +57,17 @@
 	return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self _startUp];
+    }
+    
+    return self;
+}
+
 
 #pragma mark - Deinitialization
 
@@ -88,7 +99,7 @@
     self.delegate = (id)_validatorTextViewPrivate;
     
     // Listen for end of editing
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextViewPrivate selector: @selector(textViewDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextViewPrivate selector:@selector(textViewDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
 }
 
 /**

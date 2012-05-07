@@ -1,5 +1,5 @@
 //
-//  US2ConditionRange.m
+//  US2ConditionShorthandURL.m
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,44 +23,32 @@
 //  SOFTWARE.
 //  
 
-#import "US2ConditionRange.h"
+#import "US2ConditionShorthandURL.h"
 
 
-@implementation US2ConditionRange
+@implementation US2ConditionShorthandURL
 
-
-@synthesize range = _range;
-
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        _range = NSMakeRange(0, 0);
-    }
-    
-    return self;
-}
-
-
-#pragma mark - Violation check
 
 - (BOOL)check:(NSString *)string
 {
-    if (0 == _range.location
-        && 0 == _range.length)
-        return YES;
-    
     if (nil == string)
-        string = [NSString string];
+    {
+        return NO;
+    }
     
-    NSError *error             = NULL;    
-    NSString *regexString      = [NSString stringWithFormat:@".{%d,%d}", _range.location, _range.length];
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:0 error:&error];
+    NSError *error             = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^((https?)://)?[a-z0-9-]+(\\.[a-z0-9-]+)+([/?].*)?$" options:NSRegularExpressionCaseInsensitive error:&error];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     
-    return numberOfMatches > 0;
+    return numberOfMatches == 1;
+}
+
+
+#pragma mark - Allow violation
+
+- (BOOL)shouldAllowViolation
+{
+    return YES;
 }
 
 
@@ -68,18 +56,17 @@
 
 - (NSString *)localizedViolationString
 {
-    NSString *key = @"US2KeyConditionViolationRange";
+    NSString *key = @"US2KeyConditionViolationShorthandURL";
     
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:path];
     
     if (bundle)
     {
-        return [NSString stringWithFormat:[bundle localizedStringForKey:key value:key table:nil], _range.location, _range.length];
+        return [bundle localizedStringForKey:key value:key table:nil];
     }
     
     return nil;
 }
-
 
 @end

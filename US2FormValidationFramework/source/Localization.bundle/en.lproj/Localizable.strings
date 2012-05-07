@@ -26,4 +26,6 @@
 "US2KeyConditionViolationNumeric"        = "Enter numbers only";
 "US2KeyConditionViolationAlphanumeric"   = "Enter numbers and letters only";
 "US2KeyConditionViolationAlphabetic"     = "Enter letters only";
-"US2KeyConditionViolationEmail"          = "Enter valid email address in format example@example.com";
+"US2KeyConditionViolationEmail"          = "Enter valid email address in the format example@example.com";
+"US2KeyConditionViolationURL"            = "Enter a valid URL in the format http(s)://www.example.com";
+"US2KeyConditionViolationShorthandURL"   = "Enter a valid URL in the format www.example.com";

@@ -1,5 +1,5 @@
 //
-//  US2ValidatorRange.m
+//  US2ValidatorURL.m
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -23,14 +23,11 @@
 //  SOFTWARE.
 //  
 
-#import "US2ValidatorRange.h"
-#import "US2ConditionRange.h"
+#import "US2ValidatorURL.h"
+#import "US2ConditionURL.h"
 
 
-@implementation US2ValidatorRange
-
-
-@synthesize range = _range;
+@implementation US2ValidatorURL
 
 
 #pragma mark - Initialization
@@ -40,29 +37,10 @@
     self = [super init];
     if (self)
     {
-        US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-        [self addCondition:rangeCondition];
-        [rangeCondition release];
+        [self addCondition:[[[US2ConditionURL alloc] init] autorelease]];
     }
     
     return self;
-}
-
-
-#pragma mark - Range
-
-- (void)setRange:(NSRange)range
-{
-    _range = range;
-    
-    // Remove all added range coniditons
-    [self removeConditionOfClass:[US2ConditionRange class]];
-    
-    // Add new range condition
-    US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-    rangeCondition.range             = _range;
-    [self addCondition:rangeCondition];
-    [rangeCondition release];
 }
 
 
