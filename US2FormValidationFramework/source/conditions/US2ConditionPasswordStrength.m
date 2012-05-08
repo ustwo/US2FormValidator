@@ -54,6 +54,7 @@
 {
     BOOL passed = NO;
     
+    // If strength is more than or equal to the required strength to pass, the condition can pass
     if([self _strengthOfPasswordString:string] >= _requiredStrength)
     {
         passed = YES;
@@ -93,11 +94,13 @@
     
     NSUInteger strength = 0;
     
+    // Run regex on string to check for matches of lowercase, uppercase, numeric and special chars
     NSUInteger numberMatchesCount = [self _numberOfNumericCharactersInString:string];
     NSUInteger lowercaseMatchesCount = [self _numberOfLowercaseCharactersInString:string];
     NSUInteger uppercaseMatchesCount = [self _numberOfUppercaseCharactersInString:string];
     NSUInteger specialCharacterMatchesCount = [self _numberOfSpecialCharactersInString:string];
     
+    // For each match of each type, move the strength value up one (higher = stronger)
     if (numberMatchesCount > 0)	
     { 
         strength ++; 
@@ -118,6 +121,7 @@
         strength ++; 
     }
     
+    // Move the strength up if the length is more than 8 characters and down if it is less
     if (string.length > 8) 
     { 
         strength ++; 

@@ -35,7 +35,7 @@
         // Remove all added password strength coniditons
         [self removeConditionOfClass:[US2ConditionPasswordStrength class]];
         
-        // Add new stremgth condition
+        // Add new strength condition
         US2ConditionPasswordStrength *strengthCondition = [[US2ConditionPasswordStrength alloc] init];
         strengthCondition.requiredStrength = _requiredStrength;
         [self addCondition:strengthCondition];
