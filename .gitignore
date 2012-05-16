@@ -13,3 +13,7 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+DerivedData
+
+# OSX
+.DS_Store

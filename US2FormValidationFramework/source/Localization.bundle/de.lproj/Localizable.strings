@@ -22,10 +22,11 @@
 //  SOFTWARE.
 //  
 
-"US2KeyConditionViolationRange"          = "Minimum %d, maximal %d Zeichen eingeben";
-"US2KeyConditionViolationNumeric"        = "Nur Zahlen eingeben";
-"US2KeyConditionViolationAlphanumeric"   = "Nur Zahlen und Buchstaben eingeben";
-"US2KeyConditionViolationAlphabetic"     = "Nur Buchstaben eingeben";
-"US2KeyConditionViolationEmail"          = "Gültige E-Mail-Adresse im Format beispiel@domain.com eingeben";
-"US2KeyConditionViolationURL"            = "Gültige URL im Format http(s)://www.example.com eingeben";
-"US2KeyConditionViolationShorthandURL"   = "Gültige URL im Format www.example.com eingeben";
+"US2KeyConditionViolationRange"             = "Minimum %d, maximal %d Zeichen eingeben";
+"US2KeyConditionViolationNumeric"           = "Nur Zahlen eingeben";
+"US2KeyConditionViolationAlphanumeric"      = "Nur Zahlen und Buchstaben eingeben";
+"US2KeyConditionViolationAlphabetic"        = "Nur Buchstaben eingeben";
+"US2KeyConditionViolationEmail"             = "Gültige E-Mail-Adresse im Format beispiel@domain.com eingeben";
+"US2KeyConditionViolationURL"               = "Gültige URL im Format http(s)://www.example.com eingeben";
+"US2KeyConditionViolationShorthandURL"      = "Gültige URL im Format www.example.com eingeben";
+"US2KeyConditionViolationPasswordStrength"  = "Enter a stronger password"; // Please translate me
