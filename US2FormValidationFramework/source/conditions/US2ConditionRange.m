@@ -60,7 +60,7 @@
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:0 error:&error];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     
-    return numberOfMatches > 0;
+    return numberOfMatches == 1;
 }
 
 
