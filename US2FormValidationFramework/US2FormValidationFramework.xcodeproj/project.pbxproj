@@ -66,6 +66,9 @@
 		4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */; };
 		4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */; };
+		4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */; };
+		4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */; };
+		4CB213BF15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */; };
 		4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */; };
 		4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
@@ -143,6 +146,8 @@
 		4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewPrivate.h; sourceTree = "<group>"; };
 		4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextViewPrivate.m; sourceTree = "<group>"; };
 		4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewPrivateDelegate.h; sourceTree = "<group>"; };
+		4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPostcodeUK.h; sourceTree = "<group>"; };
+		4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPostcodeUK.m; sourceTree = "<group>"; };
 		4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = US2FormValidationFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD39846147E98EF00EB75DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -219,6 +224,8 @@
 				4C59DD511487BD7B0047C698 /* US2ConditionEmail.m */,
 				4C59DD521487BD7B0047C698 /* US2ConditionNumeric.h */,
 				4C59DD531487BD7B0047C698 /* US2ConditionNumeric.m */,
+				4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */,
+				4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */,
 				4C59DD541487BD7B0047C698 /* US2ConditionRange.h */,
 				4C59DD551487BD7B0047C698 /* US2ConditionRange.m */,
 				F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */,
@@ -344,6 +351,7 @@
 				4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */,
 				FAA9CDE21558802300FFFDA4 /* US2ValidatorPasswordStrength.h in Headers */,
 				FAA9CDE71558802E00FFFDA4 /* US2ConditionPasswordStrength.h in Headers */,
+				4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +478,7 @@
 			files = (
 				4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */,
 				4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */,
+				4CB213BF15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +509,7 @@
 				4C0DE68E14FE4B86005D93CB /* US2ValidatorShorthandURL.m in Sources */,
 				FAA9CDE31558802300FFFDA4 /* US2ValidatorPasswordStrength.m in Sources */,
 				FAA9CDE81558802E00FFFDA4 /* US2ConditionPasswordStrength.m in Sources */,
+				4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

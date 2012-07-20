@@ -1,4 +1,5 @@
 //
+//  US2ConditionPostcodeUK.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -22,12 +23,24 @@
 //  SOFTWARE.
 //  
 
-"US2KeyConditionViolationRange"             = "Minimum %d, maximal %d Zeichen eingeben";
-"US2KeyConditionViolationNumeric"           = "Nur Zahlen eingeben";
-"US2KeyConditionViolationAlphanumeric"      = "Nur Zahlen und Buchstaben eingeben";
-"US2KeyConditionViolationAlphabetic"        = "Nur Buchstaben eingeben";
-"US2KeyConditionViolationEmail"             = "Gültige E-Mail-Adresse im Format beispiel@domain.com eingeben";
-"US2KeyConditionViolationURL"               = "Gültige URL im Format http(s)://www.example.com eingeben";
-"US2KeyConditionViolationShorthandURL"      = "Gültige URL im Format www.example.com eingeben";
-"US2KeyConditionViolationPasswordStrength"  = "Ein stärkeres Passwort wird benötigt";
-"US2KeyConditionViolationPostcodeUK"        = "Ungültige UK Postleitzahl";
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
+
+/**
+ The US2ConditionPostcodeUK checks a string for UK post code.
+ 
+ *Example:*
+ 
+ NSString *string = @"N1 1AA";
+ 
+ US2ConditionPostcodeUK *postcodeCondition = [[US2ConditionPostcodeUK alloc] init];
+ 
+ US2Validator *postcodeValidator = [[US2Validator alloc] init];
+ [postcodeValidator addCondition:postcodeCondition];
+ [postcodeCondition release];
+ 
+ BOOL isValid = [postcodeValidator checkConditions:string] == nil;          // isValid == YES
+ */
+@interface US2ConditionPostcodeUK : US2Condition
+
+@end

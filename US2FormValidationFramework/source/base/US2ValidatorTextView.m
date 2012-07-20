@@ -39,7 +39,7 @@
 
 @synthesize validatorUIDelegate     = _validatorUIDelegate;
 @synthesize validator               = _validator;
-@synthesize shouldAllowViolation    = _shouldAllowViolation;
+@synthesize shouldAllowViolations   = _shouldAllowViolations;
 @synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
 @dynamic    isValid;
 
@@ -88,7 +88,7 @@
 - (void)_startUp
 {    
     // Allows violation initially
-    _shouldAllowViolation = YES;
+    _shouldAllowViolations = YES;
     
     // Validate immediately
     _validateOnFocusLossOnly = NO;
