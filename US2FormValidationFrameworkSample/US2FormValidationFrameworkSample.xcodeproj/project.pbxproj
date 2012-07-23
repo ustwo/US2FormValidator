@@ -422,14 +422,12 @@
 		4CCDDE7D148CE2BA001F8FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ustwo studio ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sample/US2FormValidationFrameworkSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../US2FormValidationFramework/source/**";
 				INFOPLIST_FILE = "sample/US2FormValidationFrameworkSample-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = US2FormValidationFrameworkSample;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E10DDD74-A6C1-4843-B62E-F6854A05E4E2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

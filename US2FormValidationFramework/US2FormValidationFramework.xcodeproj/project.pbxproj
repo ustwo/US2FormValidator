@@ -25,6 +25,9 @@
 		4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */; };
 		4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */; };
 		4C0DE68E14FE4B86005D93CB /* US2ValidatorShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */; };
+		4C0F37D815BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0F37D615BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h */; };
+		4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */; };
+		4C0F37DA15BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */; };
 		4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
 		4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */; };
 		4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD401487BD7B0047C698 /* US2Condition.h */; };
@@ -61,9 +64,9 @@
 		4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */; };
 		4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */; };
 		4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */; };
-		4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		4C8885BB14B456C9005E5934 /* US2ValidatorTextFieldPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */; };
-		4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		4C8885BF14B4599D005E5934 /* US2ValidatorTextViewPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */; };
 		4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */; };
 		4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */; };
@@ -100,6 +103,8 @@
 		4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionShorthandURL.m; sourceTree = "<group>"; };
 		4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorShorthandURL.h; sourceTree = "<group>"; };
 		4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorShorthandURL.m; sourceTree = "<group>"; };
+		4C0F37D615BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorPostcodeUK.h; sourceTree = "<group>"; };
+		4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorPostcodeUK.m; sourceTree = "<group>"; };
 		4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUS2FormValidationFrameworkStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIDelegate.h; sourceTree = "<group>"; };
 		4C59DD401487BD7B0047C698 /* US2Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Condition.h; sourceTree = "<group>"; };
@@ -249,14 +254,16 @@
 				4C59DD5C1487BD7B0047C698 /* US2ValidatorEmail.m */,
 				4C59DD5D1487BD7B0047C698 /* US2ValidatorNumeric.h */,
 				4C59DD5E1487BD7B0047C698 /* US2ValidatorNumeric.m */,
+				FAA9CDE01558802300FFFDA4 /* US2ValidatorPasswordStrength.h */,
+				FAA9CDE11558802300FFFDA4 /* US2ValidatorPasswordStrength.m */,
+				4C0F37D615BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h */,
+				4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */,
 				4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */,
 				4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */,
 				F104D61E14F36131000DFC40 /* US2ValidatorURL.h */,
 				F104D61F14F36131000DFC40 /* US2ValidatorURL.m */,
 				4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */,
 				4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */,
-				FAA9CDE01558802300FFFDA4 /* US2ValidatorPasswordStrength.h */,
-				FAA9CDE11558802300FFFDA4 /* US2ValidatorPasswordStrength.m */,
 			);
 			path = validators;
 			sourceTree = "<group>";
@@ -352,6 +359,7 @@
 				FAA9CDE21558802300FFFDA4 /* US2ValidatorPasswordStrength.h in Headers */,
 				FAA9CDE71558802E00FFFDA4 /* US2ConditionPasswordStrength.h in Headers */,
 				4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */,
+				4C0F37D815BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +487,7 @@
 				4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */,
 				4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */,
 				4CB213BF15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
+				4C0F37DA15BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +519,7 @@
 				FAA9CDE31558802300FFFDA4 /* US2ValidatorPasswordStrength.m in Sources */,
 				FAA9CDE81558802E00FFFDA4 /* US2ConditionPasswordStrength.m in Sources */,
 				4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
+				4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +628,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -634,6 +645,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
