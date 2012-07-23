@@ -147,7 +147,7 @@
     // Add first name text field
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
     firstNameTextField.validator               = [[[MyProjectValidatorName alloc] init] autorelease];
-    firstNameTextField.shouldAllowViolation    = YES;
+    firstNameTextField.shouldAllowViolations   = YES;
     firstNameTextField.validateOnFocusLossOnly = YES;
     firstNameTextField.text                    = @"";
     firstNameTextField.placeholder             = @"Todd";
@@ -158,7 +158,7 @@
     // Add email text field
     US2ValidatorTextField *emailTextField  = [[US2ValidatorTextField alloc] init];
     emailTextField.validator               = [[[US2ValidatorEmail alloc] init] autorelease];
-    emailTextField.shouldAllowViolation    = YES;
+    emailTextField.shouldAllowViolations   = YES;
     emailTextField.validateOnFocusLossOnly = YES;
     emailTextField.text                    = @"";
     emailTextField.placeholder             = @"example@example.com";
@@ -169,7 +169,7 @@
     // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
     aboutTextView.validator               = [[[MyProjectValidatorAbout alloc] init] autorelease];
-    aboutTextView.shouldAllowViolation    = YES;
+    aboutTextView.shouldAllowViolations   = YES;
     aboutTextView.validateOnFocusLossOnly = YES;
     aboutTextView.validatorUIDelegate     = self;
     [_textUICollection addObject:aboutTextView];
