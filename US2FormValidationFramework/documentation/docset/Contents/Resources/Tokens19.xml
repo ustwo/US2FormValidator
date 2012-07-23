@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ConditionProtocol.html">
+	<File path="Classes/US2ValidatorRange.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ConditionProtocol</TokenIdentifier>
-			<Abstract>A condition must conform to US2Condition protocol methods.</Abstract>
-			<DeclaredIn>US2Condition.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorRange</TokenIdentifier>
+			<Abstract>The range validator checks for string length.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
 			<NodeRef refid="19"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionProtocol/check:</TokenIdentifier>
-			<Abstract>Check the custom condition.</Abstract>
-			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorRange/range</TokenIdentifier>
+			<Abstract>The range to check for.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>			
 			
-			<Declaration>- (BOOL)check:(NSString *)string</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>string</Name>
-					<Abstract>String to check</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract>Return whether condition check failed or not</Abstract></ReturnValue>
-			<Anchor>//api/name/check:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionProtocol/localizedViolationString</TokenIdentifier>
-			<Abstract>Returns a localized string which describes the kind of violation.</Abstract>
-			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
 			
-			<Declaration>- (NSString *)localizedViolationString</Declaration>
 			
-			<ReturnValue><Abstract>Localized violation string</Abstract></ReturnValue>
-			<Anchor>//api/name/localizedViolationString</Anchor>
+			<Anchor>//api/name/range</Anchor>
 		</Token>
 		
 	</File>

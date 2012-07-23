@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionRange.html">
+	<File path="Classes/US2ConditionPasswordStrength.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionRange</TokenIdentifier>
-			<Abstract>The US2ConditionRange validates the length of a string.</Abstract>
-			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionPasswordStrength</TokenIdentifier>
+			<Abstract>The US2ConditionPasswordStrength checks for the strength of a password string.</Abstract>
+			<DeclaredIn>US2ConditionPasswordStrength.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionRange/range</TokenIdentifier>
-			<Abstract>The range to check for.</Abstract>
-			<DeclaredIn>US2ConditionRange.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPasswordStrength/requiredStrength</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>US2ConditionPasswordStrength.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			<Declaration>@property (nonatomic, assign) US2PasswordStrength requiredStrength</Declaration>
 			
 			
-			<Anchor>//api/name/range</Anchor>
+			<Anchor>//api/name/requiredStrength</Anchor>
 		</Token>
 		
 	</File>

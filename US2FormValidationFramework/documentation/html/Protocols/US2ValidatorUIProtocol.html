@@ -44,17 +44,13 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;- delegate</option>
-	
 	<option value="//api/name/frame">&nbsp;&nbsp;&nbsp;&nbsp;- frame</option>
 	
 	<option value="//api/name/isValid">&nbsp;&nbsp;&nbsp;&nbsp;- isValid</option>
 	
-	<option value="//api/name/setDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setDelegate:</option>
-	
 	<option value="//api/name/setFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- setFrame:</option>
 	
-	<option value="//api/name/setShouldAllowViolation:">&nbsp;&nbsp;&nbsp;&nbsp;- setShouldAllowViolation:</option>
+	<option value="//api/name/setShouldAllowViolations:">&nbsp;&nbsp;&nbsp;&nbsp;- setShouldAllowViolations:</option>
 	
 	<option value="//api/name/setText:">&nbsp;&nbsp;&nbsp;&nbsp;- setText:</option>
 	
@@ -62,13 +58,17 @@
 	
 	<option value="//api/name/setValidator:">&nbsp;&nbsp;&nbsp;&nbsp;- setValidator:</option>
 	
-	<option value="//api/name/shouldAllowViolation">&nbsp;&nbsp;&nbsp;&nbsp;- shouldAllowViolation</option>
+	<option value="//api/name/setValidatorUIDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setValidatorUIDelegate:</option>
+	
+	<option value="//api/name/shouldAllowViolations">&nbsp;&nbsp;&nbsp;&nbsp;- shouldAllowViolations</option>
 	
 	<option value="//api/name/text">&nbsp;&nbsp;&nbsp;&nbsp;- text</option>
 	
 	<option value="//api/name/validateOnFocusLossOnly">&nbsp;&nbsp;&nbsp;&nbsp;- validateOnFocusLossOnly</option>
 	
 	<option value="//api/name/validator">&nbsp;&nbsp;&nbsp;&nbsp;- validator</option>
+	
+	<option value="//api/name/validatorUIDelegate">&nbsp;&nbsp;&nbsp;&nbsp;- validatorUIDelegate</option>
 	
 	
 	
@@ -98,17 +98,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/frame">frame</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isValid">isValid</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDelegate:">setDelegate:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setFrame:">setFrame:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShouldAllowViolation:">setShouldAllowViolation:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShouldAllowViolations:">setShouldAllowViolations:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setText:">setText:</a></span></li>
 	
@@ -116,13 +112,17 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setValidator:">setValidator:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldAllowViolation">shouldAllowViolation</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setValidatorUIDelegate:">setValidatorUIDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldAllowViolations">shouldAllowViolations</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/text">text</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validateOnFocusLossOnly">validateOnFocusLossOnly</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validator">validator</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validatorUIDelegate">validatorUIDelegate</a></span></li>
 	
 </ul></li>
 
@@ -148,7 +148,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSObject</td>
+	<td class="specification-value">UIAppearance<br />UIAppearanceContainer</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">US2ValidatorUIProtocol.h</td>
@@ -181,15 +181,15 @@ and <a href="../Classes/US2ValidatorTextView.html">US2ValidatorTextView</a>.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setDelegate:">&ndash;&nbsp;setDelegate:</a></code>
-		<span class="tooltip"><p>A <a href="#//api/name/delegate">delegate</a></p></span>
+		<code><a href="#//api/name/setValidatorUIDelegate:">&ndash;&nbsp;setValidatorUIDelegate:</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/validator">validator</a> UI delegate conforming <a href="../Protocols/US2ValidatorUIDelegate.html">US2ValidatorUIDelegate</a></p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/delegate">&ndash;&nbsp;delegate</a></code>
-		<span class="tooltip"><p>Return a <a href="#//api/name/delegate">delegate</a></p></span>
+		<code><a href="#//api/name/validatorUIDelegate">&ndash;&nbsp;validatorUIDelegate</a></code>
+		<span class="tooltip"><p>Return the delegate</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -209,7 +209,7 @@ and <a href="../Classes/US2ValidatorTextView.html">US2ValidatorTextView</a>.</p>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setShouldAllowViolation:">&ndash;&nbsp;setShouldAllowViolation:</a></code>
+		<code><a href="#//api/name/setShouldAllowViolations:">&ndash;&nbsp;setShouldAllowViolations:</a></code>
 		<span class="tooltip"><p>Determines whether <a href="#//api/name/text">text</a> inputs can be made either by violating the conditions.
 Is this parameter NO it overrides the &lsquo;shouldAllowViolation&rsquo; parameter of
 the conditions added to the <a href="#//api/name/validator">validator</a>. If set to YES the &lsquo;shouldAllowViolation&rsquo;
@@ -219,7 +219,7 @@ parameters of the conditions considered.</p></span>
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/shouldAllowViolation">&ndash;&nbsp;shouldAllowViolation</a></code>
+		<code><a href="#//api/name/shouldAllowViolations">&ndash;&nbsp;shouldAllowViolations</a></code>
 		<span class="tooltip"><p>Set boolean value</p></span>
 	</span>
 	
@@ -292,40 +292,6 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/delegate" title="delegate"></a>
-	<h3 class="subsubtitle method-title">delegate</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Return a <a href="#//api/name/delegate">delegate</a></p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (id)delegate</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">US2ValidatorUIProtocol.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/frame" title="frame"></a>
@@ -401,50 +367,6 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setDelegate:" title="setDelegate:"></a>
-	<h3 class="subsubtitle method-title">setDelegate:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>A <a href="#//api/name/delegate">delegate</a></p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (void)setDelegate:(id)<em>delegate</em></code></div>
-	
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>A <a href="#//api/name/delegate">delegate</a></p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">US2ValidatorUIProtocol.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/setFrame:" title="setFrame:"></a>
 	<h3 class="subsubtitle method-title">setFrame:</h3>
 	
@@ -489,8 +411,8 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setShouldAllowViolation:" title="setShouldAllowViolation:"></a>
-	<h3 class="subsubtitle method-title">setShouldAllowViolation:</h3>
+	<a name="//api/name/setShouldAllowViolations:" title="setShouldAllowViolations:"></a>
+	<h3 class="subsubtitle method-title">setShouldAllowViolations:</h3>
 	
 	
 	
@@ -502,7 +424,7 @@ parameters of the conditions considered.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)setShouldAllowViolation:(BOOL)<em>shouldAllowViolation</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setShouldAllowViolations:(BOOL)<em>shouldAllowViolation</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -671,8 +593,52 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shouldAllowViolation" title="shouldAllowViolation"></a>
-	<h3 class="subsubtitle method-title">shouldAllowViolation</h3>
+	<a name="//api/name/setValidatorUIDelegate:" title="setValidatorUIDelegate:"></a>
+	<h3 class="subsubtitle method-title">setValidatorUIDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/validator">validator</a> UI delegate conforming <a href="../Protocols/US2ValidatorUIDelegate.html">US2ValidatorUIDelegate</a></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setValidatorUIDelegate:(id&lt;US2ValidatorUIDelegate&gt;)<em>validatorUIDelegate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>validatorUIDelegate</em></dt>
+			<dd><p>The <a href="#//api/name/validator">validator</a> UI delegate conforming <a href="../Protocols/US2ValidatorUIDelegate.html">US2ValidatorUIDelegate</a></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2ValidatorUIProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldAllowViolations" title="shouldAllowViolations"></a>
+	<h3 class="subsubtitle method-title">shouldAllowViolations</h3>
 	
 	
 	
@@ -681,7 +647,7 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (BOOL)shouldAllowViolation</code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)shouldAllowViolations</code></div>
 	
 	
 	
@@ -806,6 +772,45 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/validatorUIDelegate" title="validatorUIDelegate"></a>
+	<h3 class="subsubtitle method-title">validatorUIDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the delegate</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id&lt;US2ValidatorUIDelegate&gt;)validatorUIDelegate</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the <a href="#//api/name/validator">validator</a> UI delegate</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2ValidatorUIProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -819,7 +824,7 @@ knows now that a violation occurrs when using this <a href="#//api/name/text">te
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 ustwo™. All rights reserved. (Last updated: 2011-12-05)</span><br />
+						<p><span class="copyright">&copy; 2012 ustwo™. All rights reserved. (Last updated: 2012-07-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
