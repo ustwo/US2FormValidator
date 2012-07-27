@@ -73,6 +73,9 @@
 
 - (void)dealloc
 {
+    // Remove notification observer
+    [[NSNotificationCenter defaultCenter] removeObserver:_validatorTextViewPrivate name:UITextViewTextDidEndEditingNotification object:self];
+    
     [_validator release];    
     [_validatorTextViewPrivate release];
     
