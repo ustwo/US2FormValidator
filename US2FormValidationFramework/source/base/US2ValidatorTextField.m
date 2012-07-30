@@ -73,6 +73,11 @@
 
 - (void)dealloc
 {
+    // Remove notification observers
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
+    
     [_validator release];
     [_validatorTextFieldPrivate release];
     
