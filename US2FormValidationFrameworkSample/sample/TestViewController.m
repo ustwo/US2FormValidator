@@ -164,6 +164,7 @@
     postcodeTextField.validateOnFocusLossOnly = YES;
     postcodeTextField.text                    = @"";
     postcodeTextField.placeholder             = @"e.g. N1 1AA";
+    postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
     postcodeTextField.validatorUIDelegate     = self;
     [_textUICollection addObject:postcodeTextField];
     [postcodeTextField release];
