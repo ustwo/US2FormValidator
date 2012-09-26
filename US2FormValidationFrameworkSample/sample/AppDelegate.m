@@ -42,14 +42,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [UIApplication sharedApplication].statusBarHidden = NO;
     
     _testViewController = [[TestViewController alloc] init];
-    [self.window addSubview:_testViewController.view];
+    
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window.rootViewController = _testViewController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

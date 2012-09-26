@@ -155,33 +155,35 @@
 - (void)testUS2ConditionURL
 {
     NSString *successTestString1 = @"http://www.example.com";
-    NSString *successTestString2 = @"http://localhost:8080";
-    NSString *successTestString3 = @"http://lol";
-    NSString *successTestString4 = @"https://www.example.com";
-    NSString *successTestString5 = @"http://www.example.com/path";
-    NSString *successTestString6 = @"www.example.com";
-    NSString *successTestString7 = @"http://www.example.com/?id=12345&param=value";
+    NSString *successTestString2 = @"https://www.example.com";
+    NSString *successTestString3 = @"http://www.example.com/path";
+    NSString *successTestString4 = @"http://www.example.com/?id=12345&param=value";
     
     NSString *failureTestString1 = @"";
     NSString *failureTestString2 = nil;
-    NSString *failureTestString3 = @"http://";
-    NSString *failureTestString4 = @"ftp://www.example.com";
-    NSString *failureTestString5 = @"mailto://www.example.com";
+    NSString *failureTestString3 = @"example";
+    NSString *failureTestString4 = @"example.com";
+    NSString *failureTestString5 = @"www.example.com";
+    NSString *failureTestString6 = @"http://example";
+    NSString *failureTestString7 = @"http://";
+    NSString *failureTestString8 = @"ftp://www.example.com";
+    NSString *failureTestString9 = @"mailto://www.example.com";
     
     US2ConditionURL* condition = [[US2ConditionURL alloc] init];
     STAssertTrue([condition check:successTestString1], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString2], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString3], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString4], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
-    STAssertTrue([condition check:successTestString5], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
-    STAssertTrue([condition check:successTestString6], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
-    STAssertTrue([condition check:successTestString7], @"The US2ConditionURL should respond with TRUE and not FALSE", nil);
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString3], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString4], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString5], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString6], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString7], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString8], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString9], @"The US2ConditionURL should respond with FALSE and not TRUE", nil);
 }
 
 /**
@@ -197,12 +199,14 @@
     NSString *successTestString6 = @"example.com";
     NSString *successTestString7 = @"www.example.com";
     NSString *successTestString8 = @"www.example.com/path";
-    NSString *successTestString9 = @"http://lol";
     
     NSString *failureTestString1 = @"";
     NSString *failureTestString2 = nil;
-    NSString *failureTestString3 = @"http://";
-    NSString *failureTestString4 = @"www.";
+    NSString *failureTestString3 = @"example";
+    NSString *failureTestString4 = @"http://example";
+    NSString *failureTestString5 = @"http://";
+    NSString *failureTestString6 = @"ftp://www.example.com";
+    NSString *failureTestString7 = @"mailto://www.example.com";
     
     US2ConditionShorthandURL* condition = [[US2ConditionShorthandURL alloc] init];
     STAssertTrue([condition check:successTestString1], @"The US2ConditionShorthandURL should respond with TRUE and not FALSE", nil);
@@ -213,12 +217,14 @@
     STAssertTrue([condition check:successTestString6], @"The US2ConditionShorthandURL should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString7], @"The US2ConditionShorthandURL should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString8], @"The US2ConditionShorthandURL should respond with TRUE and not FALSE", nil);
-    STAssertTrue([condition check:successTestString9], @"The US2ConditionShorthandURL should respond with TRUE and not FALSE", nil);
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString3], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString4], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString5], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString6], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString7], @"The US2ConditionShorthandURL should respond with FALSE and not TRUE", nil);
 }
 
 /**
