@@ -41,8 +41,8 @@
         [self addCondition:[[[MyProjectConditionName alloc] init] autorelease]];
         
         US2ConditionRange *rangeCondition   = [[[US2ConditionRange alloc] init] autorelease];
-        rangeCondition.range                = NSMakeRange(1, 15);
-        rangeCondition.shouldAllowViolation = NO;
+        rangeCondition.range                = NSMakeRange(1, 12);
+        rangeCondition.shouldAllowViolation = YES;
         
         [self addCondition:rangeCondition];
     }
