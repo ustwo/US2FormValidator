@@ -69,7 +69,7 @@
  the conditions added to the validator. If set to YES the 'shouldAllowViolation'
  parameters of the conditions considered.
 */
-@property (nonatomic, assign) BOOL shouldAllowViolation;
+@property (nonatomic, assign) BOOL shouldAllowViolations;
 
 /**
  Return whether the text is valid.

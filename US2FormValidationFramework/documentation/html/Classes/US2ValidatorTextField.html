@@ -42,13 +42,13 @@
 	
 	<option value="//api/name/isValid">&nbsp;&nbsp;&nbsp;&nbsp;isValid</option>
 	
-	<option value="//api/name/shouldAllowViolation">&nbsp;&nbsp;&nbsp;&nbsp;shouldAllowViolation</option>
+	<option value="//api/name/shouldAllowViolations">&nbsp;&nbsp;&nbsp;&nbsp;shouldAllowViolations</option>
 	
 	<option value="//api/name/validateOnFocusLossOnly">&nbsp;&nbsp;&nbsp;&nbsp;validateOnFocusLossOnly</option>
 	
 	<option value="//api/name/validator">&nbsp;&nbsp;&nbsp;&nbsp;validator</option>
 	
-	<option value="//api/name/validatorTextFieldDelegate">&nbsp;&nbsp;&nbsp;&nbsp;validatorTextFieldDelegate</option>
+	<option value="//api/name/validatorUIDelegate">&nbsp;&nbsp;&nbsp;&nbsp;validatorUIDelegate</option>
 	
 	
 	
@@ -80,13 +80,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isValid">isValid</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldAllowViolation">shouldAllowViolation</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldAllowViolations">shouldAllowViolations</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validateOnFocusLossOnly">validateOnFocusLossOnly</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validator">validator</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validatorTextFieldDelegate">validatorTextFieldDelegate</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validatorUIDelegate">validatorUIDelegate</a></span></li>
 	
 </ul></li>
 
@@ -134,8 +134,8 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>The <a href="#//api/name/validator">validator</a> text field is the central object to use. It inherits UITextField and listens internally
 to all own changes. After every change it validates the changed text material. When a <a href="#//api/name/validator">validator</a>, which
-was added to the <a href="#//api/name/validator">validator</a> text field, reports a violation the <a href="#//api/name/validatorTextFieldDelegate">validatorTextFieldDelegate</a> will be
-served with this information. The <a href="#//api/name/validatorTextFieldDelegate">validatorTextFieldDelegate</a> is of type <a href="../Protocols/US2ValidatorTextFieldDelegate.html">US2ValidatorTextFieldDelegate</a>
+was added to the <a href="#//api/name/validator">validator</a> text field, reports a violation the validatorTextFieldDelegate will be
+served with this information. The validatorTextFieldDelegate is of type US2ValidatorTextFieldDelegate
 and returns what went wrong and in which status the validation text field is at the moment.</p>
 					</div>
 					
@@ -154,9 +154,8 @@ and returns what went wrong and in which status the validation text field is at 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/validatorTextFieldDelegate">&nbsp;&nbsp;validatorTextFieldDelegate</a></code>
-		<span class="tooltip"><p>Set delegate implementing <a href="../Classes/US2ValidatorTextFieldPrivate.html">US2ValidatorTextFieldPrivate</a>
-@todo Rename delegate to validationTextFieldDelegate</p></span>
+		<code><a href="#//api/name/validatorUIDelegate">&nbsp;&nbsp;validatorUIDelegate</a></code>
+		<span class="tooltip"><p>Set delegate implementing <a href="../Protocols/US2ValidatorUIDelegate.html">US2ValidatorUIDelegate</a></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -169,11 +168,11 @@ and returns what went wrong and in which status the validation text field is at 
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/shouldAllowViolation">&nbsp;&nbsp;shouldAllowViolation</a></code>
+		<code><a href="#//api/name/shouldAllowViolations">&nbsp;&nbsp;shouldAllowViolations</a></code>
 		<span class="tooltip"><p>Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the &lsquo;shouldAllowViolation&rsquo; parameter of
+Is this parameter is NO it overrides the &lsquo;shouldAllowViolation&rsquo; parameter of
 the conditions added to the <a href="#//api/name/validator">validator</a>. If set to YES the &lsquo;shouldAllowViolation&rsquo;
-parameters of the conditions considered.</p></span>
+parameters of the conditions are considered.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -247,20 +246,20 @@ knows now that a violation occurrs when using this text field.</p></span>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shouldAllowViolation" title="shouldAllowViolation"></a>
-	<h3 class="subsubtitle method-title">shouldAllowViolation</h3>
+	<a name="//api/name/shouldAllowViolations" title="shouldAllowViolations"></a>
+	<h3 class="subsubtitle method-title">shouldAllowViolations</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
 		<p>Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the &lsquo;shouldAllowViolation&rsquo; parameter of
+Is this parameter is NO it overrides the &lsquo;shouldAllowViolation&rsquo; parameter of
 the conditions added to the <a href="#//api/name/validator">validator</a>. If set to YES the &lsquo;shouldAllowViolation&rsquo;
-parameters of the conditions considered.</p>
+parameters of the conditions are considered.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shouldAllowViolation</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shouldAllowViolations</code></div>
 	
 	
 	
@@ -355,18 +354,17 @@ knows now that a violation occurrs when using this text field.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/validatorTextFieldDelegate" title="validatorTextFieldDelegate"></a>
-	<h3 class="subsubtitle method-title">validatorTextFieldDelegate</h3>
+	<a name="//api/name/validatorUIDelegate" title="validatorUIDelegate"></a>
+	<h3 class="subsubtitle method-title">validatorUIDelegate</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set delegate implementing <a href="../Classes/US2ValidatorTextFieldPrivate.html">US2ValidatorTextFieldPrivate</a>
-@todo Rename delegate to validationTextFieldDelegate</p>
+		<p>Set delegate implementing <a href="../Protocols/US2ValidatorUIDelegate.html">US2ValidatorUIDelegate</a></p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;US2ValidatorTextFieldDelegate&gt; validatorTextFieldDelegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextFieldDelegate&gt; validatorUIDelegate</code></div>
 	
 	
 	
@@ -406,7 +404,7 @@ knows now that a violation occurrs when using this text field.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 ustwo™. All rights reserved. (Last updated: 2011-12-05)</span><br />
+						<p><span class="copyright">&copy; 2012 ustwo™. All rights reserved. (Last updated: 2012-07-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

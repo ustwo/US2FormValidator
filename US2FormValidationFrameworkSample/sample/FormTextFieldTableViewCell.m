@@ -28,7 +28,7 @@
 #import "US2ValidatorTextField.h"
 
 
-static const float  kFormTextFieldX  = 80.0;
+static const float  kFormTextFieldX  = 110.0;
 
 
 @implementation FormTextFieldTableViewCell

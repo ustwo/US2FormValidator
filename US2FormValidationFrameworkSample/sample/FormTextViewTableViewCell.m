@@ -27,7 +27,7 @@
 #import "FormTableViewCellPrivate.h"
 
 
-static const float kFormTextViewX = 72.0;
+static const float kFormTextViewX = 102.0;
 
 
 @implementation FormTextViewTableViewCell

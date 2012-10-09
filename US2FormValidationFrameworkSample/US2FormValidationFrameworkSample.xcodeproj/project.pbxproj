@@ -426,6 +426,7 @@
 				GCC_PREFIX_HEADER = "sample/US2FormValidationFrameworkSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../US2FormValidationFramework/source/**";
 				INFOPLIST_FILE = "sample/US2FormValidationFrameworkSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = US2FormValidationFrameworkSample;
 				WRAPPER_EXTENSION = app;
@@ -439,6 +440,7 @@
 				GCC_PREFIX_HEADER = "sample/US2FormValidationFrameworkSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../US2FormValidationFramework/source/**";
 				INFOPLIST_FILE = "sample/US2FormValidationFrameworkSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = US2FormValidationFrameworkSample;
 				WRAPPER_EXTENSION = app;

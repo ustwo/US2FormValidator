@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
+<<<<<<< HEAD
 	<File path="Protocols/US2ValidatorUIDelegate.html">
 		
 		<Token>
@@ -7,12 +8,22 @@
 			<Abstract type="html">The main delegate protocol which serves the interested instance with information about changed validation states.
 The delegate inherits from UITextViewDelegate.</Abstract>
 			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>
+=======
+	<File path="Protocols/US2ValidatorTextFieldPrivateDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorTextFieldPrivateDelegate</TokenIdentifier>
+			<Abstract>A private delegate protocol which is used by class US2ValidatorTextField and served by internal
+class US2ValidatorTextFieldPrivate</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>
+>>>>>>> 2878e39f3025483383cea0a08de8d7bf391e4bff
 			
 			<NodeRef refid="29"/>
 		</Token>
 		
 		
 		<Token>
+<<<<<<< HEAD
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIDelegate/validatorUIDidChange:</TokenIdentifier>
 			<Abstract type="html">Will be called when the text in the text field changes. Has its origin in listening for UITextFieldTextDidChangeNotification.</Abstract>
 			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>			
@@ -64,6 +75,40 @@ The delegate inherits from UITextViewDelegate.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/validatorUI:violatedConditions:</Anchor>
+=======
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextFieldPrivateDelegate/validatorTextFieldPrivate:violatedConditions:</TokenIdentifier>
+			<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)validatorTextFieldPrivate:(US2ValidatorTextFieldPrivate *)textFieldPrivate violatedConditions:(US2ConditionCollection *)conditions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>textFieldPrivate</Name>
+					<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+				</Parameter><Parameter>
+					<Name>conditions</Name>
+					<Abstract>Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/validatorTextFieldPrivate:violatedConditions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextFieldPrivateDelegate/validatorTextFieldPrivateSuccededConditions:</TokenIdentifier>
+			<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)validatorTextFieldPrivateSuccededConditions:(US2ValidatorTextFieldPrivate *)textFieldPrivate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>textFieldPrivate</Name>
+					<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/validatorTextFieldPrivateSuccededConditions:</Anchor>
+>>>>>>> 2878e39f3025483383cea0a08de8d7bf391e4bff
 		</Token>
 		
 	</File>

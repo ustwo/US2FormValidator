@@ -39,7 +39,7 @@
 
 @synthesize validatorUIDelegate     = _validatorUIDelegate;
 @synthesize validator               = _validator;
-@synthesize shouldAllowViolation    = _shouldAllowViolation;
+@synthesize shouldAllowViolations   = _shouldAllowViolations;
 @synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
 @dynamic    isValid;
 
@@ -73,6 +73,11 @@
 
 - (void)dealloc
 {
+    // Remove notification observers
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
+    
     [_validator release];
     [_validatorTextFieldPrivate release];
     
@@ -85,7 +90,7 @@
 - (void)_startUp
 {
     // Allows violation initially
-    _shouldAllowViolation = YES;
+    _shouldAllowViolations = YES;
     
     // Validate immediately
     _validateOnFocusLossOnly = NO;

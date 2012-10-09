@@ -36,7 +36,7 @@ https://github.com/CocoaPods/CocoaPods
 
 Add the following line to your pod file:
 
-    dependency 'US2FormValidator', '~> 1.0.0'
+    pod 'US2FormValidator', '~> 1.0.5'
 
 How-To
 ------

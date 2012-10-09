@@ -30,3 +30,4 @@
 "US2KeyConditionViolationURL"               = "Enter a valid URL in the format http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Enter a valid URL in the format www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "Enter a stronger password";
+"US2KeyConditionViolationPostcodeUK"        = "Enter a valid UK post code";

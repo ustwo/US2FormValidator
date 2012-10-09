@@ -65,11 +65,11 @@
 
 /**
  Determines whether text inputs can be made either by violating the conditions.
- Is this parameter NO it overrides the 'shouldAllowViolation' parameter of 
+ Is this parameter is NO it overrides the 'shouldAllowViolation' parameter of 
  the conditions added to the validator. If set to YES the 'shouldAllowViolation'
- parameters of the conditions considered.
+ parameters of the conditions are considered.
 */
-@property (nonatomic, assign) BOOL shouldAllowViolation;
+@property (nonatomic, assign) BOOL shouldAllowViolations;
 
 /**
  Return whether the text is valid.
