@@ -27,6 +27,9 @@
 #import "US2Validator.h"
 #import "US2ConditionAlphabetic.h"
 #import "US2ConditionRange.h"
+#import "US2ValidatorComposite.h"
+#import "US2ValidatorAlphabetic.h"
+#import "US2ValidatorRange.h"
 
 
 @implementation ValidatorUnitTests
@@ -90,5 +93,44 @@
     STAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
+/**
+ Test US2ValidatorComposite class.
+ */
+
+- (void) testValidatorComposite {
+    US2ValidatorComposite *validatorComposite = [[US2ValidatorComposite alloc] init];
+    
+    // Test for existing validator
+    STAssertNotNil(validatorComposite, @"Validator instance must not be nil", nil);
+    
+    // Create first validator
+    US2ValidatorAlphabetic *validator1 = [[US2ValidatorAlphabetic alloc] init];
+    
+    // Create second validator
+    US2ValidatorRange *validator2 = [[US2ValidatorRange alloc] init];
+    validator2.range = NSMakeRange(3, 12);
+    
+    // Create string to test
+    NSString *successTestString1 = @"abcdefgh";
+    NSString *failureTestString1 = @"ab";
+    NSString *failureTestString2 = @"12";
+    
+    // Add validators to composite
+    [validatorComposite addValidator: validator1];
+    [validator1 release];
+    
+    [validatorComposite addValidator: validator2];
+    [validator2 release];
+    
+    US2ConditionCollection *collection = nil;
+    collection = [validatorComposite checkConditions:successTestString1];
+    STAssertNil(collection, @"Collection must be nil", nil);
+    
+    collection = [validatorComposite checkConditions:failureTestString1];
+    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    
+    collection = [validatorComposite checkConditions:failureTestString2];
+    STAssertNotNil(collection, @"Collection must not be nil", nil);
+}
 
 @end
