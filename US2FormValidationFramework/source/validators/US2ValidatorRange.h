@@ -54,5 +54,9 @@
 */
 @property (nonatomic, assign) NSRange range;
 
+/**
+    Initialize the range validator with a range.
+ */
+- (id) initWithRange: (NSRange) range;
 
 @end

@@ -48,6 +48,14 @@
     return self;
 }
 
+- (id) initWithRange: (NSRange) range {
+    if (self = [self init]) {
+        [self setRange: range];
+    }
+
+    return self;
+}
+
 
 #pragma mark - Range
 
