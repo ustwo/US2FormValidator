@@ -97,6 +97,11 @@
 }
 
 /**
+ Static shorthand for creating a validator.
+ */
++ (US2Validator *) validator;
+
+/**
  Initialize with a condition or variable-argument number of conditions.
  */
 - (id) initWithCondition: (id<US2ConditionProtocol>) firstCondition, ...;
@@ -110,6 +115,16 @@
  Set localized violation string for condition at a given index.  This allows overriding a conditions default localized violation string.
  */
 - (void) setLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index;
+
+/**
+ Set localized violation string for condition at a given index and return self.
+ */
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index;
+
+/**
+ Set localized violation string for condition at index 0 and return self.
+ */
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString;
 
 /**
  Add condition conform to US2ConditionProtocol

@@ -30,6 +30,9 @@
 
 @implementation US2Validator
 
++ (US2Validator *) validator {
+    return [[[self class] alloc] init];
+}
 
 #pragma mark - Initialization
 
@@ -93,6 +96,15 @@
             condition.localizedViolationString = localizedViolationString;
         }
     }
+}
+
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index {
+    [self setLocalizedViolationString: localizedViolationString forConditionAtIndex: index];
+    return self;
+}
+
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString {
+    return [self withLocalizedViolationString: localizedViolationString forConditionAtIndex: 0];
 }
 
 #pragma mark - Condition

@@ -232,5 +232,13 @@
     STAssertEqualObjects(localizedViolationString, defaultLocalizedViolationString, @"Condition must return default localized violation string.");
 }
 
+/**
+ Test US2Validator validator
+ */
+- (void) testUS2ValidatorStatic {
+    US2Validator *validator = [US2ValidatorAlphabetic validator];
+    STAssertNotNil(validator, @"Validator must not be nil.");
+    STAssertTrue([validator isKindOfClass: [US2Validator class]], @"Must be correct class.", nil);
+}
 
 @end

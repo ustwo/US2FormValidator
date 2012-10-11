@@ -33,11 +33,20 @@
 
 #pragma mark - Init
 
++ (US2Condition *) condition {
+    return [[[self class] alloc] init];
+}
+
 - (id) initWithLocalizedViolationString: (NSString *) localizedViolationString {
     if (self = [super init]) {
         self.localizedViolationString = localizedViolationString;
     }
     
+    return self;
+}
+
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString {
+    self.localizedViolationString = localizedViolationString;
     return self;
 }
 

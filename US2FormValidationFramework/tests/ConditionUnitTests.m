@@ -431,4 +431,13 @@
     
 }
 
+/**
+ Test US2Condition condition
+ */
+- (void) testUS2ConditionStatic {
+    US2Condition *conditionRange = [US2ConditionRange condition];
+    STAssertNotNil(conditionRange, @"Condition must not be nil.");
+    STAssertTrue([conditionRange isKindOfClass: [US2ConditionRange class]], @"Must be correct class.", nil);
+}
+
 @end

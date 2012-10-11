@@ -82,8 +82,18 @@
 @property (nonatomic, assign) BOOL shouldAllowViolation;
 
 /**
+ Static shorthand for creating a validator.
+ */
++ (US2Condition *) condition;
+
+/**
  Initialize condition with a custom localized violation string.
  */
 - (id) initWithLocalizedViolationString: (NSString *) localizedViolationString;
+
+/**
+ Set the localized violation string and return self.
+ */
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString;
 
 @end
