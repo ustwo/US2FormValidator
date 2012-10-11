@@ -30,7 +30,19 @@
 #import "US2ValidatorComposite.h"
 #import "US2ValidatorAlphabetic.h"
 #import "US2ValidatorRange.h"
+#import "US2Form.h"
+#import "US2ValidatorTextField.h"
+#import "US2ValidatorTextView.h"
 
+@implementation US2ValidatableMock
+@synthesize text;
+@synthesize validator;
+
+- (NSString *) validatableText {
+    return self.text;
+}
+
+@end
 
 @implementation ValidatorUnitTests
 
@@ -132,5 +144,46 @@
     collection = [validatorComposite checkConditions:failureTestString2];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
 }
+
+/**
+    Test US2Form class.
+ */
+- (void) testForm {
+    US2Form *form = [[US2Form alloc] init];
+    
+    // Test for existing form
+    STAssertNotNil(form, @"Form instance must not be nil", nil);
+    
+    // Create first validator
+    US2ValidatorAlphabetic *validator1 = [[US2ValidatorAlphabetic alloc] init];
+    
+    // Create second validator
+    US2ValidatorRange *validator2 = [[US2ValidatorRange alloc] init];
+    validator2.range = NSMakeRange(3, 12);
+    
+    // Create string to test
+    NSString *successTestString1 = @"abcdefgh";
+    NSString *failureTestString1 = @"ab";
+    
+    US2ValidatableMock *validatable1 = [[US2ValidatableMock alloc] init];
+    validatable1.validator = validator1;
+    validatable1.text = successTestString1;
+    
+    US2ValidatableMock *validatable2 = [[US2ValidatableMock alloc] init];
+    validatable2.validator = validator2;
+    validatable2.text = failureTestString1;
+    
+    [form addValidatable: validatable1 validator: validatable1.validator];
+    
+    US2ConditionCollection *collection = [form checkConditions];
+    STAssertNil(collection, @"Collection must be nil", nil);
+    
+    [form addValidatable: validatable2 validator: validatable2.validator];
+    
+    collection = [form checkConditions];
+    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    
+}
+
 
 @end

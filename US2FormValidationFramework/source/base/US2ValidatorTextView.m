@@ -123,6 +123,9 @@
     return [_validator checkConditions:self.text] == nil;
 }
 
+- (NSString *) validatableText {
+    return self.text;
+}
 
 #pragma mark - Validator text view delegate delegate
 

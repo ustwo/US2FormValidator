@@ -27,6 +27,7 @@
 #import "US2ValidatorTextFieldPrivateDelegate.h"
 #import "US2ValidatorUIDelegate.h"
 #import "US2ValidatorUIProtocol.h"
+#import "US2Validatable.h"
 
 @protocol US2ValidatorUIDelegate;
 
@@ -43,7 +44,7 @@
  served with this information. The validatorTextFieldDelegate is of type US2ValidatorTextFieldDelegate
  and returns what went wrong and in which status the validation text field is at the moment.
 */
-@interface US2ValidatorTextField : UITextField <US2ValidatorUIProtocol, US2ValidatorTextFieldPrivateDelegate>
+@interface US2ValidatorTextField : UITextField <US2ValidatorUIProtocol, US2ValidatorTextFieldPrivateDelegate, US2Validatable>
 {
 @private
     id <US2ValidatorUIDelegate, UITextFieldDelegate> _validatorUIDelegate;
@@ -86,5 +87,9 @@
 */
 @property (nonatomic, assign) BOOL validateOnFocusLossOnly;
 
+/**
+ Text for validation
+ */
+- (NSString *) validatableText;
 
 @end
