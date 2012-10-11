@@ -57,4 +57,11 @@
     return result;
 }
 
+#pragma mark - Localization
+
+- (NSString *) createLocalizedViolationString
+{
+    return nil;
+}
+
 @end
