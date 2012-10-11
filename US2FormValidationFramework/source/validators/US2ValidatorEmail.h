@@ -42,7 +42,7 @@
     
     BOOL isValid = [emailValidator checkConditions:@"example@ustwo.co.uk"] == nil;                  // isValid == YES
 */
-@interface US2ValidatorEmail : US2Validator
+@interface US2ValidatorEmail : US2ValidatorSingleCondition
 {
 }
 

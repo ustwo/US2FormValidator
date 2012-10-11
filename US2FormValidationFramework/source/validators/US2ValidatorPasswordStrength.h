@@ -15,7 +15,7 @@
  The password strength validator contains a password strength condition (see US2ConditionPasswordStrength).
  A valid string matches or is above the required strength.
  */
-@interface US2ValidatorPasswordStrength : US2Validator
+@interface US2ValidatorPasswordStrength : US2ValidatorSingleCondition
 
 /**
  The required password strength of the validator, options are:

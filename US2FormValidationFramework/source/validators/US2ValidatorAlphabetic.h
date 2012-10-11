@@ -33,7 +33,7 @@
  The alphabetic validator contains an alphabetic condition (see US2ConditionAlphabetic).
  A valid string does only contain letters.
 */
-@interface US2ValidatorAlphabetic : US2Validator
+@interface US2ValidatorAlphabetic : US2ValidatorSingleCondition
 {
 }
 

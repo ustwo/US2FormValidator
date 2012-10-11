@@ -97,6 +97,11 @@
 }
 
 /**
+ Set localized violation string for condition at a given index.  This allows overriding a conditions default localized violation string.
+ */
+- (void) setLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index;
+
+/**
  Add condition conform to US2ConditionProtocol
  
  @param condition Condition conform to US2ConditionProtocol
@@ -118,5 +123,22 @@
 */
 - (US2ConditionCollection *)checkConditions:(NSString *)string;
 
+
+@end
+
+/**
+ A US2Validator with a single condition.
+ */
+@interface US2ValidatorSingleCondition : US2Validator {
+    id<US2ConditionProtocol> _condition;
+}
+
+@property (retain, nonatomic) id<US2ConditionProtocol> condition;
+@property (copy, nonatomic) NSString *localizedViolationString;
+
+/**
+ Initialize single validator with a condition.
+ */
+- (id) initWithCondition: (id<US2ConditionProtocol>) condition;
 
 @end

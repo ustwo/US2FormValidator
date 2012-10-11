@@ -33,6 +33,7 @@
 #import "US2Form.h"
 #import "US2ValidatorTextField.h"
 #import "US2ValidatorTextView.h"
+#import "US2ValidatorPostcodeUK.h"
 
 @implementation US2ValidatableMock
 @synthesize text;
@@ -183,6 +184,52 @@
     collection = [form checkConditions];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
     
+}
+
+/**
+ Test US2Validator with localizedViolationString customization.
+ */
+- (void)testUS2ValidatorCustomLocalizedViolationString
+{
+    // Create first validator
+    US2ValidatorAlphabetic *validator1 = [[US2ValidatorAlphabetic alloc] init];
+    
+    NSString *expectedLocalizedViolationString = @"You should only enter letters.";
+    
+    NSString *key = @"US2KeyConditionViolationAlphabetic";
+    
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource: @"Localization" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:path];
+    NSString *defaultLocalizedViolationString = [bundle localizedStringForKey:key value:key table:nil];
+    
+    STAssertNotNil(defaultLocalizedViolationString, @"Default localized violation string must not be nil.");
+    
+    NSString *successString1 = @"abcdef";
+    NSString *failureString1 = @"abcde1";
+    
+    // Test success
+    US2ConditionCollection *conditions = [validator1 checkConditions: successString1];
+    STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
+    
+    // Test failure with default localized string
+    conditions = [validator1 checkConditions: failureString1];
+    STAssertTrue([conditions count] > 0, nil);
+    NSString *localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
+    STAssertEqualObjects(localizedViolationString, defaultLocalizedViolationString, @"Condition must return default localized violation string.");
+    
+    // Test failure with expected customized localized string
+    validator1.localizedViolationString = expectedLocalizedViolationString;
+    conditions = [validator1 checkConditions: failureString1];
+    STAssertTrue([conditions count] > 0, nil);
+    localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
+    STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
+    
+    // Test failure with nil localized string (reset back to default)
+    validator1.localizedViolationString = nil;
+    conditions = [validator1 checkConditions: failureString1];
+    STAssertTrue([conditions count] > 0, nil);
+    localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
+    STAssertEqualObjects(localizedViolationString, defaultLocalizedViolationString, @"Condition must return default localized violation string.");
 }
 
 

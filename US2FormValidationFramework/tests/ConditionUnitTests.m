@@ -336,5 +336,16 @@
     STAssertFalse([condition check:failureTestString5], @"The US2ConditionPostcodeUK should respond with FALSE and not TRUE", nil);
 }
 
+/**
+ Test US2Condition createLocalizedViolationString and localizedViolationString customization.
+ */
+- (void)testUS2ConditionCustomLocalizedViolationString
+{
+    NSString *customLocalizedViolationString = @"Enter a valid UK postal code.";
+    US2ConditionPostcodeUK *condition = [[US2ConditionPostcodeUK alloc] init];
+    condition.localizedViolationString = customLocalizedViolationString;
+    
+    STAssertEqualObjects([condition localizedViolationString], customLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
+}
 
 @end

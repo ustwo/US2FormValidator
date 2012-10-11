@@ -43,7 +43,7 @@
     
     BOOL isValid = [numericValidator checkConditions:@"1234"] == nil;                       // isValid == YES
 */
-@interface US2ValidatorNumeric : US2Validator
+@interface US2ValidatorNumeric : US2ValidatorSingleCondition
 {
 }
 

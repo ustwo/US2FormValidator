@@ -33,7 +33,7 @@
  The alphanumeric validator contains an alphanumeric condition (see US2ConditionAlphanumeric).
  A valid string does only contain letters and/or numbers.
 */
-@interface US2ValidatorAlphanumeric : US2Validator
+@interface US2ValidatorAlphanumeric : US2ValidatorSingleCondition
 {
 }
 

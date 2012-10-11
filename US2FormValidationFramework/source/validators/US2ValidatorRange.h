@@ -43,7 +43,7 @@
  
     BOOL isValid = [rangeValidator checkConditions:@"Hello World!"] == nil;                 // isValid == YES
 */
-@interface US2ValidatorRange : US2Validator
+@interface US2ValidatorRange : US2ValidatorSingleCondition
 {
 @protected
     NSRange _range;

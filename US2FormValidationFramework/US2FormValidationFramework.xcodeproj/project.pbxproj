@@ -92,6 +92,7 @@
 		DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950116266A6200841F88 /* US2ValidatorEmpty.m */; };
 		DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950416266A6D00841F88 /* US2ConditionEmpty.h */; };
 		DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950516266A6E00841F88 /* US2ConditionEmpty.m */; };
+		DE079539162755AC00841F88 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
 		F104D62014F36131000DFC40 /* US2ValidatorURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F104D61E14F36131000DFC40 /* US2ValidatorURL.h */; };
 		F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F104D61F14F36131000DFC40 /* US2ValidatorURL.m */; };
 		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
@@ -486,6 +487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE079539162755AC00841F88 /* Localization.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
