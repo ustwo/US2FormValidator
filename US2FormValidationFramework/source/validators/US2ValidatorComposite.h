@@ -46,4 +46,9 @@
  */
 - (void) addValidator: (id<US2ValidatorProtocol>) validator;
 
+/**
+    Add validators from an array to collection of validators to check.
+ */
+- (void) addValidatorsFromArray: (NSArray *) validators;
+
 @end

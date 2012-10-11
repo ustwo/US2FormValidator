@@ -50,6 +50,10 @@
     [self.validators addObject: validator];
 }
 
+- (void) addValidatorsFromArray: (NSArray *) validators {
+    [self.validators addObjectsFromArray: validators];
+}
+
 #pragma mark - Condition check
 
 /**
