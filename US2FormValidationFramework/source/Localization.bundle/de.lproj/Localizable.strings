@@ -31,3 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Gültige URL im Format www.example.com eingeben";
 "US2KeyConditionViolationPasswordStrength"  = "Ein stärkeres Passwort wird benötigt";
 "US2KeyConditionViolationPostcodeUK"        = "Ungültige UK Postleitzahl";
+"US2KeyConditionViolationEmpty"             = "Geben Sie eine Zeichenfolge";
