@@ -97,6 +97,16 @@
 }
 
 /**
+ Initialize with a condition or variable-argument number of conditions.
+ */
+- (id) initWithCondition: (id<US2ConditionProtocol>) firstCondition, ...;
+
+/**
+ Initialize with an array of conditions.
+ */
+- (id) initWithConditions: (NSArray *) conditions;
+
+/**
  Set localized violation string for condition at a given index.  This allows overriding a conditions default localized violation string.
  */
 - (void) setLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index;

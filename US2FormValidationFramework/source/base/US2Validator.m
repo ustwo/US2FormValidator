@@ -44,6 +44,36 @@
     return self;
 }
 
+- (id) initWithCondition: (id<US2ConditionProtocol>) firstCondition, ... {
+    if (self = [self init]) {
+        [self addCondition: firstCondition];
+        
+        va_list args;
+        va_start(args, firstCondition);
+        
+        id<US2ConditionProtocol> condition = nil;
+        
+        while( (condition = va_arg( args, id<US2ConditionProtocol>)) != nil ) {
+            
+            [self addCondition: condition];
+        }
+
+        va_end(args);
+    }
+    
+    return self;
+}
+
+- (id) initWithConditions: (NSArray *) conditions {
+    if (self = [self init]) {
+        for (id<US2ConditionProtocol> condition in conditions) {
+            [self addCondition: condition];
+        }
+    }
+    
+    return self;
+}
+
 #pragma mark - Deinitialization
 
 - (void)dealloc

@@ -84,15 +84,17 @@
 		DE0794DA1626567D00841F88 /* US2Form.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794D81626567D00841F88 /* US2Form.m */; };
 		DE0794E21626585B00841F88 /* US2Validatable.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794E01626585900841F88 /* US2Validatable.h */; };
 		DE0794E31626585B00841F88 /* US2Validatable.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794E11626585A00841F88 /* US2Validatable.m */; };
-		DE0794F01626668700841F88 /* US2ValidatorOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794EE1626668300841F88 /* US2ValidatorOr.h */; };
-		DE0794F11626668700841F88 /* US2ValidatorOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794EF1626668500841F88 /* US2ValidatorOr.m */; };
-		DE0794F4162666A700841F88 /* US2ValidatorAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794F2162666A400841F88 /* US2ValidatorAnd.h */; };
-		DE0794F5162666A700841F88 /* US2ValidatorAnd.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794F3162666A500841F88 /* US2ValidatorAnd.m */; };
 		DE07950216266A6300841F88 /* US2ValidatorEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950016266A6000841F88 /* US2ValidatorEmpty.h */; };
 		DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950116266A6200841F88 /* US2ValidatorEmpty.m */; };
 		DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950416266A6D00841F88 /* US2ConditionEmpty.h */; };
 		DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950516266A6E00841F88 /* US2ConditionEmpty.m */; };
 		DE079539162755AC00841F88 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
+		DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953A162759E100841F88 /* US2ConditionOr.h */; };
+		DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953B162759E300841F88 /* US2ConditionOr.m */; };
+		DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953E162759F100841F88 /* US2ConditionAnd.h */; };
+		DE07954116275A0800841F88 /* US2ConditionAnd.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953F162759F700841F88 /* US2ConditionAnd.m */; };
+		DE2FAA6216275CBD007F2FE0 /* US2ConditionNot.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */; };
+		DE2FAA6316275CBD007F2FE0 /* US2ConditionNot.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */; };
 		F104D62014F36131000DFC40 /* US2ValidatorURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F104D61E14F36131000DFC40 /* US2ValidatorURL.h */; };
 		F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F104D61F14F36131000DFC40 /* US2ValidatorURL.m */; };
 		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
@@ -180,14 +182,16 @@
 		DE0794D81626567D00841F88 /* US2Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Form.m; sourceTree = "<group>"; };
 		DE0794E01626585900841F88 /* US2Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validatable.h; sourceTree = "<group>"; };
 		DE0794E11626585A00841F88 /* US2Validatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Validatable.m; sourceTree = "<group>"; };
-		DE0794EE1626668300841F88 /* US2ValidatorOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorOr.h; sourceTree = "<group>"; };
-		DE0794EF1626668500841F88 /* US2ValidatorOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorOr.m; sourceTree = "<group>"; };
-		DE0794F2162666A400841F88 /* US2ValidatorAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorAnd.h; sourceTree = "<group>"; };
-		DE0794F3162666A500841F88 /* US2ValidatorAnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorAnd.m; sourceTree = "<group>"; };
 		DE07950016266A6000841F88 /* US2ValidatorEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorEmpty.h; sourceTree = "<group>"; };
 		DE07950116266A6200841F88 /* US2ValidatorEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorEmpty.m; sourceTree = "<group>"; };
 		DE07950416266A6D00841F88 /* US2ConditionEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionEmpty.h; sourceTree = "<group>"; };
 		DE07950516266A6E00841F88 /* US2ConditionEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionEmpty.m; sourceTree = "<group>"; };
+		DE07953A162759E100841F88 /* US2ConditionOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionOr.h; sourceTree = "<group>"; };
+		DE07953B162759E300841F88 /* US2ConditionOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionOr.m; sourceTree = "<group>"; };
+		DE07953E162759F100841F88 /* US2ConditionAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAnd.h; sourceTree = "<group>"; };
+		DE07953F162759F700841F88 /* US2ConditionAnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionAnd.m; sourceTree = "<group>"; };
+		DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionNot.h; sourceTree = "<group>"; };
+		DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionNot.m; sourceTree = "<group>"; };
 		F104D61E14F36131000DFC40 /* US2ValidatorURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorURL.h; sourceTree = "<group>"; };
 		F104D61F14F36131000DFC40 /* US2ValidatorURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorURL.m; sourceTree = "<group>"; };
 		F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionURL.h; sourceTree = "<group>"; };
@@ -274,6 +278,12 @@
 				FAA9CDE61558802E00FFFDA4 /* US2ConditionPasswordStrength.m */,
 				DE07950416266A6D00841F88 /* US2ConditionEmpty.h */,
 				DE07950516266A6E00841F88 /* US2ConditionEmpty.m */,
+				DE07953A162759E100841F88 /* US2ConditionOr.h */,
+				DE07953B162759E300841F88 /* US2ConditionOr.m */,
+				DE07953E162759F100841F88 /* US2ConditionAnd.h */,
+				DE07953F162759F700841F88 /* US2ConditionAnd.m */,
+				DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */,
+				DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */,
 			);
 			path = conditions;
 			sourceTree = "<group>";
@@ -301,10 +311,6 @@
 				4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */,
 				DE079490162636D400841F88 /* US2ValidatorComposite.h */,
 				DE079491162636D400841F88 /* US2ValidatorComposite.m */,
-				DE0794EE1626668300841F88 /* US2ValidatorOr.h */,
-				DE0794EF1626668500841F88 /* US2ValidatorOr.m */,
-				DE0794F2162666A400841F88 /* US2ValidatorAnd.h */,
-				DE0794F3162666A500841F88 /* US2ValidatorAnd.m */,
 				DE07950016266A6000841F88 /* US2ValidatorEmpty.h */,
 				DE07950116266A6200841F88 /* US2ValidatorEmpty.m */,
 			);
@@ -406,10 +412,11 @@
 				DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */,
 				DE0794D91626567D00841F88 /* US2Form.h in Headers */,
 				DE0794E21626585B00841F88 /* US2Validatable.h in Headers */,
-				DE0794F01626668700841F88 /* US2ValidatorOr.h in Headers */,
-				DE0794F4162666A700841F88 /* US2ValidatorAnd.h in Headers */,
 				DE07950216266A6300841F88 /* US2ValidatorEmpty.h in Headers */,
 				DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */,
+				DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */,
+				DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */,
+				DE2FAA6216275CBD007F2FE0 /* US2ConditionNot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,10 +581,11 @@
 				DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */,
 				DE0794DA1626567D00841F88 /* US2Form.m in Sources */,
 				DE0794E31626585B00841F88 /* US2Validatable.m in Sources */,
-				DE0794F11626668700841F88 /* US2ValidatorOr.m in Sources */,
-				DE0794F5162666A700841F88 /* US2ValidatorAnd.m in Sources */,
 				DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */,
 				DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */,
+				DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */,
+				DE07954116275A0800841F88 /* US2ConditionAnd.m in Sources */,
+				DE2FAA6316275CBD007F2FE0 /* US2ConditionNot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

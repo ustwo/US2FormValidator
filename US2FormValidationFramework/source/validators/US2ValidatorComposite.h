@@ -2,6 +2,7 @@
 //  US2ValidatorComposite.h
 //  US2FormValidator
 //
+//  Created by Matthew Purland <m.purland@gmail.com>
 //  Copyright (C) 2012 ustwo™
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of

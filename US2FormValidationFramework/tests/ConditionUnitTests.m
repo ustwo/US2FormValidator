@@ -34,7 +34,9 @@
 #import "US2ConditionURL.h"
 #import "US2ConditionShorthandURL.h"
 #import "US2ConditionPostcodeUK.h"
-
+#import "US2ConditionOr.h"
+#import "US2ConditionAnd.h"
+#import "US2ConditionNot.h"
 
 @implementation ConditionUnitTests
 
@@ -346,6 +348,76 @@
     condition.localizedViolationString = customLocalizedViolationString;
     
     STAssertEqualObjects([condition localizedViolationString], customLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
+}
+
+/**
+ Test US2ConditionOr
+ */
+- (void) testUS2ConditionOr {
+    NSString *successTestString1 = @"";    
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
+    
+    US2ConditionOr *conditionOr = [[US2ConditionOr alloc] initWithConditionOne: conditionRange two: conditionAlphanumeric];
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);    
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    
+    // Test or condition
+    STAssertTrue([conditionOr check: failureTestString1], @"The US2ConditionOr should be true for alpha or range.", nil);
+}
+
+/**
+ Test US2ConditionAnd
+ */
+- (void) testUS2ConditionAnd {
+    NSString *successTestString1 = @"";
+    NSString *successTestString2 = @"1A23";
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
+    
+    US2ConditionAnd *conditionAnd = [[US2ConditionAnd alloc] initWithConditionOne: conditionRange two: conditionAlphanumeric];
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    
+    // Test or condition
+    STAssertTrue([conditionAnd check: successTestString1], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    STAssertTrue([conditionAnd check: successTestString2], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    STAssertFalse([conditionAnd check: failureTestString1], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    
+}
+
+/**
+ Test US2ConditionNot
+ */
+- (void) testUS2ConditionNot {
+    NSString *successTestString1 = @"";
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionNot *conditionNot = [[US2ConditionNot alloc] initWithCondition: conditionRange];
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    
+    // Test not condition
+    STAssertFalse([conditionNot check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertTrue([conditionNot check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  US2ValidatorEmpty.m
+//  US2ConditionNot.h
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
@@ -24,22 +24,21 @@
 //  SOFTWARE.
 //
 
-#import "US2ValidatorEmpty.h"
-#import "US2ConditionEmpty.h"
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
 
-@implementation US2ValidatorEmpty
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[[US2ConditionEmpty alloc] init] autorelease]];
-    }
+/**
+ A condition that returns the opposite of the original condition.
+ */
+@interface US2ConditionNot : US2Condition {
     
-    return self;
 }
+
+@property (retain, nonatomic) id<US2ConditionProtocol> condition;
+
+/**
+ Initialize with an initial condition to apply Not.
+ */
+- (id) initWithCondition: (id<US2ConditionProtocol>) originalCondition;
 
 @end

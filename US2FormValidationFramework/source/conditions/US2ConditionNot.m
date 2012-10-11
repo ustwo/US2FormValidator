@@ -1,5 +1,5 @@
 //
-//  US2ValidatorEmpty.m
+//  US2ConditionNot.m
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
@@ -24,22 +24,24 @@
 //  SOFTWARE.
 //
 
-#import "US2ValidatorEmpty.h"
-#import "US2ConditionEmpty.h"
+#import "US2ConditionNot.h"
 
-@implementation US2ValidatorEmpty
+@implementation US2ConditionNot
+@synthesize condition;
 
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[[US2ConditionEmpty alloc] init] autorelease]];
+- (id) initWithCondition: (id<US2ConditionProtocol>) originalCondition {
+    if (self = [super init]) {
+        self.condition = originalCondition;
     }
     
     return self;
+}
+
+- (BOOL)check:(NSString *)string
+{
+    BOOL result = [self.condition check: string];
+    
+    return !result;
 }
 
 @end

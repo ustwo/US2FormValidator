@@ -1,5 +1,5 @@
 //
-//  US2ValidatorEmpty.m
+//  US2ConditionOr.h
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
@@ -24,22 +24,26 @@
 //  SOFTWARE.
 //
 
-#import "US2ValidatorEmpty.h"
-#import "US2ConditionEmpty.h"
+#import <Foundation/Foundation.h>
+#import "US2Condition.h"
 
-@implementation US2ValidatorEmpty
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[[US2ConditionEmpty alloc] init] autorelease]];
-    }
-    
-    return self;
+/**
+ A condition that returns the result of either operands.
+ */
+@interface US2ConditionOr : US2Condition {
+    NSMutableArray *_conditions;
 }
+
+@property (retain, nonatomic) NSArray *conditions;
+
+/**
+ Initialize with an array of conditions.
+ */
+- (id) initWithConditions: (NSArray *) originalConditions;
+
+/**
+ Initialize with two conditions to Or.
+ */
+- (id) initWithConditionOne: (id<US2ConditionProtocol>) one two: (id<US2ConditionProtocol>) two;
 
 @end
