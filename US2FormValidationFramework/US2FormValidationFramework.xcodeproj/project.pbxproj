@@ -84,6 +84,10 @@
 		DE0794DA1626567D00841F88 /* US2Form.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794D81626567D00841F88 /* US2Form.m */; };
 		DE0794E21626585B00841F88 /* US2Validatable.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794E01626585900841F88 /* US2Validatable.h */; };
 		DE0794E31626585B00841F88 /* US2Validatable.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794E11626585A00841F88 /* US2Validatable.m */; };
+		DE0794F01626668700841F88 /* US2ValidatorOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794EE1626668300841F88 /* US2ValidatorOr.h */; };
+		DE0794F11626668700841F88 /* US2ValidatorOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794EF1626668500841F88 /* US2ValidatorOr.m */; };
+		DE0794F4162666A700841F88 /* US2ValidatorAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794F2162666A400841F88 /* US2ValidatorAnd.h */; };
+		DE0794F5162666A700841F88 /* US2ValidatorAnd.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794F3162666A500841F88 /* US2ValidatorAnd.m */; };
 		F104D62014F36131000DFC40 /* US2ValidatorURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F104D61E14F36131000DFC40 /* US2ValidatorURL.h */; };
 		F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F104D61F14F36131000DFC40 /* US2ValidatorURL.m */; };
 		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
@@ -171,6 +175,10 @@
 		DE0794D81626567D00841F88 /* US2Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Form.m; sourceTree = "<group>"; };
 		DE0794E01626585900841F88 /* US2Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validatable.h; sourceTree = "<group>"; };
 		DE0794E11626585A00841F88 /* US2Validatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Validatable.m; sourceTree = "<group>"; };
+		DE0794EE1626668300841F88 /* US2ValidatorOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorOr.h; sourceTree = "<group>"; };
+		DE0794EF1626668500841F88 /* US2ValidatorOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorOr.m; sourceTree = "<group>"; };
+		DE0794F2162666A400841F88 /* US2ValidatorAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorAnd.h; sourceTree = "<group>"; };
+		DE0794F3162666A500841F88 /* US2ValidatorAnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorAnd.m; sourceTree = "<group>"; };
 		F104D61E14F36131000DFC40 /* US2ValidatorURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorURL.h; sourceTree = "<group>"; };
 		F104D61F14F36131000DFC40 /* US2ValidatorURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorURL.m; sourceTree = "<group>"; };
 		F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionURL.h; sourceTree = "<group>"; };
@@ -282,6 +290,10 @@
 				4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */,
 				DE079490162636D400841F88 /* US2ValidatorComposite.h */,
 				DE079491162636D400841F88 /* US2ValidatorComposite.m */,
+				DE0794EE1626668300841F88 /* US2ValidatorOr.h */,
+				DE0794EF1626668500841F88 /* US2ValidatorOr.m */,
+				DE0794F2162666A400841F88 /* US2ValidatorAnd.h */,
+				DE0794F3162666A500841F88 /* US2ValidatorAnd.m */,
 			);
 			path = validators;
 			sourceTree = "<group>";
@@ -381,6 +393,8 @@
 				DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */,
 				DE0794D91626567D00841F88 /* US2Form.h in Headers */,
 				DE0794E21626585B00841F88 /* US2Validatable.h in Headers */,
+				DE0794F01626668700841F88 /* US2ValidatorOr.h in Headers */,
+				DE0794F4162666A700841F88 /* US2ValidatorAnd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +558,8 @@
 				DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */,
 				DE0794DA1626567D00841F88 /* US2Form.m in Sources */,
 				DE0794E31626585B00841F88 /* US2Validatable.m in Sources */,
+				DE0794F11626668700841F88 /* US2ValidatorOr.m in Sources */,
+				DE0794F5162666A700841F88 /* US2ValidatorAnd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
