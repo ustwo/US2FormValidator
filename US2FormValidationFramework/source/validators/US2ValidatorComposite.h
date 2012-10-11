@@ -37,6 +37,11 @@
 @property (strong, nonatomic) NSMutableArray *validators;
 
 /**
+    Initialize with an array of validators.
+ */
+- (id) initWithValidators: (NSArray *) validators;
+
+/**
     Add validator to collection of validators to check.
  */
 - (void) addValidator: (id<US2ValidatorProtocol>) validator;
