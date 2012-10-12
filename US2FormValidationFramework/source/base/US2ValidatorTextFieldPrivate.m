@@ -63,8 +63,9 @@
         [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
     
     // If condition is NULL no condition failed
-    if ((NO == _validatorTextField.shouldAllowViolations
-        || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
+    if (!_validatorTextField.validateOnFocusLossOnly
+        && (NO == _validatorTextField.shouldAllowViolations
+            || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
         && range.location != 0)
     {
         return [conditions conditionAtIndex:0] == nil;
