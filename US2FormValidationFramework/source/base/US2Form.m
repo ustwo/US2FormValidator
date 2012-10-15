@@ -26,6 +26,8 @@
 #import "US2Form.h"
 
 @implementation US2FormEntry
+@synthesize validatable;
+@synthesize validator;
 
 @end
 
@@ -33,17 +35,10 @@
 
 - (id) init {
     if (self = [super init]) {
-        _entries = [[NSMutableArray arrayWithCapacity:1] retain];
+        _entries = [[NSMutableArray alloc] initWithCapacity: 1];
     }
     
     return self;
-}
-
-- (void) dealloc {
-    [super dealloc];
-    
-    [_entries release];
-    _entries = nil;
 }
 
 - (id) initWithValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
