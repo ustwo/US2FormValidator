@@ -33,10 +33,17 @@
 
 - (id) init {
     if (self = [super init]) {
-        _entries = [NSMutableArray arrayWithCapacity: 1];
+        _entries = [[NSMutableArray arrayWithCapacity:1] retain];
     }
     
     return self;
+}
+
+- (void) dealloc {
+    [super dealloc];
+    
+    [_entries release];
+    _entries = nil;
 }
 
 - (id) initWithValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
