@@ -70,7 +70,7 @@
             US2ConditionCollection *checkedViolatedConditions = [validator checkConditions: string];
             if (checkedViolatedConditions != nil) {
                 if (violatedConditions == nil) {
-                    violatedConditions = [[US2ConditionCollection alloc] init];
+                    violatedConditions = [[[US2ConditionCollection alloc] init] autorelease];
                 }
                 for (id<US2ConditionProtocol> condition in checkedViolatedConditions) {
                     [violatedConditions addCondition: condition];
@@ -79,7 +79,7 @@
         }
     }
     
-    return [violatedConditions autorelease];
+    return violatedConditions;
 }
 
 @end

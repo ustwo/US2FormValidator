@@ -34,7 +34,7 @@
 #pragma mark - Init
 
 + (US2Condition *) condition {
-    return [[[self class] alloc] init];
+    return [[[[self class] alloc] init] autorelease];
 }
 
 - (id) initWithLocalizedViolationString: (NSString *) localizedViolationString {

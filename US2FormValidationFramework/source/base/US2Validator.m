@@ -31,7 +31,7 @@
 @implementation US2Validator
 
 + (US2Validator *) validator {
-    return [[[self class] alloc] init];
+    return [[[[self class] alloc] init] autorelease];
 }
 
 #pragma mark - Initialization
