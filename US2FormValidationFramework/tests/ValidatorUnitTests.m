@@ -86,6 +86,7 @@
     
     // Create string to test
     NSString *successTestString1 = @"abcdefgh";
+    NSString *successTestString2 = @"abc def gh";
     NSString *failureTestString1 = @"ab";
     NSString *failureTestString2 = @"12";
     
@@ -96,6 +97,16 @@
     [condition2 release];
     
     US2ConditionCollection *collection = nil;
+    
+    // Validate whitespace first
+    condition1.allowWhitespace = YES;
+    collection = [_validator checkConditions:successTestString2];
+    STAssertNil(collection, @"Collection must be nil", nil);
+    
+    collection = [_validator checkConditions:successTestString1];
+    STAssertNil(collection, @"Collection must be nil", nil);
+    condition1.allowWhitespace = NO;
+    
     collection = [_validator checkConditions:successTestString1];
     STAssertNil(collection, @"Collection must be nil", nil);
     

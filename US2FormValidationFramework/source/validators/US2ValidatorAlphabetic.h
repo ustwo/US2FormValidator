@@ -37,5 +37,7 @@
 {
 }
 
+@property (nonatomic) BOOL allowWhitespace;
+
 
 @end

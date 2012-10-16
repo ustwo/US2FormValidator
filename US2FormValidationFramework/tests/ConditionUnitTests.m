@@ -86,6 +86,7 @@
 - (void)testUS2ConditionAlphabetic
 {
     NSString *successTestString1 = @"abcdefgh";
+    NSString *successTestString2 = @"abcd efg h";
     NSString *failureTestString1 = @"12345678";
     NSString *failureTestString2 = @"a?";
     NSString *failureTestString3 = nil;
@@ -93,6 +94,11 @@
     US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
     
     STAssertTrue([condition check:successTestString1], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
+    
+    condition.allowWhitespace = YES;
+    STAssertTrue([condition check:successTestString1], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString2], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
+    condition.allowWhitespace = NO;
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);

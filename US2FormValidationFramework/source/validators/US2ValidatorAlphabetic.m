@@ -28,20 +28,24 @@
 
 
 @implementation US2ValidatorAlphabetic
-
+@dynamic allowWhitespace;
 
 #pragma mark - Initialization
 
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[[US2ConditionAlphabetic alloc] init] autorelease]];
+    if (self = [super initWithCondition: [[[US2ConditionAlphabetic alloc] init] autorelease]]) {
     }
-    
+        
     return self;
 }
 
+- (BOOL) allowWhitespace {
+    return [(US2ConditionAlphabetic *)[self condition] allowWhitespace];
+}
+
+- (void) setAllowWhitespace:(BOOL)allowWhitespace {
+    [(US2ConditionAlphabetic *)[self condition] setAllowWhitespace: allowWhitespace];
+}
 
 @end
