@@ -90,6 +90,7 @@
     NSString *failureTestString1 = @"12345678";
     NSString *failureTestString2 = @"a?";
     NSString *failureTestString3 = nil;
+    NSString *failureTestString4 = @"";
     
     US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
     
@@ -103,6 +104,7 @@
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString3], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString4], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     
     [condition release];
 }
