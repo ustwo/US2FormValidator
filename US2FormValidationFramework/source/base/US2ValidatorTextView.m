@@ -48,13 +48,21 @@
 
 - (id)init
 {
-	self = [super init];
-	if (self != nil)
+	self = [self initWithFrame: CGRectZero];
+	if (self)
 	{
-        [self _startUp];
 	}
     
 	return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame: frame];
+    if (self) {
+        [self _startUp];
+    }
+    
+    return self;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
