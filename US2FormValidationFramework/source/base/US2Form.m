@@ -41,6 +41,13 @@
     return self;
 }
 
+- (void) dealloc {
+    [_entries release];
+    _entries = nil;
+    
+    [super dealloc];
+}
+
 - (id) initWithValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
     if (self = [self init]) {
         [self addValidatable: validatable validator: validator];
