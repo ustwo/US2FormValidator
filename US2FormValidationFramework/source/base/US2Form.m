@@ -50,11 +50,17 @@
 }
 
 - (void) addValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
-    US2FormEntry *entry = [[US2FormEntry alloc] init];
-    [entry setValidatable: validatable];
-    [entry setValidator: validator];
-    [_entries addObject: entry];
-    [entry release];
+    if (validatable != nil && validator != nil) {
+        US2FormEntry *entry = [[US2FormEntry alloc] init];
+        [entry setValidatable: validatable];
+        [entry setValidator: validator];
+        [_entries addObject: entry];
+        [entry release];
+    }
+}
+
+- (void) addValidatable: (id<US2Validatable>) validatable {
+    [self addValidatable: validatable validator: [validatable validator]];
 }
 
 - (US2ConditionCollection *) checkConditions {

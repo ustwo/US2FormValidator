@@ -51,8 +51,15 @@
 - (void) addValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator;
 
 /**
+    Add a validatable to be validated.  The default validator for the validatable will be used as a validator.
+ */
+- (void) addValidatable: (id<US2Validatable>) validatable;
+
+/**
     Check conditions for all validatables.
  */
 - (US2ConditionCollection *) checkConditions;
+
+
 
 @end

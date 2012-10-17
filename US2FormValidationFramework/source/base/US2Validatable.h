@@ -25,11 +25,14 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol US2ValidatorProtocol;
+
 /**
  Protocol to control text for validation for controls other than UITextField/UITextView.
  */
 @protocol US2Validatable <NSObject>
 
 - (NSString *) validatableText;
+- (id<US2ValidatorProtocol>) validator;
 
 @end
