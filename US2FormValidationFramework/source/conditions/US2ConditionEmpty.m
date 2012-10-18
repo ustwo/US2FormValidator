@@ -28,8 +28,11 @@
 
 @implementation US2ConditionEmpty
 
-- (id) init {
-    if (self = [super init]) {
+- (id) init
+{
+    self = [super init];
+    if (self)
+    {
         self.allowsNull = YES;
     }
     

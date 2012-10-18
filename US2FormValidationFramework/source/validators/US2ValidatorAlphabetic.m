@@ -34,17 +34,21 @@
 
 - (id)init
 {
-    if (self = [super initWithCondition: [[[US2ConditionAlphabetic alloc] init] autorelease]]) {
+    self = [super initWithCondition: [[[US2ConditionAlphabetic alloc] init] autorelease]];
+    if (self)
+    {
     }
         
     return self;
 }
 
-- (BOOL) allowWhitespace {
+- (BOOL)allowWhitespace
+{
     return [(US2ConditionAlphabetic *)[self condition] allowWhitespace];
 }
 
-- (void) setAllowWhitespace:(BOOL)allowWhitespace {
+- (void)setAllowWhitespace:(BOOL)allowWhitespace
+{
     [(US2ConditionAlphabetic *)[self condition] setAllowWhitespace: allowWhitespace];
 }
 

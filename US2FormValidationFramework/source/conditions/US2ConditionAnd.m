@@ -27,19 +27,24 @@
 #import "US2ConditionAnd.h"
 
 @implementation US2ConditionAnd
-
 @synthesize conditions = _conditions;
 
-- (id) initWithConditions: (NSArray *) originalConditions {
-    if (self = [super init]) {
+- (id)initWithConditions:(NSArray *)originalConditions
+{
+    self = [super init];
+    if (self)
+    {
         self.conditions = [NSMutableArray arrayWithArray: originalConditions];
     }
     
     return self;
 }
 
-- (id) initWithConditionOne: (id<US2ConditionProtocol>) one two: (id<US2ConditionProtocol>) two {
-    if (self = [self initWithConditions: [NSArray arrayWithObjects: one, two, nil]]) {
+- (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two
+{
+    self = [self initWithConditions: [NSArray arrayWithObjects: one, two, nil]];
+    if (self)
+    {
         
     }
     
@@ -59,7 +64,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     return nil;
 }

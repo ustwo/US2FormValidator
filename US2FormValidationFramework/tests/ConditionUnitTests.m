@@ -361,7 +361,8 @@
 /**
  Test US2ConditionOr
  */
-- (void) testUS2ConditionOr {
+- (void)testUS2ConditionOr
+{
     NSString *successTestString1 = @"";    
     NSString *failureTestString1 = @"1A234";
     
@@ -387,7 +388,8 @@
 /**
  Test US2ConditionAnd
  */
-- (void) testUS2ConditionAnd {
+- (void)testUS2ConditionAnd
+{
     NSString *successTestString1 = @"";
     NSString *successTestString2 = @"1A23";
     NSString *failureTestString1 = @"1A234";
@@ -416,7 +418,8 @@
 /**
  Test US2ConditionNot
  */
-- (void) testUS2ConditionNot {
+- (void)testUS2ConditionNot
+{
     NSString *successTestString1 = @"";
     NSString *failureTestString1 = @"1A234";
     
@@ -442,7 +445,8 @@
 /**
  Test US2Condition condition
  */
-- (void) testUS2ConditionStatic {
+- (void)testUS2ConditionStatic
+{
     US2Condition *conditionRange = [US2ConditionRange condition];
     STAssertNotNil(conditionRange, @"Condition must not be nil.");
     STAssertTrue([conditionRange isKindOfClass: [US2ConditionRange class]], @"Must be correct class.", nil);

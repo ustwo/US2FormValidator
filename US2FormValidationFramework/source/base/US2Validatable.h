@@ -32,7 +32,7 @@
  */
 @protocol US2Validatable <NSObject>
 
-- (NSString *) validatableText;
-- (id<US2ValidatorProtocol>) validator;
+- (NSString *)validatableText;
+- (id<US2ValidatorProtocol>)validator;
 
 @end

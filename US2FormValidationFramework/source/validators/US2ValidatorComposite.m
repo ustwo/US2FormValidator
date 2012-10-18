@@ -31,27 +31,35 @@
 
 @synthesize validators = _validators;
 
-- (id) initWithValidators: (NSArray *) validators {
-    if (self = [super init]) {
+- (id)initWithValidators:(NSArray *)validators
+{
+    self = [super init];
+    if (self)
+    {
         self.validators = [NSMutableArray arrayWithArray: validators];
     }
     
     return self;
 }
 
-- (id) init {
-    if (self = [self initWithValidators: [NSArray array]]) {
+- (id)init
+{
+    self = [self initWithValidators: [NSArray array]];
+    if (self);
+    {
         
     }
     
     return self;
 }
 
-- (void) addValidator: (id<US2ValidatorProtocol>) validator {
+- (void)addValidator:(id<US2ValidatorProtocol>)validator
+{
     [self.validators addObject: validator];
 }
 
-- (void) addValidatorsFromArray: (NSArray *) validators {
+- (void)addValidatorsFromArray:(NSArray *)validators
+{
     [self.validators addObjectsFromArray: validators];
 }
 
@@ -65,14 +73,19 @@
     US2ConditionCollection *violatedConditions = [super checkConditions: string];
     
     // Check violated conditions of each composite validator
-    if (violatedConditions == nil) {
-        for (id<US2ValidatorProtocol> validator in _validators) {
+    if (violatedConditions == nil)
+    {
+        for (id<US2ValidatorProtocol> validator in _validators)
+        {
             US2ConditionCollection *checkedViolatedConditions = [validator checkConditions: string];
-            if (checkedViolatedConditions != nil) {
-                if (violatedConditions == nil) {
+            if (checkedViolatedConditions != nil)
+            {
+                if (violatedConditions == nil)
+                {
                     violatedConditions = [[[US2ConditionCollection alloc] init] autorelease];
                 }
-                for (id<US2ConditionProtocol> condition in checkedViolatedConditions) {
+                for (id<US2ConditionProtocol> condition in checkedViolatedConditions)
+                {
                     [violatedConditions addCondition: condition];
                 }
             }

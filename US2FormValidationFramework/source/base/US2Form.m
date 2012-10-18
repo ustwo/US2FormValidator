@@ -33,31 +33,38 @@
 
 @implementation US2Form
 
-- (id) init {
-    if (self = [super init]) {
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
         _entries = [[NSMutableArray alloc] initWithCapacity: 1];
     }
     
     return self;
 }
 
-- (void) dealloc {
+- (void)dealloc
+{
     [_entries release];
     _entries = nil;
     
     [super dealloc];
 }
 
-- (id) initWithValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
-    if (self = [self init]) {
+- (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator {
+    self = [self init];
+    if (self) {
         [self addValidatable: validatable validator: validator];
     }
     
     return self;
 }
 
-- (void) addValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator {
-    if (validatable != nil && validator != nil) {
+- (void)addValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
+{
+    if (validatable != nil && validator != nil)
+    {
         US2FormEntry *entry = [[US2FormEntry alloc] init];
         [entry setValidatable: validatable];
         [entry setValidator: validator];
@@ -66,18 +73,23 @@
     }
 }
 
-- (void) addValidatable: (id<US2Validatable>) validatable {
+- (void)addValidatable:(id<US2Validatable>)validatable
+{
     [self addValidatable: validatable validator: [validatable validator]];
 }
 
-- (US2ConditionCollection *) checkConditions {
+- (US2ConditionCollection *)checkConditions
+{
     US2ConditionCollection *conditions = nil;
-    for (US2FormEntry *entry in _entries) {
+    for (US2FormEntry *entry in _entries)
+    {
         US2ConditionCollection *entryConditions = [entry.validator checkConditions: [entry.validatable validatableText]];
-        if (entryConditions && conditions == nil) {
+        if (entryConditions && conditions == nil)
+        {
             conditions = [[US2ConditionCollection alloc] init];
         }
-        for (id<US2ConditionProtocol> condition in entryConditions) {
+        for (id<US2ConditionProtocol> condition in entryConditions)
+        {
             [conditions addCondition: condition];
         }
     }

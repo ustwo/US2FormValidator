@@ -38,7 +38,8 @@
     
     NSString *pattern = REGEX_PATTERN;
     
-    if (self.allowWhitespace) {
+    if (self.allowWhitespace)
+    {
         pattern = REGEX_PATTERN_WHITESPACE;
     }
     
@@ -60,7 +61,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     NSString *key = @"US2KeyConditionViolationAlphabetic";
     

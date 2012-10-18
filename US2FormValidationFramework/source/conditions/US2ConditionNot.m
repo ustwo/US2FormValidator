@@ -29,8 +29,11 @@
 @implementation US2ConditionNot
 @synthesize condition;
 
-- (id) initWithCondition: (id<US2ConditionProtocol>) originalCondition {
-    if (self = [super init]) {
+- (id)initWithCondition:(id<US2ConditionProtocol>)originalCondition
+{
+    self = [super init];
+    if (self)
+    {
         self.condition = originalCondition;
     }
     
@@ -46,7 +49,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     return nil;
 }

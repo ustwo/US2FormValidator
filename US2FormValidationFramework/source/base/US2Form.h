@@ -40,7 +40,8 @@
 /**
     A form to assist in validating a validatable objects current state.
  */
-@interface US2Form : NSObject {
+@interface US2Form : NSObject
+{
 @private
     NSMutableArray *_entries;
 }
@@ -48,17 +49,17 @@
 /**
     Add a validatable to be validated with the given validator. 
  */
-- (void) addValidatable: (id<US2Validatable>) validatable validator: (id<US2ValidatorProtocol>) validator;
+- (void)addValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator;
 
 /**
     Add a validatable to be validated.  The default validator for the validatable will be used as a validator.
  */
-- (void) addValidatable: (id<US2Validatable>) validatable;
+- (void)addValidatable:(id<US2Validatable>)validatable;
 
 /**
     Check conditions for all validatables.
  */
-- (US2ConditionCollection *) checkConditions;
+- (US2ConditionCollection *)checkConditions;
 
 
 

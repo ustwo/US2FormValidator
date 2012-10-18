@@ -31,7 +31,8 @@
 /**
  A condition that returns the result of either operands.
  */
-@interface US2ConditionAnd : US2Condition {
+@interface US2ConditionAnd : US2Condition
+{
     NSMutableArray *_conditions;
 }
 
@@ -40,11 +41,11 @@
 /**
  Initialize with an array of conditions.
  */
-- (id) initWithConditions: (NSArray *) originalConditions;
+- (id)initWithConditions:(NSArray *)originalConditions;
 
 /**
  Initialize with two conditions to And.
  */
-- (id) initWithConditionOne: (id<US2ConditionProtocol>) one two: (id<US2ConditionProtocol>) two;
+- (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two;
 
 @end

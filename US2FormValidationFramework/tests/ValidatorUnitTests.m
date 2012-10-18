@@ -121,7 +121,8 @@
  Test US2ValidatorComposite class.
  */
 
-- (void) testValidatorComposite {
+- (void)testValidatorComposite
+{
     US2ValidatorComposite *validatorComposite = [[US2ValidatorComposite alloc] init];
     
     // Test for existing validator
@@ -160,7 +161,8 @@
 /**
     Test US2Form class.
  */
-- (void) testForm {
+- (void)testForm
+{
     US2Form *form = [[US2Form alloc] init];
     
     // Test for existing form
@@ -246,7 +248,8 @@
 /**
  Test US2Validator validator
  */
-- (void) testUS2ValidatorStatic {
+- (void)testUS2ValidatorStatic
+{
     US2Validator *validator = [US2ValidatorAlphabetic validator];
     STAssertNotNil(validator, @"Validator must not be nil.");
     STAssertTrue([validator isKindOfClass: [US2Validator class]], @"Must be correct class.", nil);

@@ -40,16 +40,16 @@
 /**
     Initialize with an array of validators.
  */
-- (id) initWithValidators: (NSArray *) validators;
+- (id)initWithValidators:(NSArray *)validators;
 
 /**
     Add validator to collection of validators to check.
  */
-- (void) addValidator: (id<US2ValidatorProtocol>) validator;
+- (void)addValidator:(id<US2ValidatorProtocol>)validator;
 
 /**
     Add validators from an array to collection of validators to check.
  */
-- (void) addValidatorsFromArray: (NSArray *) validators;
+- (void)addValidatorsFromArray:(NSArray *)validators;
 
 @end

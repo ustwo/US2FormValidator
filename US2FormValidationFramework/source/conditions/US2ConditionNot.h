@@ -30,7 +30,8 @@
 /**
  A condition that returns the opposite of the original condition.
  */
-@interface US2ConditionNot : US2Condition {
+@interface US2ConditionNot : US2Condition
+{
     
 }
 
@@ -39,6 +40,6 @@
 /**
  Initialize with an initial condition to apply Not.
  */
-- (id) initWithCondition: (id<US2ConditionProtocol>) originalCondition;
+- (id)initWithCondition:(id<US2ConditionProtocol>)originalCondition;
 
 @end
