@@ -34,7 +34,7 @@
 
 - (id)init
 {
-    self = [super initWithCondition: [[[US2ConditionAlphabetic alloc] init] autorelease]];
+    self = [super initWithCondition:[[[US2ConditionAlphabetic alloc] init] autorelease]];
     if (self)
     {
     }
@@ -49,7 +49,7 @@
 
 - (void)setAllowWhitespace:(BOOL)allowWhitespace
 {
-    [(US2ConditionAlphabetic *)[self condition] setAllowWhitespace: allowWhitespace];
+    [(US2ConditionAlphabetic *)[self condition] setAllowWhitespace:allowWhitespace];
 }
 
 @end
