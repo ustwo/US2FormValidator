@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionAlphabetic</TokenIdentifier>
-			<Abstract>The US2ConditionAlphabetic checks a string for occurrences of letters.</Abstract>
+			<Abstract type="html">The US2ConditionAlphabetic checks a string for occurrences of letters.</Abstract>
 			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
 			
 			<NodeRef refid="2"/>

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2Validator</TokenIdentifier>
-			<Abstract>US2Validator is a holder for conditions of type US2Condition in a US2ConditionCollection.
+			<Abstract type="html">US2Validator is a holder for conditions of type US2Condition in a US2ConditionCollection.
 The validator checks for violation of each condition. Returned will be a collection of
 violated conditions or nil if the string to check is correct or no condition was added.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>
@@ -15,14 +15,14 @@ violated conditions or nil if the string to check is correct or no condition was
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/US2Validator/addCondition:</TokenIdentifier>
-			<Abstract>Add condition conform to US2ConditionProtocol</Abstract>
+			<Abstract type="html">Add condition conform to US2ConditionProtocol</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>condition</Name>
-					<Abstract>Condition conform to US2ConditionProtocol</Abstract>
+					<Abstract type="html">Condition conform to US2ConditionProtocol</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -31,14 +31,14 @@ violated conditions or nil if the string to check is correct or no condition was
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/US2Validator/removeConditionOfClass:</TokenIdentifier>
-			<Abstract>Remove all conditions subclassing conditionClass from validation queue.</Abstract>
+			<Abstract type="html">Remove all conditions subclassing conditionClass from validation queue.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (void)removeConditionOfClass:(Class&lt;US2ConditionProtocol&gt;)conditionClass</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>conditionClass</Name>
-					<Abstract>Remove all conditions which are kind of conditionClass</Abstract>
+					<Abstract type="html">Remove all conditions which are kind of conditionClass</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -47,17 +47,17 @@ violated conditions or nil if the string to check is correct or no condition was
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/US2Validator/checkConditions:</TokenIdentifier>
-			<Abstract>Add condition subclass of US2Condition for validation queue.</Abstract>
+			<Abstract type="html">Add condition subclass of US2Condition for validation queue.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (US2ConditionCollection *)checkConditions:(NSString *)string</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>string</Name>
-					<Abstract>String to check for all added conditons</Abstract>
+					<Abstract type="html">String to check for all added conditons</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract>Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
 			<Anchor>//api/name/checkConditions:</Anchor>
 		</Token>
 		

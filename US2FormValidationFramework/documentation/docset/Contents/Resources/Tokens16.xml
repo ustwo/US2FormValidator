@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorNumeric</TokenIdentifier>
-			<Abstract>The number validator checks for number string.</Abstract>
+			<Abstract type="html">The number validator checks for number string.</Abstract>
 			<DeclaredIn>US2ValidatorNumeric.h</DeclaredIn>
 			
 			<NodeRef refid="16"/>

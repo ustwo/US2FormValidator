@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextViewPrivate</TokenIdentifier>
-			<Abstract>US2ValidatorTextViewPrivate is a private class within US2ValidatorTextView
+			<Abstract type="html">US2ValidatorTextViewPrivate is a private class within US2ValidatorTextView
 and calls the set validator. The result of the validator will be checked and
 forwarded to the origin delegate and US2ValidatorTextView.
 This private class is needed because the US2ValidatorTextView should not listen
@@ -16,8 +16,8 @@ for itself.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextViewPrivate/delegate</TokenIdentifier>
-			<Abstract>Origin delegate which was set through US2ValidatorTextView and will
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/setDelegate:</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextView and will
 be served by this private class US2ValidatorTextViewPrivate.</Abstract>
 			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>			
 			
@@ -28,8 +28,33 @@ be served by this private class US2ValidatorTextViewPrivate.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextViewPrivate/delegate</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextView and will
+be served by this private class US2ValidatorTextViewPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/setValidatorTextView:</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextViewPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) US2ValidatorTextView *validatorTextView</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextView</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextViewPrivate/validatorTextView</TokenIdentifier>
-			<Abstract>Represents the main validation text field which wants to know what went
+			<Abstract type="html">Represents the main validation text field which wants to know what went
 wrong when validating in this private class US2ValidatorTextViewPrivate.
 Thus the validation text field is able to change its appearance e.g..</Abstract>
 			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>			

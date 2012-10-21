@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorShorthandURL</TokenIdentifier>
-			<Abstract>The URL validator contains a URL condition (see US2ConditionShorthandURL.
+			<Abstract type="html">The URL validator contains a URL condition (see US2ConditionShorthandURL.
 A valid string does only contain a valid URL</Abstract>
 			<DeclaredIn>US2ValidatorShorthandURL.h</DeclaredIn>
 			
