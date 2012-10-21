@@ -36,7 +36,7 @@
     self = [super init];
     if (self)
     {
-        self.validators = [NSMutableArray arrayWithArray: validators];
+        self.validators = [NSMutableArray arrayWithArray:validators];
     }
     
     return self;
@@ -44,23 +44,18 @@
 
 - (id)init
 {
-    self = [self initWithValidators: [NSArray array]];
-    if (self);
-    {
-        
-    }
-    
+    self = [self initWithValidators:[NSArray array]];
     return self;
 }
 
 - (void)addValidator:(id<US2ValidatorProtocol>)validator
 {
-    [self.validators addObject: validator];
+    [self.validators addObject:validator];
 }
 
 - (void)addValidatorsFromArray:(NSArray *)validators
 {
-    [self.validators addObjectsFromArray: validators];
+    [self.validators addObjectsFromArray:validators];
 }
 
 #pragma mark - Condition check
@@ -77,7 +72,7 @@
     {
         for (id<US2ValidatorProtocol> validator in _validators)
         {
-            US2ConditionCollection *checkedViolatedConditions = [validator checkConditions: string];
+            US2ConditionCollection *checkedViolatedConditions = [validator checkConditions:string];
             if (checkedViolatedConditions != nil)
             {
                 if (violatedConditions == nil)
@@ -86,7 +81,7 @@
                 }
                 for (id<US2ConditionProtocol> condition in checkedViolatedConditions)
                 {
-                    [violatedConditions addCondition: condition];
+                    [violatedConditions addCondition:condition];
                 }
             }
         }

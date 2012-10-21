@@ -42,7 +42,7 @@
 
 - (BOOL)check:(NSString *)string
 {
-    BOOL result = [self.condition check: string];
+    BOOL result = [self.condition check:string];
     
     return !result;
 }
