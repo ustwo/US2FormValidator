@@ -100,7 +100,7 @@
     [description appendString:@"<"];
     [description appendString:[super description]];
     [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];
-    [description appendString:[NSString stringWithFormat:@"\n <shouldAllowViolation: %@>", _shouldAllowViolation == 0 ? @"YES" : @"NO"]];
+    [description appendString:[NSString stringWithFormat:@"\n <shouldAllowViolation: %@>", _shouldAllowViolation == 0 ? @"NO" : @"YES"]];
     [description appendString:@">"];
     
     return description;
