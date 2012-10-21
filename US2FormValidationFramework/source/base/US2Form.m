@@ -38,7 +38,7 @@
     self = [super init];
     if (self)
     {
-        _entries = [[NSMutableArray alloc] initWithCapacity: 1];
+        _entries = [[NSMutableArray alloc] initWithCapacity:1];
     }
     
     return self;
@@ -52,10 +52,12 @@
     [super dealloc];
 }
 
-- (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator {
+- (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
+{
     self = [self init];
-    if (self) {
-        [self addValidatable: validatable validator: validator];
+    if (self)
+    {
+        [self addValidatable:validatable validator: validator];
     }
     
     return self;
@@ -66,16 +68,16 @@
     if (validatable != nil && validator != nil)
     {
         US2FormEntry *entry = [[US2FormEntry alloc] init];
-        [entry setValidatable: validatable];
-        [entry setValidator: validator];
-        [_entries addObject: entry];
+        [entry setValidatable:validatable];
+        [entry setValidator:validator];
+        [_entries addObject:entry];
         [entry release];
     }
 }
 
 - (void)addValidatable:(id<US2Validatable>)validatable
 {
-    [self addValidatable: validatable validator: [validatable validator]];
+    [self addValidatable:validatable validator:[validatable validator]];
 }
 
 - (US2ConditionCollection *)checkConditions
@@ -83,7 +85,7 @@
     US2ConditionCollection *conditions = nil;
     for (US2FormEntry *entry in _entries)
     {
-        US2ConditionCollection *entryConditions = [entry.validator checkConditions: [entry.validatable validatableText]];
+        US2ConditionCollection *entryConditions = [entry.validator checkConditions:[entry.validatable validatableText]];
         if (entryConditions && conditions == nil)
         {
             conditions = [[US2ConditionCollection alloc] init];
