@@ -28,7 +28,7 @@
 
 @implementation US2ConditionEmpty
 
-- (id) init
+- (id)init
 {
     self = [super init];
     if (self)
@@ -62,7 +62,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     NSString *key = @"US2KeyConditionViolationEmpty";
     
