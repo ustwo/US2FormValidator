@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionPasswordStrength</TokenIdentifier>
-			<Abstract>The US2ConditionPasswordStrength checks for the strength of a password string.</Abstract>
+			<Abstract type="html">The US2ConditionPasswordStrength checks for the strength of a password string.</Abstract>
 			<DeclaredIn>US2ConditionPasswordStrength.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
@@ -12,8 +12,19 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPasswordStrength/setRequiredStrength:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ConditionPasswordStrength.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPasswordStrength/requiredStrength</TokenIdentifier>
-			<Abstract></Abstract>
+			<Abstract type="html"></Abstract>
 			<DeclaredIn>US2ConditionPasswordStrength.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) US2PasswordStrength requiredStrength</Declaration>

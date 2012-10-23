@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionEmail</TokenIdentifier>
-			<Abstract>The US2ConditionEmail checks a string for an email.</Abstract>
+			<Abstract type="html">The US2ConditionEmail checks a string for an email.</Abstract>
 			<DeclaredIn>US2ConditionEmail.h</DeclaredIn>
 			
 			<NodeRef refid="5"/>

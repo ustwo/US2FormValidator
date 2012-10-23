@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorEmail</TokenIdentifier>
-			<Abstract>The email validator checks for email in a string.</Abstract>
+			<Abstract type="html">The email validator checks for email in a string.</Abstract>
 			<DeclaredIn>US2ValidatorEmail.h</DeclaredIn>
 			
 			<NodeRef refid="15"/>

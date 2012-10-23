@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorTextViewPrivateDelegate</TokenIdentifier>
-			<Abstract>A private delegate protocol which is used by class US2ValidatorTextView and served by internal
+			<Abstract type="html">A private delegate protocol which is used by class US2ValidatorTextView and served by internal
 class US2ValidatorTextViewPrivate</Abstract>
 			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>
 			
@@ -14,17 +14,17 @@ class US2ValidatorTextViewPrivate</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextViewPrivateDelegate/validatorTextViewDelegate:violatedConditions:</TokenIdentifier>
-			<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
 			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>			
 			
 			<Declaration>- (void)validatorTextViewDelegate:(US2ValidatorTextViewPrivate *)textViewPrivate violatedConditions:(US2ConditionCollection *)conditions</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>textViewPrivate</Name>
-					<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
 				</Parameter><Parameter>
 					<Name>conditions</Name>
-					<Abstract>Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
+					<Abstract type="html">Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -33,14 +33,14 @@ class US2ValidatorTextViewPrivate</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextViewPrivateDelegate/validatorTextViewDelegateSuccededConditions:</TokenIdentifier>
-			<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
 			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>			
 			
 			<Declaration>- (void)validatorTextViewDelegateSuccededConditions:(US2ValidatorTextViewPrivate *)textViewPrivate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>textViewPrivate</Name>
-					<Abstract>Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
 				</Parameter>
 			</Parameters>
 			

@@ -66,19 +66,9 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
-{
-    NSString *key = @"US2KeyConditionViolationRange";
-    
-    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource: @"Localization" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    if (bundle)
-    {
-        return [NSString stringWithFormat:[bundle localizedStringForKey:key value:key table:nil], _range.location, _range.length];
-    }
-    
-    return nil;
+- (NSString *)createLocalizedViolationString
+{    
+    return  [NSString stringWithFormat:NSLocalizedString(@"US2KeyConditionViolationRange", nil),_range.location,_range.length];
 }
 
 

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorRange</TokenIdentifier>
-			<Abstract>The range validator checks for string length.</Abstract>
+			<Abstract type="html">The range validator checks for string length.</Abstract>
 			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
 			<NodeRef refid="19"/>
@@ -12,8 +12,19 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorRange/setRange:</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			
+			
+			<Anchor>//api/name/range</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorRange/range</TokenIdentifier>
-			<Abstract>The range to check for.</Abstract>
+			<Abstract type="html">The range to check for.</Abstract>
 			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>

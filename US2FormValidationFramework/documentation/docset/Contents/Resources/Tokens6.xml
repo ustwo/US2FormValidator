@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionNumeric</TokenIdentifier>
-			<Abstract>The US2ConditionNumeric checks a string for numbers.</Abstract>
+			<Abstract type="html">The US2ConditionNumeric checks a string for numbers.</Abstract>
 			<DeclaredIn>US2ConditionNumeric.h</DeclaredIn>
 			
 			<NodeRef refid="6"/>

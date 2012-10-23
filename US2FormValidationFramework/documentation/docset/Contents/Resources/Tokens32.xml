@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorUIProtocol</TokenIdentifier>
-			<Abstract>A text user interface element must conform to US2ValidatorUIProtocol protocol methods.
+			<Abstract type="html">A text user interface element must conform to US2ValidatorUIProtocol protocol methods.
 At the moment the framework supports UITextField and UITextView by using US2ValidatorTextField
 and US2ValidatorTextView.</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>
@@ -15,14 +15,14 @@ and US2ValidatorTextView.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidatorUIDelegate:</TokenIdentifier>
-			<Abstract>The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
+			<Abstract type="html">The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (void)setValidatorUIDelegate:(id&lt;US2ValidatorUIDelegate&gt;)validatorUIDelegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>validatorUIDelegate</Name>
-					<Abstract>The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
+					<Abstract type="html">The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -31,25 +31,25 @@ and US2ValidatorTextView.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validatorUIDelegate</TokenIdentifier>
-			<Abstract>Return the delegate</Abstract>
+			<Abstract type="html">Return the delegate</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (id&lt;US2ValidatorUIDelegate&gt;)validatorUIDelegate</Declaration>
 			
-			<ReturnValue><Abstract>Returns the validator UI delegate</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns the validator UI delegate</Abstract></ReturnValue>
 			<Anchor>//api/name/validatorUIDelegate</Anchor>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidator:</TokenIdentifier>
-			<Abstract>Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
+			<Abstract type="html">Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (void)setValidator:(US2Validator *)validator</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>validator</Name>
-					<Abstract>Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
+					<Abstract type="html">Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -58,7 +58,7 @@ and US2ValidatorTextView.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validator</TokenIdentifier>
-			<Abstract>Set validator</Abstract>
+			<Abstract type="html">Set validator</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (US2Validator *)validator</Declaration>
@@ -69,9 +69,9 @@ and US2ValidatorTextView.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setShouldAllowViolations:</TokenIdentifier>
-			<Abstract>Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the 'shouldAllowViolation' parameter of
-the conditions added to the validator. If set to YES the 'shouldAllowViolation'
+			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
+Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
+the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
 parameters of the conditions considered.</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
@@ -79,7 +79,7 @@ parameters of the conditions considered.</Abstract>
 			<Parameters>
 				<Parameter>
 					<Name>shouldAllowViolation</Name>
-					<Abstract>Boolean value</Abstract>
+					<Abstract type="html">Boolean value</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -88,7 +88,7 @@ parameters of the conditions considered.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/shouldAllowViolations</TokenIdentifier>
-			<Abstract>Set boolean value</Abstract>
+			<Abstract type="html">Set boolean value</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)shouldAllowViolations</Declaration>
@@ -99,18 +99,18 @@ parameters of the conditions considered.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/isValid</TokenIdentifier>
-			<Abstract>Return whether the text is valid.</Abstract>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)isValid</Declaration>
 			
-			<ReturnValue><Abstract>Returns the valid state of the text field</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
 			<Anchor>//api/name/isValid</Anchor>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidateOnFocusLossOnly:</TokenIdentifier>
-			<Abstract>Determines whether the text has to be validated after leaving the text field
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
 or while editing. After a violation appeared after leaving the text field
 the text field will from now on validate while editing. Because the user
 knows now that a violation occurrs when using this text field.</Abstract>
@@ -120,7 +120,7 @@ knows now that a violation occurrs when using this text field.</Abstract>
 			<Parameters>
 				<Parameter>
 					<Name>validateOnFocusLossOnly</Name>
-					<Abstract>Boolean value</Abstract>
+					<Abstract type="html">Boolean value</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -129,7 +129,7 @@ knows now that a violation occurrs when using this text field.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validateOnFocusLossOnly</TokenIdentifier>
-			<Abstract>Set boolean value</Abstract>
+			<Abstract type="html">Set boolean value</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (BOOL)validateOnFocusLossOnly</Declaration>
@@ -140,14 +140,14 @@ knows now that a violation occurrs when using this text field.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setText:</TokenIdentifier>
-			<Abstract>String to set as text to text UI</Abstract>
+			<Abstract type="html">String to set as text to text UI</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (void)setText:(NSString *)text</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>text</Name>
-					<Abstract>String to set as text to text UI</Abstract>
+					<Abstract type="html">String to set as text to text UI</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -156,7 +156,7 @@ knows now that a violation occurrs when using this text field.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/text</TokenIdentifier>
-			<Abstract>Set string value</Abstract>
+			<Abstract type="html">Set string value</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)text</Declaration>
@@ -167,14 +167,14 @@ knows now that a violation occurrs when using this text field.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setFrame:</TokenIdentifier>
-			<Abstract>Boundary to set as frame to text UI</Abstract>
+			<Abstract type="html">Boundary to set as frame to text UI</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (void)setFrame:(CGRect)frame</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>frame</Name>
-					<Abstract>Boundary to set as frame to text UI</Abstract>
+					<Abstract type="html">Boundary to set as frame to text UI</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -183,7 +183,7 @@ knows now that a violation occurrs when using this text field.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/frame</TokenIdentifier>
-			<Abstract>Set CGRect value</Abstract>
+			<Abstract type="html">Set CGRect value</Abstract>
 			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
 			
 			<Declaration>- (CGRect)frame</Declaration>

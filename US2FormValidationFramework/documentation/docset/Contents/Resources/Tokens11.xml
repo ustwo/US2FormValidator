@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionURL</TokenIdentifier>
-			<Abstract>The US2ConditionURL checks a string for a valid URL like
+			<Abstract type="html">The US2ConditionURL checks a string for a valid URL like
 http://www.example.com
 https://www.example.com
 http://example.com</Abstract>

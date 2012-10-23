@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorProtocol</TokenIdentifier>
-			<Abstract>A validator must conform to US2ValidatorProtocol protocol methods.</Abstract>
+			<Abstract type="html">A validator must conform to US2ValidatorProtocol protocol methods.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>
 			
 			<NodeRef refid="28"/>
@@ -13,14 +13,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/addCondition:</TokenIdentifier>
-			<Abstract>Add condition conform to US2ConditionProtocol</Abstract>
+			<Abstract type="html">Add condition conform to US2ConditionProtocol</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>condition</Name>
-					<Abstract>Condition conform to US2ConditionProtocol</Abstract>
+					<Abstract type="html">Condition conform to US2ConditionProtocol</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -29,14 +29,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/removeConditionOfClass:</TokenIdentifier>
-			<Abstract>Remove all conditions subclassing conditionClass from validation queue.</Abstract>
+			<Abstract type="html">Remove all conditions subclassing conditionClass from validation queue.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (void)removeConditionOfClass:(Class&lt;US2ConditionProtocol&gt;)conditionClass</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>conditionClass</Name>
-					<Abstract>Remove all conditions which are kind of conditionClass</Abstract>
+					<Abstract type="html">Remove all conditions which are kind of conditionClass</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -45,17 +45,17 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/checkConditions:</TokenIdentifier>
-			<Abstract>Add condition subclass of US2Condition for validation queue.</Abstract>
+			<Abstract type="html">Add condition subclass of US2Condition for validation queue.</Abstract>
 			<DeclaredIn>US2Validator.h</DeclaredIn>			
 			
 			<Declaration>- (US2ConditionCollection *)checkConditions:(NSString *)string</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>string</Name>
-					<Abstract>String to check for all added conditons</Abstract>
+					<Abstract type="html">String to check for all added conditons</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract>Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
 			<Anchor>//api/name/checkConditions:</Anchor>
 		</Token>
 		

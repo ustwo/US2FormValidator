@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intf/US2ConditionCollectionProtocol</TokenIdentifier>
-			<Abstract>A condition collection must conform to US2ConditionCollection protocol methods.</Abstract>
+			<Abstract type="html">A condition collection must conform to US2ConditionCollection protocol methods.</Abstract>
 			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
 			
 			<NodeRef refid="26"/>
@@ -13,14 +13,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/addCondition:</TokenIdentifier>
-			<Abstract>Add a condition to collection.</Abstract>
+			<Abstract type="html">Add a condition to collection.</Abstract>
 			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
 			
 			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>condition</Name>
-					<Abstract>US2Condition instance to add</Abstract>
+					<Abstract type="html">US2Condition instance to add</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -29,14 +29,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeCondition:</TokenIdentifier>
-			<Abstract>Remove a condition from collection.</Abstract>
+			<Abstract type="html">Remove a condition from collection.</Abstract>
 			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
 			
 			<Declaration>- (void)removeCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>condition</Name>
-					<Abstract>US2Condition instance to remove</Abstract>
+					<Abstract type="html">US2Condition instance to remove</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -45,14 +45,14 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeConditionAtIndex:</TokenIdentifier>
-			<Abstract>Remove a condition from collection at index.</Abstract>
+			<Abstract type="html">Remove a condition from collection at index.</Abstract>
 			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
 			
 			<Declaration>- (void)removeConditionAtIndex:(NSUInteger)index</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>index</Name>
-					<Abstract>US2Condition instance to remove at index</Abstract>
+					<Abstract type="html">US2Condition instance to remove at index</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -61,17 +61,17 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/conditionAtIndex:</TokenIdentifier>
-			<Abstract>Returns a condition of collection at index.</Abstract>
+			<Abstract type="html">Returns a condition of collection at index.</Abstract>
 			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
 			
 			<Declaration>- (US2Condition *)conditionAtIndex:(NSUInteger)index</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>index</Name>
-					<Abstract>Index of condition</Abstract>
+					<Abstract type="html">Index of condition</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract>Return US2Condition instance at index</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Return US2Condition instance at index</Abstract></ReturnValue>
 			<Anchor>//api/name/conditionAtIndex:</Anchor>
 		</Token>
 		

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2Condition</TokenIdentifier>
-			<Abstract>A condition is the smallest sub element of the validation framework.
+			<Abstract type="html">A condition is the smallest sub element of the validation framework.
 It tells how a string must be structured or wat is has to contain or not.
 Validators (see US2Validator are storing those conditions and checking
 for violations of every condition.
@@ -17,8 +17,19 @@ their custom checking code for detecting violations in the string to check.</Abs
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/setShouldAllowViolation:</TokenIdentifier>
+			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolation</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAllowViolation</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2Condition/shouldAllowViolation</TokenIdentifier>
-			<Abstract>If set to NO the user is not able to enter characters which would break the condition.</Abstract>
+			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.</Abstract>
 			<DeclaredIn>US2Condition.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolation</Declaration>

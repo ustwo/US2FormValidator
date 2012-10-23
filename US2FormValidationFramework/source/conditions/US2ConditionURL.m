@@ -56,17 +56,7 @@
 
 - (NSString *) createLocalizedViolationString
 {
-    NSString *key = @"US2KeyConditionViolationURL";
-    
-    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource: @"Localization" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    if (bundle)
-    {
-        return [bundle localizedStringForKey:key value:key table:nil];
-    }
-    
-    return nil;
+    return NSLocalizedString(@"US2KeyConditionViolationURL", nil);
 }
 
 @end

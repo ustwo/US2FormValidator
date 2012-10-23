@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorPostcodeUK</TokenIdentifier>
-			<Abstract>The UK post code validator contains a UK post code condition (see US2ConditionPostcodeUK.
+			<Abstract type="html">The UK post code validator contains a UK post code condition (see US2ConditionPostcodeUK.
 A valid string does only contain one valid UK post code and up to 8 characters.</Abstract>
 			<DeclaredIn>US2ValidatorPostcodeUK.h</DeclaredIn>
 			

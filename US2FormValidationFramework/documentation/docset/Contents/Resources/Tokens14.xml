@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorAlphanumeric</TokenIdentifier>
-			<Abstract>The alphanumeric validator contains an alphanumeric condition (see US2ConditionAlphanumeric.
+			<Abstract type="html">The alphanumeric validator contains an alphanumeric condition (see US2ConditionAlphanumeric.
 A valid string does only contain letters and/or numbers.</Abstract>
 			<DeclaredIn>US2ValidatorAlphanumeric.h</DeclaredIn>
 			

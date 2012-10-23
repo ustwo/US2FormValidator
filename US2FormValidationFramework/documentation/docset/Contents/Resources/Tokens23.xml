@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextView</TokenIdentifier>
-			<Abstract>The validator text view is the central object to use. It inherits UITextView and listens internally
+			<Abstract type="html">The validator text view is the central object to use. It inherits UITextView and listens internally
 to all own changes. After every change it validates the changed text material. When a validator, which
 was added to the validator text view, reports a violation the validatorTextViewDelegate will be
 served with this information. The validatorTextViewDelegate is of type US2ValidatorTextViewDelegate
@@ -16,8 +16,8 @@ and returns what went wrong and in which status the validation text field is at 
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validatorUIDelegate</TokenIdentifier>
-			<Abstract>Set delegate implementing US2ValidatorUIDelegate</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidatorUIDelegate:</TokenIdentifier>
+			<Abstract type="html">Set delegate implementing US2ValidatorUIDelegate</Abstract>
 			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextViewDelegate&gt; validatorUIDelegate</Declaration>
@@ -27,8 +27,19 @@ and returns what went wrong and in which status the validation text field is at 
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validator</TokenIdentifier>
-			<Abstract>Set the validator to check the text of the text field with</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validatorUIDelegate</TokenIdentifier>
+			<Abstract type="html">Set delegate implementing US2ValidatorUIDelegate</Abstract>
+			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextViewDelegate&gt; validatorUIDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/validatorUIDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidator:</TokenIdentifier>
+			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
 			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, retain) US2Validator *validator</Declaration>
@@ -38,10 +49,21 @@ and returns what went wrong and in which status the validation text field is at 
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/shouldAllowViolations</TokenIdentifier>
-			<Abstract>Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the 'shouldAllowViolation' parameter of
-the conditions added to the validator. If set to YES the 'shouldAllowViolation'
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validator</TokenIdentifier>
+			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
+			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) US2Validator *validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setShouldAllowViolations:</TokenIdentifier>
+			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
+Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
+the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
 parameters of the conditions considered.</Abstract>
 			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
 			
@@ -52,20 +74,60 @@ parameters of the conditions considered.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/isValid</TokenIdentifier>
-			<Abstract>Return whether the text is valid.
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/shouldAllowViolations</TokenIdentifier>
+			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
+Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
+the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
+parameters of the conditions considered.</Abstract>
+			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolations</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAllowViolations</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setIsValid:</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.
 *</Abstract>
 			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign, readonly) BOOL isValid</Declaration>
 			
-			<ReturnValue><Abstract>Returns the valid state of the text field</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
 			<Anchor>//api/name/isValid</Anchor>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/isValid</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.
+*</Abstract>
+			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign, readonly) BOOL isValid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/isValid</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidateOnFocusLossOnly:</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validateOnFocusLossOnly</TokenIdentifier>
-			<Abstract>Determines whether the text has to be validated after leaving the text field
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
 or while editing. After a violation appeared after leaving the text field
 the text field will from now on validate while editing. Because the user
 knows now that a violation occurrs when using this text field.</Abstract>

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionRange</TokenIdentifier>
-			<Abstract>The US2ConditionRange validates the length of a string.</Abstract>
+			<Abstract type="html">The US2ConditionRange validates the length of a string.</Abstract>
 			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
 			
 			<NodeRef refid="9"/>
@@ -12,8 +12,19 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionRange/setRange:</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ConditionRange.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			
+			
+			<Anchor>//api/name/range</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionRange/range</TokenIdentifier>
-			<Abstract>The range to check for.</Abstract>
+			<Abstract type="html">The range to check for.</Abstract>
 			<DeclaredIn>US2ConditionRange.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionPostcodeUK</TokenIdentifier>
-			<Abstract>The US2ConditionPostcodeUK checks a string for UK post code.</Abstract>
+			<Abstract type="html">The US2ConditionPostcodeUK checks a string for UK post code.</Abstract>
 			<DeclaredIn>US2ConditionPostcodeUK.h</DeclaredIn>
 			
 			<NodeRef refid="8"/>
