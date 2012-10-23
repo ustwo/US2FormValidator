@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06EEEA431636AA3E00C3D716 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06EEEA421636AA3E00C3D716 /* Localizable.strings */; };
 		4C09FB4D149A346600C3E817 /* SubmitButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */; };
 		4CAC33A91490C6EA008B96FB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC33A01490C6EA008B96FB /* Default.png */; };
 		4CAC33AA1490C6EA008B96FB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC33A11490C6EA008B96FB /* Default@2x.png */; };
@@ -28,7 +29,6 @@
 		4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */; };
 		4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */; };
 		4CD03F2D148E27ED00B44198 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
-		4CE521B11491103A005E1105 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CE521B01491103A005E1105 /* Localization.bundle */; };
 		4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39E71490F309006699E6 /* InvalidTooltipView.m */; };
 		4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39EB1490F457006699E6 /* ValidTooltipView.m */; };
 		4CED39F11490F4D8006699E6 /* image_tooltip_invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39ED1490F4D8006699E6 /* image_tooltip_invalid.png */; };
@@ -68,6 +68,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06EEEA351636AA3E00C3D716 /* da */ = {isa = PBXFileReference; lastKnownFileType = file; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA361636AA3E00C3D716 /* de */ = {isa = PBXFileReference; lastKnownFileType = file; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA371636AA3E00C3D716 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA381636AA3E00C3D716 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA391636AA3E00C3D716 /* it */ = {isa = PBXFileReference; lastKnownFileType = file; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA3A1636AA3E00C3D716 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA3B1636AA3E00C3D716 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA3C1636AA3E00C3D716 /* nb */ = {isa = PBXFileReference; lastKnownFileType = file; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA3D1636AA3E00C3D716 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA3E1636AA3E00C3D716 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		06EEEA3F1636AA3E00C3D716 /* ro */ = {isa = PBXFileReference; lastKnownFileType = file; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA401636AA3E00C3D716 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06EEEA411636AA3E00C3D716 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C09FB4B149A346600C3E817 /* SubmitButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitButtonTableViewCell.h; sourceTree = "<group>"; };
 		4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitButtonTableViewCell.m; sourceTree = "<group>"; };
 		4CAC33A01490C6EA008B96FB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -104,7 +117,6 @@
 		4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "US2FormValidationFrameworkSample-Info.plist"; sourceTree = "<group>"; };
 		4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "US2FormValidationFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
 		4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = US2FormValidationFramework.xcodeproj; path = ../US2FormValidationFramework/US2FormValidationFramework.xcodeproj; sourceTree = "<group>"; };
-		4CE521B01491103A005E1105 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Localization.bundle; path = ../../US2FormValidationFramework/source/Localization.bundle; sourceTree = "<group>"; };
 		4CED39E61490F309006699E6 /* InvalidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidTooltipView.h; sourceTree = "<group>"; };
 		4CED39E71490F309006699E6 /* InvalidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidTooltipView.m; sourceTree = "<group>"; };
 		4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipViewPrivate.h; sourceTree = "<group>"; };
@@ -189,7 +201,7 @@
 		4CCDDE7F148CE2DE001F8FF1 /* sample */ = {
 			isa = PBXGroup;
 			children = (
-				4CE521B01491103A005E1105 /* Localization.bundle */,
+				06EEEA421636AA3E00C3D716 /* Localizable.strings */,
 				4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */,
 				4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */,
 				4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */,
@@ -326,7 +338,7 @@
 				4CC9C13714910B5C00F7AF39 /* icon.png in Resources */,
 				4CC9C13814910B5C00F7AF39 /* icon@2x.png in Resources */,
 				4CC9C13E14910CF300F7AF39 /* InfoPlist.strings in Resources */,
-				4CE521B11491103A005E1105 /* Localization.bundle in Resources */,
+				06EEEA431636AA3E00C3D716 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +377,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		06EEEA421636AA3E00C3D716 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06EEEA351636AA3E00C3D716 /* da */,
+				06EEEA361636AA3E00C3D716 /* de */,
+				06EEEA371636AA3E00C3D716 /* en */,
+				06EEEA381636AA3E00C3D716 /* fr */,
+				06EEEA391636AA3E00C3D716 /* it */,
+				06EEEA3A1636AA3E00C3D716 /* ja */,
+				06EEEA3B1636AA3E00C3D716 /* ko */,
+				06EEEA3C1636AA3E00C3D716 /* nb */,
+				06EEEA3D1636AA3E00C3D716 /* pl */,
+				06EEEA3E1636AA3E00C3D716 /* pt-PT */,
+				06EEEA3F1636AA3E00C3D716 /* ro */,
+				06EEEA401636AA3E00C3D716 /* ru */,
+				06EEEA411636AA3E00C3D716 /* sv */,
+			);
+			name = Localizable.strings;
+			path = ../../US2FormValidationFramework/localisation;
+			sourceTree = "<group>";
+		};
 		4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

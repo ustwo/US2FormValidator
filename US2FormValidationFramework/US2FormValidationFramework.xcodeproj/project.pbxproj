@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		064F8BFC1636A97700DC6D95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 064F8BEE1636A97700DC6D95 /* Localizable.strings */; };
 		4C0DE68814FE4173005D93CB /* US2ConditionShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */; };
 		4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */; };
 		4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */; };
@@ -77,7 +78,6 @@
 		4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
-		5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
 		DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */ = {isa = PBXBuildFile; fileRef = DE079490162636D400841F88 /* US2ValidatorComposite.h */; };
 		DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = DE079491162636D400841F88 /* US2ValidatorComposite.m */; };
 		DE0794D91626567D00841F88 /* US2Form.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794D71626567D00841F88 /* US2Form.h */; };
@@ -88,7 +88,6 @@
 		DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950116266A6200841F88 /* US2ValidatorEmpty.m */; };
 		DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950416266A6D00841F88 /* US2ConditionEmpty.h */; };
 		DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950516266A6E00841F88 /* US2ConditionEmpty.m */; };
-		DE079539162755AC00841F88 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
 		DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953A162759E100841F88 /* US2ConditionOr.h */; };
 		DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953B162759E300841F88 /* US2ConditionOr.m */; };
 		DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953E162759F100841F88 /* US2ConditionAnd.h */; };
@@ -117,6 +116,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		064F8BEF1636A97700DC6D95 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF01636A97700DC6D95 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF11636A97700DC6D95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF21636A97700DC6D95 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF31636A97700DC6D95 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF41636A97700DC6D95 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF51636A97700DC6D95 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF61636A97700DC6D95 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF71636A97700DC6D95 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BF81636A97700DC6D95 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		064F8BF91636A97700DC6D95 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BFA1636A97700DC6D95 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		064F8BFB1636A97700DC6D95 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionShorthandURL.h; sourceTree = "<group>"; };
 		4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionShorthandURL.m; sourceTree = "<group>"; };
 		4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorShorthandURL.h; sourceTree = "<group>"; };
@@ -162,7 +174,6 @@
 		4C624337148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "US2FormValidationFrameworkTests-Prefix.pch"; path = "tests/US2FormValidationFrameworkTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		4C624338148CF2FB0084BC01 /* ValidatorUnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidatorUnitTests.h; path = tests/ValidatorUnitTests.h; sourceTree = SOURCE_ROOT; };
 		4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidatorUnitTests.m; path = tests/ValidatorUnitTests.m; sourceTree = SOURCE_ROOT; };
-		4C624343148CF31C0084BC01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = tests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextFieldPrivateDelegate.h; sourceTree = "<group>"; };
 		4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextFieldPrivate.h; sourceTree = "<group>"; };
 		4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextFieldPrivate.m; sourceTree = "<group>"; };
@@ -176,7 +187,6 @@
 		5BD39846147E98EF00EB75DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BD39848147E98EF00EB75DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5BEA7205147FA7B800D03089 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Localization.bundle; sourceTree = "<group>"; };
 		DE079490162636D400841F88 /* US2ValidatorComposite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorComposite.h; sourceTree = "<group>"; };
 		DE079491162636D400841F88 /* US2ValidatorComposite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorComposite.m; sourceTree = "<group>"; };
 		DE0794D71626567D00841F88 /* US2Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Form.h; sourceTree = "<group>"; };
@@ -228,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064F8BED1636A97700DC6D95 /* localisation */ = {
+			isa = PBXGroup;
+			children = (
+				064F8BEE1636A97700DC6D95 /* Localizable.strings */,
+			);
+			path = localisation;
+			sourceTree = "<group>";
+		};
 		4C59DD3F1487BD7B0047C698 /* base */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +344,6 @@
 				4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */,
 				4C624338148CF2FB0084BC01 /* ValidatorUnitTests.h */,
 				4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */,
-				4C624342148CF31C0084BC01 /* InfoPlist.strings */,
 				4C624336148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Info.plist */,
 				4C624337148CF2FB0084BC01 /* US2FormValidationFrameworkTests-Prefix.pch */,
 			);
@@ -337,6 +354,7 @@
 		5BD39837147E98EF00EB75DB = {
 			isa = PBXGroup;
 			children = (
+				064F8BED1636A97700DC6D95 /* localisation */,
 				5BD3989E147E9A5D00EB75DB /* source */,
 				4CDBC166148CF14300312190 /* tests */,
 				5BD39845147E98EF00EB75DB /* Frameworks */,
@@ -370,7 +388,6 @@
 				4C59DD3F1487BD7B0047C698 /* base */,
 				4C59DD491487BD7B0047C698 /* conditions */,
 				4C59DD561487BD7B0047C698 /* validators */,
-				5BEA7205147FA7B800D03089 /* Localization.bundle */,
 				DE2FAA6716278AF5007F2FE0 /* US2FormValidator.h */,
 			);
 			path = source;
@@ -480,6 +497,17 @@
 			knownRegions = (
 				en,
 				de,
+				ja,
+				fr,
+				ko,
+				pl,
+				nb,
+				sv,
+				da,
+				it,
+				ru,
+				ro,
+				"pt-PT",
 			);
 			mainGroup = 5BD39837147E98EF00EB75DB;
 			productRefGroup = 5BD39843147E98EF00EB75DB /* Products */;
@@ -498,7 +526,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE079539162755AC00841F88 /* Localization.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */,
+				064F8BFC1636A97700DC6D95 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,12 +631,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C624342148CF31C0084BC01 /* InfoPlist.strings */ = {
+		064F8BEE1636A97700DC6D95 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C624343148CF31C0084BC01 /* en */,
+				064F8BEF1636A97700DC6D95 /* da */,
+				064F8BF01636A97700DC6D95 /* de */,
+				064F8BF11636A97700DC6D95 /* en */,
+				064F8BF21636A97700DC6D95 /* fr */,
+				064F8BF31636A97700DC6D95 /* it */,
+				064F8BF41636A97700DC6D95 /* ja */,
+				064F8BF51636A97700DC6D95 /* ko */,
+				064F8BF61636A97700DC6D95 /* nb */,
+				064F8BF71636A97700DC6D95 /* pl */,
+				064F8BF81636A97700DC6D95 /* pt-PT */,
+				064F8BF91636A97700DC6D95 /* ro */,
+				064F8BFA1636A97700DC6D95 /* ru */,
+				064F8BFB1636A97700DC6D95 /* sv */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
