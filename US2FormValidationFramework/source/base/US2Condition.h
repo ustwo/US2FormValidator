@@ -70,13 +70,30 @@
 @interface US2Condition : NSObject <US2ConditionProtocol>
 {
 @private
+    NSString *_localizedViolationString;
     BOOL _shouldAllowViolation;
 }
+
+@property (copy, nonatomic) NSString *localizedViolationString;
 
 /**
  If set to *NO* the user is not able to enter characters which would break the condition.
 */
 @property (nonatomic, assign) BOOL shouldAllowViolation;
 
+/**
+ Static shorthand for creating a validator.
+ */
++ (US2Condition *) condition;
+
+/**
+ Initialize condition with a custom localized violation string.
+ */
+- (id) initWithLocalizedViolationString: (NSString *) localizedViolationString;
+
+/**
+ Set the localized violation string and return self.
+ */
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString;
 
 @end

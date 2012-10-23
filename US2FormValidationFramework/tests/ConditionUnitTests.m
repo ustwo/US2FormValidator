@@ -34,7 +34,9 @@
 #import "US2ConditionURL.h"
 #import "US2ConditionShorthandURL.h"
 #import "US2ConditionPostcodeUK.h"
-
+#import "US2ConditionOr.h"
+#import "US2ConditionAnd.h"
+#import "US2ConditionNot.h"
 
 @implementation ConditionUnitTests
 
@@ -84,17 +86,25 @@
 - (void)testUS2ConditionAlphabetic
 {
     NSString *successTestString1 = @"abcdefgh";
+    NSString *successTestString2 = @"abcd efg h";
     NSString *failureTestString1 = @"12345678";
     NSString *failureTestString2 = @"a?";
     NSString *failureTestString3 = nil;
+    NSString *failureTestString4 = @"";
     
     US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
     
     STAssertTrue([condition check:successTestString1], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
     
+    condition.allowWhitespace = YES;
+    STAssertTrue([condition check:successTestString1], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString2], @"The US2ConditionAlphabetic should respond with TRUE and not FALSE", nil);
+    condition.allowWhitespace = NO;
+    
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString3], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString4], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     
     [condition release];
 }
@@ -336,5 +346,110 @@
     STAssertFalse([condition check:failureTestString5], @"The US2ConditionPostcodeUK should respond with FALSE and not TRUE", nil);
 }
 
+/**
+ Test US2Condition createLocalizedViolationString and localizedViolationString customization.
+ */
+- (void)testUS2ConditionCustomLocalizedViolationString
+{
+    NSString *customLocalizedViolationString = @"Enter a valid UK postal code.";
+    US2ConditionPostcodeUK *condition = [[US2ConditionPostcodeUK alloc] init];
+    condition.localizedViolationString = customLocalizedViolationString;
+    
+    STAssertEqualObjects([condition localizedViolationString], customLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
+}
+
+/**
+ Test US2ConditionOr
+ */
+- (void)testUS2ConditionOr
+{
+    NSString *successTestString1 = @"";    
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
+    
+    US2ConditionOr *conditionOr = [[US2ConditionOr alloc] initWithConditionOne: conditionRange two: conditionAlphanumeric];
+    NSString *expectedLocalizedViolationString = @"Min 0 Max 4 or must only contain alphanumeric";
+    conditionOr.localizedViolationString = expectedLocalizedViolationString;
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);    
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    STAssertEqualObjects([conditionRange localizedViolationString], @"Enter minimum 0, maximum 4 characters", @"Localized violation desription must match.");
+    
+    // Test or condition
+    STAssertTrue([conditionOr check: failureTestString1], @"The US2ConditionOr should be true for alpha or range.", nil);
+    STAssertEqualObjects([conditionOr localizedViolationString], expectedLocalizedViolationString, @"Localized violation desription must match.");
+}
+
+/**
+ Test US2ConditionAnd
+ */
+- (void)testUS2ConditionAnd
+{
+    NSString *successTestString1 = @"";
+    NSString *successTestString2 = @"1A23";
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
+    
+    US2ConditionAnd *conditionAnd = [[US2ConditionAnd alloc] initWithConditionOne: conditionRange two: conditionAlphanumeric];
+    NSString *expectedLocalizedViolationString = @"Min 0 Max 4 and must only contain alphanumeric";
+    conditionAnd.localizedViolationString = expectedLocalizedViolationString;
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    STAssertEqualObjects([conditionRange localizedViolationString], @"Enter minimum 0, maximum 4 characters", @"Localized violation desription must match.");
+    
+    // Test or condition
+    STAssertTrue([conditionAnd check: successTestString1], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    STAssertTrue([conditionAnd check: successTestString2], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    STAssertFalse([conditionAnd check: failureTestString1], @"The US2ConditionAnd should be true for alpha or range.", nil);
+    STAssertEqualObjects([conditionAnd localizedViolationString], expectedLocalizedViolationString, @"Localized violation desription must match.");
+}
+
+/**
+ Test US2ConditionNot
+ */
+- (void)testUS2ConditionNot
+{
+    NSString *successTestString1 = @"";
+    NSString *failureTestString1 = @"1A234";
+    
+    US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
+    conditionRange.range = NSMakeRange(0, 4);
+    
+    US2ConditionNot *conditionNot = [[US2ConditionNot alloc] initWithCondition: conditionRange];
+    NSString *expectedLocalizedViolationString = @"Must not be between 0 through 4.";
+    conditionNot.localizedViolationString = expectedLocalizedViolationString;
+    
+    // Test initial conditions
+    STAssertTrue([conditionRange check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertFalse([conditionRange check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    STAssertEqualObjects([conditionRange localizedViolationString], @"Enter minimum 0, maximum 4 characters", @"Localized violation desription must match.");
+    
+    // Test not condition
+    STAssertFalse([conditionNot check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
+    STAssertTrue([conditionNot check:failureTestString1], @"The US2ConditionRange should respond with FALSE and not TRUE", nil);
+    STAssertEqualObjects([conditionNot localizedViolationString], expectedLocalizedViolationString, @"Localized violation desription must match.");
+    
+}
+
+/**
+ Test US2Condition condition
+ */
+- (void)testUS2ConditionStatic
+{
+    US2Condition *conditionRange = [US2ConditionRange condition];
+    STAssertNotNil(conditionRange, @"Condition must not be nil.");
+    STAssertTrue([conditionRange isKindOfClass: [US2ConditionRange class]], @"Must be correct class.", nil);
+}
 
 @end

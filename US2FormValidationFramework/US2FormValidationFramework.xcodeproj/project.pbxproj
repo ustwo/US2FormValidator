@@ -78,6 +78,24 @@
 		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		5BEA7209147FAD3200D03089 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
+		DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */ = {isa = PBXBuildFile; fileRef = DE079490162636D400841F88 /* US2ValidatorComposite.h */; };
+		DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = DE079491162636D400841F88 /* US2ValidatorComposite.m */; };
+		DE0794D91626567D00841F88 /* US2Form.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794D71626567D00841F88 /* US2Form.h */; };
+		DE0794DA1626567D00841F88 /* US2Form.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794D81626567D00841F88 /* US2Form.m */; };
+		DE0794E21626585B00841F88 /* US2Validatable.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794E01626585900841F88 /* US2Validatable.h */; };
+		DE0794E31626585B00841F88 /* US2Validatable.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794E11626585A00841F88 /* US2Validatable.m */; };
+		DE07950216266A6300841F88 /* US2ValidatorEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950016266A6000841F88 /* US2ValidatorEmpty.h */; };
+		DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950116266A6200841F88 /* US2ValidatorEmpty.m */; };
+		DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07950416266A6D00841F88 /* US2ConditionEmpty.h */; };
+		DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07950516266A6E00841F88 /* US2ConditionEmpty.m */; };
+		DE079539162755AC00841F88 /* Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA7205147FA7B800D03089 /* Localization.bundle */; };
+		DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953A162759E100841F88 /* US2ConditionOr.h */; };
+		DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953B162759E300841F88 /* US2ConditionOr.m */; };
+		DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953E162759F100841F88 /* US2ConditionAnd.h */; };
+		DE07954116275A0800841F88 /* US2ConditionAnd.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953F162759F700841F88 /* US2ConditionAnd.m */; };
+		DE2FAA6216275CBD007F2FE0 /* US2ConditionNot.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */; };
+		DE2FAA6316275CBD007F2FE0 /* US2ConditionNot.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */; };
+		DE2FAA6816278AF5007F2FE0 /* US2FormValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2FAA6716278AF5007F2FE0 /* US2FormValidator.h */; };
 		F104D62014F36131000DFC40 /* US2ValidatorURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F104D61E14F36131000DFC40 /* US2ValidatorURL.h */; };
 		F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F104D61F14F36131000DFC40 /* US2ValidatorURL.m */; };
 		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
@@ -159,6 +177,23 @@
 		5BD39848147E98EF00EB75DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5BEA7205147FA7B800D03089 /* Localization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Localization.bundle; sourceTree = "<group>"; };
+		DE079490162636D400841F88 /* US2ValidatorComposite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorComposite.h; sourceTree = "<group>"; };
+		DE079491162636D400841F88 /* US2ValidatorComposite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorComposite.m; sourceTree = "<group>"; };
+		DE0794D71626567D00841F88 /* US2Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Form.h; sourceTree = "<group>"; };
+		DE0794D81626567D00841F88 /* US2Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Form.m; sourceTree = "<group>"; };
+		DE0794E01626585900841F88 /* US2Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validatable.h; sourceTree = "<group>"; };
+		DE0794E11626585A00841F88 /* US2Validatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Validatable.m; sourceTree = "<group>"; };
+		DE07950016266A6000841F88 /* US2ValidatorEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorEmpty.h; sourceTree = "<group>"; };
+		DE07950116266A6200841F88 /* US2ValidatorEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorEmpty.m; sourceTree = "<group>"; };
+		DE07950416266A6D00841F88 /* US2ConditionEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionEmpty.h; sourceTree = "<group>"; };
+		DE07950516266A6E00841F88 /* US2ConditionEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionEmpty.m; sourceTree = "<group>"; };
+		DE07953A162759E100841F88 /* US2ConditionOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionOr.h; sourceTree = "<group>"; };
+		DE07953B162759E300841F88 /* US2ConditionOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionOr.m; sourceTree = "<group>"; };
+		DE07953E162759F100841F88 /* US2ConditionAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAnd.h; sourceTree = "<group>"; };
+		DE07953F162759F700841F88 /* US2ConditionAnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionAnd.m; sourceTree = "<group>"; };
+		DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionNot.h; sourceTree = "<group>"; };
+		DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionNot.m; sourceTree = "<group>"; };
+		DE2FAA6716278AF5007F2FE0 /* US2FormValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2FormValidator.h; sourceTree = "<group>"; };
 		F104D61E14F36131000DFC40 /* US2ValidatorURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorURL.h; sourceTree = "<group>"; };
 		F104D61F14F36131000DFC40 /* US2ValidatorURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorURL.m; sourceTree = "<group>"; };
 		F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionURL.h; sourceTree = "<group>"; };
@@ -212,6 +247,10 @@
 				4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */,
 				4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */,
 				4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */,
+				DE0794D71626567D00841F88 /* US2Form.h */,
+				DE0794D81626567D00841F88 /* US2Form.m */,
+				DE0794E01626585900841F88 /* US2Validatable.h */,
+				DE0794E11626585A00841F88 /* US2Validatable.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -239,6 +278,14 @@
 				4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */,
 				FAA9CDE51558802E00FFFDA4 /* US2ConditionPasswordStrength.h */,
 				FAA9CDE61558802E00FFFDA4 /* US2ConditionPasswordStrength.m */,
+				DE07950416266A6D00841F88 /* US2ConditionEmpty.h */,
+				DE07950516266A6E00841F88 /* US2ConditionEmpty.m */,
+				DE07953A162759E100841F88 /* US2ConditionOr.h */,
+				DE07953B162759E300841F88 /* US2ConditionOr.m */,
+				DE07953E162759F100841F88 /* US2ConditionAnd.h */,
+				DE07953F162759F700841F88 /* US2ConditionAnd.m */,
+				DE2FAA6016275CBD007F2FE0 /* US2ConditionNot.h */,
+				DE2FAA6116275CBD007F2FE0 /* US2ConditionNot.m */,
 			);
 			path = conditions;
 			sourceTree = "<group>";
@@ -264,6 +311,10 @@
 				F104D61F14F36131000DFC40 /* US2ValidatorURL.m */,
 				4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */,
 				4C0DE68C14FE4B86005D93CB /* US2ValidatorShorthandURL.m */,
+				DE079490162636D400841F88 /* US2ValidatorComposite.h */,
+				DE079491162636D400841F88 /* US2ValidatorComposite.m */,
+				DE07950016266A6000841F88 /* US2ValidatorEmpty.h */,
+				DE07950116266A6200841F88 /* US2ValidatorEmpty.m */,
 			);
 			path = validators;
 			sourceTree = "<group>";
@@ -320,6 +371,7 @@
 				4C59DD491487BD7B0047C698 /* conditions */,
 				4C59DD561487BD7B0047C698 /* validators */,
 				5BEA7205147FA7B800D03089 /* Localization.bundle */,
+				DE2FAA6716278AF5007F2FE0 /* US2FormValidator.h */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -360,6 +412,15 @@
 				FAA9CDE71558802E00FFFDA4 /* US2ConditionPasswordStrength.h in Headers */,
 				4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */,
 				4C0F37D815BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h in Headers */,
+				DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */,
+				DE0794D91626567D00841F88 /* US2Form.h in Headers */,
+				DE0794E21626585B00841F88 /* US2Validatable.h in Headers */,
+				DE07950216266A6300841F88 /* US2ValidatorEmpty.h in Headers */,
+				DE07950616266A6E00841F88 /* US2ConditionEmpty.h in Headers */,
+				DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */,
+				DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */,
+				DE2FAA6216275CBD007F2FE0 /* US2ConditionNot.h in Headers */,
+				DE2FAA6816278AF5007F2FE0 /* US2FormValidator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE079539162755AC00841F88 /* Localization.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +582,14 @@
 				FAA9CDE81558802E00FFFDA4 /* US2ConditionPasswordStrength.m in Sources */,
 				4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
 				4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */,
+				DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */,
+				DE0794DA1626567D00841F88 /* US2Form.m in Sources */,
+				DE0794E31626585B00841F88 /* US2Validatable.m in Sources */,
+				DE07950316266A6300841F88 /* US2ValidatorEmpty.m in Sources */,
+				DE07950716266A6E00841F88 /* US2ConditionEmpty.m in Sources */,
+				DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */,
+				DE07954116275A0800841F88 /* US2ConditionAnd.m in Sources */,
+				DE2FAA6316275CBD007F2FE0 /* US2ConditionNot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

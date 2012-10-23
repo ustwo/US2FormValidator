@@ -48,6 +48,17 @@
     return self;
 }
 
+- (id)initWithRange:(NSRange)range
+{
+    self = [super init];
+    if(self)
+    {
+        [self setRange: range];
+    }
+
+    return self;
+}
+
 
 #pragma mark - Range
 
@@ -59,8 +70,8 @@
     [self removeConditionOfClass:[US2ConditionRange class]];
     
     // Add new range condition
-    US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-    rangeCondition.range             = _range;
+    US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
+    rangeCondition.range                = _range;
     [self addCondition:rangeCondition];
     [rangeCondition release];
 }

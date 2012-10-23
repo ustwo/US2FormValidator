@@ -30,6 +30,9 @@
 
 @implementation US2Validator
 
++ (US2Validator *) validator {
+    return [[[[self class] alloc] init] autorelease];
+}
 
 #pragma mark - Initialization
 
@@ -44,6 +47,35 @@
     return self;
 }
 
+- (id) initWithCondition: (id<US2ConditionProtocol>) firstCondition, ... {
+    if (self = [self init]) {
+        [self addCondition: firstCondition];
+        
+        va_list args;
+        va_start(args, firstCondition);
+        
+        id<US2ConditionProtocol> condition = nil;
+        
+        while( (condition = va_arg( args, id<US2ConditionProtocol>)) != nil ) {
+            
+            [self addCondition: condition];
+        }
+
+        va_end(args);
+    }
+    
+    return self;
+}
+
+- (id) initWithConditions: (NSArray *) conditions {
+    if (self = [self init]) {
+        for (id<US2ConditionProtocol> condition in conditions) {
+            [self addCondition: condition];
+        }
+    }
+    
+    return self;
+}
 
 #pragma mark - Deinitialization
 
@@ -54,6 +86,26 @@
     [super dealloc];
 }
 
+#pragma mark - Localized violation string
+
+- (void) setLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index {
+    if (index < [_conditionCollection count]) {
+        id<US2ConditionProtocol> conditionProtocol = [_conditionCollection conditionAtIndex: index];
+        if ([conditionProtocol isKindOfClass: [US2Condition class]]) {
+            US2Condition *condition = (US2Condition *) conditionProtocol;
+            condition.localizedViolationString = localizedViolationString;
+        }
+    }
+}
+
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString forConditionAtIndex: (NSUInteger) index {
+    [self setLocalizedViolationString: localizedViolationString forConditionAtIndex: index];
+    return self;
+}
+
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString {
+    return [self withLocalizedViolationString: localizedViolationString forConditionAtIndex: 0];
+}
 
 #pragma mark - Condition
 
@@ -103,5 +155,40 @@
     return [violatedConditions autorelease];
 }
 
+
+@end
+
+@implementation US2ValidatorSingleCondition
+
+@synthesize condition = _condition;
+@dynamic localizedViolationString;
+
+- (id) initWithCondition: (id<US2ConditionProtocol>) condition {
+    if (self = [super init]) {
+        [self setCondition: condition];
+    }
+    
+    return self;
+}
+
+- (void) setCondition:(id<US2ConditionProtocol>)condition {
+    [_condition release];
+    _condition = [condition retain];
+    
+    [_conditionCollection removeAllConditions];
+    [self addCondition: _condition];
+}
+
+- (NSString *) localizedViolationString {
+    if ([_conditionCollection count] > 0) {
+        return [[_conditionCollection conditionAtIndex: 0] localizedViolationString];
+    }
+    
+    return nil;
+}
+
+- (void) setLocalizedViolationString:(NSString *)localizedViolationString {
+    [self setLocalizedViolationString: localizedViolationString forConditionAtIndex: 0];
+}
 
 @end

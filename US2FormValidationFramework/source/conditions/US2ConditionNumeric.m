@@ -52,11 +52,11 @@
 
 #pragma mark - Localization
 
-- (NSString *)localizedViolationString
+- (NSString *) createLocalizedViolationString
 {
     NSString *key = @"US2KeyConditionViolationNumeric";
     
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource: @"Localization" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:path];
     
     if (bundle)
