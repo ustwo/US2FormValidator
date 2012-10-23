@@ -104,7 +104,7 @@
 /**
  Initialize with a condition or variable-argument number of conditions.
  */
-- (id)initWithCondition:(id<US2ConditionProtocol>)firstCondition, ... NS_REQUIRES_NIL_TERMINATION;
+- (id)initWithCondition:(id<US2ConditionProtocol>)firstCondition, ...;
 
 /**
  Initialize with an array of conditions.
