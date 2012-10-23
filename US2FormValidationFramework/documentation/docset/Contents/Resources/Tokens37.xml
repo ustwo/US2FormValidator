@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2Validatable.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2Validatable</TokenIdentifier>
+			<Abstract type="html">Protocol to control text for validation for controls other than UITextField/UITextView.</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/validatableText</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)validatableText</Declaration>
+			
+			
+			<Anchor>//api/name/validatableText</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/validator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;US2ValidatorProtocol&gt;)validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

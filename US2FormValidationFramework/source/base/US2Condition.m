@@ -31,24 +31,30 @@
 @synthesize shouldAllowViolation = _shouldAllowViolation;
 @synthesize localizedViolationString = _localizedViolationString;
 
+
 #pragma mark - Init
 
-+ (US2Condition *) condition {
++ (US2Condition *)condition
+{
     return [[[[self class] alloc] init] autorelease];
 }
 
-- (id) initWithLocalizedViolationString: (NSString *) localizedViolationString {
-    if (self = [super init]) {
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString
+{
+    if (self = [super init])
+    {
         self.localizedViolationString = localizedViolationString;
     }
     
     return self;
 }
 
-- (id) withLocalizedViolationString: (NSString *) localizedViolationString {
+- (id)withLocalizedViolationString:(NSString *)localizedViolationString
+{
     self.localizedViolationString = localizedViolationString;
     return self;
 }
+
 
 #pragma mark - Check
 
@@ -68,7 +74,8 @@
 /**
  Create a localized violation string.
  */
-- (NSString *) createLocalizedViolationString {
+- (NSString *)createLocalizedViolationString
+{
     return nil;
 }
 
@@ -79,7 +86,8 @@
 */
 - (NSString *)localizedViolationString
 {
-    if (!_localizedViolationString) {
+    if (!_localizedViolationString)
+    {
         return [self createLocalizedViolationString];
     }
     
