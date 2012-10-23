@@ -89,11 +89,11 @@
 /**
  Initialize condition with a custom localized violation string.
  */
-- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString;
+- (id) initWithLocalizedViolationString: (NSString *) localizedViolationString;
 
 /**
  Set the localized violation string and return self.
  */
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString;
+- (id) withLocalizedViolationString: (NSString *) localizedViolationString;
 
 @end

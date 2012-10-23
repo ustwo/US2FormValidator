@@ -31,7 +31,6 @@
 @synthesize shouldAllowViolation = _shouldAllowViolation;
 @synthesize localizedViolationString = _localizedViolationString;
 
-
 #pragma mark - Init
 
 + (US2Condition *)condition
@@ -74,7 +73,7 @@
 /**
  Create a localized violation string.
  */
-- (NSString *)createLocalizedViolationString
+- (NSString *) createLocalizedViolationString
 {
     return nil;
 }
