@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'US2FormValidator'
-  s.version      = '1.0.6'
+  s.version      = '1.0.7'
   s.license      = 'MIT'
   s.summary      = 'A lightweight iOS form validation framework.'
   s.homepage     = 'https://github.com/ustwo/US2FormValidator'
