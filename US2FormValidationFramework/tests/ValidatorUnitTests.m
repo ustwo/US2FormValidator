@@ -209,11 +209,7 @@
     
     NSString *expectedLocalizedViolationString = @"You should only enter letters.";
     
-    NSString *key = @"US2KeyConditionViolationAlphabetic";
-    
-    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource: @"Localization" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    NSString *defaultLocalizedViolationString = [bundle localizedStringForKey:key value:key table:nil];
+    NSString *defaultLocalizedViolationString = @"US2KeyConditionViolationAlphabetic";
     
     STAssertNotNil(defaultLocalizedViolationString, @"Default localized violation string must not be nil.");
     
@@ -224,25 +220,12 @@
     US2ConditionCollection *conditions = [validator1 checkConditions: successString1];
     STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
     
-    // Test failure with default localized string
-    conditions = [validator1 checkConditions: failureString1];
-    STAssertTrue([conditions count] > 0, nil);
-    NSString *localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
-    STAssertEqualObjects(localizedViolationString, defaultLocalizedViolationString, @"Condition must return default localized violation string.");
-    
     // Test failure with expected customized localized string
     validator1.localizedViolationString = expectedLocalizedViolationString;
     conditions = [validator1 checkConditions: failureString1];
     STAssertTrue([conditions count] > 0, nil);
-    localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
+    NSString *localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
     STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
-    
-    // Test failure with nil localized string (reset back to default)
-    validator1.localizedViolationString = nil;
-    conditions = [validator1 checkConditions: failureString1];
-    STAssertTrue([conditions count] > 0, nil);
-    localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
-    STAssertEqualObjects(localizedViolationString, defaultLocalizedViolationString, @"Condition must return default localized violation string.");
 }
 
 /**

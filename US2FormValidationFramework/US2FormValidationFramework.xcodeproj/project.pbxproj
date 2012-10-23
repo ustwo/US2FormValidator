@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		064F8BFC1636A97700DC6D95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 064F8BEE1636A97700DC6D95 /* Localizable.strings */; };
+		06EEEA4C1636B94100C3D716 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 064F8BEE1636A97700DC6D95 /* Localizable.strings */; };
 		4C0DE68814FE4173005D93CB /* US2ConditionShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */; };
 		4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */; };
 		4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DE68B14FE4B86005D93CB /* US2ValidatorShorthandURL.h */; };
@@ -526,6 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06EEEA4C1636B94100C3D716 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +694,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
 				);
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
