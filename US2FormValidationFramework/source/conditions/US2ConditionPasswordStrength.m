@@ -92,7 +92,7 @@
 
 - (NSString *) createLocalizedViolationString
 {
-    return NSLocalizedString(@"US2KeyConditionViolationPasswordStrength", nil);
+    return US2LocalizedString(@"US2KeyConditionViolationPasswordStrength", nil);
 }
 
 #pragma mark - Strength Check
