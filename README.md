@@ -28,6 +28,10 @@ Clone the project from the link above.
 
 ![Target dependencies screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Target Dependencies.png)
 
+### Add US2Localizable.strings to your projects Copy Bundle Resources
+
+![Target dependencies screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Bundle Resources.png)
+
 Installation using CocoaPods
 ----------------------------
 
@@ -36,7 +40,7 @@ https://github.com/CocoaPods/CocoaPods
 
 Add the following line to your pod file:
 
-    pod 'US2FormValidator', '~> 1.0.7'
+    pod 'US2FormValidator', '~> 1.0.8'
 
 How-To
 ------

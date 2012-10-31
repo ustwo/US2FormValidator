@@ -334,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3FD6E71641307B007001F6 /* US2Localizable.strings in Resources */,
 				4CAC33A91490C6EA008B96FB /* Default.png in Resources */,
 				4CAC33AA1490C6EA008B96FB /* Default@2x.png in Resources */,
 				4CED39F11490F4D8006699E6 /* image_tooltip_invalid.png in Resources */,
@@ -349,7 +350,6 @@
 				4CC9C13714910B5C00F7AF39 /* icon.png in Resources */,
 				4CC9C13814910B5C00F7AF39 /* icon@2x.png in Resources */,
 				4CC9C13E14910CF300F7AF39 /* InfoPlist.strings in Resources */,
-				2C3FD6E71641307B007001F6 /* US2Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
