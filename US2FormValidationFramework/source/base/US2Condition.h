@@ -24,6 +24,7 @@
 //  
 
 #import <Foundation/Foundation.h>
+#import "US2Localization.h"
 
 
 #pragma mark - Condition protocol

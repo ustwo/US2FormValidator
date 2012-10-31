@@ -68,7 +68,7 @@
 
 - (NSString *)createLocalizedViolationString
 {    
-    return  [NSString stringWithFormat:NSLocalizedString(@"US2KeyConditionViolationRange", nil),_range.location,_range.length];
+    return  [NSString stringWithFormat:US2LocalizedString(@"US2KeyConditionViolationRange", nil),_range.location,_range.length];
 }
 
 

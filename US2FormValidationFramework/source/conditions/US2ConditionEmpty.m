@@ -64,7 +64,7 @@
 
 - (NSString *)createLocalizedViolationString
 {
-    return NSLocalizedString(@"US2KeyConditionViolationEmpty", nil);
+    return US2LocalizedString(@"US2KeyConditionViolationEmpty", nil);
 }
 
 @end
