@@ -39,7 +39,8 @@
 @synthesize text;
 @synthesize validator;
 
-- (NSString *) validatableText {
+- (NSString *)validatableText
+{
     return self.text;
 }
 
