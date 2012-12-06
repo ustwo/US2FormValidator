@@ -63,8 +63,10 @@
         [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
     
     // If condition is NULL no condition failed
-    if (NO == _validatorTextField.shouldAllowViolation
-        || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
+    if (!_validatorTextField.validateOnFocusLossOnly
+        && (NO == _validatorTextField.shouldAllowViolations
+            || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
+        && range.location != 0)
     {
         return [conditions conditionAtIndex:0] == nil;
     }
@@ -79,7 +81,7 @@
 - (void)textFieldDidChange:(NSNotification *)notification
 {
     // Only validate if violations are allowed
-    if (_validatorTextField.shouldAllowViolation)
+    if (_validatorTextField.shouldAllowViolations)
     {
         // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
         if (!_validatorTextField.validateOnFocusLossOnly

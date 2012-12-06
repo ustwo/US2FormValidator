@@ -67,6 +67,10 @@
 */
 - (US2Condition *)conditionAtIndex:(NSUInteger)index;
 
+/**
+ Remove all conditions from collection.
+ */
+- (void) removeAllConditions;
 
 @end
 
@@ -125,6 +129,11 @@
  @return Return US2Condition instance at index
 */
 - (US2Condition *)conditionAtIndex:(NSUInteger)index;
+
+/**
+ Remove all conditions from collection.
+ */
+- (void) removeAllConditions;
 
 /**
  Number of conditions in collection.

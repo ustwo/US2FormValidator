@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2ConditionProtocol.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ConditionProtocol</TokenIdentifier>
+			<Abstract type="html">A condition must conform to US2Condition protocol methods.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionProtocol/check:</TokenIdentifier>
+			<Abstract type="html">Check the custom condition.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)check:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">String to check</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Return whether condition check failed or not</Abstract></ReturnValue>
+			<Anchor>//api/name/check:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionProtocol/localizedViolationString</TokenIdentifier>
+			<Abstract type="html">Returns a localized string which describes the kind of violation.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)localizedViolationString</Declaration>
+			
+			<ReturnValue><Abstract type="html">Localized violation string</Abstract></ReturnValue>
+			<Anchor>//api/name/localizedViolationString</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -97,6 +97,36 @@
 }
 
 /**
+ Static shorthand for creating a validator.
+ */
++ (US2Validator *)validator;
+
+/**
+ Initialize with a condition or variable-argument number of conditions.
+ */
+- (id)initWithCondition:(id<US2ConditionProtocol>)firstCondition, ...;
+
+/**
+ Initialize with an array of conditions.
+ */
+- (id)initWithConditions:(NSArray *)conditions;
+
+/**
+ Set localized violation string for condition at a given index.  This allows overriding a conditions default localized violation string.
+ */
+- (void)setLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index;
+
+/**
+ Set localized violation string for condition at a given index and return self.
+ */
+- (id)withLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index;
+
+/**
+ Set localized violation string for condition at index 0 and return self.
+ */
+- (id)withLocalizedViolationString:(NSString *)localizedViolationString;
+
+/**
  Add condition conform to US2ConditionProtocol
  
  @param condition Condition conform to US2ConditionProtocol
@@ -118,5 +148,23 @@
 */
 - (US2ConditionCollection *)checkConditions:(NSString *)string;
 
+
+@end
+
+/**
+ A US2Validator with a single condition.
+ */
+@interface US2ValidatorSingleCondition : US2Validator
+{
+    id<US2ConditionProtocol> _condition;
+}
+
+@property (retain, nonatomic) id<US2ConditionProtocol> condition;
+@property (copy, nonatomic) NSString *localizedViolationString;
+
+/**
+ Initialize single validator with a condition.
+ */
+- (id)initWithCondition:(id<US2ConditionProtocol>)condition;
 
 @end

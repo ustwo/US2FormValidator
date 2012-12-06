@@ -28,8 +28,31 @@
 
 @implementation US2Condition
 
-
 @synthesize shouldAllowViolation = _shouldAllowViolation;
+@synthesize localizedViolationString = _localizedViolationString;
+
+#pragma mark - Init
+
++ (US2Condition *)condition
+{
+    return [[[[self class] alloc] init] autorelease];
+}
+
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString
+{
+    if (self = [super init])
+    {
+        self.localizedViolationString = localizedViolationString;
+    }
+    
+    return self;
+}
+
+- (id)withLocalizedViolationString:(NSString *)localizedViolationString
+{
+    self.localizedViolationString = localizedViolationString;
+    return self;
+}
 
 
 #pragma mark - Check
@@ -48,13 +71,26 @@
 #pragma mark - Localization
 
 /**
+ Create a localized violation string.
+ */
+- (NSString *) createLocalizedViolationString
+{
+    return nil;
+}
+
+/**
  Returns a localized violation string.
  *
  @return Localized violation string
 */
 - (NSString *)localizedViolationString
 {
-    return nil;
+    if (!_localizedViolationString)
+    {
+        return [self createLocalizedViolationString];
+    }
+    
+    return _localizedViolationString;
 }
 
 
@@ -71,7 +107,7 @@
     [description appendString:@"<"];
     [description appendString:[super description]];
     [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];
-    [description appendString:[NSString stringWithFormat:@"\n <shouldAllowViolation: %@>", _shouldAllowViolation == 0 ? @"YES" : @"NO"]];
+    [description appendString:[NSString stringWithFormat:@"\n <shouldAllowViolation: %@>", _shouldAllowViolation == 0 ? @"NO" : @"YES"]];
     [description appendString:@">"];
     
     return description;

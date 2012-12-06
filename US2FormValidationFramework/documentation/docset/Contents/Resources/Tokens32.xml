@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2ValidatorUIProtocol.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorUIProtocol</TokenIdentifier>
+			<Abstract type="html">A text user interface element must conform to US2ValidatorUIProtocol protocol methods.
+At the moment the framework supports UITextField and UITextView by using US2ValidatorTextField
+and US2ValidatorTextView.</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>
+			
+			<NodeRef refid="32"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidatorUIDelegate:</TokenIdentifier>
+			<Abstract type="html">The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setValidatorUIDelegate:(id&lt;US2ValidatorUIDelegate&gt;)validatorUIDelegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validatorUIDelegate</Name>
+					<Abstract type="html">The validator UI delegate conforming US2ValidatorUIDelegate</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValidatorUIDelegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validatorUIDelegate</TokenIdentifier>
+			<Abstract type="html">Return the delegate</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (id&lt;US2ValidatorUIDelegate&gt;)validatorUIDelegate</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the validator UI delegate</Abstract></ReturnValue>
+			<Anchor>//api/name/validatorUIDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidator:</TokenIdentifier>
+			<Abstract type="html">Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setValidator:(US2Validator *)validator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validator</Name>
+					<Abstract type="html">Validator to check the text of text UI conforming US2ValidatorUIProtocol</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValidator:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validator</TokenIdentifier>
+			<Abstract type="html">Set validator</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (US2Validator *)validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setShouldAllowViolations:</TokenIdentifier>
+			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
+Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
+the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
+parameters of the conditions considered.</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setShouldAllowViolations:(BOOL)shouldAllowViolation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>shouldAllowViolation</Name>
+					<Abstract type="html">Boolean value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setShouldAllowViolations:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/shouldAllowViolations</TokenIdentifier>
+			<Abstract type="html">Set boolean value</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)shouldAllowViolations</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAllowViolations</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/isValid</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isValid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/isValid</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setValidateOnFocusLossOnly:</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setValidateOnFocusLossOnly:(BOOL)validateOnFocusLossOnly</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validateOnFocusLossOnly</Name>
+					<Abstract type="html">Boolean value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValidateOnFocusLossOnly:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/validateOnFocusLossOnly</TokenIdentifier>
+			<Abstract type="html">Set boolean value</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setText:</TokenIdentifier>
+			<Abstract type="html">String to set as text to text UI</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setText:(NSString *)text</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>text</Name>
+					<Abstract type="html">String to set as text to text UI</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setText:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/text</TokenIdentifier>
+			<Abstract type="html">Set string value</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/setFrame:</TokenIdentifier>
+			<Abstract type="html">Boundary to set as frame to text UI</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (void)setFrame:(CGRect)frame</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>frame</Name>
+					<Abstract type="html">Boundary to set as frame to text UI</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setFrame:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIProtocol/frame</TokenIdentifier>
+			<Abstract type="html">Set CGRect value</Abstract>
+			<DeclaredIn>US2ValidatorUIProtocol.h</DeclaredIn>			
+			
+			<Declaration>- (CGRect)frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

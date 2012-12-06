@@ -103,8 +103,8 @@
         [_validatorTextView validatorTextViewDelegate:self violatedConditions:conditions];
     
     // If condition is NULL no condition failed
-    if (NO == _validatorTextView.shouldAllowViolation
-        || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
+    if (!_validatorTextView.validateOnFocusLossOnly && (NO == _validatorTextView.shouldAllowViolations
+        || NO == [conditions conditionAtIndex:0].shouldAllowViolation))
     {
         return [conditions conditionAtIndex:0] == nil;
     }
@@ -118,7 +118,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    if (YES == _validatorTextView.shouldAllowViolation)
+    if (YES == _validatorTextView.shouldAllowViolations)
     {
         // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
         if (!_validatorTextView.validateOnFocusLossOnly

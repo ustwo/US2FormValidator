@@ -41,6 +41,8 @@
 #import "InvalidTooltipView.h"
 #import "SubmitButtonTableViewCell.h"
 
+#import "US2ValidatorPostcodeUK.h"
+
 
 @interface TestViewController ()
 - (void)buildView;
@@ -138,7 +140,7 @@
     // Set type string for every form item
     _typeStringCollection = [[NSMutableArray alloc] init];
     [_typeStringCollection addObject:@"Name"];
-    [_typeStringCollection addObject:@"Email"];
+    [_typeStringCollection addObject:@"Post Code"];
     [_typeStringCollection addObject:@"About"];
     
     // Set text fields which will be used in form
@@ -147,7 +149,7 @@
     // Add first name text field
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
     firstNameTextField.validator               = [[[MyProjectValidatorName alloc] init] autorelease];
-    firstNameTextField.shouldAllowViolation    = YES;
+    firstNameTextField.shouldAllowViolations   = YES;
     firstNameTextField.validateOnFocusLossOnly = YES;
     firstNameTextField.text                    = @"";
     firstNameTextField.placeholder             = @"Todd";
@@ -155,21 +157,22 @@
     [_textUICollection addObject:firstNameTextField];
     [firstNameTextField release];
     
-    // Add email text field
-    US2ValidatorTextField *emailTextField  = [[US2ValidatorTextField alloc] init];
-    emailTextField.validator               = [[[US2ValidatorEmail alloc] init] autorelease];
-    emailTextField.shouldAllowViolation    = YES;
-    emailTextField.validateOnFocusLossOnly = YES;
-    emailTextField.text                    = @"";
-    emailTextField.placeholder             = @"example@example.com";
-    emailTextField.validatorUIDelegate     = self;
-    [_textUICollection addObject:emailTextField];
-    [emailTextField release];
+    // Add post code text field    
+    US2ValidatorTextField *postcodeTextField  = [[US2ValidatorTextField alloc] init];
+    postcodeTextField.validator               = [[[US2ValidatorPostcodeUK alloc] init] autorelease];
+    postcodeTextField.shouldAllowViolations   = YES;
+    postcodeTextField.validateOnFocusLossOnly = YES;
+    postcodeTextField.text                    = @"";
+    postcodeTextField.placeholder             = @"e.g. N1 1AA";
+    postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
+    postcodeTextField.validatorUIDelegate     = self;
+    [_textUICollection addObject:postcodeTextField];
+    [postcodeTextField release];
     
     // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
     aboutTextView.validator               = [[[MyProjectValidatorAbout alloc] init] autorelease];
-    aboutTextView.shouldAllowViolation    = YES;
+    aboutTextView.shouldAllowViolations   = YES;
     aboutTextView.validateOnFocusLossOnly = YES;
     aboutTextView.validatorUIDelegate     = self;
     [_textUICollection addObject:aboutTextView];

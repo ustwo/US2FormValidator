@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2ValidatorTextViewPrivateDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorTextViewPrivateDelegate</TokenIdentifier>
+			<Abstract type="html">A private delegate protocol which is used by class US2ValidatorTextView and served by internal
+class US2ValidatorTextViewPrivate</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextViewPrivateDelegate/validatorTextViewDelegate:violatedConditions:</TokenIdentifier>
+			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)validatorTextViewDelegate:(US2ValidatorTextViewPrivate *)textViewPrivate violatedConditions:(US2ConditionCollection *)conditions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>textViewPrivate</Name>
+					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+				</Parameter><Parameter>
+					<Name>conditions</Name>
+					<Abstract type="html">Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/validatorTextViewDelegate:violatedConditions:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextViewPrivateDelegate/validatorTextViewDelegateSuccededConditions:</TokenIdentifier>
+			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivateDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)validatorTextViewDelegateSuccededConditions:(US2ValidatorTextViewPrivate *)textViewPrivate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>textViewPrivate</Name>
+					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/validatorTextViewDelegateSuccededConditions:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

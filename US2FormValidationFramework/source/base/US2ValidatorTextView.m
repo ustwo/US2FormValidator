@@ -39,7 +39,7 @@
 
 @synthesize validatorUIDelegate     = _validatorUIDelegate;
 @synthesize validator               = _validator;
-@synthesize shouldAllowViolation    = _shouldAllowViolation;
+@synthesize shouldAllowViolations   = _shouldAllowViolations;
 @synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
 @dynamic    isValid;
 
@@ -48,13 +48,21 @@
 
 - (id)init
 {
-	self = [super init];
-	if (self != nil)
+	self = [self initWithFrame: CGRectZero];
+	if (self)
 	{
-        [self _startUp];
 	}
     
 	return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame: frame];
+    if (self) {
+        [self _startUp];
+    }
+    
+    return self;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -73,6 +81,9 @@
 
 - (void)dealloc
 {
+    // Remove notification observer
+    [[NSNotificationCenter defaultCenter] removeObserver:_validatorTextViewPrivate name:UITextViewTextDidEndEditingNotification object:self];
+    
     [_validator release];    
     [_validatorTextViewPrivate release];
     
@@ -88,7 +99,7 @@
 - (void)_startUp
 {    
     // Allows violation initially
-    _shouldAllowViolation = YES;
+    _shouldAllowViolations = YES;
     
     // Validate immediately
     _validateOnFocusLossOnly = NO;
@@ -120,6 +131,9 @@
     return [_validator checkConditions:self.text] == nil;
 }
 
+- (NSString *) validatableText {
+    return self.text;
+}
 
 #pragma mark - Validator text view delegate delegate
 

@@ -69,12 +69,12 @@
  
  @param shouldAllowViolation Boolean value
 */
-- (void)setShouldAllowViolation:(BOOL)shouldAllowViolation;
+- (void)setShouldAllowViolations:(BOOL)shouldAllowViolation;
 
 /**
  Set boolean value
 */
-- (BOOL)shouldAllowViolation;
+- (BOOL)shouldAllowViolations;
 
 /**
  Return whether the text is valid.

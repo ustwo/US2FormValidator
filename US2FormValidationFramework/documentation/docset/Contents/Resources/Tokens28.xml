@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2ValidatorProtocol.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorProtocol</TokenIdentifier>
+			<Abstract type="html">A validator must conform to US2ValidatorProtocol protocol methods.</Abstract>
+			<DeclaredIn>US2Validator.h</DeclaredIn>
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/addCondition:</TokenIdentifier>
+			<Abstract type="html">Add condition conform to US2ConditionProtocol</Abstract>
+			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			
+			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>condition</Name>
+					<Abstract type="html">Condition conform to US2ConditionProtocol</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addCondition:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/removeConditionOfClass:</TokenIdentifier>
+			<Abstract type="html">Remove all conditions subclassing conditionClass from validation queue.</Abstract>
+			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeConditionOfClass:(Class&lt;US2ConditionProtocol&gt;)conditionClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>conditionClass</Name>
+					<Abstract type="html">Remove all conditions which are kind of conditionClass</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeConditionOfClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/checkConditions:</TokenIdentifier>
+			<Abstract type="html">Add condition subclass of US2Condition for validation queue.</Abstract>
+			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			
+			<Declaration>- (US2ConditionCollection *)checkConditions:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">String to check for all added conditons</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
+			<Anchor>//api/name/checkConditions:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

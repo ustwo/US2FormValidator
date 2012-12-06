@@ -35,7 +35,7 @@
         string = [NSString string];
     
     NSError *error             = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[+\\w\\.\\-']+@[a-zA-Z0-9-]+(\\.[a-zA-Z]{2,})+$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[+\\w\\.\\-']+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{2,})+$" options:NSRegularExpressionCaseInsensitive error:&error];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     
     return numberOfMatches == 1;
@@ -52,19 +52,9 @@
 
 #pragma mark - Localization
 
-- (NSString *)localizedViolationString
+- (NSString *) createLocalizedViolationString
 {
-    NSString *key = @"US2KeyConditionViolationEmail";
-    
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Localization.bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:path];
-    
-    if (bundle)
-    {
-        return [bundle localizedStringForKey:key value:key table:nil];
-    }
-    
-    return nil;
+    return US2LocalizedString(@"US2KeyConditionViolationEmail", nil);
 }
 
 @end

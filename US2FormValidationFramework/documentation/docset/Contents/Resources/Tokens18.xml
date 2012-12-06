@@ -1,79 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ConditionCollectionProtocol.html">
+	<File path="Classes/US2ValidatorPostcodeUK.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ConditionCollectionProtocol</TokenIdentifier>
-			<Abstract>A condition collection must conform to US2ConditionCollection protocol methods.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorPostcodeUK</TokenIdentifier>
+			<Abstract type="html">The UK post code validator contains a UK post code condition (see US2ConditionPostcodeUK.
+A valid string does only contain one valid UK post code and up to 8 characters.</Abstract>
+			<DeclaredIn>US2ValidatorPostcodeUK.h</DeclaredIn>
 			
 			<NodeRef refid="18"/>
 		</Token>
 		
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/addCondition:</TokenIdentifier>
-			<Abstract>Add a condition to collection.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
-			
-			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>condition</Name>
-					<Abstract>US2Condition instance to add</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/addCondition:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeCondition:</TokenIdentifier>
-			<Abstract>Remove a condition from collection.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
-			
-			<Declaration>- (void)removeCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>condition</Name>
-					<Abstract>US2Condition instance to remove</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/removeCondition:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeConditionAtIndex:</TokenIdentifier>
-			<Abstract>Remove a condition from collection at index.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
-			
-			<Declaration>- (void)removeConditionAtIndex:(NSUInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract>US2Condition instance to remove at index</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/removeConditionAtIndex:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/conditionAtIndex:</TokenIdentifier>
-			<Abstract>Returns a condition of collection at index.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
-			
-			<Declaration>- (US2Condition *)conditionAtIndex:(NSUInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract>Index of condition</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract>Return US2Condition instance at index</Abstract></ReturnValue>
-			<Anchor>//api/name/conditionAtIndex:</Anchor>
-		</Token>
 		
 	</File>
 </Tokens>

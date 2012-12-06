@@ -43,4 +43,6 @@
 */
 @interface US2ConditionAlphabetic : US2Condition
 
+@property (assign, nonatomic) BOOL allowWhitespace;
+
 @end

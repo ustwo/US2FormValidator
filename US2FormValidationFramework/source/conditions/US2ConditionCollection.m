@@ -75,6 +75,9 @@
     return [_array objectAtIndex:index];
 }
 
+- (void) removeAllConditions {
+    [_array removeAllObjects];
+}
 
 #pragma mark - Fast enumeration
 
