@@ -40,7 +40,7 @@
  Check the custom condition.
  
  @param string String to check
- @return Return whether condition check failed or not
+ @return Return whether condition check passed or not
 */
 - (BOOL)check:(NSString *)string;
 
