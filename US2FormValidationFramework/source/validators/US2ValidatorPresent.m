@@ -24,10 +24,10 @@
 //  SOFTWARE.
 //
 
-#import "US2ValidatorEmpty.h"
-#import "US2ConditionEmpty.h"
+#import "US2ValidatorPresent.h"
+#import "US2ConditionPresent.h"
 
-@implementation US2ValidatorEmpty
+@implementation US2ValidatorPresent
 
 #pragma mark - Initialization
 
@@ -36,7 +36,7 @@
     self = [super init];
     if (self)
     {
-        [self addCondition:[[[US2ConditionEmpty alloc] init] autorelease]];
+        [self addCondition:[[[US2ConditionPresent alloc] init] autorelease]];
     }
     
     return self;

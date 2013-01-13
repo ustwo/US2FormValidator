@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Inserire un indirizzo valido nel formato http(s)://www.esempio.it";
 "US2KeyConditionViolationPasswordStrength"  = "Inserire una password più sicura";
 "US2KeyConditionViolationPostcodeUK"        = "Inserire un codice postale valido";
-"US2KeyConditionViolationEmpty"             = "Inserire del testo";
+"US2KeyConditionViolationPresent"           = "Inserire del testo";

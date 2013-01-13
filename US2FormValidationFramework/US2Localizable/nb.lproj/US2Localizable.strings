@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Skriv inn en gyldig lenke i formatet www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "Skriv inn et mer sikkert passord";
 "US2KeyConditionViolationPostcodeUK"        = "Skriv inn et gyldig UK postnummer";
-"US2KeyConditionViolationEmpty"             = "Skriv inn tekst";
+"US2KeyConditionViolationPresent"           = "Skriv inn tekst";

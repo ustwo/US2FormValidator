@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Entrez un URL valide sous forme de www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "Entrez un mot de passe plus fort";
 "US2KeyConditionViolationPostcodeUK"        = "Entrez un code postal valide pour le Royaume Uni";
-"US2KeyConditionViolationEmpty"             = "Entrez le texte";
+"US2KeyConditionViolationPresent"           = "Entrez le texte";

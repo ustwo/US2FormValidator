@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "유효한 URL주소를 입력하세요 예) www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "좀 더 안전한 비밀번호를 입력하세요";
 "US2KeyConditionViolationPostcodeUK"        = "유효한 영국내 우편주소를 입력하세요";
-"US2KeyConditionViolationEmpty"             = "글자를 입력하세요";
+"US2KeyConditionViolationPresent"           = "글자를 입력하세요";

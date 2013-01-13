@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Por favor escreva um endereço de web (URL) válido no formato de www.exemplo.com";
 "US2KeyConditionViolationPasswordStrength"  = "Por favor escreva uma palavra-passe mais segura";
 "US2KeyConditionViolationPostcodeUK"        = "Por favor escreva um código postal válido";
-"US2KeyConditionViolationEmpty"             = "Por favor escreva texto";
+"US2KeyConditionViolationPresent"           = "Por favor escreva texto";

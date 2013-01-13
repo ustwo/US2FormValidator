@@ -30,6 +30,6 @@
 /**
     A validator to check if a string is non-empty or null.
  */
-@interface US2ValidatorEmpty : US2ValidatorSingleCondition
+@interface US2ValidatorPresent : US2ValidatorSingleCondition
 
 @end
