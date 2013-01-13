@@ -24,6 +24,7 @@
 //  
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "US2Validatable.h"
 
 @class US2Validator;
 @protocol US2Validatable;

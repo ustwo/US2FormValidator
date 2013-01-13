@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Введите действующую ссылку в формате www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "Задайте более сложный пароль";
 "US2KeyConditionViolationPostcodeUK"        = "Введите действующий почтовый индекс UK";
-"US2KeyConditionViolationEmpty"             = "Введите текст";
+"US2KeyConditionViolationPresent"           = "Введите текст";

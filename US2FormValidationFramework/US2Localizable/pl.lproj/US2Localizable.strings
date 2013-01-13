@@ -31,4 +31,4 @@
 "US2KeyConditionViolationShorthandURL"      = "Podaj poprawny adres URL w formacie www.example.com";
 "US2KeyConditionViolationPasswordStrength"  = "Podaj bardziej bezpieczne hasło";
 "US2KeyConditionViolationPostcodeUK"        = "Podaj poprawny kod pocztowy, ważny w Wielkiej Brytanii.";
-"US2KeyConditionViolationEmpty"             = "Podaj tekst";
+"US2KeyConditionViolationPresent"           = "Podaj tekst";

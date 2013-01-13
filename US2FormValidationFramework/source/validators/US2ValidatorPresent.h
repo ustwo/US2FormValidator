@@ -1,5 +1,5 @@
 //
-//  US2ValidatorEmpty.m
+//  US2ValidatorEmpty.h
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
@@ -24,22 +24,12 @@
 //  SOFTWARE.
 //
 
-#import "US2ValidatorEmpty.h"
-#import "US2ConditionEmpty.h"
+#import <Foundation/Foundation.h>
+#import "US2Validator.h"
 
-@implementation US2ValidatorEmpty
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[[US2ConditionEmpty alloc] init] autorelease]];
-    }
-    
-    return self;
-}
+/**
+    A validator to check for the presence of a string
+ */
+@interface US2ValidatorPresent : US2ValidatorSingleCondition
 
 @end
