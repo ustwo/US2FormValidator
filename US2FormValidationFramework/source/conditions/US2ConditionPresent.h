@@ -8,6 +8,9 @@
 
 #import "US2Condition.h"
 
+/**
+ A condition that checks for the presence of a string
+ */
 @interface US2ConditionPresent : US2Condition
 
 @end

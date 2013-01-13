@@ -28,7 +28,7 @@
 #import "US2Validator.h"
 
 /**
-    A validator to check if a string is non-empty or null.
+    A validator to check for the presence of a string
  */
 @interface US2ValidatorPresent : US2ValidatorSingleCondition
 
