@@ -18,7 +18,7 @@
 #import <US2FormValidator/US2ConditionURL.h>
 #import <US2FormValidator/US2ConditionShorthandURL.h>
 #import <US2FormValidator/US2ConditionPasswordStrength.h>
-#import <US2FormValidator/US2ConditionEmpty.h>
+#import <US2FormValidator/US2ConditionPresent.h>
 #import <US2FormValidator/US2ConditionOr.h>
 #import <US2FormValidator/US2ConditionAnd.h>
 #import <US2FormValidator/US2ConditionNot.h>
@@ -34,4 +34,4 @@
 #import <US2FormValidator/US2ValidatorURL.h>
 #import <US2FormValidator/US2ValidatorShorthandURL.h>
 #import <US2FormValidator/US2ValidatorComposite.h>
-#import <US2FormValidator/US2ValidatorEmpty.h>
+#import <US2FormValidator/US2ValidatorPresent.h>

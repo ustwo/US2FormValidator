@@ -1,5 +1,5 @@
 //
-//  US2ValidatorEmpty.h
+//  US2ValidatorPresent.h
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
