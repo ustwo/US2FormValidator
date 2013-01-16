@@ -148,7 +148,8 @@
 {
     NSString *successTestString1 = @"example@example.ex";
     NSString *successTestString2 = @"e_x.a+m-p_l.e@example.ex.am";
-    NSString *successTestString3 = @"example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_@example.ex";
+    NSString *successTestString3 = @"e_x.a+m-p_l.e@ex.example-example.ex.am";
+    NSString *successTestString4 = @"example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_example_@example.ex";
     NSString *failureTestString1 = @"example";
     NSString *failureTestString2 = @"example@";
     NSString *failureTestString3 = @"example@example";
@@ -163,6 +164,7 @@
     STAssertTrue([condition check:successTestString1], @"The US2ConditionEmail should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString2], @"The US2ConditionEmail should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString3], @"The US2ConditionEmail should respond with TRUE and not FALSE", nil);
+    STAssertTrue([condition check:successTestString4], @"The US2ConditionEmail should respond with TRUE and not FALSE", nil);
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionEmail should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionEmail should respond with FALSE and not TRUE", nil);
