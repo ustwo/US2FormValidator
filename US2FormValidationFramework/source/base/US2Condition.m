@@ -30,6 +30,7 @@
 
 @synthesize shouldAllowViolation = _shouldAllowViolation;
 @synthesize localizedViolationString = _localizedViolationString;
+@synthesize regexString = _regex;
 
 #pragma mark - Init
 
@@ -45,6 +46,33 @@
         self.localizedViolationString = localizedViolationString;
     }
     
+    return self;
+}
+
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString
+{
+    if (self = [super init])
+    {
+        self.localizedViolationString = localizedViolationString;
+        self.regexString = regexString;
+    }
+    
+    return self;
+}
+
+- (id)initWithRegexString:(NSString *)regexString
+{
+    if (self = [super init])
+    {
+        self.regexString = regexString;
+    }
+    
+    return self;
+}
+
+- (id)withRegexString:(NSString *)regexString
+{
+    self.regexString = regexString;
     return self;
 }
 
@@ -64,7 +92,24 @@
 */
 - (BOOL)check:(NSString *)string
 {
-    return YES;
+    BOOL success = YES;
+    
+    if(!string)
+    {
+        success = NO;
+    }
+    else if(self.regexString)
+    {
+        NSError *error = NULL;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.regexString options:NSRegularExpressionCaseInsensitive error:&error];
+        if(!error)
+        {
+            NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+            success = numberOfMatches == 1;
+        }
+    }
+    
+    return success;
 }
 
 
@@ -73,7 +118,7 @@
 /**
  Create a localized violation string.
  */
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     return nil;
 }

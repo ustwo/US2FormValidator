@@ -70,7 +70,7 @@
 /**
  Remove all conditions from collection.
  */
-- (void) removeAllConditions;
+- (void)removeAllConditions;
 
 @end
 

@@ -36,11 +36,9 @@
         return NO;
     }
     
-    NSError *error             = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^((https?)://)[a-z0-9-]+(\\.[a-z0-9-]+)+([/?].*)?$" options:NSRegularExpressionCaseInsensitive error:&error];
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    self.regexString = @"^((https?)://)[a-z0-9-]+(\\.[a-z0-9-]+)+([/?].*)?$";
     
-    return numberOfMatches == 1;
+    return [super check:string];
 }
 
 

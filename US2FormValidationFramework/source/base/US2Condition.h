@@ -83,6 +83,12 @@
 @property (nonatomic, assign) BOOL shouldAllowViolation;
 
 /**
+ A regular expression string which the validated string is matched against
+ Defaults to nil
+ */
+@property (nonatomic, copy) NSString *regexString;
+
+/**
  Static shorthand for creating a validator.
  */
 + (US2Condition *) condition;
@@ -90,11 +96,26 @@
 /**
  Initialize condition with a custom localized violation string.
  */
-- (id) initWithLocalizedViolationString: (NSString *) localizedViolationString;
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString;
 
 /**
  Set the localized violation string and return self.
  */
-- (id) withLocalizedViolationString: (NSString *) localizedViolationString;
+- (id)withLocalizedViolationString:(NSString *)localizedViolationString;
+
+/**
+ Initialize condition with a custom localized violation string and regex string.
+ */
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString;
+
+/**
+ Initialize condition with a custom regex string.
+ */
+- (id)initWithRegexString:(NSString *)regexString;
+
+/**
+ Set the regex string and return self.
+ */
+- (id)withRegexString:(NSString *)regexString;
 
 @end

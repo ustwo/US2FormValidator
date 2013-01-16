@@ -126,6 +126,22 @@
 }
 
 /**
+ Test Condition with custom regex check
+ */
+- (void)testUS2ConditionRegexString
+{
+    NSString *successTestString1 = @"hello world";
+    NSString *failureTestString1 = @"a?1";
+    NSString *failureTestString2 = nil;
+    
+    US2Condition *condition = [[US2Condition alloc] initWithRegexString:@"hello world"];
+    STAssertTrue([condition check:successTestString1], @"The US2Condition should respond with TRUE and not FALSE", nil);
+    
+    STAssertFalse([condition check:failureTestString1], @"The US2Condition should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString2], @"The US2Condition should respond with FALSE and not TRUE", nil);
+}
+
+/**
  Test US2ConditionEmail check
  */
 - (void)testUS2ConditionEmail

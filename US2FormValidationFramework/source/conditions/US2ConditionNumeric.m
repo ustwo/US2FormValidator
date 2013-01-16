@@ -34,11 +34,9 @@
     if (nil == string)
         return NO;
     
-    NSError *error             = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]" options:0 error:&error];
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    self.regexString = @"\\d+";
     
-    return numberOfMatches == string.length;
+    return [super check:string];
 }
 
 
