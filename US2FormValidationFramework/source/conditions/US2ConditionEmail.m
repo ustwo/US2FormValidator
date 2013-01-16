@@ -34,7 +34,7 @@
     if (nil == string)
         string = [NSString string];
     
-    self.regexString = @"^[+\\w\\.\\-']+@[a-zA-Z0-9-]+(\\.[a-zA-Z]{2,})+$";
+    self.regexString = @"^[+\\w\\.\\-']+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{2,})+$";
     
     return [super check:string];
 }
