@@ -97,11 +97,9 @@ Create the implementation.
 		if (nil == string)
 			string = [NSString string];
 		
-		NSError *error             = NULL;
-		NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-zA-Z .-]" options:0 error:&error];
-		NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+		self.regexString = @"[a-zA-Z .-]";
 		
-		return numberOfMatches == string.length;
+		return [super check:string];
 	}
 	
 	
