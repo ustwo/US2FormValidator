@@ -48,16 +48,21 @@
 
 - (BOOL)check:(NSString *)string
 {
+    BOOL success = NO;
+    
     if (0 == _range.location
         && 0 == _range.length)
-        return YES;
+        success = YES;
     
     if (nil == string)
         string = [NSString string];
     
-    self.regexString = [NSString stringWithFormat:@"^.{%d,%d}$", _range.location, _range.length];
+    if(string.length >= _range.location && string.length <= _range.length)
+    {
+        success = YES;
+    }
     
-    return [super check:string];
+    return success;
 }
 
 
