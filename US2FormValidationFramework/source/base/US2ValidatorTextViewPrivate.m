@@ -152,7 +152,7 @@
     }
     
     // Inform delegate about changes
-    if ([_delegate respondsToSelector:@selector(validatorUIChange:)])
+    if ([_delegate respondsToSelector:@selector(validatorUIDidChange:)])
         [_delegate validatorUIDidChange:_validatorTextView];
 }
 
