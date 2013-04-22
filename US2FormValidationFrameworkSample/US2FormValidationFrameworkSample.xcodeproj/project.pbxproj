@@ -28,7 +28,6 @@
 		4CCDDEAD148CE2DE001F8FF1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE98148CE2DE001F8FF1 /* TestView.m */; };
 		4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */; };
 		4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */; };
-		4CD03F2D148E27ED00B44198 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
 		4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39E71490F309006699E6 /* InvalidTooltipView.m */; };
 		4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39EB1490F457006699E6 /* ValidTooltipView.m */; };
 		4CED39F11490F4D8006699E6 /* image_tooltip_invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39ED1490F4D8006699E6 /* image_tooltip_invalid.png */; };
@@ -41,31 +40,8 @@
 		4CED39FE1490F751006699E6 /* image_icon_validation_valid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F81490F751006699E6 /* image_icon_validation_valid@2x.png */; };
 		4CED39FF1490F751006699E6 /* image_icon_validation_waiting.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39F91490F751006699E6 /* image_icon_validation_waiting.png */; };
 		4CED3A001490F751006699E6 /* image_icon_validation_waiting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CED39FA1490F751006699E6 /* image_icon_validation_waiting@2x.png */; };
+		CF7395CE172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7395CD172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4CD03F25148E260100B44198 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4C26FB89148CF4210087D957;
-			remoteInfo = US2FormValidationFrameworkStaticLibrary;
-		};
-		4CD03F27148E260100B44198 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CDBC162148CF14300312190;
-			remoteInfo = US2FormValidationFrameworkTests;
-		};
-		4CD03F2B148E278C00B44198 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BD39923147E9EBA00EB75DB;
-			remoteInfo = US2FormValidationFrameworkStaticLibrary;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		066D89CA16413C3100B398B4 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/US2Localizable.strings; sourceTree = "<group>"; };
@@ -116,7 +92,6 @@
 		4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TooltipView.m; sourceTree = "<group>"; };
 		4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "US2FormValidationFrameworkSample-Info.plist"; sourceTree = "<group>"; };
 		4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "US2FormValidationFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
-		4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = US2FormValidationFramework.xcodeproj; path = ../US2FormValidationFramework/US2FormValidationFramework.xcodeproj; sourceTree = "<group>"; };
 		4CED39E61490F309006699E6 /* InvalidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidTooltipView.h; sourceTree = "<group>"; };
 		4CED39E71490F309006699E6 /* InvalidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidTooltipView.m; sourceTree = "<group>"; };
 		4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipViewPrivate.h; sourceTree = "<group>"; };
@@ -132,6 +107,7 @@
 		4CED39F81490F751006699E6 /* image_icon_validation_valid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_icon_validation_valid@2x.png"; sourceTree = "<group>"; };
 		4CED39F91490F751006699E6 /* image_icon_validation_waiting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_icon_validation_waiting.png; sourceTree = "<group>"; };
 		4CED39FA1490F751006699E6 /* image_icon_validation_waiting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_icon_validation_waiting@2x.png"; sourceTree = "<group>"; };
+		CF7395CD172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libUS2FormValidationFrameworkStaticLibrary.a; path = "../US2FormValidationFramework/build/Release-iphoneos/libUS2FormValidationFrameworkStaticLibrary.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD03F2D148E27ED00B44198 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */,
+				CF7395CE172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */,
 				4CCDDE69148CE2BA001F8FF1 /* UIKit.framework in Frameworks */,
 				4CCDDE6B148CE2BA001F8FF1 /* Foundation.framework in Frameworks */,
 				4CCDDE6D148CE2BA001F8FF1 /* CoreGraphics.framework in Frameworks */,
@@ -182,7 +158,7 @@
 		4CCDDE59148CE2BA001F8FF1 = {
 			isa = PBXGroup;
 			children = (
-				4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */,
+				CF7395CD172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a */,
 				4CCDDE7F148CE2DE001F8FF1 /* sample */,
 				4CCDDE67148CE2BA001F8FF1 /* Frameworks */,
 				4CCDDE65148CE2BA001F8FF1 /* Products */,
@@ -248,15 +224,6 @@
 			path = sample;
 			sourceTree = "<group>";
 		};
-		4CD03F1D148E260100B44198 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */,
-				4CD03F28148E260100B44198 /* US2FormValidationFrameworkTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,7 +238,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4CD03F2C148E278C00B44198 /* PBXTargetDependency */,
 			);
 			name = US2FormValidationFrameworkSample;
 			productName = US2FormValidationFrameworkSample;
@@ -308,35 +274,12 @@
 			mainGroup = 4CCDDE59148CE2BA001F8FF1;
 			productRefGroup = 4CCDDE65148CE2BA001F8FF1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4CD03F1D148E260100B44198 /* Products */;
-					ProjectRef = 4CD03F1C148E260100B44198 /* US2FormValidationFramework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4CCDDE63148CE2BA001F8FF1 /* US2FormValidationFrameworkSample */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4CD03F26148E260100B44198 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libUS2FormValidationFrameworkStaticLibrary.a;
-			remoteRef = 4CD03F25148E260100B44198 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CD03F28148E260100B44198 /* US2FormValidationFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = US2FormValidationFrameworkTests.octest;
-			remoteRef = 4CD03F27148E260100B44198 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4CCDDE62148CE2BA001F8FF1 /* Resources */ = {
@@ -387,14 +330,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4CD03F2C148E278C00B44198 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = US2FormValidationFrameworkStaticLibrary;
-			targetProxy = 4CD03F2B148E278C00B44198 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		066D89C916413C3100B398B4 /* US2Localizable.strings */ = {

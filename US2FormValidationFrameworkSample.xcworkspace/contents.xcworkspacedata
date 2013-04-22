@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:US2FormValidationFrameworkSample/US2FormValidationFrameworkSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:US2FormValidationFramework/US2FormValidationFramework.xcodeproj">
+   </FileRef>
+</Workspace>
