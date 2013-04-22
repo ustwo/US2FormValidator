@@ -3,6 +3,8 @@
 ustwo™ iOS Form Validator
 =========================
 
+[![Build Status](https://travis-ci.org/ustwo/US2FormValidator.png)](https://travis-ci.org//ustwo/US2FormValidator)
+
 This framework allows you to validate inputs of text fields and text views in a convenient way.
 
 Features
