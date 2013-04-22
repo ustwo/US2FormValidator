@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/tests/ValidatorUnitTests.m \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/tests/ValidatorUnitTests.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingKit.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestDefines.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTest.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase_Macros.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingUtilities.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/NSException_SenTestFailure.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestSuite.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestObserver.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestLog.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestDistributedNotifier.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestSuiteRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCaseRun.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenInterfaceTestCase.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestProbe.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2Validatable.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2Validator.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2Condition.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2Localization.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/conditions/US2ConditionCollection.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/conditions/US2ConditionAlphabetic.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/conditions/US2ConditionRange.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/validators/US2ValidatorComposite.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/validators/US2ValidatorAlphabetic.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/validators/US2ValidatorRange.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2Form.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorTextField.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorTextFieldPrivateDelegate.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorUIDelegate.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorUIProtocol.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorTextView.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/base/US2ValidatorTextViewPrivateDelegate.h \
+  /Users/fish/ios/US2FormValidator/US2FormValidationFramework/source/validators/US2ValidatorPostcodeUK.h
