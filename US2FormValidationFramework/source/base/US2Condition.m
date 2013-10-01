@@ -104,8 +104,8 @@
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.regexString options:NSRegularExpressionCaseInsensitive error:&error];
         if(!error)
         {
-            NSUInteger numberOfMatches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
-            success = numberOfMatches == 1;
+            NSRange matchRange = [regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
+            success = (matchRange.location == 0) && (matchRange.length == string.length);
         }
     }
     

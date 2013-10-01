@@ -269,6 +269,7 @@
     
     NSString *failureTestString1 = @"a";
     NSString *failureTestString2 = nil;
+    NSString *failureTestString3 = @"1234abc";
     
     US2ConditionNumeric *condition = [[US2ConditionNumeric alloc] init];
     STAssertTrue([condition check:successTestString1], @"The US2ConditionNumeric should respond with TRUE and not FALSE", nil);
@@ -276,6 +277,7 @@
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionNumeric should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionNumeric should respond with FALSE and not TRUE", nil);
+    STAssertFalse([condition check:failureTestString3], @"The US2ConditionNumeric should respond with FALSE and not TRUE", nil);
 }
 
 /**
@@ -285,11 +287,6 @@
 {
     NSString *successTestString1 = @"1A2B3D4C5D";
     NSString *successTestString2 = @"1A2";
-//    NSMutableString *successTestString3 = [NSMutableString string];
-//    for (NSUInteger i = 0; i < 1000000; i++)
-//    {
-//        [successTestString3 appendString:successTestString1];
-//    }
     
     NSString *failureTestString1 = @"1A2B3D4C5D6E";
     NSString *failureTestString2 = @"1A";
