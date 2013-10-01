@@ -32,7 +32,9 @@
 - (BOOL)check:(NSString *)string
 {
     if (nil == string)
+    {
         return NO;
+    }
     
     self.regexString = @"\\d+";
     
