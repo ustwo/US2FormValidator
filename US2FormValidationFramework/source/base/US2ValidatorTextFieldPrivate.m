@@ -64,11 +64,11 @@
     }
     
     // If any condition does not allow violation check for invalidities and do not allow to change the text field
-    // Making sure that the last character can be deleted although
+    // Making sure that characters can be deleted
     BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
     if (!_validatorTextField.validateOnFocusLossOnly
         && anyInvalidConditionDoesNotAllowViolation
-        && ![string isEqualToString:@""])
+        && string.length != 0)
     {
         return conditions.count == 0;
     }
@@ -99,8 +99,7 @@
 {
     // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
     if (!_validatorTextField.validateOnFocusLossOnly
-        || (_validatorTextField.validateOnFocusLossOnly
-            && _didEndEditing))
+        || (_validatorTextField.validateOnFocusLossOnly && _didEndEditing))
     {
         US2ConditionCollection *conditions = [_validatorTextField.validator checkConditions:_validatorTextField.text];
         BOOL isValid = conditions == nil;
