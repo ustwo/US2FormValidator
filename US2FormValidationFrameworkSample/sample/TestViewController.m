@@ -31,8 +31,8 @@
 //  the delegate instance will receive this information.
 //
 
+#import "US2FormValidator.h"
 #import "TestViewController.h"
-#import "US2ValidatorEmail.h"
 #import "MyProjectValidatorName.h"
 #import "MyProjectValidatorAbout.h"
 #import "FormTextFieldTableViewCell.h"
@@ -40,8 +40,6 @@
 #import "ValidTooltipView.h"
 #import "InvalidTooltipView.h"
 #import "SubmitButtonTableViewCell.h"
-
-#import "US2ValidatorPostcodeUK.h"
 
 
 @interface TestViewController ()
@@ -140,10 +138,26 @@
     // Set text fields which will be used in form
     _textUICollection = [[NSMutableArray alloc] init];
     
+    US2Validator *validator = [[US2Validator alloc] init];
+    
+    US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
+    maxRangeCondition.range = NSMakeRange(0, 6);
+    maxRangeCondition.shouldAllowViolation = NO;
+    [validator addCondition:maxRangeCondition];
+    
+    US2ConditionRange *minRangeCondition = [[US2ConditionRange alloc] init];
+    minRangeCondition.range = NSMakeRange(2, 6);
+    minRangeCondition.shouldAllowViolation = YES;
+    [validator addCondition:minRangeCondition];
+    
+    US2ConditionNumeric *numericCondition = [[US2ConditionNumeric alloc] init];
+    numericCondition.shouldAllowViolation = NO;
+    [validator addCondition:numericCondition];
+    
     // Add first name text field
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
-    firstNameTextField.validator               = [[MyProjectValidatorName alloc] init];
-    firstNameTextField.validateOnFocusLossOnly = YES;
+    firstNameTextField.validator               = validator;
+    firstNameTextField.validateOnFocusLossOnly = NO;
     firstNameTextField.text                    = @"";
     firstNameTextField.placeholder             = @"Todd";
     firstNameTextField.validatorUIDelegate     = self;
