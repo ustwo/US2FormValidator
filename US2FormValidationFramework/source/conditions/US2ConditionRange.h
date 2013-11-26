@@ -43,15 +43,11 @@
     BOOL isValid = [rangeValidator checkConditions:string] == nil;          // isValid == YES
 */
 @interface US2ConditionRange : US2Condition
-{
-@protected
-    NSRange _range;
-}
 
 /**
  The range to check for.
 */
-@property (nonatomic, assign) NSRange range;
+@property (nonatomic) NSRange range;
 
 
 @end

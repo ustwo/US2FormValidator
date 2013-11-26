@@ -69,10 +69,6 @@
  user can be informed in a convenient way what went wrong.
 */
 @interface US2Condition : NSObject <US2ConditionProtocol>
-{
-@private
-    NSString *_localizedViolationString;
-}
 
 @property (nonatomic, copy) NSString *localizedViolationString;
 
