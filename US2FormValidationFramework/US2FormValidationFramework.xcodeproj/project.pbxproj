@@ -700,7 +700,6 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -727,7 +726,6 @@
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
