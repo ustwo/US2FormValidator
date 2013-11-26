@@ -137,17 +137,20 @@
     // Add first name text field
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
     firstNameTextField.validator               = validator;
-    firstNameTextField.validateOnFocusLossOnly = NO;
-    firstNameTextField.text                    = @"";
+    firstNameTextField.text                    = @"123";
     firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
     firstNameTextField.validatorUIDelegate     = self;
     [_textUICollection addObject:firstNameTextField];
     
+    minRangeCondition = [[US2ConditionRange alloc] init];
+    minRangeCondition.range = NSMakeRange(2, 6);
+    minRangeCondition.shouldAllowViolation = NO;
+    [validator addCondition:minRangeCondition];
+    
     // Add post code text field    
     US2ValidatorTextField *postcodeTextField  = [[US2ValidatorTextField alloc] init];
-    postcodeTextField.validator               = [[US2ValidatorPostcodeUK alloc] init];
-    postcodeTextField.validateOnFocusLossOnly = YES;
-    postcodeTextField.text                    = @"";
+    postcodeTextField.validator               = validator;
+    postcodeTextField.text                    = @"123";
     postcodeTextField.placeholder             = @"e.g. N1 1AA";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
     postcodeTextField.validatorUIDelegate     = self;
