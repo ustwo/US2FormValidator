@@ -98,68 +98,91 @@
     
     // Inform text field about valid state change
     if (conditions == nil)
-        [_validatorTextView validatorTextViewDelegateSuccededConditions:self];
-    else
-        [_validatorTextView validatorTextViewDelegate:self violatedConditions:conditions];
-    
-    // If condition is NULL no condition failed
-    if (!_validatorTextView.validateOnFocusLossOnly && (NO == _validatorTextView.shouldAllowViolations
-        || NO == [conditions conditionAtIndex:0].shouldAllowViolation))
     {
-        return [conditions conditionAtIndex:0] == nil;
+        [_validatorTextView validatorTextViewDelegateSuccededConditions:self];
+    }
+    else
+    {
+        [_validatorTextView validatorTextViewDelegate:self violatedConditions:conditions];
+    }
+    
+    // If any condition does not allow violation check for invalidities and do not allow to change the text field
+    // Making sure that the last character can be deleted although
+    BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
+    if (!_validatorTextView.validateOnFocusLossOnly
+        && anyInvalidConditionDoesNotAllowViolation
+        && ![text isEqualToString:@""])
+    {
+        return conditions.count == 0;
     }
     
     // Ask delegate whether should change characters in range
     if ([_delegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)])
+    {
         return [_delegate textView:_validatorTextView shouldChangeTextInRange:range replacementText:text];
+    }
     
     return YES;
 }
 
+- (BOOL)anyConditionDoesNotAllowViolation:(US2ConditionCollection *)conditions
+{
+    for (US2Condition *condition in conditions)
+    {
+        if (condition.shouldAllowViolation == NO)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 - (void)textViewDidChange:(UITextView *)textView
 {
-    if (YES == _validatorTextView.shouldAllowViolations)
+    // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
+    if (!_validatorTextView.validateOnFocusLossOnly
+        || (_validatorTextView.validateOnFocusLossOnly
+            && _didEndEditing))
     {
-        // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
-        if (!_validatorTextView.validateOnFocusLossOnly
-            || (_validatorTextView.validateOnFocusLossOnly
-                && _didEndEditing))
+        US2ConditionCollection *conditions = [_validatorTextView.validator checkConditions:_validatorTextView.text];
+        BOOL isValid = conditions == nil;
+        if (_lastIsValid != isValid)
         {
-            US2ConditionCollection *conditions = [_validatorTextView.validator checkConditions:_validatorTextView.text];
-            BOOL isValid = conditions == nil;
-            if (_lastIsValid != isValid)
+            _lastIsValid = isValid;
+            
+            // Inform text field about valid state change
+            if (isValid)
+                [_validatorTextView validatorTextViewDelegateSuccededConditions:self];
+            else
+                [_validatorTextView validatorTextViewDelegate:self violatedConditions:conditions];
+            
+            // Inform delegate about valid state change
+            if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
+                [_delegate validatorUI:_validatorTextView changedValidState:isValid];
+            
+            // Inform delegate about violation
+            if (!isValid)
             {
-                _lastIsValid = isValid;
-                
-                // Inform text field about valid state change
-                if (isValid)
-                    [_validatorTextView validatorTextViewDelegateSuccededConditions:self];
-                else
-                    [_validatorTextView validatorTextViewDelegate:self violatedConditions:conditions];
-                
-                // Inform delegate about valid state change
-                if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
-                    [_delegate validatorUI:_validatorTextView changedValidState:isValid];
-                
-                // Inform delegate about violation
-                if (!isValid)
-                {
-                    if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
-                        [_delegate validatorUI:_validatorTextView violatedConditions:conditions];
-                }
+                if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
+                    [_delegate validatorUI:_validatorTextView violatedConditions:conditions];
             }
         }
     }
     
     // Inform delegate about changes
     if ([_delegate respondsToSelector:@selector(validatorUIDidChange:)])
+    {
         [_delegate validatorUIDidChange:_validatorTextView];
+    }
 }
 
 - (void)textViewDidChangeSelection:(UITextView *)textView
 {
     if ([_delegate respondsToSelector:@selector(textViewDidChangeSelection:)])
+    {
         [_delegate textViewDidChangeSelection:_validatorTextView];
+    }
 }
 
 @end

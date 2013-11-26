@@ -39,7 +39,6 @@
 
 @synthesize validatorUIDelegate     = _validatorUIDelegate;
 @synthesize validator               = _validator;
-@synthesize shouldAllowViolations   = _shouldAllowViolations;
 @synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
 @dynamic    isValid;
 
@@ -97,10 +96,7 @@
  Set interested instance. The private class US2ValidatorTextViewPrivate will serve the delegate after validation.
 */
 - (void)_startUp
-{    
-    // Allows violation initially
-    _shouldAllowViolations = YES;
-    
+{
     // Validate immediately
     _validateOnFocusLossOnly = NO;
     

@@ -62,21 +62,6 @@
 - (US2Validator *)validator;
 
 /**
- Determines whether text inputs can be made either by violating the conditions.
- Is this parameter NO it overrides the 'shouldAllowViolation' parameter of 
- the conditions added to the validator. If set to YES the 'shouldAllowViolation'
- parameters of the conditions considered.
- 
- @param shouldAllowViolation Boolean value
-*/
-- (void)setShouldAllowViolations:(BOOL)shouldAllowViolation;
-
-/**
- Set boolean value
-*/
-- (BOOL)shouldAllowViolations;
-
-/**
  Return whether the text is valid.
  
  @return Returns the valid state of the text field

@@ -58,65 +58,83 @@
     
     // Inform text field about valid state change
     if (conditions == nil)
-        [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
-    else
-        [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
-    
-    // If condition is NULL no condition failed
-    if (!_validatorTextField.validateOnFocusLossOnly
-        && (NO == _validatorTextField.shouldAllowViolations
-            || NO == [conditions conditionAtIndex:0].shouldAllowViolation)
-        && range.location != 0)
     {
-        return [conditions conditionAtIndex:0] == nil;
+        [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
+    }
+    else
+    {
+        [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
+    }
+    
+    // If any condition does not allow violation check for invalidities and do not allow to change the text field
+    // Making sure that the last character can be deleted although
+    BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
+    if (!_validatorTextField.validateOnFocusLossOnly
+        && anyInvalidConditionDoesNotAllowViolation
+        && ![string isEqualToString:@""])
+    {
+        return conditions.count == 0;
     }
     
     // Ask delegate whether should change characters in range
     if ([_delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)])
+    {
         return [_delegate textField:_validatorTextField shouldChangeCharactersInRange:range replacementString:string];
+    }
     
     return YES;
 }
 
+- (BOOL)anyConditionDoesNotAllowViolation:(US2ConditionCollection *)conditions
+{
+    for (US2Condition *condition in conditions)
+    {
+        if (condition.shouldAllowViolation == NO)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 - (void)textFieldDidChange:(NSNotification *)notification
 {
-    // Only validate if violations are allowed
-    if (_validatorTextField.shouldAllowViolations)
+    // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
+    if (!_validatorTextField.validateOnFocusLossOnly
+        || (_validatorTextField.validateOnFocusLossOnly
+            && _didEndEditing))
     {
-        // Validate according to 'validateOnFocusLossOnly' while editing first time or after focus loss
-        if (!_validatorTextField.validateOnFocusLossOnly
-            || (_validatorTextField.validateOnFocusLossOnly
-                && _didEndEditing))
+        US2ConditionCollection *conditions = [_validatorTextField.validator checkConditions:_validatorTextField.text];
+        BOOL isValid = conditions == nil;
+        if (_lastIsValid != isValid)
         {
-            US2ConditionCollection *conditions = [_validatorTextField.validator checkConditions:_validatorTextField.text];
-            BOOL isValid = conditions == nil;
-            if (_lastIsValid != isValid)
-            {
-                _lastIsValid = isValid;
-                
-                // Inform text field about valid state change
-                if (isValid)
-                    [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
-                else
-                    [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
-                
-                // Inform delegate about valid state change
-                if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
-                    [_delegate validatorUI:_validatorTextField changedValidState:isValid];
-                
-                // Inform delegate about violation
-                if (!isValid)
-                {                
-                    if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
-                        [_delegate validatorUI:_validatorTextField violatedConditions:conditions];
-                }
+            _lastIsValid = isValid;
+            
+            // Inform text field about valid state change
+            if (isValid)
+                [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
+            else
+                [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
+            
+            // Inform delegate about valid state change
+            if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
+                [_delegate validatorUI:_validatorTextField changedValidState:isValid];
+            
+            // Inform delegate about violation
+            if (!isValid)
+            {                
+                if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
+                    [_delegate validatorUI:_validatorTextField violatedConditions:conditions];
             }
         }
     }
     
     // Inform delegate about changes
     if ([_delegate respondsToSelector:@selector(validatorUIDidChange:)])
+    {
         [_delegate validatorUIDidChange:_validatorTextField];
+    }
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField

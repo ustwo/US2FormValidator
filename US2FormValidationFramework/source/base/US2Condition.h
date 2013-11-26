@@ -72,10 +72,9 @@
 {
 @private
     NSString *_localizedViolationString;
-    BOOL _shouldAllowViolation;
 }
 
-@property (copy, nonatomic) NSString *localizedViolationString;
+@property (nonatomic, copy) NSString *localizedViolationString;
 
 /**
  If set to *NO* the user is not able to enter characters which would break the condition.
@@ -89,9 +88,9 @@
 @property (nonatomic, copy) NSString *regexString;
 
 /**
- Static shorthand for creating a validator.
+ Static shorthand for creating a condition.
  */
-+ (US2Condition *) condition;
++ (US2Condition *)condition;
 
 /**
  Initialize condition with a custom localized violation string.

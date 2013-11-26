@@ -50,7 +50,6 @@
     id <US2ValidatorUIDelegate, UITextFieldDelegate> _validatorUIDelegate;
     US2Validator                                     *_validator;
     US2ValidatorTextFieldPrivate                     *_validatorTextFieldPrivate;
-    BOOL                                             _shouldAllowViolation;
     BOOL                                             _validateOnFocusLossOnly;
 }
 
@@ -63,14 +62,6 @@
  Set the validator to check the text of the text field with
 */
 @property (nonatomic, retain) US2Validator *validator;
-
-/**
- Determines whether text inputs can be made either by violating the conditions.
- Is this parameter is NO it overrides the 'shouldAllowViolation' parameter of 
- the conditions added to the validator. If set to YES the 'shouldAllowViolation'
- parameters of the conditions are considered.
-*/
-@property (nonatomic, assign) BOOL shouldAllowViolations;
 
 /**
  Return whether the text is valid.
@@ -90,6 +81,6 @@
 /**
  Text for validation
  */
-- (NSString *) validatableText;
+- (NSString *)validatableText;
 
 @end

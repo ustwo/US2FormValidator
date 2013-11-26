@@ -43,14 +43,14 @@
  
  @param condition Condition conform to US2ConditionProtocol
 */
-- (void)addCondition:(id <US2ConditionProtocol>)condition;
+- (void)addCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove all conditions subclassing conditionClass from validation queue.
  
  @param conditionClass Remove all conditions which are kind of _conditionClass_
 */
-- (void)removeConditionOfClass:(Class <US2ConditionProtocol>)conditionClass;
+- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass;
 
 /**
  Add condition subclass of US2Condition for validation queue.
@@ -131,14 +131,14 @@
  
  @param condition Condition conform to US2ConditionProtocol
 */
-- (void)addCondition:(id <US2ConditionProtocol>)condition;
+- (void)addCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove all conditions subclassing conditionClass from validation queue.
  
  @param conditionClass Remove all conditions which are kind of _conditionClass_
 */
-- (void)removeConditionOfClass:(Class <US2ConditionProtocol>)conditionClass;
+- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass;
 
 /**
  Add condition subclass of US2Condition for validation queue.

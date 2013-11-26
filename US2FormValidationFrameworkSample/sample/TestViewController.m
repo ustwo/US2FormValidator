@@ -32,42 +32,25 @@
 //
 
 #import "TestViewController.h"
-#import "US2ValidatorEmail.h"
-#import "MyProjectValidatorName.h"
-#import "MyProjectValidatorAbout.h"
 #import "FormTextFieldTableViewCell.h"
 #import "FormTextViewTableViewCell.h"
 #import "ValidTooltipView.h"
 #import "InvalidTooltipView.h"
 #import "SubmitButtonTableViewCell.h"
 
+#import "MyProjectValidatorName.h"
+#import "MyProjectValidatorAbout.h"
+#import "US2ValidatorEmail.h"
 #import "US2ValidatorPostcodeUK.h"
+#import "US2ConditionRange.h"
+#import "US2ConditionNumeric.h"
 
 
 @interface TestViewController ()
-- (void)buildView;
-- (void)initData;
-- (void)initUserInterface;
-- (void)dismissTooltip;
-- (void)submitButtonTouched:(UIButton *)button;
-- (FormTableViewCell *)formTextFieldTableViewCellFromTableView:(UITableView *)tableView;
-- (FormTableViewCell *)formTextViewTableViewCellFromTableView:(UITableView *)tableView;
-- (SubmitButtonTableViewCell *)submitButtonTableViewCellFromTableView:(UITableView *)tableView;
-
 @end
 
 
 @implementation TestViewController
-
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    
-    return self;
-}
 
 
 #pragma mark - Deinitialization
@@ -107,7 +90,7 @@
 */
 - (void)buildView
 {
-    self.testView = [[[TestView alloc] initWithFrame: self.view.frame] autorelease];
+    self.testView = [[[TestView alloc] initWithFrame:self.view.frame] autorelease];
 }
 
 /**
@@ -147,9 +130,24 @@
     _textUICollection = [[NSMutableArray alloc] init];
     
     // Add first name text field
+    US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
+    maxRangeCondition.range = NSMakeRange(0, 6);
+    maxRangeCondition.shouldAllowViolation = NO;
+    
+    US2ConditionRange *minRangeCondition = [[US2ConditionRange alloc] init];
+    minRangeCondition.range = NSMakeRange(2, 6);
+    minRangeCondition.shouldAllowViolation = YES;
+    
+    US2ConditionNumeric *numericCondition = [[US2ConditionNumeric alloc] init];
+    numericCondition.shouldAllowViolation = NO;
+    
+    US2Validator *validator = [[US2Validator alloc] init];
+    [validator addCondition:minRangeCondition];
+    [validator addCondition:maxRangeCondition];
+    [validator addCondition:numericCondition];
+    
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
-    firstNameTextField.validator               = [[[MyProjectValidatorName alloc] init] autorelease];
-    firstNameTextField.shouldAllowViolations   = YES;
+    firstNameTextField.validator               = [validator autorelease];
     firstNameTextField.validateOnFocusLossOnly = YES;
     firstNameTextField.text                    = @"";
     firstNameTextField.placeholder             = @"Todd";
@@ -160,7 +158,6 @@
     // Add post code text field    
     US2ValidatorTextField *postcodeTextField  = [[US2ValidatorTextField alloc] init];
     postcodeTextField.validator               = [[[US2ValidatorPostcodeUK alloc] init] autorelease];
-    postcodeTextField.shouldAllowViolations   = YES;
     postcodeTextField.validateOnFocusLossOnly = YES;
     postcodeTextField.text                    = @"";
     postcodeTextField.placeholder             = @"e.g. N1 1AA";
@@ -171,8 +168,7 @@
     
     // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
-    aboutTextView.validator               = [[[MyProjectValidatorAbout alloc] init] autorelease];
-    aboutTextView.shouldAllowViolations   = YES;
+    aboutTextView.validator               = validator;
     aboutTextView.validateOnFocusLossOnly = YES;
     aboutTextView.validatorUIDelegate     = self;
     [_textUICollection addObject:aboutTextView];

@@ -39,7 +39,6 @@
 
 @synthesize validatorUIDelegate     = _validatorUIDelegate;
 @synthesize validator               = _validator;
-@synthesize shouldAllowViolations   = _shouldAllowViolations;
 @synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
 @dynamic    isValid;
 
@@ -97,9 +96,6 @@
 
 - (void)_startUp
 {
-    // Allows violation initially
-    _shouldAllowViolations = YES;
-    
     // Validate immediately
     _validateOnFocusLossOnly = NO;
     
@@ -145,10 +141,6 @@
     return [_validator checkConditions:self.text] == nil;
 }
 
-- (NSString *) validatableText {
-    return self.text;
-}
-
 #pragma mark - 
 
 /**
@@ -163,6 +155,11 @@
 */
 - (void)validatorTextFieldPrivateSuccededConditions:(US2ValidatorTextFieldPrivate *)textFieldPrivate
 {
+}
+
+- (NSString *)validatableText
+{
+    return self.text;
 }
 
 

@@ -51,14 +51,6 @@
 }
 
 
-#pragma mark - Allow violation
-
-- (BOOL)shouldAllowViolation
-{
-    return YES;
-}
-
-
 #pragma mark - Localization
 
 - (NSString *)createLocalizedViolationString
