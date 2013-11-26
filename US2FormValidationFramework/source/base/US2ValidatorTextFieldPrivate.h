@@ -42,8 +42,8 @@
 @interface US2ValidatorTextFieldPrivate : NSObject <UITextFieldDelegate>
 {
 @private
-    id <US2ValidatorUIDelegate, UITextFieldDelegate> _delegate;
-    US2ValidatorTextField                            *_validatorTextField;
+    id <US2ValidatorUIDelegate, UITextFieldDelegate> __unsafe_unretained _delegate;
+    US2ValidatorTextField                            *__unsafe_unretained _validatorTextField;
     BOOL                                             _lastIsValid;
     BOOL                                             _didEndEditing;
 }
@@ -52,14 +52,14 @@
  Origin delegate which was set through US2ValidatorTextField and will
  be served by this private class US2ValidatorTextFieldPrivate.
 */
-@property (nonatomic, assign) id <US2ValidatorUIDelegate, UITextFieldDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <US2ValidatorUIDelegate, UITextFieldDelegate> delegate;
 
 /**
  Represents the main validation text field which wants to know what went
  wrong when validating in this private class US2ValidatorTextFieldPrivate.
  Thus the validation text field is able to change its appearance e.g..
 */
-@property (nonatomic, assign) US2ValidatorTextField *validatorTextField;
+@property (nonatomic, unsafe_unretained) US2ValidatorTextField *validatorTextField;
 
 
 @end

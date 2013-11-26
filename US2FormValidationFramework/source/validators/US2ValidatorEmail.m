@@ -37,7 +37,7 @@
     self = [super init];
     if (self)
     {
-        [self addCondition:[[[US2ConditionEmail alloc] init] autorelease]];
+        [self addCondition:[[US2ConditionEmail alloc] init]];
     }
     
     return self;

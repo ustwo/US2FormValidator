@@ -25,11 +25,10 @@
 
 #import "US2Form.h"
 
-@implementation US2FormEntry
-@synthesize validatable;
-@synthesize validator;
 
+@implementation US2FormEntry
 @end
+
 
 @implementation US2Form
 
@@ -46,10 +45,7 @@
 
 - (void)dealloc
 {
-    [_entries release];
     _entries = nil;
-    
-    [super dealloc];
 }
 
 - (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
@@ -71,7 +67,6 @@
         [entry setValidatable:validatable];
         [entry setValidator:validator];
         [_entries addObject:entry];
-        [entry release];
     }
 }
 
@@ -95,7 +90,7 @@
             [conditions addCondition: condition];
         }
     }
-    return [conditions autorelease];
+    return conditions;
 }
 
 @end

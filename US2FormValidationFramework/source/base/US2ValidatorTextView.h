@@ -47,7 +47,7 @@
 @interface US2ValidatorTextView : UITextView <US2ValidatorUIProtocol, US2ValidatorTextViewPrivateDelegate, US2Validatable>
 {
 @private
-    id <US2ValidatorUIDelegate, UITextViewDelegate> _validatorUIDelegate;
+    id <US2ValidatorUIDelegate, UITextViewDelegate> __unsafe_unretained _validatorUIDelegate;
     US2Validator                                    *_validator;
     US2ValidatorTextViewPrivate                     *_validatorTextViewPrivate;
     BOOL                                            _validateOnFocusLossOnly;
@@ -56,12 +56,12 @@
 /**
  Set delegate implementing US2ValidatorUIDelegate
  */
-@property (nonatomic, assign) id <US2ValidatorUIDelegate, UITextViewDelegate> validatorUIDelegate;
+@property (nonatomic, unsafe_unretained) id <US2ValidatorUIDelegate, UITextViewDelegate> validatorUIDelegate;
 
 /**
  Set the validator to check the text of the text field with
 */
-@property (nonatomic, retain) US2Validator *validator;
+@property (nonatomic, strong) US2Validator *validator;
 
 /**
  Return whether the text is valid.

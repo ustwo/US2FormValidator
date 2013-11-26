@@ -37,7 +37,7 @@
     self = [super init];
     if (self)
     {
-        US2ConditionRange *rangeCondition   = [[[US2ConditionRange alloc] init] autorelease];
+        US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
         rangeCondition.range                = NSMakeRange(2, UINT16_MAX);
         rangeCondition.shouldAllowViolation = YES;
         

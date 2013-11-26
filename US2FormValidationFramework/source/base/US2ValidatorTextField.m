@@ -36,11 +36,7 @@
 
 @implementation US2ValidatorTextField
 
-
-@synthesize validatorUIDelegate     = _validatorUIDelegate;
-@synthesize validator               = _validator;
-@synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
-@dynamic    isValid;
+@dynamic isValid;
 
 
 #pragma mark - Initialization
@@ -84,11 +80,6 @@
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
     [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
-    
-    [_validator release];
-    [_validatorTextFieldPrivate release];
-    
-    [super dealloc];
 }
 
 
@@ -129,8 +120,7 @@
 
 - (void)setValidator:(US2Validator *)validator
 {
-    [_validator release];
-    _validator = [validator retain];
+    _validator = validator;
 }
 
 

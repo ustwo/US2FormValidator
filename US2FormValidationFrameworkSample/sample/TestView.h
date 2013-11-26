@@ -36,7 +36,7 @@
     UITableView *_tableView;
 }
 
-@property (nonatomic, retain, readonly) UITableView *tableView;
+@property (nonatomic, strong, readonly) UITableView *tableView;
 
 
 @end

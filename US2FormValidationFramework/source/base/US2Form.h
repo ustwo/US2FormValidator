@@ -32,8 +32,8 @@
  */
 @interface US2FormEntry : NSObject
 
-@property (nonatomic, retain) id<US2Validatable> validatable;
-@property (nonatomic, retain) id<US2ValidatorProtocol> validator;
+@property (nonatomic, strong) id<US2Validatable> validatable;
+@property (nonatomic, strong) id<US2ValidatorProtocol> validator;
 
 @end
 

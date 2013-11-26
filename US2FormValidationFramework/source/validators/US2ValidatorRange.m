@@ -30,9 +30,6 @@
 @implementation US2ValidatorRange
 
 
-@synthesize range = _range;
-
-
 #pragma mark - Initialization
 
 - (id)init
@@ -42,7 +39,6 @@
     {
         US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
         [self addCondition:rangeCondition];
-        [rangeCondition release];
     }
     
     return self;
@@ -73,7 +69,6 @@
     US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
     rangeCondition.range                = _range;
     [self addCondition:rangeCondition];
-    [rangeCondition release];
 }
 
 

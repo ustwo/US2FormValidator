@@ -36,7 +36,7 @@
     self = [super init];
     if (self)
     {
-        [self addCondition:[[[US2ConditionPresent alloc] init] autorelease]];
+        [self addCondition:[[US2ConditionPresent alloc] init]];
     }
     
     return self;

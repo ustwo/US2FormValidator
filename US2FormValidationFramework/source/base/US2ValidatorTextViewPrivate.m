@@ -32,10 +32,6 @@
 @implementation US2ValidatorTextViewPrivate
 
 
-@synthesize delegate          = _delegate;
-@synthesize validatorTextView = _validatorTextView;
-
-
 #pragma mark - Initialization
 
 - (id)init

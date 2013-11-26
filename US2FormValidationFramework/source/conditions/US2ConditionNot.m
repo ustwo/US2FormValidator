@@ -26,8 +26,8 @@
 
 #import "US2ConditionNot.h"
 
+
 @implementation US2ConditionNot
-@synthesize condition;
 
 - (id)initWithCondition:(id<US2ConditionProtocol>)originalCondition
 {
@@ -46,6 +46,7 @@
     
     return !result;
 }
+
 
 #pragma mark - Localization
 

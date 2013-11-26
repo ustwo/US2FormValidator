@@ -42,8 +42,8 @@
         rangeCondition.range                = NSMakeRange(0, 8);
         rangeCondition.shouldAllowViolation = NO;
         
-        [self addCondition:[rangeCondition autorelease]];
-        [self addCondition:[[[US2ConditionPostcodeUK alloc] init] autorelease]];
+        [self addCondition:rangeCondition];
+        [self addCondition:[[US2ConditionPostcodeUK alloc] init]];
     }
     
     return self;

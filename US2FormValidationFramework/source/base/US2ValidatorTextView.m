@@ -36,11 +36,7 @@
 
 @implementation US2ValidatorTextView
 
-
-@synthesize validatorUIDelegate     = _validatorUIDelegate;
-@synthesize validator               = _validator;
-@synthesize validateOnFocusLossOnly = _validateOnFocusLossOnly;
-@dynamic    isValid;
+@dynamic isValid;
 
 
 #pragma mark - Initialization
@@ -82,11 +78,6 @@
 {
     // Remove notification observer
     [[NSNotificationCenter defaultCenter] removeObserver:_validatorTextViewPrivate name:UITextViewTextDidEndEditingNotification object:self];
-    
-    [_validator release];    
-    [_validatorTextViewPrivate release];
-    
-    [super dealloc];
 }
 
 

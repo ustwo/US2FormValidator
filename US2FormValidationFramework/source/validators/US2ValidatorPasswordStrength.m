@@ -11,14 +11,13 @@
 
 @implementation US2ValidatorPasswordStrength
 
-@synthesize requiredStrength = _requiredStrength;
 
 - (id)init
 {
     self = [super init];
     if (self)
     {
-        [self addCondition:[[[US2ConditionPasswordStrength alloc] init] autorelease]];
+        [self addCondition:[[US2ConditionPasswordStrength alloc] init]];
     }
     
     return self;
@@ -39,7 +38,6 @@
         US2ConditionPasswordStrength *strengthCondition = [[US2ConditionPasswordStrength alloc] init];
         strengthCondition.requiredStrength = _requiredStrength;
         [self addCondition:strengthCondition];
-        [strengthCondition release];
     }
 }
 

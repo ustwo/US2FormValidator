@@ -35,9 +35,6 @@
 @implementation SubmitButtonTableViewCell
 
 
-@synthesize button = _button;
-
-
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
@@ -65,7 +62,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     // Remove background
-    self.backgroundView = [[[UIView alloc] init] autorelease];
+    self.backgroundView = [[UIView alloc] init];
 }
 
 

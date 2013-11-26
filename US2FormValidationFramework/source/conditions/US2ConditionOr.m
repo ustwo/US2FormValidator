@@ -26,8 +26,8 @@
 
 #import "US2ConditionOr.h"
 
+
 @implementation US2ConditionOr
-@synthesize conditions = _conditions;
 
 - (id)initWithConditions:(NSArray *)originalConditions
 {
@@ -43,10 +43,6 @@
 - (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two
 {
     self = [self initWithConditions:[NSArray arrayWithObjects:one, two, nil]];
-    if (self)
-    {
-        
-    }
     
     return self;
 }
@@ -55,12 +51,14 @@
 {
     BOOL result = NO;
     
-    for (id<US2ConditionProtocol> condition in _conditions) {
+    for (id<US2ConditionProtocol> condition in _conditions)
+    {
         result = result || [condition check: string];
     }
     
     return result;
 }
+
 
 #pragma mark - Localization
 

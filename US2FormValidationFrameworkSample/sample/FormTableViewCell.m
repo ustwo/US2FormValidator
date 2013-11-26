@@ -32,9 +32,7 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 
 @implementation FormTableViewCell
 
-
-@synthesize delegate = _delegate;
-@dynamic    textUI;
+@dynamic textUI;
 
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
@@ -51,8 +49,6 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 - (void)dealloc
 {    
     [self _removeTextUI];
-    
-    [super dealloc];
 }
 
 
@@ -135,7 +131,6 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
     ((UIView *)_textUI).backgroundColor = [UIColor clearColor];
     
     [self.contentView addSubview:((UIView *)_textUI)];
-    [_textUI release];
 }
 
 /**
@@ -145,7 +140,7 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 {
     [self _removeTextUI];
     
-    _textUI = [textUI retain];
+    _textUI = textUI;
     
     [self _addTextUI];
     
@@ -169,8 +164,7 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 
 - (void)setIcon:(UIImage *)image
 {
-    [_icon release];
-    _icon = [image retain];
+    _icon = image;
     
     _hasToUpdateIcon = YES;
     [self _updateUserInterface];

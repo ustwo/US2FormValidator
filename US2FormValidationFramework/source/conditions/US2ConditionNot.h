@@ -35,7 +35,7 @@
     
 }
 
-@property (retain, nonatomic) id<US2ConditionProtocol> condition;
+@property (strong, nonatomic) id<US2ConditionProtocol> condition;
 
 /**
  Initialize with an initial condition to apply Not.

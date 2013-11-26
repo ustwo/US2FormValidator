@@ -47,7 +47,7 @@ static const float  kFormTextFieldX  = 110.0;
         // Collapse text field height to content
         CGSize size = [@"#" sizeWithFont:((US2ValidatorTextField *)_textUI).font
                        constrainedToSize:CGSizeMake(UINT16_MAX, UINT16_MAX)
-                           lineBreakMode:UILineBreakModeClip];
+                           lineBreakMode:NSLineBreakByClipping];
         
         // Set dimension of text field
         CGFloat verticalCenter = round((self.contentView.frame.size.height - size.height) / 2.0);

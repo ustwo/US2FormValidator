@@ -28,11 +28,8 @@
 #import "US2ValidatorTextField.h"
 #import "US2Validator.h"
 
+
 @implementation US2ValidatorTextFieldPrivate
-
-
-@synthesize delegate           = _delegate;
-@synthesize validatorTextField = _validatorTextField;
 
 
 #pragma mark - Initialization
@@ -113,19 +110,27 @@
             
             // Inform text field about valid state change
             if (isValid)
+            {
                 [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
+            }
             else
+            {
                 [_validatorTextField validatorTextFieldPrivate:self violatedConditions:conditions];
-            
+            }
+                
             // Inform delegate about valid state change
             if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
+            {
                 [_delegate validatorUI:_validatorTextField changedValidState:isValid];
+            }
             
             // Inform delegate about violation
             if (!isValid)
             {                
                 if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
+                {
                     [_delegate validatorUI:_validatorTextField violatedConditions:conditions];
+                }
             }
         }
     }
@@ -141,7 +146,9 @@
 {
     // Ask delegate whether should begin editing
     if ([_delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)])
+    {
         return [_delegate textFieldShouldBeginEditing:_validatorTextField];
+    }
     
     return YES;
 }
@@ -149,14 +156,18 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ([_delegate respondsToSelector:@selector(textFieldDidBeginEditing:)])
+    {
         [_delegate textFieldDidBeginEditing:_validatorTextField];
+    }
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     // Ask delegate whether should end editing
     if ([_delegate respondsToSelector:@selector(textFieldShouldEndEditing:)])
+    {
         return [_delegate textFieldShouldEndEditing:_validatorTextField];
+    }
     
     return YES;
 }
@@ -175,14 +186,18 @@
     [self textFieldDidChange:nil];
     
     if ([_delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
+    {
         [_delegate textFieldDidEndEditing:_validatorTextField];
+    }
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     // Ask delegate whether should clear
     if ([_delegate respondsToSelector:@selector(textFieldShouldClear:)])
+    {
         return [_delegate textFieldShouldClear:_validatorTextField];
+    }
     
     return YES;
 }
@@ -191,7 +206,9 @@
 {
     // Ask delegate whether should return
     if ([_delegate respondsToSelector:@selector(textFieldShouldReturn:)])
+    {
         return [_delegate textFieldShouldReturn:_validatorTextField];
+    }
     
     return YES;
 }

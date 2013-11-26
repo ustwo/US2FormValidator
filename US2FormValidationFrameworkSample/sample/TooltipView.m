@@ -33,9 +33,6 @@ static const CGFloat kMargin = 10.0;
 @implementation TooltipView
 
 
-@synthesize text = _text;
-
-
 #pragma mark - Initialization
 
 - (id)init
@@ -63,14 +60,12 @@ static const CGFloat kMargin = 10.0;
     _textLabel.textColor       = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     _textLabel.font            = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0];
     _textLabel.numberOfLines   = 2;
-    _textLabel.minimumFontSize = 11.0;
     _textLabel.backgroundColor = [UIColor clearColor];
     _textLabel.adjustsFontSizeToFitWidth = YES;
-    _textLabel.lineBreakMode   = UILineBreakModeWordWrap;
+    _textLabel.lineBreakMode   = NSLineBreakByWordWrapping;
     _textLabel.shadowColor     = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
     _textLabel.shadowOffset    = CGSizeMake(0.0, 1.0);
     [self addSubview:_textLabel];
-    [_textLabel release];
 }
 
 
@@ -108,7 +103,6 @@ static const CGFloat kMargin = 10.0;
 */
 - (void)setText:(NSString *)text
 {
-    [_text release];
     _text = [text copy];
     
     [self _updateUserInterface];

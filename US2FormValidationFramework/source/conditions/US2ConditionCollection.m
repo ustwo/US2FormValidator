@@ -39,18 +39,12 @@
     self = [super init];
     if (self)
     {
-        _array  = [[NSMutableArray array] retain];
+        _array  = [NSMutableArray array];
     }
     
     return self;
 }
 
-- (void)dealloc
-{
-    [_array release];
-    
-    [super dealloc];
-}
 
 
 #pragma mark - Manipulation
@@ -81,8 +75,7 @@
 
 #pragma mark - Fast enumeration
 
-//- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)buffer count:(NSUInteger)len
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len
 {
     return [_array countByEnumeratingWithState:state objects:buffer count:len];
 }

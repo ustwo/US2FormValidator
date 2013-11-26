@@ -33,7 +33,7 @@
     TestViewController *_testViewController;
 }
 
-@property (retain, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end

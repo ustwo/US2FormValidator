@@ -35,9 +35,9 @@
 #import "US2ValidatorTextView.h"
 #import "US2ValidatorPostcodeUK.h"
 
+
 @implementation US2ValidatableMock
-@synthesize text;
-@synthesize validator;
+
 
 - (NSString *)validatableText
 {

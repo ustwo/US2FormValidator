@@ -28,15 +28,12 @@
 
 @implementation US2Condition
 
-@synthesize shouldAllowViolation = _shouldAllowViolation;
-@synthesize localizedViolationString = _localizedViolationString;
-@synthesize regexString = _regex;
 
 #pragma mark - Init
 
 + (US2Condition *)condition
 {
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 - (id)initWithLocalizedViolationString:(NSString *)localizedViolationString

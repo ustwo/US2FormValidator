@@ -49,8 +49,6 @@
 
 @implementation US2ConditionPasswordStrength
 
-@synthesize requiredStrength = _requiredStrength;
-
 
 #pragma mark - Initilisation
 

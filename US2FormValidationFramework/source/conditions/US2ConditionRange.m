@@ -29,9 +29,6 @@
 @implementation US2ConditionRange
 
 
-@synthesize range = _range;
-
-
 - (id)init
 {
     self = [super init];

@@ -31,15 +31,7 @@
 #import "TestView.h"
 
 
-@interface TestView (private)
-- (void)buildUserInterface;
-@end
-
-
 @implementation TestView
-
-
-@synthesize tableView = _tableView;
 
 
 #pragma mark - Initialization
@@ -72,7 +64,6 @@
     _tableView.frame            = tableViewFrame;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self addSubview:_tableView];
-    [_tableView release];
 }
 
 

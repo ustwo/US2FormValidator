@@ -33,7 +33,7 @@
 {
 }
 
-@property (nonatomic, retain) US2ValidatorTextView *textView;
+@property (nonatomic, strong) US2ValidatorTextView *textView;
 
 
 @end

@@ -37,7 +37,7 @@
     self = [super init];
     if (self)
     {
-        [self addCondition:[[[US2ConditionNumeric alloc] init] autorelease]];
+        [self addCondition:[[US2ConditionNumeric alloc] init]];
     }
     
     return self;

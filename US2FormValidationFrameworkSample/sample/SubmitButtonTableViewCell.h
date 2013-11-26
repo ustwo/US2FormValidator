@@ -34,7 +34,7 @@
     UIButton *_button;
 }
 
-@property (nonatomic, retain) UIButton *button;
+@property (nonatomic, strong) UIButton *button;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 

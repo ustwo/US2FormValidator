@@ -55,7 +55,7 @@
     BOOL           _didSubmit;
 }
 
-@property (nonatomic, retain, readonly) TestView *testView;
+@property (nonatomic, strong, readonly) TestView *testView;
 
 
 @end

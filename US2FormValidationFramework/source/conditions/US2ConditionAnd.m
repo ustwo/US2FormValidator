@@ -26,8 +26,8 @@
 
 #import "US2ConditionAnd.h"
 
+
 @implementation US2ConditionAnd
-@synthesize conditions = _conditions;
 
 - (id)initWithConditions:(NSArray *)originalConditions
 {
@@ -57,6 +57,7 @@
     
     return result;
 }
+
 
 #pragma mark - Localization
 

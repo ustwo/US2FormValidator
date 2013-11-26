@@ -27,9 +27,9 @@
 
 #import "US2ValidatorComposite.h"
 
+
 @implementation US2ValidatorComposite
 
-@synthesize validators = _validators;
 
 - (id)initWithValidators:(NSArray *)validators
 {
@@ -77,7 +77,7 @@
             {
                 if (violatedConditions == nil)
                 {
-                    violatedConditions = [[[US2ConditionCollection alloc] init] autorelease];
+                    violatedConditions = [[US2ConditionCollection alloc] init];
                 }
                 for (id<US2ConditionProtocol> condition in checkedViolatedConditions)
                 {

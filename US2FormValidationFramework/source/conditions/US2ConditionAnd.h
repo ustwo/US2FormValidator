@@ -36,7 +36,7 @@
     NSMutableArray *_conditions;
 }
 
-@property (retain, nonatomic) NSArray *conditions;
+@property (strong, nonatomic) NSArray *conditions;
 
 /**
  Initialize with an array of conditions.

@@ -32,6 +32,6 @@
 {
 }
 
-@property (nonatomic, retain) US2ValidatorTextField *textField;
+@property (nonatomic, strong) US2ValidatorTextField *textField;
 
 @end

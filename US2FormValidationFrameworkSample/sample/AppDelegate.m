@@ -29,29 +29,17 @@
 @implementation AppDelegate
 
 
-@synthesize window = _window;
-
-
-- (void)dealloc
-{
-    [_testViewController release];
-    [_window release];
-    
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [UIApplication sharedApplication].statusBarHidden = NO;
     
     _testViewController = [[TestViewController alloc] init];
     
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = _testViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
 }
-
 
 @end

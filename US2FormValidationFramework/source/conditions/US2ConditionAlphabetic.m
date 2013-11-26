@@ -28,8 +28,8 @@
 #define REGEX_PATTERN @"[a-zA-Z]"
 #define REGEX_PATTERN_WHITESPACE @"[a-zA-Z\\s]"
 
+
 @implementation US2ConditionAlphabetic
-@synthesize allowWhitespace;
 
 - (BOOL)check:(NSString *)string
 {

@@ -159,7 +159,7 @@
     id<US2ConditionProtocol> _condition;
 }
 
-@property (retain, nonatomic) id<US2ConditionProtocol> condition;
+@property (strong, nonatomic) id<US2ConditionProtocol> condition;
 @property (copy, nonatomic) NSString *localizedViolationString;
 
 /**

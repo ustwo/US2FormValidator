@@ -30,9 +30,12 @@
 
 @implementation US2Validator
 
-+ (US2Validator *) validator {
-    return [[[[self class] alloc] init] autorelease];
+
++ (US2Validator *) validator
+{
+    return [[[self class] alloc] init];
 }
+
 
 #pragma mark - Initialization
 
@@ -82,14 +85,6 @@
     return self;
 }
 
-#pragma mark - Deinitialization
-
-- (void)dealloc
-{
-    [_conditionCollection release];
-    
-    [super dealloc];
-}
 
 #pragma mark - Localized violation string
 
@@ -117,6 +112,7 @@
     return [self withLocalizedViolationString:localizedViolationString forConditionAtIndex:0];
 }
 
+
 #pragma mark - Condition
 
 /**
@@ -142,7 +138,9 @@
     for (US2Condition *condition in _conditionCollection)
     {
         if ([condition isKindOfClass:conditionClass])
+        {
             [_conditionCollection removeCondition:condition];
+        }
     }
 }
 
@@ -160,22 +158,25 @@
         if (NO == [condition check:string])
         {
             if (nil == violatedConditions)
+            {
                 violatedConditions = [[US2ConditionCollection alloc] init];
+            }
             
             [violatedConditions addCondition:condition];
         }
     }
     
-    return [violatedConditions autorelease];
+    return violatedConditions;
 }
 
 
 @end
 
+
 @implementation US2ValidatorSingleCondition
 
-@synthesize condition = _condition;
 @dynamic localizedViolationString;
+
 
 - (id)initWithCondition:(id<US2ConditionProtocol>)condition
 {
@@ -189,8 +190,7 @@
 
 - (void)setCondition:(id<US2ConditionProtocol>)condition
 {
-    [_condition release];
-    _condition = [condition retain];
+    _condition = condition;
     
     [_conditionCollection removeAllConditions];
     [self addCondition: _condition];
