@@ -25,11 +25,11 @@
 
 #import <Foundation/Foundation.h>
 #import "US2ValidatorTextViewPrivateDelegate.h"
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 #import "US2ValidatorUIProtocol.h"
 #import "US2Validatable.h"
 
-@protocol US2ValidatorUIDelegate;
+@protocol US2ValidatorDelegate;
 
 @class US2Validator;
 @class US2ValidatorTextViewPrivate;
@@ -47,16 +47,16 @@
 @interface US2ValidatorTextView : UITextView <US2ValidatorUIProtocol, US2ValidatorTextViewPrivateDelegate, US2Validatable>
 {
 @private
-    id <US2ValidatorUIDelegate, UITextViewDelegate> __unsafe_unretained _validatorUIDelegate;
+    id <US2ValidatorDelegate, UITextViewDelegate> __unsafe_unretained _validatorDelegate;
     US2Validator                                    *_validator;
     US2ValidatorTextViewPrivate                     *_validatorTextViewPrivate;
     BOOL                                            _validateOnFocusLossOnly;
 }
 
 /**
- Set delegate implementing US2ValidatorUIDelegate
+ Set delegate implementing US2ValidatorDelegate
  */
-@property (nonatomic, unsafe_unretained) id <US2ValidatorUIDelegate, UITextViewDelegate> validatorUIDelegate;
+@property (nonatomic, unsafe_unretained) id <US2ValidatorDelegate, UITextViewDelegate> validatorDelegate;
 
 /**
  Set the validator to check the text of the text field with

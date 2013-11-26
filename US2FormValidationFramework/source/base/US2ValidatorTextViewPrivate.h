@@ -24,7 +24,7 @@
 //  
 
 #import <UIKit/UIKit.h>
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 #import "US2ValidatorUIProtocol.h"
 
 @class US2ValidatorTextView;
@@ -42,7 +42,7 @@
 @interface US2ValidatorTextViewPrivate : NSObject <UITextViewDelegate>
 {
 @private
-    id <US2ValidatorUIDelegate, UITextViewDelegate> __unsafe_unretained _delegate;
+    id <US2ValidatorDelegate, UITextViewDelegate> __unsafe_unretained _delegate;
     US2ValidatorTextView                            *__unsafe_unretained _validatorTextView;
     BOOL                                            _lastIsValid;
     BOOL                                            _didEndEditing;
@@ -52,7 +52,7 @@
  Origin delegate which was set through US2ValidatorTextView and will
  be served by this private class US2ValidatorTextViewPrivate.
  */
-@property (nonatomic, unsafe_unretained) id <US2ValidatorUIDelegate, UITextViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <US2ValidatorDelegate, UITextViewDelegate> delegate;
 
 /**
  Represents the main validation text field which wants to know what went

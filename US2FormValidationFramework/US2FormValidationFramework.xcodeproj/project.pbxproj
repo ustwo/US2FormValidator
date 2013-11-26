@@ -35,7 +35,7 @@
 		4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */; };
 		4C0F37DA15BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */; };
 		4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */; };
-		4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */; };
+		4C301FED14B329CC005FE002 /* US2ValidatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C301FEC14B329CC005FE002 /* US2ValidatorDelegate.h */; };
 		4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD401487BD7B0047C698 /* US2Condition.h */; };
 		4C59DD621487BD7B0047C698 /* US2Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD411487BD7B0047C698 /* US2Condition.m */; };
 		4C59DD631487BD7B0047C698 /* US2Validator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD421487BD7B0047C698 /* US2Validator.h */; };
@@ -142,7 +142,7 @@
 		4C0F37D615BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorPostcodeUK.h; sourceTree = "<group>"; };
 		4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorPostcodeUK.m; sourceTree = "<group>"; };
 		4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUS2FormValidationFrameworkStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIDelegate.h; sourceTree = "<group>"; };
+		4C301FEC14B329CC005FE002 /* US2ValidatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorDelegate.h; sourceTree = "<group>"; };
 		4C59DD401487BD7B0047C698 /* US2Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Condition.h; sourceTree = "<group>"; };
 		4C59DD411487BD7B0047C698 /* US2Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Condition.m; sourceTree = "<group>"; };
 		4C59DD421487BD7B0047C698 /* US2Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validator.h; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 				4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */,
 				4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */,
 				4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */,
-				4C301FEC14B329CC005FE002 /* US2ValidatorUIDelegate.h */,
+				4C301FEC14B329CC005FE002 /* US2ValidatorDelegate.h */,
 				DE0794D71626567D00841F88 /* US2Form.h */,
 				DE0794D81626567D00841F88 /* US2Form.m */,
 				DE0794E01626585900841F88 /* US2Validatable.h */,
@@ -421,7 +421,7 @@
 				4C59DD7A1487BD7B0047C698 /* US2ValidatorEmail.h in Headers */,
 				4C59DD7C1487BD7B0047C698 /* US2ValidatorNumeric.h in Headers */,
 				4C59DD7E1487BD7B0047C698 /* US2ValidatorRange.h in Headers */,
-				4C301FED14B329CC005FE002 /* US2ValidatorUIDelegate.h in Headers */,
+				4C301FED14B329CC005FE002 /* US2ValidatorDelegate.h in Headers */,
 				4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */,
 				4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */,
 				F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */,

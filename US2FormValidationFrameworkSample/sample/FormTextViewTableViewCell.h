@@ -25,11 +25,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FormTableViewCell.h"
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 #import "US2ValidatorTextView.h"
 
 
-@interface FormTextViewTableViewCell : FormTableViewCell <US2ValidatorUIDelegate>
+@interface FormTextViewTableViewCell : FormTableViewCell <US2ValidatorDelegate>
 {
 }
 

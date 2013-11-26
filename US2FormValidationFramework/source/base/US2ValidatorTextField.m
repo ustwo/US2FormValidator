@@ -29,31 +29,23 @@
 #import "US2Validator.h"
 
 
-@interface US2ValidatorTextField (private)
-- (void)_startUp;
+@interface US2ValidatorTextField ()
+{
+    US2ValidatorTextFieldPrivate *_validatorTextFieldPrivate;
+}
 @end
 
 
 @implementation US2ValidatorTextField
 
-@dynamic isValid;
-
 
 #pragma mark - Initialization
 
-- (id)init
+- (id)initWithFrame:(CGRect)frame
 {
-	self = [self initWithFrame: CGRectZero];
-	if (self)
-	{
-	}
-    
-	return self;
-}
-
-- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame: frame];
-    if (self) {
+    if (self)
+    {
         [self _startUp];
     }
     
@@ -105,12 +97,12 @@
 
 #pragma mark - Delegate
 
-- (void)setValidatorUIDelegate:(id <US2ValidatorUIDelegate, UITextFieldDelegate>)validatorUIDelegate
+- (void)setValidatorDelegate:(id<US2ValidatorDelegate, UITextFieldDelegate>)validatorDelegate
 {
-    _validatorTextFieldPrivate.delegate = validatorUIDelegate;
+    _validatorTextFieldPrivate.delegate = validatorDelegate;
 }
 
-- (id <US2ValidatorUIDelegate>)setValidatorUIDelegate
+- (id<US2ValidatorDelegate>)setValidatorDelegate
 {
     return _validatorTextFieldPrivate.delegate;
 }

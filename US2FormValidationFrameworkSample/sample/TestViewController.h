@@ -34,11 +34,11 @@
 #import "TestView.h"
 #import "TooltipView.h"
 #import "FormTableViewCell.h"
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 #import "US2ValidatorUIProtocol.h"
 
 
-@interface TestViewController : UIViewController <US2ValidatorUIDelegate,
+@interface TestViewController : UIViewController <US2ValidatorDelegate,
                                                   UITextFieldDelegate,
                                                   UITextViewDelegate,
                                                   FormTableViewCellDelegate,

@@ -30,7 +30,7 @@
 #import "US2ValidatorTextView.h"
 #import "US2Form.h"
 #import "US2ValidatorUIProtocol.h"
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 
 // Conditions
 #import "US2ConditionAlphabetic.h"

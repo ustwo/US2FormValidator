@@ -26,7 +26,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@protocol US2ValidatorUIDelegate;
+@protocol US2ValidatorDelegate;
 
 @class US2Validator;
 
@@ -40,16 +40,16 @@
 @required
 
 /**
- @param validatorUIDelegate The validator UI delegate conforming US2ValidatorUIDelegate
+ @param validatorDelegate The validator UI delegate conforming US2ValidatorDelegate
  */
-- (void)setValidatorUIDelegate:(id <US2ValidatorUIDelegate>)validatorUIDelegate;
+- (void)setValidatorDelegate:(id <US2ValidatorDelegate>)validatorDelegate;
 
 /**
  Return the delegate
  
  @return Returns the validator UI delegate
  */
-- (id <US2ValidatorUIDelegate>)validatorUIDelegate;
+- (id <US2ValidatorDelegate>)validatorDelegate;
 
 /**
  @param validator Validator to check the text of text UI conforming US2ValidatorUIProtocol

@@ -1,5 +1,5 @@
 //
-//  US2ValidatorUIDelegate.h
+//  US2ValidatorDelegate.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -37,7 +37,7 @@
  The main delegate protocol which serves the interested instance with information about changed validation states.
  The delegate inherits from UITextViewDelegate.
  */
-@protocol US2ValidatorUIDelegate
+@protocol US2ValidatorDelegate
 @optional
 
 /**

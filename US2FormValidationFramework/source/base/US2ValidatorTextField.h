@@ -25,11 +25,11 @@
 
 #import <UIKit/UIKit.h>
 #import "US2ValidatorTextFieldPrivateDelegate.h"
-#import "US2ValidatorUIDelegate.h"
+#import "US2ValidatorDelegate.h"
 #import "US2ValidatorUIProtocol.h"
 #import "US2Validatable.h"
 
-@protocol US2ValidatorUIDelegate;
+@protocol US2ValidatorDelegate;
 
 @class US2Validator;
 @class US2ValidatorTextFieldPrivate;
@@ -45,18 +45,11 @@
  and returns what went wrong and in which status the validation text field is at the moment.
 */
 @interface US2ValidatorTextField : UITextField <US2ValidatorUIProtocol, US2ValidatorTextFieldPrivateDelegate, US2Validatable>
-{
-@private
-    id <US2ValidatorUIDelegate, UITextFieldDelegate> __unsafe_unretained _validatorUIDelegate;
-    US2Validator                                     *_validator;
-    US2ValidatorTextFieldPrivate                     *_validatorTextFieldPrivate;
-    BOOL                                             _validateOnFocusLossOnly;
-}
 
 /**
- Set delegate implementing US2ValidatorUIDelegate
+ Set delegate implementing US2ValidatorDelegate
 */
-@property (nonatomic, unsafe_unretained) id <US2ValidatorUIDelegate, UITextFieldDelegate> validatorUIDelegate;
+@property (nonatomic, weak) id <US2ValidatorDelegate, UITextFieldDelegate> validatorDelegate;
 
 /**
  Set the validator to check the text of the text field with
