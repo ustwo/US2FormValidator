@@ -32,6 +32,7 @@
 //
 
 #import "US2FormValidator.h"
+
 #import "TestViewController.h"
 #import "MyProjectValidatorName.h"
 #import "MyProjectValidatorAbout.h"
@@ -56,20 +57,6 @@
 
 
 @implementation TestViewController
-
-
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    
-    return self;
-}
-
-
-#pragma mark - Deinitialization
-
 
 
 #pragma mark - View setter and getter
@@ -99,7 +86,7 @@
 */
 - (void)buildView
 {
-    self.testView = [[TestView alloc] initWithFrame: self.view.frame];
+    self.testView = [[TestView alloc] initWithFrame:self.view.frame];
 }
 
 /**
@@ -114,15 +101,7 @@
 }
 
 
-#pragma mark - Rotation
-
-/**
- Prevent rotation
-*/
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return NO;
-}
+#pragma mark - Initialize data
 
 - (void)initData
 {
@@ -138,6 +117,7 @@
     // Set text fields which will be used in form
     _textUICollection = [[NSMutableArray alloc] init];
     
+    // Create a validator which only allows numbers and min 2 and max 6 characters. The user is not able to enter more than 6 numbers.
     US2Validator *validator = [[US2Validator alloc] init];
     
     US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
@@ -159,7 +139,7 @@
     firstNameTextField.validator               = validator;
     firstNameTextField.validateOnFocusLossOnly = NO;
     firstNameTextField.text                    = @"";
-    firstNameTextField.placeholder             = @"Todd";
+    firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
     firstNameTextField.validatorUIDelegate     = self;
     [_textUICollection addObject:firstNameTextField];
     
