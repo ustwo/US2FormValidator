@@ -61,7 +61,7 @@
 
 - (instancetype)initWithCondition:(id<US2ConditionProtocol>)condition
 {
-    self = [super init];
+    self = [self init];
     if (self)
     {
         [self addCondition:condition];

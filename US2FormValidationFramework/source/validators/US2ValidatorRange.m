@@ -40,7 +40,7 @@
 
 - (id)initWithRange:(NSRange)range
 {
-    self = [super init];
+    self = [self init];
     if(self)
     {
         [self setRange:range];
@@ -60,8 +60,8 @@
     [self removeConditionsOfClass:[US2ConditionRange class]];
     
     // Add new range condition
-    US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
-    rangeCondition.range                = _range;
+    US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
+    rangeCondition.range = _range;
     [self addCondition:rangeCondition];
 }
 
