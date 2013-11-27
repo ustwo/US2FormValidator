@@ -122,16 +122,16 @@
     
     US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
     maxRangeCondition.range = NSMakeRange(0, 6);
-    maxRangeCondition.shouldAllowViolation = NO;
+    maxRangeCondition.shouldAllowViolation = YES;
     [validator addCondition:maxRangeCondition];
     
     US2ConditionRange *minRangeCondition = [[US2ConditionRange alloc] init];
-    minRangeCondition.range = NSMakeRange(2, 6);
+    minRangeCondition.range = NSMakeRange(2, NSUIntegerMax);
     minRangeCondition.shouldAllowViolation = YES;
     [validator addCondition:minRangeCondition];
     
     US2ConditionNumeric *numericCondition = [[US2ConditionNumeric alloc] init];
-    numericCondition.shouldAllowViolation = NO;
+    numericCondition.shouldAllowViolation = YES;
     [validator addCondition:numericCondition];
     
     // Add first name text field
@@ -142,16 +142,21 @@
     firstNameTextField.validatorDelegate       = self;
     [_textUICollection addObject:firstNameTextField];
     
+    US2Validator *secondValidator = [[US2Validator alloc] init];
+    [secondValidator addCondition:maxRangeCondition];
+    
     minRangeCondition = [[US2ConditionRange alloc] init];
-    minRangeCondition.range = NSMakeRange(2, 6);
+    minRangeCondition.range = NSMakeRange(2, NSUIntegerMax);
     minRangeCondition.shouldAllowViolation = NO;
-    [validator addCondition:minRangeCondition];
+    [secondValidator addCondition:minRangeCondition];
+    
+    [secondValidator addCondition:numericCondition];
     
     // Add post code text field    
     US2ValidatorTextField *postcodeTextField  = [[US2ValidatorTextField alloc] init];
-    postcodeTextField.validator               = validator;
+    postcodeTextField.validator               = secondValidator;
     postcodeTextField.text                    = @"123";
-    postcodeTextField.placeholder             = @"e.g. N1 1AA";
+    postcodeTextField.placeholder             = @"A number between 2 and 6 digits";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
     postcodeTextField.validatorDelegate       = self;
     [_textUICollection addObject:postcodeTextField];
