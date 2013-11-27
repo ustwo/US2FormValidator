@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "유효한 이메일 주소를 입력하세요 example@example.com";
 "US2KeyConditionViolationURL"               = "유효한 URL주소를 http(s)를 포함하여 입력하세요 예) http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "유효한 URL주소를 입력하세요 예) www.example.com";
-"US2KeyConditionViolationPasswordStrength"  = "좀 더 안전한 비밀번호를 입력하세요";
+"US2KeyConditionViolationPassword"          = "좀 더 안전한 비밀번호를 입력하세요";
 "US2KeyConditionViolationPostcodeUK"        = "유효한 영국내 우편주소를 입력하세요";
 "US2KeyConditionViolationPresent"           = "글자를 입력하세요";

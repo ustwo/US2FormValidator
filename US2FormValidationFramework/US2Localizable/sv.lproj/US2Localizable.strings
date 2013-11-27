@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "Fyll i en giltig emailadress med formatet example@example.com";
 "US2KeyConditionViolationURL"               = "Fyll i en giltig URL med formatet http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Fyll i en giltig URL med formatet www.example.com ";
-"US2KeyConditionViolationPasswordStrength"  = "Fyll i ett säkrare lösenord";
+"US2KeyConditionViolationPassword"          = "Fyll i ett säkrare lösenord";
 "US2KeyConditionViolationPostcodeUK"        = "Fyll i en postkod giltig i UK";
 "US2KeyConditionViolationPresent"           = "Fyll i text";

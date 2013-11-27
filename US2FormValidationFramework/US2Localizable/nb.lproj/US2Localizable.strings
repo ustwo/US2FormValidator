@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "Skriv inn en gyldig e-postadresse i formatet example@example.com";
 "US2KeyConditionViolationURL"               = "Skriv inn en gyldig lenke i formatet http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Skriv inn en gyldig lenke i formatet www.example.com";
-"US2KeyConditionViolationPasswordStrength"  = "Skriv inn et mer sikkert passord";
+"US2KeyConditionViolationPassword"          = "Skriv inn et mer sikkert passord";
 "US2KeyConditionViolationPostcodeUK"        = "Skriv inn et gyldig UK postnummer";
 "US2KeyConditionViolationPresent"           = "Skriv inn tekst";

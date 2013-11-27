@@ -101,7 +101,7 @@
         strength++;
     }
     
-    if (string.length > _minimalLength)
+    if (string.length >= _minimalLength)
     {
         strength++;
     }

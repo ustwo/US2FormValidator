@@ -102,8 +102,8 @@
 		F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F104D61F14F36131000DFC40 /* US2ValidatorURL.m */; };
 		F17CFB1214F351F200BB9D0F /* US2ConditionURL.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */; };
 		F17CFB1314F351F200BB9D0F /* US2ConditionURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */; };
-		FAA9CDE21558802300FFFDA4 /* US2ValidatorPasswordStrength.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA9CDE01558802300FFFDA4 /* US2ValidatorPasswordStrength.h */; };
-		FAA9CDE31558802300FFFDA4 /* US2ValidatorPasswordStrength.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA9CDE11558802300FFFDA4 /* US2ValidatorPasswordStrength.m */; };
+		FAA9CDE21558802300FFFDA4 /* US2ValidatorPassword.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA9CDE01558802300FFFDA4 /* US2ValidatorPassword.h */; };
+		FAA9CDE31558802300FFFDA4 /* US2ValidatorPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA9CDE11558802300FFFDA4 /* US2ValidatorPassword.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,8 +212,8 @@
 		F104D61F14F36131000DFC40 /* US2ValidatorURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorURL.m; sourceTree = "<group>"; };
 		F17CFB1014F351F200BB9D0F /* US2ConditionURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionURL.h; sourceTree = "<group>"; };
 		F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionURL.m; sourceTree = "<group>"; };
-		FAA9CDE01558802300FFFDA4 /* US2ValidatorPasswordStrength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorPasswordStrength.h; sourceTree = "<group>"; };
-		FAA9CDE11558802300FFFDA4 /* US2ValidatorPasswordStrength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorPasswordStrength.m; sourceTree = "<group>"; };
+		FAA9CDE01558802300FFFDA4 /* US2ValidatorPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorPassword.h; sourceTree = "<group>"; };
+		FAA9CDE11558802300FFFDA4 /* US2ValidatorPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorPassword.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,8 +322,8 @@
 				4C59DD5C1487BD7B0047C698 /* US2ValidatorEmail.m */,
 				4C59DD5D1487BD7B0047C698 /* US2ValidatorNumeric.h */,
 				4C59DD5E1487BD7B0047C698 /* US2ValidatorNumeric.m */,
-				FAA9CDE01558802300FFFDA4 /* US2ValidatorPasswordStrength.h */,
-				FAA9CDE11558802300FFFDA4 /* US2ValidatorPasswordStrength.m */,
+				FAA9CDE01558802300FFFDA4 /* US2ValidatorPassword.h */,
+				FAA9CDE11558802300FFFDA4 /* US2ValidatorPassword.m */,
 				4C0F37D615BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h */,
 				4C0F37D715BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m */,
 				4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */,
@@ -429,7 +429,7 @@
 				4C0DE68814FE4173005D93CB /* US2ConditionShorthandURL.h in Headers */,
 				5B23E098184641A8009986F1 /* US2ConditionPassword.h in Headers */,
 				4C0DE68D14FE4B86005D93CB /* US2ValidatorShorthandURL.h in Headers */,
-				FAA9CDE21558802300FFFDA4 /* US2ValidatorPasswordStrength.h in Headers */,
+				FAA9CDE21558802300FFFDA4 /* US2ValidatorPassword.h in Headers */,
 				4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */,
 				4C0F37D815BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h in Headers */,
 				DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */,
@@ -610,7 +610,7 @@
 				F104D62114F36131000DFC40 /* US2ValidatorURL.m in Sources */,
 				4C0DE68914FE4173005D93CB /* US2ConditionShorthandURL.m in Sources */,
 				4C0DE68E14FE4B86005D93CB /* US2ValidatorShorthandURL.m in Sources */,
-				FAA9CDE31558802300FFFDA4 /* US2ValidatorPasswordStrength.m in Sources */,
+				FAA9CDE31558802300FFFDA4 /* US2ValidatorPassword.m in Sources */,
 				4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */,
 				4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */,
 				DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */,

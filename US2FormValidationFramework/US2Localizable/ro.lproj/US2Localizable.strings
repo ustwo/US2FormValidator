@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "Introduceți adresa dvs. de email validă în formatul example@example.com";
 "US2KeyConditionViolationURL"               = "Introduceți o adresă URL validă în formatul http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Introduceți o adresă URL validă în formatul www.example.com";
-"US2KeyConditionViolationPasswordStrength"  = "Alegeți o parolă mai puternică";
+"US2KeyConditionViolationPassword"          = "Alegeți o parolă mai puternică";
 "US2KeyConditionViolationPostcodeUK"        = "Introduceți un cod poștal valid din UK ";
 "US2KeyConditionViolationPresent"           = "Introduceți textul";

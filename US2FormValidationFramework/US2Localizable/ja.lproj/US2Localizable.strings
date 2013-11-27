@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "example@example.comの形式でメールアドレスを入力して下さい。";
 "US2KeyConditionViolationURL"               = "http(s)://www.example.comの形式でURLを入力して下さい。";
 "US2KeyConditionViolationShorthandURL"      = "www.example.comの形式でURLを入力して下さい。";
-"US2KeyConditionViolationPasswordStrength"  = "もっと強いパスワードを入力して下さい。";
+"US2KeyConditionViolationPassword"          = "もっと強いパスワードを入力して下さい。";
 "US2KeyConditionViolationPostcodeUK"        = "正式なUKの郵便番号を入力して下さい。";
 "US2KeyConditionViolationPresent"           = "テキストを入力して下さい。";

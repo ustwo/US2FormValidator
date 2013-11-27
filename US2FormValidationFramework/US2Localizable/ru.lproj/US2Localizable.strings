@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "Введите действующий адрес электронной почты в формате example@example.com";
 "US2KeyConditionViolationURL"               = "Введите действующую ссылку в формате http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Введите действующую ссылку в формате www.example.com";
-"US2KeyConditionViolationPasswordStrength"  = "Задайте более сложный пароль";
+"US2KeyConditionViolationPassword"          = "Задайте более сложный пароль";
 "US2KeyConditionViolationPostcodeUK"        = "Введите действующий почтовый индекс UK";
 "US2KeyConditionViolationPresent"           = "Введите текст";

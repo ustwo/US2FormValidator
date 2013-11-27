@@ -29,6 +29,6 @@
 "US2KeyConditionViolationEmail"             = "Enter valid email address in the format example@example.com";
 "US2KeyConditionViolationURL"               = "Enter a valid URL in the format http(s)://www.example.com";
 "US2KeyConditionViolationShorthandURL"      = "Enter a valid URL in the format www.example.com";
-"US2KeyConditionViolationPasswordStrength"  = "Enter a stronger password";
+"US2KeyConditionViolationPassword"          = "Enter a stronger password";
 "US2KeyConditionViolationPostcodeUK"        = "Enter a valid UK post code";
 "US2KeyConditionViolationPresent"           = "Enter some text";
