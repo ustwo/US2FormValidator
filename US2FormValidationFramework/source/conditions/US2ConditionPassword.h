@@ -37,6 +37,7 @@ typedef enum
     US2PasswordStrengthMedium     = 2,
     US2PasswordStrengthStrong     = 3,
     US2PasswordStrengthVeryStrong = 4,
+    US2PasswordMatchesAll         = 5,
 } US2PasswordStrength;
 
 
@@ -58,7 +59,8 @@ typedef enum
  US2PasswordStrengthWeak         = 1,
  US2PasswordStrengthMedium       = 2,
  US2PasswordStrengthStrong       = 3,
- US2PasswordStrengthVeryStrong   = 4, // All criteria is matched
+ US2PasswordStrengthVeryStrong   = 4,
+ US2PasswordMatchesAll           = 5, // All criteria is matched
  
  If the password strength matches or is above the required strength than the condition will pass.
  */
@@ -98,7 +100,8 @@ typedef enum
  * US2PasswordStrengthWeak
  * US2PasswordStrengthMedium (Default Value)
  * US2PasswordStrengthStrong
- * US2PasswordStrengthVeryStrong (All criteria is matched)
+ * US2PasswordStrengthVeryStrong
+ * US2PasswordMatchesAll (All criteria is matched)
  
  */
 @property (nonatomic) US2PasswordStrength requiredStrength;

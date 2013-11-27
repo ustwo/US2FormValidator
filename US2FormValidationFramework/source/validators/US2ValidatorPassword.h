@@ -69,7 +69,8 @@
  * US2PasswordStrengthWeak
  * US2PasswordStrengthMedium (Default Value)
  * US2PasswordStrengthStrong
- * US2PasswordStrengthVeryStrong (All criteria is matched)
+ * US2PasswordStrengthVeryStrong
+ * US2PasswordMatchesAll (All criteria is matched)
  
  */
 @property (nonatomic) US2PasswordStrength requiredStrength;

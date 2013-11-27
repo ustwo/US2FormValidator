@@ -81,23 +81,23 @@
     NSUInteger specialCharacterMatchesCount = [self US2__numberOfSpecialCharactersInString:string];
     
     // For each match of each type, move the strength value up one (higher = stronger)
-    if (numberMatchesCount > _minimalNumbers)
-    { 
+    if (numberMatchesCount >= _minimalNumbers)
+    {
         strength++;
     }
     
-    if (lowercaseMatchesCount > _minimalLowerCase)
-    { 
+    if (lowercaseMatchesCount >= _minimalLowerCase)
+    {
         strength++;
     }
     
-    if (uppercaseMatchesCount > _minimalUpperCase)
-    { 
+    if (uppercaseMatchesCount >= _minimalUpperCase)
+    {
         strength++;
     }
     
-    if (specialCharacterMatchesCount > _minimalSymbols)
-    { 
+    if (specialCharacterMatchesCount >= _minimalSymbols)
+    {
         strength++;
     }
     
