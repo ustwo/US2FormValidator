@@ -120,17 +120,17 @@
     // Create a validator which only allows numbers and min 2 and max 6 characters. The user is not able to enter more than 6 numbers.
     US2Validator *validator = [[US2Validator alloc] init];
     
-    US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
+    US2ConditionRange *maxRangeCondition = [US2ConditionRange condition];
     maxRangeCondition.range = NSMakeRange(0, 6);
     maxRangeCondition.shouldAllowViolation = NO;
     [validator addCondition:maxRangeCondition];
     
-    US2ConditionRange *minRangeCondition = [[US2ConditionRange alloc] init];
+    US2ConditionRange *minRangeCondition = [US2ConditionRange condition];
     minRangeCondition.range = NSMakeRange(2, NSUIntegerMax);
     minRangeCondition.shouldAllowViolation = YES;
     [validator addCondition:minRangeCondition];
     
-    US2ConditionNumeric *numericCondition = [[US2ConditionNumeric alloc] init];
+    US2ConditionNumeric *numericCondition = [US2ConditionNumeric condition];
     numericCondition.shouldAllowViolation = YES;
     [validator addCondition:numericCondition];
     
