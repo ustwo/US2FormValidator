@@ -63,6 +63,7 @@
     _tableView                  = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     _tableView.frame            = tableViewFrame;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    _tableView.contentInset     = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0);
     [self addSubview:_tableView];
 }
 

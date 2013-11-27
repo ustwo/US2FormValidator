@@ -135,11 +135,11 @@
     [validator addCondition:numericCondition];
     
     // Add first name text field
-    US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
+    US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] initWithFrame:CGRectZero];
     firstNameTextField.validator               = validator;
     firstNameTextField.text                    = @"123";
     firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
-    firstNameTextField.validatorDelegate     = self;
+    firstNameTextField.validatorDelegate       = self;
     [_textUICollection addObject:firstNameTextField];
     
     minRangeCondition = [[US2ConditionRange alloc] init];
@@ -153,14 +153,14 @@
     postcodeTextField.text                    = @"123";
     postcodeTextField.placeholder             = @"e.g. N1 1AA";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
-    postcodeTextField.validatorDelegate     = self;
+    postcodeTextField.validatorDelegate       = self;
     [_textUICollection addObject:postcodeTextField];
     
     // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
     aboutTextView.validator               = [[MyProjectValidatorAbout alloc] init];
     aboutTextView.validateOnFocusLossOnly = YES;
-    aboutTextView.validatorDelegate     = self;
+    aboutTextView.validatorDelegate       = self;
     [_textUICollection addObject:aboutTextView];
 }
 
@@ -214,7 +214,7 @@
  Called for every valid or violated state change
  React to this information by showing up warnings or disabling a 'send' button e.g.
 */
-- (void)validatorUI:(id <US2ValidatorUIProtocol>)validatorUI changedValidState:(BOOL)isValid
+- (void)validatorUI:(id<US2ValidatorUIProtocol>)validatorUI changedValidState:(BOOL)isValid
 {
     NSLog(@"validatorUI changedValidState: %d", isValid);
     
@@ -240,7 +240,7 @@
  Called on every violation of the highest prioritised validator condition.
  Update UI like showing alert messages or disabling buttons.
 */
-- (void)validatorUI:(id <US2ValidatorUIProtocol>)validatorUI violatedConditions:(US2ConditionCollection *)conditions
+- (void)validatorUI:(id<US2ValidatorUIProtocol>)validatorUI violatedConditions:(US2ConditionCollection *)conditions
 {
     NSLog(@"validatorUI violatedConditions: \n%@", conditions);
 }
@@ -472,7 +472,7 @@
     // Create tooltip
     // Set text to tooltip
     US2Validator *validator = [textUI validator];
-    US2ConditionCollection *conditionCollection = [validator checkConditions:[textUI text]];
+    US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:[textUI text]];
     CGRect tooltipViewFrame = CGRectMake(6.0, point.y, 309.0, _tooltipView.frame.size.height);
     if (nil == conditionCollection)
     {
@@ -534,7 +534,7 @@
                 && errorString.length == 0)
             {
                 US2Validator *validator = [textUI validator];
-                US2ConditionCollection *conditionCollection = [validator checkConditions:[textUI text]];
+                US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:[textUI text]];
                 US2Condition *violatedCondition = [conditionCollection conditionAtIndex:0];
                 
                 NSMutableString *violatedString = [NSMutableString string];

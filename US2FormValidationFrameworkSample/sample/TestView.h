@@ -32,11 +32,7 @@
 
 
 @interface TestView : UIView
-{
-    UITableView *_tableView;
-}
 
 @property (nonatomic, strong, readonly) UITableView *tableView;
-
 
 @end
