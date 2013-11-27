@@ -49,16 +49,13 @@ typedef kFormTableViewCellStatus;
 @interface FormTableViewCell : UITableViewCell
 {
 @protected
-    id <FormTableViewCellDelegate> __unsafe_unretained _delegate;
-    id <US2ValidatorUIProtocol>    _textUI;
     UIButton                       *_iconButton;
-    UIImage                        *_icon;
     BOOL                           _hasToUpdateIcon;
 }
 
-@property (nonatomic, unsafe_unretained) id <FormTableViewCellDelegate> delegate;
-@property (nonatomic, strong) id <US2ValidatorUIProtocol>    textUI;
-@property (nonatomic, strong) UIImage                        *icon;
+@property (nonatomic, weak) id <FormTableViewCellDelegate> delegate;
+@property (nonatomic, strong) id <US2ValidatorUIProtocol> textUI;
+@property (nonatomic, strong) UIImage *icon;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 - (void)updateValidationIconByValidStatus:(kFormTableViewCellStatus)status;
