@@ -58,28 +58,30 @@
     [self.validators addObjectsFromArray:validators];
 }
 
+
 #pragma mark - Condition check
 
 /**
-    Returns all violated condition in a US2ConditionCollection by checking each composite validator.
+ Returns all violated condition in a US2ConditionCollection by checking each composite validator.
  */
 - (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string
 {
-    US2ConditionCollection *violatedConditions = [super violatedConditionsUsingString: string];
+    US2ConditionCollection *violatedConditions = [super violatedConditionsUsingString:string];
     
     // Check violated conditions of each composite validator
     if (violatedConditions == nil)
     {
         for (id<US2ValidatorProtocol> validator in _validators)
         {
-            US2ConditionCollection *checkedViolatedConditions = [validator violatedConditionsUsingString:string];
-            if (checkedViolatedConditions != nil)
+            US2ConditionCollection *violatedConditionsByValidator = [validator violatedConditionsUsingString:string];
+            if (violatedConditionsByValidator != nil)
             {
                 if (violatedConditions == nil)
                 {
                     violatedConditions = [[US2ConditionCollection alloc] init];
                 }
-                for (id<US2ConditionProtocol> condition in checkedViolatedConditions)
+                
+                for (id<US2ConditionProtocol> condition in violatedConditionsByValidator)
                 {
                     [violatedConditions addCondition:condition];
                 }

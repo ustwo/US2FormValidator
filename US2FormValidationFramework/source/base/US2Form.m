@@ -94,9 +94,10 @@
         }
         for (id<US2ConditionProtocol> condition in entryConditions)
         {
-            [conditions addCondition: condition];
+            [conditions addCondition:condition];
         }
     }
+    
     return conditions;
 }
 

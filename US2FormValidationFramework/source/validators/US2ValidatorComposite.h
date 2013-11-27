@@ -30,7 +30,8 @@
 /**
     The composite validator takes in a collection of validators and checks each to validate.
  */
-@interface US2ValidatorComposite : US2Validator {
+@interface US2ValidatorComposite : US2Validator
+{
 @private
     NSMutableArray *_validators;
 }
