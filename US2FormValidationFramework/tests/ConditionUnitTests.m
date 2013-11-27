@@ -52,6 +52,15 @@
 }
 
 /**
+ Test US2Condition check
+ */
+- (void)testUS2ConditionShouldAllowViolationDefault
+{
+    US2Condition *condition = [US2Condition condition];
+    STAssertTrue(condition.shouldAllowViolation == YES, @"The default value for shouldAllowViolation must be YES", nil);
+}
+
+/**
  Test US2ConditionCollection check
  */
 - (void)testUS2ConditionCollection

@@ -76,6 +76,7 @@
 
 /**
  If set to *NO* the user is not able to enter characters which would break the condition.
+ The default is *YES*.
  */
 @property (nonatomic) BOOL shouldAllowViolation;
 
