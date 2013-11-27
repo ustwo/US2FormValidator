@@ -95,7 +95,7 @@
 /**
  Static shorthand for creating a condition.
  */
-+ (US2Condition *)condition;
++ (instancetype)condition;
 
 /**
  Initialize condition with a custom localized violation string.
