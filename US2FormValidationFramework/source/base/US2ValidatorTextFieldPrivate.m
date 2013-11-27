@@ -50,15 +50,9 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSLog(@"textField.text: %@", textField.text);
-    NSLog(@"range: %@", NSStringFromRange(range));
-    NSLog(@"string: %@", string);
     NSString *futureString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    NSLog(@"futureString: %@", futureString);
     US2ConditionCollection *conditions = [_validatorTextField.validator violatedConditionsUsingString:futureString];
-    NSLog(@"invalid conditions: %@", conditions);
     BOOL isValid = conditions == nil;
-    NSLog(@"isValid: %d", isValid);
     
     // Inform text field about valid state change
     if (isValid)
@@ -73,7 +67,6 @@
     // If any condition does not allow violation check for invalidities and do not allow to change the text field
     // Making sure that characters can be deleted
     BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
-    NSLog(@"anyInvalidConditionDoesNotAllowViolation: %d", anyInvalidConditionDoesNotAllowViolation);
     if (!_validatorTextField.validateOnFocusLossOnly
         && anyInvalidConditionDoesNotAllowViolation)
     {
