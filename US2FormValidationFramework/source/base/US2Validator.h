@@ -50,7 +50,7 @@
  
  @param conditionClass Remove all conditions which are kind of _conditionClass_
 */
-- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass;
+- (void)removeConditionsOfClass:(Class<US2ConditionProtocol>)conditionClass;
 
 /**
  Add condition subclass of US2Condition for validation queue.
@@ -119,7 +119,7 @@
  
  @param conditionClass Remove all conditions which are kind of _conditionClass_
 */
-- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass;
+- (void)removeConditionsOfClass:(Class<US2ConditionProtocol>)conditionClass;
 
 /**
  Add condition subclass of US2Condition for validation queue.

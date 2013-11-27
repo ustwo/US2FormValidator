@@ -108,7 +108,7 @@
 /**
  Remove all conditions which are kind of specific class.
 */
-- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass
+- (void)removeConditionsOfClass:(Class<US2ConditionProtocol>)conditionClass
 {
     for (US2Condition *condition in _conditionCollection)
     {
