@@ -31,21 +31,31 @@
 @implementation US2ValidatorComposite
 
 
-- (id)initWithValidators:(NSArray *)validators
+- (id)init
 {
     self = [super init];
     if (self)
     {
-        self.validators = [NSMutableArray arrayWithArray:validators];
+        [self setupWithValidators:[NSArray array]];
     }
     
     return self;
 }
 
-- (id)init
+- (id)initWithValidators:(NSArray *)validators
 {
-    self = [self initWithValidators:[NSArray array]];
+    self = [super init];
+    if (self)
+    {
+        [self setupWithValidators:validators];
+    }
+    
     return self;
+}
+
+- (void)setupWithValidators:(NSArray *)validators
+{
+    self.validators = [NSMutableArray arrayWithArray:validators];
 }
 
 - (void)addValidator:(id<US2ValidatorProtocol>)validator

@@ -36,11 +36,24 @@
     return [[[self class] alloc] init];
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self setup];
+    }
+    
+    return self;
+}
+
 - (instancetype)initWithLocalizedViolationString:(NSString *)localizedViolationString
 {
-    if (self = [super init])
+    self = [super init];
+    if (self)
     {
-        self.localizedViolationString = localizedViolationString;
+        [self setup];
+        _localizedViolationString = localizedViolationString;
     }
     
     return self;
@@ -48,10 +61,12 @@
 
 - (instancetype)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString
 {
-    if (self = [super init])
+    self = [super init];
+    if (self)
     {
-        self.localizedViolationString = localizedViolationString;
-        self.regexString = regexString;
+        [self setup];
+        _localizedViolationString = localizedViolationString;
+        _regexString = regexString;
     }
     
     return self;
@@ -59,12 +74,19 @@
 
 - (instancetype)initWithRegexString:(NSString *)regexString
 {
-    if (self = [super init])
+    self = [super init];
+    if (self)
     {
-        self.regexString = regexString;
+        [self setup];
+        _regexString = regexString;
     }
     
     return self;
+}
+
+- (void)setup
+{
+    _shouldAllowViolation = YES;
 }
 
 

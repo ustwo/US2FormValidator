@@ -34,7 +34,7 @@
     self = [super init];
     if (self)
     {
-        self.conditions = [NSMutableArray arrayWithArray:originalConditions];
+        [self setupWithConditions:originalConditions];
     }
     
     return self;
@@ -42,9 +42,18 @@
 
 - (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two
 {
-    self = [self initWithConditions:[NSArray arrayWithObjects:one, two, nil]];
+    self = [super init];
+    if (self)
+    {
+        [self setupWithConditions:[NSArray arrayWithObjects:one, two, nil]];
+    }
     
     return self;
+}
+
+- (void)setupWithConditions:(NSArray *)originalConditions
+{
+    _conditions = [NSMutableArray arrayWithArray:originalConditions];
 }
 
 - (BOOL)check:(NSString *)string

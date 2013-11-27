@@ -48,12 +48,12 @@
 
 #pragma mark - Initialization
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
     {
-        _conditionCollection = [[US2ConditionCollection alloc] init];
+        [self setup];
     }
     
     return self;
@@ -61,9 +61,10 @@
 
 - (instancetype)initWithCondition:(id<US2ConditionProtocol>)condition
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
+        [self setup];
         [self addCondition:condition];
     }
     
@@ -87,6 +88,11 @@
     }
     
     return self;
+}
+
+- (void)setup
+{
+    _conditionCollection = [[US2ConditionCollection alloc] init];
 }
 
 

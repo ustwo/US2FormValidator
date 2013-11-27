@@ -39,8 +39,7 @@
     }
     
     NSString *pattern = REGEX_PATTERN;
-    
-    if (self.allowWhitespace)
+    if (_allowWhitespace)
     {
         pattern = REGEX_PATTERN_WHITESPACE;
     }

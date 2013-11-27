@@ -31,12 +31,12 @@
 @implementation US2ConditionPassword
 
 
-#pragma mark - Initilisation
+#pragma mark - Initilization
 
 - (id)init
 {
     self = [super init];
-    if(self != nil)
+    if(self)
     {
         _requiredStrength = US2PasswordStrengthMedium;
     }
