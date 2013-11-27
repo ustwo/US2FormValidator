@@ -26,6 +26,10 @@
 #import "US2Form.h"
 
 
+@implementation US2FormEntry
+@end
+
+
 @interface US2Form ()
 {
     NSMutableArray *_entries;
