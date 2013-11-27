@@ -38,7 +38,7 @@
  
  NSString *string = @"http://www.example.com";
  
- US2ConditionURL *urlCondition = [[[US2ConditionURL alloc] init] autorelease];
+ US2ConditionURL *urlCondition = [[US2ConditionURL alloc] init];
  
  US2Validator *urlValidator = [[US2Validator alloc] init];
  [urlValidator addCondition:urlCondition];

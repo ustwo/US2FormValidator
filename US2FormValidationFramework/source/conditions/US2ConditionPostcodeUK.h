@@ -37,7 +37,6 @@
  
  US2Validator *postcodeValidator = [[US2Validator alloc] init];
  [postcodeValidator addCondition:postcodeCondition];
- [postcodeCondition release];
  
  BOOL isValid = [postcodeValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
  */

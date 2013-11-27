@@ -78,7 +78,6 @@
     
     US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
     [validator addCondition:condition];
-    [condition release];
     
     US2ConditionCollection *conditionCollection1 = [validator violatedConditionsUsingString:@"HelloWorld"];
     US2ConditionCollection *conditionCollection2 = [validator violatedConditionsUsingString:@"Hello World 123"];

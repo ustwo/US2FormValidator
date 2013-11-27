@@ -90,7 +90,6 @@
  
     US2Condition *condition1 = [[US2Condition alloc] init];
     [conditionCollection addCondition:condition1];
-    [condition1 release];
  
     US2Condition *condition2 = [conditionCollection conditionAtIndex:0];
     [conditionCollection removeCondition:condition2];

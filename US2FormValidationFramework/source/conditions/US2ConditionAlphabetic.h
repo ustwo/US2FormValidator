@@ -37,7 +37,6 @@
     
     US2Validator *alphabeticValidator = [[US2Validator alloc] init];
     [alphabeticValidator addCondition:alphabeticCondition];
-    [alphabeticCondition release];
     
     BOOL isValid = [alphabeticValidator violatedConditionsUsingString:string] == nil;                     // isValid == YES
 */

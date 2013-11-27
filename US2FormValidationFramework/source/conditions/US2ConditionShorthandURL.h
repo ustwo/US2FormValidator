@@ -40,7 +40,7 @@
  
  NSString *string = @"example.com";
  
- US2ConditionURL *shorthandUrlCondition = [[[US2ConditionShorthandURL alloc] init] autorelease];
+ US2ConditionURL *shorthandUrlCondition = [[US2ConditionShorthandURL alloc] init];
  
  US2Validator *shorthandUrlValidator = [[US2Validator alloc] init];
  [shorthandUrlValidator addCondition:shorthandUrlCondition];

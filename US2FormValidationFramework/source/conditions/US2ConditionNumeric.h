@@ -37,7 +37,6 @@
     
     US2Validator *numericValidator = [[US2Validator alloc] init];
     [numericValidator addCondition:numericCondition];
-    [numericCondition release];
     
     BOOL isValid = [numericValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */

@@ -38,7 +38,6 @@
     
     US2Validator *rangeValidator = [[US2Validator alloc] init];
     [rangeValidator addCondition:rangeCondition];
-    [rangeCondition release];
     
     BOOL isValid = [rangeValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */

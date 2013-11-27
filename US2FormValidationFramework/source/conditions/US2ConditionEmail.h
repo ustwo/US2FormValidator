@@ -37,7 +37,6 @@
     
     US2Validator *emailValidator = [[US2Validator alloc] init];
     [emailValidator addCondition:emailCondition];
-    [emailCondition release];
     
     BOOL isValid = [emailValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */

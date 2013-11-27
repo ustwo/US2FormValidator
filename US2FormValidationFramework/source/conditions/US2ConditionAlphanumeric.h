@@ -37,7 +37,6 @@
     
     US2Validator *alphanumericValidator = [[US2Validator alloc] init];
     [alphanumericValidator addCondition:alphanumericCondition];
-    [alphanumericCondition release];
     
     BOOL isValid = [alphanumericValidator violatedConditionsUsingString:string] == nil;                       // isValid == YES
 */
