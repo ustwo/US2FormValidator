@@ -122,7 +122,7 @@
     
     US2ConditionRange *maxRangeCondition = [[US2ConditionRange alloc] init];
     maxRangeCondition.range = NSMakeRange(0, 6);
-    maxRangeCondition.shouldAllowViolation = YES;
+    maxRangeCondition.shouldAllowViolation = NO;
     [validator addCondition:maxRangeCondition];
     
     US2ConditionRange *minRangeCondition = [[US2ConditionRange alloc] init];
