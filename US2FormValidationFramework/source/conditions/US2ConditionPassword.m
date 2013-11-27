@@ -1,8 +1,9 @@
 //
-//  US2ConditionPasswordStrength.m
+//  US2ConditionPassword.m
 //  US2FormValidationFramework
 //
 //  Created by Alex Fish on 07/05/2012.
+//  Modified by Martin Stolz on 27/11/2013.
 //  Copyright (C) 2012 ustwo™
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -24,10 +25,10 @@
 //  SOFTWARE.
 //  
 
-#import "US2ConditionPasswordStrength.h"
+#import "US2ConditionPassword.h"
 
 
-@implementation US2ConditionPasswordStrength
+@implementation US2ConditionPassword
 
 
 #pragma mark - Initilisation
@@ -35,10 +36,9 @@
 - (id)init
 {
     self = [super init];
-    
     if(self != nil)
     {
-        _requiredStrength = US2PasswordStrengthMedium; // default required strength
+        _requiredStrength = US2PasswordStrengthMedium;
     }
     
     return self;
@@ -51,8 +51,7 @@
 {
     BOOL passed = NO;
     
-    // If strength is more than or equal to the required strength to pass, the condition can pass
-    if([self _strengthOfPasswordString:string] >= _requiredStrength)
+    if([self US2__strengthOfPasswordString:string] >= _requiredStrength)
     {
         passed = YES;
     }
@@ -65,15 +64,14 @@
 
 - (NSString *)createLocalizedViolationString
 {
-    return US2LocalizedString(@"US2KeyConditionViolationPasswordStrength", nil);
+    return US2LocalizedString(@"US2KeyConditionViolationPassword", nil);
 }
 
 
-#pragma mark - Strength Check
+#pragma mark - Strength check
 
-- (NSUInteger)_strengthOfPasswordString:(NSString *)string
+- (NSUInteger)US2__strengthOfPasswordString:(NSString *)string
 {
-    
     NSUInteger strength = 0;
     
     // Run regex on string to check for matches of lowercase, uppercase, numeric and special chars
@@ -83,29 +81,28 @@
     NSUInteger specialCharacterMatchesCount = [self US2__numberOfSpecialCharactersInString:string];
     
     // For each match of each type, move the strength value up one (higher = stronger)
-    if (numberMatchesCount > 0)	
+    if (numberMatchesCount > _minimalNumbers)
     { 
         strength++;
     }
     
-    if (lowercaseMatchesCount > 0)	
+    if (lowercaseMatchesCount > _minimalLowerCase)
     { 
         strength++;
     }
     
-    if (uppercaseMatchesCount > 0)	
+    if (uppercaseMatchesCount > _minimalUpperCase)
     { 
         strength++;
     }
     
-    if (specialCharacterMatchesCount > 0) 
+    if (specialCharacterMatchesCount > _minimalSymbols)
     { 
         strength++;
     }
     
-    // Move the strength up if the length is more than 8 characters and down if it is less
-    if (string.length > 8) 
-    { 
+    if (string.length > _minimalLength)
+    {
         strength++;
     }
     else if (strength > 0)
@@ -114,10 +111,10 @@
     }
     
     return strength;
-    
 }
 
-#pragma mark - Regular Expressions
+
+#pragma mark - Regular expressions
 
 - (NSUInteger)US2__numberOfNumericCharactersInString:(NSString *)string
 {
@@ -141,14 +138,14 @@
 
 - (NSUInteger)US2__numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string
 {
-    NSError *error      = NULL;
-    NSUInteger matches  = 0;
+    NSError *error = NULL;
+    NSUInteger matches = 0;
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
     if(!error)
     {
-        matches =  [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
+        matches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     }
     
     return matches;

@@ -1,8 +1,9 @@
 //
-//  US2ConditionPasswordStrength.h
+//  US2ConditionPassword.h
 //  US2FormValidationFramework
 //
 //  Created by Alex Fish on 07/05/2012.
+//  Modified by Martin Stolz on 27/11/2013.
 //  Copyright (C) 2012 ustwo™
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -26,28 +27,30 @@
 
 #import "US2Condition.h"
 
-#pragma mark - Strength Enumerator
 
-typedef enum {
-    US2PasswordStrengthVeryWeak     = 0,
-    US2PasswordStrengthWeak         = 1,
-    US2PasswordStrengthMedium       = 2,
-    US2PasswordStrengthStrong       = 3,
-    US2PasswordStrengthVeryStrong   = 4,
+#pragma mark - Strength enumerator
+
+typedef enum
+{
+    US2PasswordStrengthVeryWeak   = 0,
+    US2PasswordStrengthWeak       = 1,
+    US2PasswordStrengthMedium     = 2,
+    US2PasswordStrengthStrong     = 3,
+    US2PasswordStrengthVeryStrong = 4,
 } US2PasswordStrength;
 
 
-#pragma mark - US2ConditionPasswordStrength Interface
+#pragma mark - US2ConditionPasswordStrength interface
 
 /**
- The US2ConditionPasswordStrength checks for the strength of a password string.
+ The US2ConditionPassword checks for the strength of a password string.
  
  The strength is measured on five simple criteria:
- * contains lower case characters
- * contains upper case characters
- * contains numeric characters
- * contains special characters (e.g /';~)
- * is more than 8 characters long
+ * contains X amount of lower case characters
+ * contains X amount of upper case characters
+ * contains X amount of numeric characters
+ * contains X amount of special characters (e.g /';~)
+ * is more than X characters long
  
  Each of these matched criteria moves the password strength of the string up one strength, strength is measured on five levels:
  
@@ -55,13 +58,40 @@ typedef enum {
  US2PasswordStrengthWeak         = 1,
  US2PasswordStrengthMedium       = 2,
  US2PasswordStrengthStrong       = 3,
- US2PasswordStrengthVeryStrong   = 4,
+ US2PasswordStrengthVeryStrong   = 4, // All criteria is matched
  
- If the password strength matches or is above the required strength than the condition will pass. 
- 
+ If the password strength matches or is above the required strength than the condition will pass.
  */
-@interface US2ConditionPasswordStrength : US2Condition
+@interface US2ConditionPassword : US2Condition
 
+/**
+ How many lower case characters the password should contain.
+ */
+@property (nonatomic) NSUInteger minimalLowerCase;
+
+/**
+ How many upper case characters the password should contain.
+ */
+@property (nonatomic) NSUInteger minimalUpperCase;
+
+/**
+ How many numbers the password should contain.
+ */
+@property (nonatomic) NSUInteger minimalNumbers;
+
+/**
+ How many symbols the password should contain.
+ */
+@property (nonatomic) NSUInteger minimalSymbols;
+
+/**
+ How many characters the password should contain.
+ */
+@property (nonatomic) NSUInteger minimalLength;
+
+/**
+ How strong the password needs to be to be valid.
+ */
 @property (nonatomic) US2PasswordStrength requiredStrength;
 
 @end
