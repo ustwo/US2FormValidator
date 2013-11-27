@@ -34,8 +34,4 @@
  A valid string does only contain letters.
 */
 @interface US2ValidatorAlphabetic : US2Validator
-
-//@property (nonatomic) BOOL allowWhitespace;
-
-
 @end

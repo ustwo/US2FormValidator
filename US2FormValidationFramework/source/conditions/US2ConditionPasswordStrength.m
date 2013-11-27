@@ -26,26 +26,6 @@
 
 #import "US2ConditionPasswordStrength.h"
 
-#pragma mark - US2ConditionpasswordStrength Private Interface
-
-@interface US2ConditionPasswordStrength (Private)
-
-- (NSUInteger)_numberOfNumericCharactersInString:(NSString *)string;
-
-- (NSUInteger)_numberOfLowercaseCharactersInString:(NSString *)string;
-
-- (NSUInteger)_numberOfUppercaseCharactersInString:(NSString *)string;
-
-- (NSUInteger)_numberOfSpecialCharactersInString:(NSString *)string;
-
-- (NSUInteger)_numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string;
-
-- (NSUInteger)_strengthOfPasswordString:(NSString *)string;
-
-@end
-
-
-#pragma mark - US2ConditionpasswordStrength Implementation
 
 @implementation US2ConditionPasswordStrength
 
@@ -64,6 +44,7 @@
     return self;
 }
 
+
 #pragma mark - Condition check
 
 - (BOOL)check:(NSString *)string
@@ -79,12 +60,14 @@
     return passed;
 }
 
+
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     return US2LocalizedString(@"US2KeyConditionViolationPasswordStrength", nil);
 }
+
 
 #pragma mark - Strength Check
 
@@ -94,40 +77,40 @@
     NSUInteger strength = 0;
     
     // Run regex on string to check for matches of lowercase, uppercase, numeric and special chars
-    NSUInteger numberMatchesCount = [self _numberOfNumericCharactersInString:string];
-    NSUInteger lowercaseMatchesCount = [self _numberOfLowercaseCharactersInString:string];
-    NSUInteger uppercaseMatchesCount = [self _numberOfUppercaseCharactersInString:string];
-    NSUInteger specialCharacterMatchesCount = [self _numberOfSpecialCharactersInString:string];
+    NSUInteger numberMatchesCount = [self US2__numberOfNumericCharactersInString:string];
+    NSUInteger lowercaseMatchesCount = [self US2__numberOfLowercaseCharactersInString:string];
+    NSUInteger uppercaseMatchesCount = [self US2__numberOfUppercaseCharactersInString:string];
+    NSUInteger specialCharacterMatchesCount = [self US2__numberOfSpecialCharactersInString:string];
     
     // For each match of each type, move the strength value up one (higher = stronger)
     if (numberMatchesCount > 0)	
     { 
-        strength ++; 
+        strength++;
     }
     
     if (lowercaseMatchesCount > 0)	
     { 
-        strength ++; 
+        strength++;
     }
     
     if (uppercaseMatchesCount > 0)	
     { 
-        strength ++; 
+        strength++;
     }
     
     if (specialCharacterMatchesCount > 0) 
     { 
-        strength ++; 
+        strength++;
     }
     
     // Move the strength up if the length is more than 8 characters and down if it is less
     if (string.length > 8) 
     { 
-        strength ++; 
+        strength++;
     }
     else if (strength > 0)
     {
-        strength --;
+        strength--;
     }
     
     return strength;
@@ -136,27 +119,27 @@
 
 #pragma mark - Regular Expressions
 
-- (NSUInteger)_numberOfNumericCharactersInString:(NSString *)string
+- (NSUInteger)US2__numberOfNumericCharactersInString:(NSString *)string
 {
-    return [self _numberOfMatchesWithPattern:@"\\d" inString:string];
+    return [self US2__numberOfMatchesWithPattern:@"\\d" inString:string];
 }
 
-- (NSUInteger)_numberOfLowercaseCharactersInString:(NSString *)string
+- (NSUInteger)US2__numberOfLowercaseCharactersInString:(NSString *)string
 {
-    return [self _numberOfMatchesWithPattern:@"[a-z]" inString:string];
+    return [self US2__numberOfMatchesWithPattern:@"[a-z]" inString:string];
 }
 
-- (NSUInteger)_numberOfUppercaseCharactersInString:(NSString *)string
+- (NSUInteger)US2__numberOfUppercaseCharactersInString:(NSString *)string
 {
-    return [self _numberOfMatchesWithPattern:@"[A-Z]" inString:string];
+    return [self US2__numberOfMatchesWithPattern:@"[A-Z]" inString:string];
 }
 
-- (NSUInteger)_numberOfSpecialCharactersInString:(NSString *)string
+- (NSUInteger)US2__numberOfSpecialCharactersInString:(NSString *)string
 {
-    return [self _numberOfMatchesWithPattern:@"[^a-zA-Z\\d]" inString:string];
+    return [self US2__numberOfMatchesWithPattern:@"[^a-zA-Z\\d]" inString:string];
 }
 
-- (NSUInteger)_numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string
+- (NSUInteger)US2__numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string
 {
     NSError *error      = NULL;
     NSUInteger matches  = 0;

@@ -42,7 +42,8 @@
 
 - (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two
 {
-    self = [self initWithConditions:[NSArray arrayWithObjects: one, two, nil]];
+    self = [self initWithConditions:[NSArray arrayWithObjects:one, two, nil]];
+    
     return self;
 }
 

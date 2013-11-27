@@ -31,8 +31,10 @@
 
 - (BOOL)check:(NSString *)string
 {
-    if (nil == string)
-        return NO;
+    if (nil == string || string.length == 0)
+    {
+        return YES;
+    }
     
     NSError *error             = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-zA-Z0-9]" options:0 error:&error];

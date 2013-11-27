@@ -8,16 +8,18 @@
 
 #import "US2ConditionPresent.h"
 
+
 @implementation US2ConditionPresent
+
 
 - (BOOL)check:(NSString *)string
 {
-    if(!string)
+    if (nil == string || string.length == 0)
     {
         return NO;
     }
     
-    return string.length > 0 ? YES : NO;
+    return YES;
 }
 
 

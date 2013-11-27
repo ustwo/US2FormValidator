@@ -31,9 +31,9 @@
 
 - (BOOL)check:(NSString *)string
 {
-    if (nil == string)
+    if (nil == string || string.length == 0)
     {
-        return NO;
+        return YES;
     }
     
     self.regexString = @"^((https?)://)?[a-z0-9-]+(\\.[a-z0-9-]+)+([/?].*)?$";

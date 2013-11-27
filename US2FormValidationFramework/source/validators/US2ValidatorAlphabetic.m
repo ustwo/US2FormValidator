@@ -38,15 +38,4 @@
     return self;
 }
 
-// TODO: (MS) Think about it whether it is needed or not.
-//- (BOOL)allowWhitespace
-//{
-//    return [(US2ConditionAlphabetic *)[self condition] allowWhitespace];
-//}
-//
-//- (void)setAllowWhitespace:(BOOL)allowWhitespace
-//{
-//    [(US2ConditionAlphabetic *)[self condition] setAllowWhitespace:allowWhitespace];
-//}
-
 @end

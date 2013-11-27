@@ -62,6 +62,6 @@ typedef enum {
  */
 @interface US2ConditionPasswordStrength : US2Condition
 
-@property (nonatomic, assign) US2PasswordStrength requiredStrength;
+@property (nonatomic) US2PasswordStrength requiredStrength;
 
 @end

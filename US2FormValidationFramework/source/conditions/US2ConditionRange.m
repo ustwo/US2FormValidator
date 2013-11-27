@@ -47,12 +47,10 @@
 {
     BOOL success = NO;
     
-    if (0 == _range.location
-        && 0 == _range.length)
-        success = YES;
-    
-    if (nil == string)
+    if (nil == string || string.length == 0)
+    {
         string = [NSString string];
+    }
     
     if(string.length >= _range.location && string.length <= _range.length)
     {

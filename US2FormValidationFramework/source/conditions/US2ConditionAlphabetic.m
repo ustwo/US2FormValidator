@@ -33,8 +33,10 @@
 
 - (BOOL)check:(NSString *)string
 {
-    if (nil == string || [string isEqualToString: @""])
-        return NO;
+    if (nil == string || string.length == 0)
+    {
+        return YES;
+    }
     
     NSString *pattern = REGEX_PATTERN;
     

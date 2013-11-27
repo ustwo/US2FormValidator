@@ -31,8 +31,10 @@
 
 - (BOOL)check:(NSString *)string
 {
-    if (nil == string)
-        string = [NSString string];
+    if (nil == string || string.length == 0)
+    {
+        return YES;
+    }
     
     self.regexString = @"^[+\\w\\.\\-']+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{2,})+$";
     
