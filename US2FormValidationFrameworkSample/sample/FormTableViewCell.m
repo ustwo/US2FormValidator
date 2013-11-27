@@ -32,8 +32,6 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 
 @implementation FormTableViewCell
 
-@dynamic textUI;
-
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
