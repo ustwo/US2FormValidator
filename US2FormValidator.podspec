@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.source          = { :git => 'https://github.com/ustwo/US2FormValidator.git', :tag => '2.0.3-beta' }
   s.source_files    = 'US2FormValidationFramework/source/**/*.{h,m}'
   s.resources       = 'US2FormValidationFramework/US2Localizable/*'
+  s.requires_arc    = true
   s.preserve_paths  = 'Documentation', 'US2FormValidationFrameworkSample', 'US2FormValidationFramework/tests', 'US2FormValidationFramework/documentation', 'US2FormValidationFramework/US2FormValidationFramework.xcodeproj'
 end
