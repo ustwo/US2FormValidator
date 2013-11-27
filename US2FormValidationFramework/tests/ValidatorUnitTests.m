@@ -215,7 +215,7 @@
     STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
     
     // Test failure with expected customized localized string
-//    validator1.localizedViolationString = expectedLocalizedViolationString;
+    validator1.localizedViolationString = expectedLocalizedViolationString;
     conditions = [validator1 violatedConditionsUsingString:failureString1];
     STAssertTrue([conditions count] > 0, nil);
     NSString *localizedViolationString = [[conditions conditionAtIndex:0] localizedViolationString];
