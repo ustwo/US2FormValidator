@@ -150,4 +150,50 @@
     return violatedConditions;
 }
 
+
+#pragma mark - Localization
+
+/**
+ Create a localized violation string.
+ */
+- (NSString *)createLocalizedViolationString
+{
+    return nil;
+}
+
+/**
+ Returns a localized violation string.
+ *
+ @return Localized violation string
+ */
+- (NSString *)localizedViolationString
+{
+    if (!_localizedViolationString)
+    {
+        return [self createLocalizedViolationString];
+    }
+    
+    return _localizedViolationString;
+}
+
+
+#pragma mark - Description
+
+/**
+ Returns the description
+ *
+ @return Description string
+ */
+- (NSString *)description
+{
+    NSMutableString *description = [NSMutableString string];
+    [description appendString:@"<"];
+    [description appendString:[super description]];
+    [description appendString:[NSString stringWithFormat:@"\n <conditionCollection: \n%@>", _conditionCollection]];
+    [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];
+    [description appendString:@">"];
+    
+    return description;
+}
+
 @end

@@ -134,7 +134,7 @@
  Returns a localized violation string.
  *
  @return Localized violation string
-*/
+ */
 - (NSString *)localizedViolationString
 {
     if (!_localizedViolationString)

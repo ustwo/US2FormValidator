@@ -218,7 +218,7 @@
     validator1.localizedViolationString = expectedLocalizedViolationString;
     conditions = [validator1 violatedConditionsUsingString:failureString1];
     STAssertTrue([conditions count] > 0, nil);
-    NSString *localizedViolationString = [[conditions conditionAtIndex:0] localizedViolationString];
+    NSString *localizedViolationString = [validator1 localizedViolationString];
     STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
 }
 

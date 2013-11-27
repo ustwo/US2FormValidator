@@ -128,4 +128,11 @@
 */
 - (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string;
 
+/**
+ Returns a localized string which describes the kind of violation.
+ 
+ @return Localized violation string
+ */
+@property (nonatomic, copy) NSString *localizedViolationString;
+
 @end
