@@ -58,7 +58,6 @@
 
 - (void)tearDown
 {
-    [_validator release];
     _validator = nil;
     
     [super tearDown];
@@ -93,9 +92,7 @@
     
     // Add first condition to validator
     [_validator addCondition:condition1];
-    [condition1 release];
     [_validator addCondition:condition2];
-    [condition2 release];
     
     US2ConditionCollection *collection = nil;
     
@@ -142,11 +139,8 @@
     NSString *failureTestString2 = @"12";
     
     // Add validators to composite
-    [validatorComposite addValidator: validator1];
-    [validator1 release];
-    
-    [validatorComposite addValidator: validator2];
-    [validator2 release];
+    [validatorComposite addValidator:validator1];
+    [validatorComposite addValidator:validator2];
     
     US2ConditionCollection *collection = nil;
     collection = [validatorComposite violatedConditionsUsingString:successTestString1];
@@ -188,16 +182,15 @@
     validatable2.validator = validator2;
     validatable2.text = failureTestString1;
     
-    [form addValidatable: validatable1 validator: validatable1.validator];
+    [form addValidatable:validatable1 validator:validatable1.validator];
     
     US2ConditionCollection *collection = [form checkConditions];
     STAssertNil(collection, @"Collection must be nil", nil);
     
-    [form addValidatable: validatable2 validator: validatable2.validator];
+    [form addValidatable:validatable2 validator:validatable2.validator];
     
     collection = [form checkConditions];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
-    
 }
 
 /**
@@ -218,14 +211,14 @@
     NSString *failureString1 = @"abcde1";
     
     // Test success
-    US2ConditionCollection *conditions = [validator1 violatedConditionsUsingString: successString1];
+    US2ConditionCollection *conditions = [validator1 violatedConditionsUsingString:successString1];
     STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
     
     // Test failure with expected customized localized string
 //    validator1.localizedViolationString = expectedLocalizedViolationString;
-    conditions = [validator1 violatedConditionsUsingString: failureString1];
+    conditions = [validator1 violatedConditionsUsingString:failureString1];
     STAssertTrue([conditions count] > 0, nil);
-    NSString *localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
+    NSString *localizedViolationString = [[conditions conditionAtIndex:0] localizedViolationString];
     STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
 }
 

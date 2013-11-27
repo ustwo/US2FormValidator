@@ -64,20 +64,18 @@
     STAssertThrows([collection addCondition:(US2Condition *)someObject], @"Must not be able to take a nil object", nil);
     STAssertTrue(collection.count == 0, @"The collection must be empty", nil);
     
-    someObject = [[[NSObject alloc] init] autorelease];
+    someObject = [[NSObject alloc] init];
     STAssertNoThrow([collection addCondition:(US2Condition *)someObject], @"Must be able to take some other object", nil);
     US2Condition *condition = [collection conditionAtIndex:0];
     STAssertFalse([condition isKindOfClass:[US2Condition class]], @"The first item in collection can't be a condition", nil);
     [collection removeConditionAtIndex:0];
     STAssertTrue(collection.count == 0, @"The collection must be empty", nil);
     
-    US2Condition *condition2 = [[[US2Condition alloc] init] autorelease];
+    US2Condition *condition2 = [[US2Condition alloc] init];
     STAssertNoThrow([collection addCondition:condition2], @"Must be able to take a condition", nil);
     STAssertTrue(collection.count == 1, @"The collection must have one item", nil);
     [collection removeCondition:condition2];
     STAssertTrue(collection.count == 0, @"The collection must be empty", nil);
-    
-    [collection release];
 }
 
 /**
@@ -105,8 +103,6 @@
     
     STAssertFalse([condition check:failureTestString1], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
     STAssertFalse([condition check:failureTestString2], @"The US2ConditionAlphabetic should respond with FALSE and not TRUE", nil);
-    
-    [condition release];
 }
 
 /**

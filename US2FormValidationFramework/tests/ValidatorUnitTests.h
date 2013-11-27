@@ -30,10 +30,11 @@
 @protocol US2Validatable;
 @protocol US2ValidatorProtocol;
 
+
 @interface US2ValidatableMock : NSObject <US2Validatable>
 
-@property (retain, nonatomic) NSString *text;
-@property (assign, nonatomic) id<US2ValidatorProtocol> validator;
+@property (nonatomic, copy) NSString *text;
+@property (nonatomic, strong) id<US2ValidatorProtocol> validator;
 
 @end
 
