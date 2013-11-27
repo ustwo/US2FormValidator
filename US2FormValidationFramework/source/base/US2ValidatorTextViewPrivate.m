@@ -91,9 +91,10 @@
 {
     NSString *futureString = [textView.text stringByReplacingCharactersInRange:range withString:text];
     US2ConditionCollection *conditions = [_validatorTextView.validator violatedConditionsUsingString:futureString];
+    BOOL isValid = conditions == nil;
     
     // Inform text field about valid state change
-    if (conditions == nil)
+    if (isValid)
     {
         [_validatorTextView validatorTextViewDelegateSuccededConditions:self];
     }
@@ -106,10 +107,9 @@
     // Making sure that the last character can be deleted although
     BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
     if (!_validatorTextView.validateOnFocusLossOnly
-        && anyInvalidConditionDoesNotAllowViolation
-        && ![text isEqualToString:@""])
+        && anyInvalidConditionDoesNotAllowViolation)
     {
-        return conditions.count == 0;
+        return isValid;
     }
     
     // Ask delegate whether should change characters in range
