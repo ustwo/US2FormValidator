@@ -40,7 +40,7 @@
     [rangeValidator addCondition:rangeCondition];
     [rangeCondition release];
     
-    BOOL isValid = [rangeValidator checkConditions:string] == nil;          // isValid == YES
+    BOOL isValid = [rangeValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */
 @interface US2ConditionRange : US2Condition
 

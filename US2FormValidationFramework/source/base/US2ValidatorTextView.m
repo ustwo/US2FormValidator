@@ -29,32 +29,24 @@
 #import "US2Validator.h"
 
 
-@interface US2ValidatorTextView (private)
-- (void)_startUp;
+@interface US2ValidatorTextView ()
+{
+    US2ValidatorTextViewPrivate *_validatorTextViewPrivate;
+}
 @end
 
 
 @implementation US2ValidatorTextView
 
-@dynamic isValid;
-
 
 #pragma mark - Initialization
 
-- (id)init
+- (id)initWithFrame:(CGRect)frame
 {
-	self = [self initWithFrame: CGRectZero];
-	if (self)
-	{
-	}
-    
-	return self;
-}
-
-- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame: frame];
-    if (self) {
-        [self _startUp];
+    if (self)
+    {
+        [self US2__startUp];
     }
     
     return self;
@@ -65,7 +57,7 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        [self _startUp];
+        [self US2__startUp];
     }
     
     return self;
@@ -86,7 +78,7 @@
 /**
  Set interested instance. The private class US2ValidatorTextViewPrivate will serve the delegate after validation.
 */
-- (void)_startUp
+- (void)US2__startUp
 {
     // Validate immediately
     _validateOnFocusLossOnly = NO;
@@ -97,13 +89,16 @@
     self.delegate = (id)_validatorTextViewPrivate;
     
     // Listen for end of editing
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextViewPrivate selector:@selector(textViewDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextViewPrivate
+                                             selector:@selector(textViewDidEndEditing:)
+                                                 name:UITextViewTextDidEndEditingNotification
+                                               object:self];
 }
 
 /**
  Set interested instance. The private class US2ValidatorTextViewPrivate will serve the delegate after validation.
  */
-- (void)setValidatorDelegate:(id <US2ValidatorDelegate, UITextViewDelegate>)validatorDelegate
+- (void)setValidatorDelegate:(id<US2ValidatorDelegate, UITextViewDelegate>)validatorDelegate
 {
     _validatorTextViewPrivate.delegate = validatorDelegate;
 }
@@ -115,12 +110,14 @@
 
 - (BOOL)isValid
 {
-    return [_validator checkConditions:self.text] == nil;
+    return [_validator violatedConditionsUsingString:self.text] == nil;
 }
 
-- (NSString *) validatableText {
+- (NSString *)validatableText
+{
     return self.text;
 }
+
 
 #pragma mark - Validator text view delegate delegate
 

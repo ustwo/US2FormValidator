@@ -39,7 +39,7 @@
     [alphabeticValidator addCondition:alphabeticCondition];
     [alphabeticCondition release];
     
-    BOOL isValid = [alphabeticValidator checkConditions:string] == nil;                     // isValid == YES
+    BOOL isValid = [alphabeticValidator violatedConditionsUsingString:string] == nil;                     // isValid == YES
 */
 @interface US2ConditionAlphabetic : US2Condition
 

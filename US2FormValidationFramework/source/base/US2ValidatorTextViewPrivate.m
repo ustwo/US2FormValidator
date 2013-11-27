@@ -39,7 +39,7 @@
     self = [super init];
     if (self)
     {
-        _lastIsValid = -1;
+        _lastCheckWasValid = -1;
     }
     
     return self;
@@ -90,7 +90,7 @@
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     NSString *futureString = [textView.text stringByReplacingCharactersInRange:range withString:text];
-    US2ConditionCollection *conditions = [_validatorTextView.validator checkConditions:futureString];
+    US2ConditionCollection *conditions = [_validatorTextView.validator violatedConditionsUsingString:futureString];
     
     // Inform text field about valid state change
     if (conditions == nil)
@@ -141,11 +141,13 @@
         || (_validatorTextView.validateOnFocusLossOnly
             && _didEndEditing))
     {
-        US2ConditionCollection *conditions = [_validatorTextView.validator checkConditions:_validatorTextView.text];
+        US2ConditionCollection *conditions = [_validatorTextView.validator violatedConditionsUsingString:_validatorTextView.text];
         BOOL isValid = conditions == nil;
-        if (_lastIsValid != isValid)
+        
+        // Check only if the state changed to invalid
+        if (_lastCheckWasValid != isValid)
         {
-            _lastIsValid = isValid;
+            _lastCheckWasValid = isValid;
             
             // Inform text field about valid state change
             if (isValid)

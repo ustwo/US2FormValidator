@@ -30,6 +30,5 @@
 /**
     A validator to check for the presence of a string
  */
-@interface US2ValidatorPresent : US2ValidatorSingleCondition
-
+@interface US2ValidatorPresent : US2Validator
 @end

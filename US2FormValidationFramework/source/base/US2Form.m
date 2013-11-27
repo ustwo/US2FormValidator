@@ -26,7 +26,10 @@
 #import "US2Form.h"
 
 
-@implementation US2FormEntry
+@interface US2Form ()
+{
+    NSMutableArray *_entries;
+}
 @end
 
 
@@ -53,7 +56,7 @@
     self = [self init];
     if (self)
     {
-        [self addValidatable:validatable validator: validator];
+        [self addValidatable:validatable validator:validator];
     }
     
     return self;
@@ -80,7 +83,7 @@
     US2ConditionCollection *conditions = nil;
     for (US2FormEntry *entry in _entries)
     {
-        US2ConditionCollection *entryConditions = [entry.validator checkConditions:[entry.validatable validatableText]];
+        US2ConditionCollection *entryConditions = [entry.validator violatedConditionsUsingString:[entry.validatable validatableText]];
         if (entryConditions && conditions == nil)
         {
             conditions = [[US2ConditionCollection alloc] init];

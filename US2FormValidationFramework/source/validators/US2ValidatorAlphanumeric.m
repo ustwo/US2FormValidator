@@ -34,12 +34,7 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[US2ConditionAlphanumeric alloc] init]];
-    }
-    
+    self = [self initWithCondition:[[US2ConditionAlphanumeric alloc] init]];
     return self;
 }
 

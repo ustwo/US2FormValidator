@@ -41,7 +41,7 @@
 */
 @interface US2ValidatorTextFieldPrivate : NSObject <UITextFieldDelegate>
 {
-    BOOL _lastIsValid;
+    BOOL _lastCheckWasValid;
     BOOL _didEndEditing;
 }
 

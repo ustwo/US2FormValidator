@@ -43,7 +43,7 @@
  US2Validator *urlValidator = [[US2Validator alloc] init];
  [urlValidator addCondition:urlCondition];
  
- BOOL isValid = [urlValidator checkConditions:string] == nil;                     // isValid == YES
+ BOOL isValid = [urlValidator violatedConditionsUsingString:string] == nil;                     // isValid == YES
  */
 
 @interface US2ConditionURL : US2Condition

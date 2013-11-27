@@ -101,20 +101,20 @@
     
     // Validate whitespace first
     condition1.allowWhitespace = YES;
-    collection = [_validator checkConditions:successTestString2];
+    collection = [_validator violatedConditionsUsingString:successTestString2];
     STAssertNil(collection, @"Collection must be nil", nil);
     
-    collection = [_validator checkConditions:successTestString1];
+    collection = [_validator violatedConditionsUsingString:successTestString1];
     STAssertNil(collection, @"Collection must be nil", nil);
     condition1.allowWhitespace = NO;
     
-    collection = [_validator checkConditions:successTestString1];
+    collection = [_validator violatedConditionsUsingString:successTestString1];
     STAssertNil(collection, @"Collection must be nil", nil);
     
-    collection = [_validator checkConditions:failureTestString1];
+    collection = [_validator violatedConditionsUsingString:failureTestString1];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
     
-    collection = [_validator checkConditions:failureTestString2];
+    collection = [_validator violatedConditionsUsingString:failureTestString2];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
@@ -149,13 +149,13 @@
     [validator2 release];
     
     US2ConditionCollection *collection = nil;
-    collection = [validatorComposite checkConditions:successTestString1];
+    collection = [validatorComposite violatedConditionsUsingString:successTestString1];
     STAssertNil(collection, @"Collection must be nil", nil);
     
-    collection = [validatorComposite checkConditions:failureTestString1];
+    collection = [validatorComposite violatedConditionsUsingString:failureTestString1];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
     
-    collection = [validatorComposite checkConditions:failureTestString2];
+    collection = [validatorComposite violatedConditionsUsingString:failureTestString2];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
@@ -218,12 +218,12 @@
     NSString *failureString1 = @"abcde1";
     
     // Test success
-    US2ConditionCollection *conditions = [validator1 checkConditions: successString1];
+    US2ConditionCollection *conditions = [validator1 violatedConditionsUsingString: successString1];
     STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
     
     // Test failure with expected customized localized string
-    validator1.localizedViolationString = expectedLocalizedViolationString;
-    conditions = [validator1 checkConditions: failureString1];
+//    validator1.localizedViolationString = expectedLocalizedViolationString;
+    conditions = [validator1 violatedConditionsUsingString: failureString1];
     STAssertTrue([conditions count] > 0, nil);
     NSString *localizedViolationString = [[conditions conditionAtIndex: 0] localizedViolationString];
     STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");

@@ -33,8 +33,5 @@
  The URL validator contains a URL condition (see US2ConditionShorthandURL).
  A valid string does only contain a valid URL
  */
-@interface US2ValidatorShorthandURL : US2ValidatorSingleCondition
-{
-}
-
+@interface US2ValidatorShorthandURL : US2Validator
 @end

@@ -39,7 +39,7 @@
  [postcodeValidator addCondition:postcodeCondition];
  [postcodeCondition release];
  
- BOOL isValid = [postcodeValidator checkConditions:string] == nil;          // isValid == YES
+ BOOL isValid = [postcodeValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
  */
 @interface US2ConditionPostcodeUK : US2Condition
 

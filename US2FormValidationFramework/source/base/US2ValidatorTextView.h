@@ -23,7 +23,7 @@
 //  SOFTWARE.
 //  
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "US2ValidatorTextViewPrivateDelegate.h"
 #import "US2ValidatorDelegate.h"
 #import "US2ValidatorUIProtocol.h"
@@ -45,18 +45,11 @@
  and returns what went wrong and in which status the validation text field is at the moment.
 */
 @interface US2ValidatorTextView : UITextView <US2ValidatorUIProtocol, US2ValidatorTextViewPrivateDelegate, US2Validatable>
-{
-@private
-    id <US2ValidatorDelegate, UITextViewDelegate> __unsafe_unretained _validatorDelegate;
-    US2Validator                                    *_validator;
-    US2ValidatorTextViewPrivate                     *_validatorTextViewPrivate;
-    BOOL                                            _validateOnFocusLossOnly;
-}
 
 /**
  Set delegate implementing US2ValidatorDelegate
  */
-@property (nonatomic, unsafe_unretained) id <US2ValidatorDelegate, UITextViewDelegate> validatorDelegate;
+@property (nonatomic, weak) id <US2ValidatorDelegate, UITextViewDelegate> validatorDelegate;
 
 /**
  Set the validator to check the text of the text field with
@@ -68,7 +61,7 @@
  *
  @return Returns the valid state of the text field
 */
-@property (nonatomic, assign, readonly) BOOL isValid;
+@property (nonatomic, readonly) BOOL isValid;
 
 /**
  Determines whether the text has to be validated after leaving the text field
@@ -76,11 +69,11 @@
  the text field will from now on validate while editing. Because the user
  knows now that a violation occurrs when using this text field.
 */
-@property (nonatomic, assign) BOOL validateOnFocusLossOnly;
+@property (nonatomic) BOOL validateOnFocusLossOnly;
 
 /**
  Text for validation
  */
-- (NSString *) validatableText;
+- (NSString *)validatableText;
 
 @end

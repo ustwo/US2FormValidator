@@ -38,6 +38,8 @@
 
 @required
 
+- (void)addCondition:(id<US2ConditionProtocol>)condition atIndex:(NSUInteger)index;
+
 /**
  Add a condition to collection.
  
@@ -93,27 +95,25 @@
     US2Condition *condition2 = [conditionCollection conditionAtIndex:0];
     [conditionCollection removeCondition:condition2];
  
-    BOOL isEmpty = conditionCollection.count == 0;                                          // isEmpty == YES
+    BOOL isEmpty = conditionCollection.count == 0;   // isEmpty == YES
 */
-@interface US2ConditionCollection : NSObject <US2ConditionCollectionProtocol,
-                                              NSFastEnumeration>
-{
-    NSMutableArray *_array;
-}
+@interface US2ConditionCollection : NSObject <US2ConditionCollectionProtocol, NSFastEnumeration>
+
+- (void)addCondition:(id<US2ConditionProtocol>)condition atIndex:(NSUInteger)index;
 
 /**
  Add a condition to collection.
  
  @param condition US2Condition instance to add
 */
-- (void)addCondition:(id <US2ConditionProtocol>)condition;
+- (void)addCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove a condition from collection.
  
  @param condition US2Condition instance to remove
 */
-- (void)removeCondition:(id <US2ConditionProtocol>)condition;
+- (void)removeCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove a condition from collection at index.
@@ -133,12 +133,12 @@
 /**
  Remove all conditions from collection.
  */
-- (void) removeAllConditions;
+- (void)removeAllConditions;
 
 /**
  Number of conditions in collection.
 */
-@property (nonatomic, assign, readonly) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger count;
 
 
 @end

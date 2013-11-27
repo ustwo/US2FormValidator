@@ -61,7 +61,7 @@
  
  @return Returns the valid state of the text field
 */
-@property (nonatomic, assign, readonly) BOOL isValid;
+@property (nonatomic, readonly) BOOL isValid;
 
 /**
  Determines whether the text has to be validated after leaving the text field
@@ -69,11 +69,11 @@
  the text field will from now on validate while editing. Because the user
  knows now that a violation occurrs when using this text field.
 */
-@property (nonatomic, assign) BOOL validateOnFocusLossOnly;
+@property (nonatomic) BOOL validateOnFocusLossOnly;
 
 /**
  Text for validation
  */
-- (NSString *)validatableText;
+@property (nonatomic, readonly) NSString *validatableText;
 
 @end

@@ -41,10 +41,6 @@
     A form to assist in validating a validatable objects current state.
  */
 @interface US2Form : NSObject
-{
-@private
-    NSMutableArray *_entries;
-}
 
 /**
     Add a validatable to be validated with the given validator. 

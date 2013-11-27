@@ -34,22 +34,16 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
-        US2ConditionRange *rangeCondition = [[US2ConditionRange alloc] init];
-        [self addCondition:rangeCondition];
-    }
-    
+    self = [self initWithCondition:[[US2ConditionRange alloc] init]];
     return self;
 }
 
 - (id)initWithRange:(NSRange)range
 {
-    self = [super init];
+    self = [self init];
     if(self)
     {
-        [self setRange: range];
+        [self setRange:range];
     }
 
     return self;

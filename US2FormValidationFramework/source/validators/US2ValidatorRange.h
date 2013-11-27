@@ -38,25 +38,21 @@
     US2ValidatorRange *rangeValidator = [US2ValidatorRange alloc] init];
     rangeValidator.range = NSMakeRange(2, 12);
  
-    US2ConditionCollection *collection1 = [rangeValidator checkConditions:@"Hello World!"]; // collection1 == nil, thus YES
-    US2ConditionCollection *collection2 = [rangeValidator checkConditions:@"H"];            // collection2.length > 0, thus NO
+    US2ConditionCollection *collection1 = [rangeValidator violatedConditionsUsingString:@"Hello World!"]; // collection1 == nil, thus YES
+    US2ConditionCollection *collection2 = [rangeValidator violatedConditionsUsingString:@"H"];            // collection2.length > 0, thus NO
  
-    BOOL isValid = [rangeValidator checkConditions:@"Hello World!"] == nil;                 // isValid == YES
+    BOOL isValid = [rangeValidator violatedConditionsUsingString:@"Hello World!"] == nil;                 // isValid == YES
 */
-@interface US2ValidatorRange : US2ValidatorSingleCondition
-{
-@protected
-    NSRange _range;
-}
+@interface US2ValidatorRange : US2Validator
 
 /**
  The range to check for.
 */
-@property (nonatomic, assign) NSRange range;
+@property (nonatomic) NSRange range;
 
 /**
-    Initialize the range validator with a range.
+ Initialize the range validator with a range.
  */
-- (id) initWithRange: (NSRange) range;
+- (id)initWithRange:(NSRange)range;
 
 @end

@@ -63,16 +63,16 @@
 /**
     Returns all violated condition in a US2ConditionCollection by checking each composite validator.
  */
-- (US2ConditionCollection *)checkConditions:(NSString *)string
+- (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string
 {
-    US2ConditionCollection *violatedConditions = [super checkConditions: string];
+    US2ConditionCollection *violatedConditions = [super violatedConditionsUsingString: string];
     
     // Check violated conditions of each composite validator
     if (violatedConditions == nil)
     {
         for (id<US2ValidatorProtocol> validator in _validators)
         {
-            US2ConditionCollection *checkedViolatedConditions = [validator checkConditions:string];
+            US2ConditionCollection *checkedViolatedConditions = [validator violatedConditionsUsingString:string];
             if (checkedViolatedConditions != nil)
             {
                 if (violatedConditions == nil)

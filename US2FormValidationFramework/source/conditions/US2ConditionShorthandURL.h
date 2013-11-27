@@ -45,7 +45,7 @@
  US2Validator *shorthandUrlValidator = [[US2Validator alloc] init];
  [shorthandUrlValidator addCondition:shorthandUrlCondition];
  
- BOOL isValid = [shorthandUrlValidator checkConditions:string] == nil;                     // isValid == YES
+ BOOL isValid = [shorthandUrlValidator violatedConditionsUsingString:string] == nil;                     // isValid == YES
  */
 
 @interface US2ConditionShorthandURL : US2Condition

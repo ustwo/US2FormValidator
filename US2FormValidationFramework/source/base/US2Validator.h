@@ -28,6 +28,13 @@
 #import "US2ConditionCollection.h"
 
 
+typedef NS_ENUM(NSUInteger, US2ConditionPriority)
+{
+    US2ConditionPriorityLowest = 0,
+    US2ConditionPriorityHighest = NSUIntegerMax
+};
+
+
 #pragma mark - Validator protocol
 
 @protocol US2Condition;
@@ -58,7 +65,7 @@
  @param string String to check for all added conditons
  @return Returns *nil* if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon
 */
-- (US2ConditionCollection *)checkConditions:(NSString *)string;
+- (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string;
 
 @end
 
@@ -80,51 +87,32 @@
     [validator addCondition:condition];
     [condition release];
     
-    US2ConditionCollection *conditionCollection1 = [validator checkConditions:@"HelloWorld"];
-    US2ConditionCollection *conditionCollection2 = [validator checkConditions:@"Hello World 123"];
+    US2ConditionCollection *conditionCollection1 = [validator violatedConditionsUsingString:@"HelloWorld"];
+    US2ConditionCollection *conditionCollection2 = [validator violatedConditionsUsingString:@"Hello World 123"];
     
-    BOOL isValid = conditionCollection1 == nil;                                                  // isValid == YES
-    isValid = conditionCollection2 == nil;                                                       // isValid == NO
+    BOOL isValid = conditionCollection1 == nil;   // isValid == YES
+    isValid = conditionCollection2 == nil;        // isValid == NO
     
     // What went wrong?
     NSLog(@"conditionCollection2: %@", conditionCollection2);
  
 */
 @interface US2Validator : NSObject <US2ValidatorProtocol>
-{
-@protected
-    US2ConditionCollection *_conditionCollection;
-}
 
 /**
  Static shorthand for creating a validator.
  */
-+ (US2Validator *)validator;
++ (instancetype)validator;
 
 /**
  Initialize with a condition or variable-argument number of conditions.
  */
-- (id)initWithCondition:(id<US2ConditionProtocol>)firstCondition, ...;
+- (instancetype)initWithCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Initialize with an array of conditions.
  */
-- (id)initWithConditions:(NSArray *)conditions;
-
-/**
- Set localized violation string for condition at a given index.  This allows overriding a conditions default localized violation string.
- */
-- (void)setLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index;
-
-/**
- Set localized violation string for condition at a given index and return self.
- */
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index;
-
-/**
- Set localized violation string for condition at index 0 and return self.
- */
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString;
+- (instancetype)initWithConditions:(NSArray *)conditions;
 
 /**
  Add condition conform to US2ConditionProtocol
@@ -132,6 +120,16 @@
  @param condition Condition conform to US2ConditionProtocol
 */
 - (void)addCondition:(id<US2ConditionProtocol>)condition;
+
+/**
+ @methodName addCondition:withPriority:
+ @abstract   Add a condition with a priority.
+ @discussion Add a condition with a priority, the lower the priority number the lower the priority. Use US2ConditionPriority for convenience.
+ 
+ @param condition The condition
+ @param priority The priority
+ */
+- (void)addCondition:(id<US2ConditionProtocol>)condition withPriority:(NSUInteger)priority;
 
 /**
  Remove all conditions subclassing conditionClass from validation queue.
@@ -146,25 +144,6 @@
  @param string String to check for all added conditons
  @return Returns *nil* if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon
 */
-- (US2ConditionCollection *)checkConditions:(NSString *)string;
-
-
-@end
-
-/**
- A US2Validator with a single condition.
- */
-@interface US2ValidatorSingleCondition : US2Validator
-{
-    id<US2ConditionProtocol> _condition;
-}
-
-@property (strong, nonatomic) id<US2ConditionProtocol> condition;
-@property (copy, nonatomic) NSString *localizedViolationString;
-
-/**
- Initialize single validator with a condition.
- */
-- (id)initWithCondition:(id<US2ConditionProtocol>)condition;
+- (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string;
 
 @end

@@ -39,7 +39,7 @@
     [numericValidator addCondition:numericCondition];
     [numericCondition release];
     
-    BOOL isValid = [numericValidator checkConditions:string] == nil;          // isValid == YES
+    BOOL isValid = [numericValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */
 @interface US2ConditionNumeric : US2Condition
 

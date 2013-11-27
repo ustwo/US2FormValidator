@@ -51,6 +51,10 @@
 */
 - (NSString *)localizedViolationString;
 
+/**
+ Sets a localized string which describes the kind of violation.
+ */
+- (void)setLocalizedViolationString:(NSString *)string;
 
 @end
 
@@ -70,12 +74,17 @@
 */
 @interface US2Condition : NSObject <US2ConditionProtocol>
 
-@property (nonatomic, copy) NSString *localizedViolationString;
-
 /**
  If set to *NO* the user is not able to enter characters which would break the condition.
-*/
-@property (nonatomic, assign) BOOL shouldAllowViolation;
+ */
+@property (nonatomic) BOOL shouldAllowViolation;
+
+/**
+ Returns a localized string which describes the kind of violation.
+ 
+ @return Localized violation string
+ */
+@property (nonatomic, copy) NSString *localizedViolationString;
 
 /**
  A regular expression string which the validated string is matched against
@@ -94,23 +103,13 @@
 - (id)initWithLocalizedViolationString:(NSString *)localizedViolationString;
 
 /**
- Set the localized violation string and return self.
- */
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString;
-
-/**
- Initialize condition with a custom localized violation string and regex string.
- */
-- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString;
-
-/**
  Initialize condition with a custom regex string.
  */
 - (id)initWithRegexString:(NSString *)regexString;
 
 /**
- Set the regex string and return self.
+ Initialize condition with a custom localized violation string and regex string.
  */
-- (id)withRegexString:(NSString *)regexString;
+- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString;
 
 @end

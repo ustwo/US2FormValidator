@@ -33,11 +33,9 @@
  The alphabetic validator contains an alphabetic condition (see US2ConditionAlphabetic).
  A valid string does only contain letters.
 */
-@interface US2ValidatorAlphabetic : US2ValidatorSingleCondition
-{
-}
+@interface US2ValidatorAlphabetic : US2Validator
 
-@property (nonatomic) BOOL allowWhitespace;
+//@property (nonatomic) BOOL allowWhitespace;
 
 
 @end

@@ -28,10 +28,19 @@
 #import "US2ConditionCollection.h"
 
 
+@interface US2Validator ()
+{
+    US2ConditionCollection *_conditionCollection;
+}
+@end
+
+
 @implementation US2Validator
 
 
-+ (US2Validator *) validator
+#pragma mark - Convenience creator
+
++ (instancetype)validator
 {
     return [[[self class] alloc] init];
 }
@@ -50,35 +59,28 @@
     return self;
 }
 
-- (id)initWithCondition:(id<US2ConditionProtocol>) firstCondition, ...
+- (instancetype)initWithCondition:(id<US2ConditionProtocol>)condition
 {
     if (self = [self init])
     {
-        [self addCondition: firstCondition];
-        
-        va_list args;
-        va_start(args, firstCondition);
-        
-        id<US2ConditionProtocol> condition = nil;
-        
-        while( (condition = va_arg( args, id<US2ConditionProtocol>)) != nil )
-        {
-            [self addCondition: condition];
-        }
-
-        va_end(args);
+        [self addCondition:condition];
     }
     
     return self;
 }
 
-- (id)initWithConditions:(NSArray *) conditions
+- (instancetype)initWithConditions:(NSArray *)conditions
 {
     if (self = [self init])
     {
         for (id<US2ConditionProtocol> condition in conditions)
         {
-            [self addCondition: condition];
+            if (![condition conformsToProtocol:@protocol(US2ConditionProtocol)])
+            {
+                [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added incompatible condition <%@> to validator.", [condition class]], nil];
+            }
+            
+            [self addCondition:condition];
         }
     }
     
@@ -86,54 +88,30 @@
 }
 
 
-#pragma mark - Localized violation string
-
-- (void) setLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index
-{
-    if (index < [_conditionCollection count])
-    {
-        id<US2ConditionProtocol> conditionProtocol = [_conditionCollection conditionAtIndex:index];
-        if ([conditionProtocol isKindOfClass: [US2Condition class]])
-        {
-            US2Condition *condition = (US2Condition *) conditionProtocol;
-            condition.localizedViolationString = localizedViolationString;
-        }
-    }
-}
-
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString forConditionAtIndex:(NSUInteger)index
-{
-    [self setLocalizedViolationString:localizedViolationString forConditionAtIndex:index];
-    return self;
-}
-
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString
-{
-    return [self withLocalizedViolationString:localizedViolationString forConditionAtIndex:0];
-}
-
-
-#pragma mark - Condition
+#pragma mark - Adding and removing
 
 /**
  Add condition for validation queue.
 */
-- (void)addCondition:(id <US2ConditionProtocol>)condition
+- (void)addCondition:(id<US2ConditionProtocol>)condition
 {
-    if ([condition isKindOfClass:[US2Condition class]])
-    {
-        [_conditionCollection addCondition:condition];
-    }
-    else
+    [self addCondition:condition withPriority:US2ConditionPriorityLowest];
+}
+
+- (void)addCondition:(id<US2ConditionProtocol>)condition withPriority:(NSUInteger)priority
+{
+    if (![condition conformsToProtocol:@protocol(US2ConditionProtocol)])
     {
         [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added incompatible condition <%@> to validator.", [condition class]], nil];
     }
+    
+    [_conditionCollection addCondition:condition atIndex:priority];
 }
 
 /**
  Remove all conditions which are kind of specific class.
 */
-- (void)removeConditionOfClass:(Class <US2ConditionProtocol>)conditionClass
+- (void)removeConditionOfClass:(Class<US2ConditionProtocol>)conditionClass
 {
     for (US2Condition *condition in _conditionCollection)
     {
@@ -150,14 +128,14 @@
 /**
  Returns all violated condition in a US2ConditionCollection
 */
-- (US2ConditionCollection *)checkConditions:(NSString *)string
+- (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)string
 {
     US2ConditionCollection *violatedConditions = nil;
     for (US2Condition *condition in _conditionCollection)
     {
-        if (NO == [condition check:string])
+        if ([condition check:string] == NO)
         {
-            if (nil == violatedConditions)
+            if (violatedConditions == nil)
             {
                 violatedConditions = [[US2ConditionCollection alloc] init];
             }
@@ -167,48 +145,6 @@
     }
     
     return violatedConditions;
-}
-
-
-@end
-
-
-@implementation US2ValidatorSingleCondition
-
-@dynamic localizedViolationString;
-
-
-- (id)initWithCondition:(id<US2ConditionProtocol>)condition
-{
-    if (self = [super init])
-    {
-        [self setCondition: condition];
-    }
-    
-    return self;
-}
-
-- (void)setCondition:(id<US2ConditionProtocol>)condition
-{
-    _condition = condition;
-    
-    [_conditionCollection removeAllConditions];
-    [self addCondition: _condition];
-}
-
-- (NSString *)localizedViolationString
-{
-    if ([_conditionCollection count] > 0)
-    {
-        return [[_conditionCollection conditionAtIndex: 0] localizedViolationString];
-    }
-    
-    return nil;
-}
-
-- (void)setLocalizedViolationString:(NSString *)localizedViolationString
-{
-    [self setLocalizedViolationString: localizedViolationString forConditionAtIndex: 0];
 }
 
 @end

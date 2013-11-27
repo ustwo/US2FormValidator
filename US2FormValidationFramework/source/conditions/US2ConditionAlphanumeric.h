@@ -39,7 +39,7 @@
     [alphanumericValidator addCondition:alphanumericCondition];
     [alphanumericCondition release];
     
-    BOOL isValid = [alphanumericValidator checkConditions:string] == nil;                       // isValid == YES
+    BOOL isValid = [alphanumericValidator violatedConditionsUsingString:string] == nil;                       // isValid == YES
 */
 @interface US2ConditionAlphanumeric : US2Condition
 

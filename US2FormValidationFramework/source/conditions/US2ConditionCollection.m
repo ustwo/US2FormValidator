@@ -26,10 +26,14 @@
 #import "US2ConditionCollection.h"
 
 
+@interface US2ConditionCollection ()
+{
+    NSMutableArray *_array;
+}
+@end
+
+
 @implementation US2ConditionCollection
-
-
-@dynamic count;
 
 
 #pragma mark - Initialization
@@ -39,22 +43,26 @@
     self = [super init];
     if (self)
     {
-        _array  = [NSMutableArray array];
+        _array = [NSMutableArray array];
     }
     
     return self;
 }
 
 
-
 #pragma mark - Manipulation
 
-- (void)addCondition:(id <US2ConditionProtocol>)condition
+- (void)addCondition:(id<US2ConditionProtocol>)condition atIndex:(NSUInteger)index
+{
+    [_array insertObject:condition atIndex:index];
+}
+
+- (void)addCondition:(id<US2ConditionProtocol>)condition
 {
     [_array addObject:condition];
 }
 
-- (void)removeCondition:(id <US2ConditionProtocol>)condition
+- (void)removeCondition:(id<US2ConditionProtocol>)condition
 {
     [_array removeObject:condition];
 }
@@ -69,9 +77,11 @@
     return [_array objectAtIndex:index];
 }
 
-- (void) removeAllConditions {
+- (void)removeAllConditions
+{
     [_array removeAllObjects];
 }
+
 
 #pragma mark - Fast enumeration
 
@@ -91,11 +101,6 @@
 
 #pragma mark - Description
 
-/**
- Returns the description
- 
- @return Description string
-*/
 - (NSString *)description
 {
     NSMutableString *description = [NSMutableString string];

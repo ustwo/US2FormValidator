@@ -43,10 +43,10 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame: frame];
+    self = [super initWithFrame:frame];
     if (self)
     {
-        [self _startUp];
+        [self US2__startUp];
     }
     
     return self;
@@ -57,7 +57,7 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        [self _startUp];
+        [self US2__startUp];
     }
     
     return self;
@@ -68,7 +68,7 @@
 
 - (void)dealloc
 {
-    // Remove notification observers
+    // Remove observers
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
     [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
@@ -77,9 +77,9 @@
 
 #pragma mark - Start up
 
-- (void)_startUp
+- (void)US2__startUp
 {
-    // Validate immediately
+    // Validate immediately as default
     _validateOnFocusLossOnly = NO;
     
     // Create listening instance 
@@ -88,10 +88,16 @@
     super.delegate = (id)_validatorTextFieldPrivate;
     
     // Listen for update of inherited UITextField
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector:@selector(textFieldDidChange:) name:UITextFieldTextDidChangeNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate
+                                             selector:@selector(textFieldDidChange:)
+                                                 name:UITextFieldTextDidChangeNotification
+                                               object:self];
     
     // Listen for end of editing
-    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate selector:@selector(textFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate
+                                             selector:@selector(textFieldDidEndEditing:)
+                                                 name:UITextFieldTextDidEndEditingNotification
+                                               object:self];
 }
 
 
@@ -116,14 +122,23 @@
 }
 
 
-#pragma mark - Is valid
+#pragma mark - Text
+
+- (NSString *)validatableText
+{
+    return self.text;
+}
+
+
+#pragma mark - Valid state
 
 - (BOOL)isValid
 {
-    return [_validator checkConditions:self.text] == nil;
+    return [_validator violatedConditionsUsingString:self.text] == nil;
 }
 
-#pragma mark - 
+
+#pragma mark - Internal validation state changes
 
 /**
  After occurring violations the UI will be changed.
@@ -138,11 +153,5 @@
 - (void)validatorTextFieldPrivateSuccededConditions:(US2ValidatorTextFieldPrivate *)textFieldPrivate
 {
 }
-
-- (NSString *)validatableText
-{
-    return self.text;
-}
-
 
 @end

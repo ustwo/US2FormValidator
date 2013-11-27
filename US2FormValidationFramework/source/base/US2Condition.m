@@ -31,12 +31,12 @@
 
 #pragma mark - Init
 
-+ (US2Condition *)condition
++ (instancetype)condition
 {
     return [[[self class] alloc] init];
 }
 
-- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString
+- (instancetype)initWithLocalizedViolationString:(NSString *)localizedViolationString
 {
     if (self = [super init])
     {
@@ -46,7 +46,7 @@
     return self;
 }
 
-- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString
+- (instancetype)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString
 {
     if (self = [super init])
     {
@@ -57,25 +57,13 @@
     return self;
 }
 
-- (id)initWithRegexString:(NSString *)regexString
+- (instancetype)initWithRegexString:(NSString *)regexString
 {
     if (self = [super init])
     {
         self.regexString = regexString;
     }
     
-    return self;
-}
-
-- (id)withRegexString:(NSString *)regexString
-{
-    self.regexString = regexString;
-    return self;
-}
-
-- (id)withLocalizedViolationString:(NSString *)localizedViolationString
-{
-    self.localizedViolationString = localizedViolationString;
     return self;
 }
 
@@ -95,10 +83,10 @@
     {
         success = NO;
     }
-    else if(self.regexString)
+    else if(_regexString)
     {
         NSError *error = NULL;
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:self.regexString options:NSRegularExpressionCaseInsensitive error:&error];
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:_regexString options:NSRegularExpressionCaseInsensitive error:&error];
         if(!error)
         {
             NSRange matchRange = [regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
@@ -148,8 +136,9 @@
     NSMutableString *description = [NSMutableString string];
     [description appendString:@"<"];
     [description appendString:[super description]];
-    [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];
     [description appendString:[NSString stringWithFormat:@"\n <shouldAllowViolation: %@>", _shouldAllowViolation == 0 ? @"NO" : @"YES"]];
+    [description appendString:[NSString stringWithFormat:@"\n <localizedViolationString: %@>", [self localizedViolationString]]];
+    [description appendString:[NSString stringWithFormat:@"\n <regexString: %@>", _regexString]];
     [description appendString:@">"];
     
     return description;

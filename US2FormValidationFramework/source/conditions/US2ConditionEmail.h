@@ -39,7 +39,7 @@
     [emailValidator addCondition:emailCondition];
     [emailCondition release];
     
-    BOOL isValid = [emailValidator checkConditions:string] == nil;          // isValid == YES
+    BOOL isValid = [emailValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */
 @interface US2ConditionEmail : US2Condition
 

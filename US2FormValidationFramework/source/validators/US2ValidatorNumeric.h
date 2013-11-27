@@ -37,15 +37,11 @@
  
     US2ValidatorNumeric *numericValidator = [US2ValidatorNumeric alloc] init];
     
-    US2ConditionCollection *collection1 = [numericValidator checkConditions:@"1234"];       // collection1 == nil, thus YES
-    US2ConditionCollection *collection2 = [numericValidator checkConditions:@"1.234,56"];   // collection2 == nil, thus YES
-    US2ConditionCollection *collection3 = [numericValidator checkConditions:@"123 Hello"];  // collection3.length > 0, thus NO
+    US2ConditionCollection *collection1 = [numericValidator violatedConditionsUsingString:@"1234"];       // collection1 == nil, thus YES
+    US2ConditionCollection *collection2 = [numericValidator violatedConditionsUsingString:@"1.234,56"];   // collection2 == nil, thus YES
+    US2ConditionCollection *collection3 = [numericValidator violatedConditionsUsingString:@"123 Hello"];  // collection3.length > 0, thus NO
     
-    BOOL isValid = [numericValidator checkConditions:@"1234"] == nil;                       // isValid == YES
+    BOOL isValid = [numericValidator violatedConditionsUsingString:@"1234"] == nil;                       // isValid == YES
 */
-@interface US2ValidatorNumeric : US2ValidatorSingleCondition
-{
-}
-
-
+@interface US2ValidatorNumeric : US2Validator
 @end

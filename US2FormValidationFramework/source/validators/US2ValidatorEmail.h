@@ -36,14 +36,11 @@
  
     US2ValidatorEmail *emailValidator = [US2ValidatorEmail alloc] init];
     
-    US2ConditionCollection *collection1 = [emailValidator checkConditions:@"example@ustwo.co.uk"];  // collection1 == nil, thus YES
-    US2ConditionCollection *collection2 = [emailValidator checkConditions:@"example@ustwo."];       // collection2.length > 0, thus NO
-    US2ConditionCollection *collection3 = [emailValidator checkConditions:@"example"];              // collection3.length > 0, thus NO
+    US2ConditionCollection *collection1 = [emailValidator violatedConditionsUsingString:@"example@ustwo.co.uk"];  // collection1 == nil, thus YES
+    US2ConditionCollection *collection2 = [emailValidator violatedConditionsUsingString:@"example@ustwo."];       // collection2.length > 0, thus NO
+    US2ConditionCollection *collection3 = [emailValidator violatedConditionsUsingString:@"example"];              // collection3.length > 0, thus NO
     
-    BOOL isValid = [emailValidator checkConditions:@"example@ustwo.co.uk"] == nil;                  // isValid == YES
+    BOOL isValid = [emailValidator violatedConditionsUsingString:@"example@ustwo.co.uk"] == nil;                  // isValid == YES
 */
-@interface US2ValidatorEmail : US2ValidatorSingleCondition
-{
-}
-
+@interface US2ValidatorEmail : US2Validator
 @end

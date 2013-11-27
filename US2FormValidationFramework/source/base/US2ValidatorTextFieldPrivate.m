@@ -39,7 +39,7 @@
     self = [super init];
     if (self)
     {
-        _lastIsValid = -1;
+        _lastCheckWasValid = -1;
     }
     
     return self;
@@ -51,10 +51,11 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *futureString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    US2ConditionCollection *conditions = [_validatorTextField.validator checkConditions:futureString];
+    US2ConditionCollection *conditions = [_validatorTextField.validator violatedConditionsUsingString:futureString];
+    BOOL isValid = conditions == nil;
     
     // Inform text field about valid state change
-    if (conditions == nil)
+    if (isValid)
     {
         [_validatorTextField validatorTextFieldPrivateSuccededConditions:self];
     }
@@ -68,9 +69,10 @@
     BOOL anyInvalidConditionDoesNotAllowViolation = [self anyConditionDoesNotAllowViolation:conditions];
     if (!_validatorTextField.validateOnFocusLossOnly
         && anyInvalidConditionDoesNotAllowViolation
-        && string.length != 0)
+//        && string.length != 0
+        )
     {
-        return conditions.count == 0;
+        return isValid;
     }
     
     // Ask delegate whether should change characters in range
@@ -101,11 +103,13 @@
     if (!_validatorTextField.validateOnFocusLossOnly
         || (_validatorTextField.validateOnFocusLossOnly && _didEndEditing))
     {
-        US2ConditionCollection *conditions = [_validatorTextField.validator checkConditions:_validatorTextField.text];
+        US2ConditionCollection *conditions = [_validatorTextField.validator violatedConditionsUsingString:_validatorTextField.text];
         BOOL isValid = conditions == nil;
-        if (_lastIsValid != isValid)
+        
+        // Check only if the state changed to invalid
+        if (_lastCheckWasValid != isValid)
         {
-            _lastIsValid = isValid;
+            _lastCheckWasValid = isValid;
             
             // Inform text field about valid state change
             if (isValid)

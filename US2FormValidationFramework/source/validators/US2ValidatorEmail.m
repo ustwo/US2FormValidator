@@ -34,12 +34,7 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
-        [self addCondition:[[US2ConditionEmail alloc] init]];
-    }
-    
+    self = [self initWithCondition:[[US2ConditionEmail alloc] init]];
     return self;
 }
 
