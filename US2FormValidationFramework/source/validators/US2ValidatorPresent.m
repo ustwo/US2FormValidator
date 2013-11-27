@@ -33,7 +33,7 @@
 
 - (id)init
 {
-    self = [self initWithCondition:[[US2ConditionPresent alloc] init]];
+    self = [super initWithCondition:[[US2ConditionPresent alloc] init]];
     return self;
 }
 

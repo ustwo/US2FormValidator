@@ -34,7 +34,7 @@
 
 - (id)init
 {
-    self = [self initWithCondition:[[US2ConditionAlphanumeric alloc] init]];
+    self = [super initWithCondition:[[US2ConditionAlphanumeric alloc] init]];
     return self;
 }
 

@@ -61,7 +61,7 @@
 
 - (instancetype)initWithCondition:(id<US2ConditionProtocol>)condition
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
         [self addCondition:condition];
@@ -72,7 +72,7 @@
 
 - (instancetype)initWithConditions:(NSArray *)conditions
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
         for (id<US2ConditionProtocol> condition in conditions)

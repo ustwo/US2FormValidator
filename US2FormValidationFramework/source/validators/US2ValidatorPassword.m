@@ -33,7 +33,7 @@
 
 - (id)init
 {
-    self = [self initWithCondition:[[US2ConditionPassword alloc] init]];
+    self = [super initWithCondition:[[US2ConditionPassword alloc] init]];
     return self;
 }
 

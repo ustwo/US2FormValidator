@@ -34,13 +34,13 @@
 
 - (id)init
 {
-    self = [self initWithCondition:[[US2ConditionRange alloc] init]];
+    self = [super initWithCondition:[[US2ConditionRange alloc] init]];
     return self;
 }
 
 - (id)initWithRange:(NSRange)range
 {
-    self = [self init];
+    self = [super init];
     if(self)
     {
         [self setRange:range];

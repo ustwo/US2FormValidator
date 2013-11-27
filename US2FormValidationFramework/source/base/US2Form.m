@@ -57,7 +57,7 @@
 
 - (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
         [self addValidatable:validatable validator:validator];

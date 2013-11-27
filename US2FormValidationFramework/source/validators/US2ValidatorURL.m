@@ -34,7 +34,7 @@
 
 - (id)init
 {
-    self = [self initWithCondition:[[US2ConditionURL alloc] init]];
+    self = [super initWithCondition:[[US2ConditionURL alloc] init]];
     return self;
 }
 

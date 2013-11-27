@@ -30,7 +30,7 @@
 
 
 /**
- The password strength validator contains a password strength condition (see US2ConditionPasswordStrength).
+ The password strength validator contains a password strength condition (see US2ConditionPassword).
  A valid string matches or is above the required strength.
  */
 @interface US2ValidatorPassword : US2Validator

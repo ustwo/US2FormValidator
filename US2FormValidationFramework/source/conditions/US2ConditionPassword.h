@@ -40,7 +40,7 @@ typedef enum
 } US2PasswordStrength;
 
 
-#pragma mark - US2ConditionPasswordStrength interface
+#pragma mark - US2ConditionPassword interface
 
 /**
  The US2ConditionPassword checks for the strength of a password string.
