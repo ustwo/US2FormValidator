@@ -28,13 +28,6 @@
 #import "US2ConditionCollection.h"
 
 
-typedef NS_ENUM(NSUInteger, US2ConditionPriority)
-{
-    US2ConditionPriorityLowest = 0,
-    US2ConditionPriorityHighest = NSUIntegerMax
-};
-
-
 #pragma mark - Validator protocol
 
 @protocol US2Condition;
@@ -120,16 +113,6 @@ typedef NS_ENUM(NSUInteger, US2ConditionPriority)
  @param condition Condition conform to US2ConditionProtocol
 */
 - (void)addCondition:(id<US2ConditionProtocol>)condition;
-
-/**
- @methodName addCondition:withPriority:
- @abstract   Add a condition with a priority.
- @discussion Add a condition with a priority, the lower the priority number the lower the priority. Use US2ConditionPriority for convenience.
- 
- @param condition The condition
- @param priority The priority
- */
-- (void)addCondition:(id<US2ConditionProtocol>)condition withPriority:(NSUInteger)priority;
 
 /**
  Remove all conditions subclassing conditionClass from validation queue.

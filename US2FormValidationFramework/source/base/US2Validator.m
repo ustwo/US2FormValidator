@@ -95,17 +95,12 @@
 */
 - (void)addCondition:(id<US2ConditionProtocol>)condition
 {
-    [self addCondition:condition withPriority:US2ConditionPriorityLowest];
-}
-
-- (void)addCondition:(id<US2ConditionProtocol>)condition withPriority:(NSUInteger)priority
-{
     if (![condition conformsToProtocol:@protocol(US2ConditionProtocol)])
     {
         [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added incompatible condition <%@> to validator.", [condition class]], nil];
     }
     
-    [_conditionCollection addCondition:condition atIndex:priority];
+    [_conditionCollection addCondition:condition];
 }
 
 /**
