@@ -1,2 +1,10 @@
 language: objective-c
 script: "bundle exec rake test --trace"
+notifications:
+  email:
+    recipients:
+      - martin@ustwo.co.uk
+      - fish@ustwo.co.uk
+      - mio@ustwo.co.uk
+    on_success: change
+    on_failure: always
