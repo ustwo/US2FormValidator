@@ -26,6 +26,7 @@
 //  
 
 #import "US2ConditionPassword.h"
+#import "US2ConditionPassword_Private.h"
 
 
 @implementation US2ConditionPassword
@@ -70,7 +71,7 @@
 
 #pragma mark - Strength check
 
-- (NSUInteger)US2__strengthOfPasswordString:(NSString *)string
+- (US2PasswordStrength)US2__strengthOfPasswordString:(NSString *)string
 {
     NSUInteger strength = 0;
     

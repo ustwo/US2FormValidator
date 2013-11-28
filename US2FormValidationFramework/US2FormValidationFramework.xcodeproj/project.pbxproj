@@ -81,6 +81,7 @@
 		4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */; };
 		4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
+		5B1F8BD4184749A8000A1FDF /* US2ConditionPassword_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */; };
 		5B23E098184641A8009986F1 /* US2ConditionPassword.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B23E096184641A8009986F1 /* US2ConditionPassword.h */; };
 		5B23E099184641A8009986F1 /* US2ConditionPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B23E097184641A8009986F1 /* US2ConditionPassword.m */; };
 		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
@@ -190,6 +191,7 @@
 		4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPostcodeUK.m; sourceTree = "<group>"; };
 		4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = US2FormValidationFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword_Private.h; sourceTree = "<group>"; };
 		5B23E096184641A8009986F1 /* US2ConditionPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword.h; sourceTree = "<group>"; };
 		5B23E097184641A8009986F1 /* US2ConditionPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPassword.m; sourceTree = "<group>"; };
 		5BD39846147E98EF00EB75DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -297,6 +299,7 @@
 				F17CFB1114F351F200BB9D0F /* US2ConditionURL.m */,
 				4C0DE68614FE4173005D93CB /* US2ConditionShorthandURL.h */,
 				4C0DE68714FE4173005D93CB /* US2ConditionShorthandURL.m */,
+				5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */,
 				5B23E096184641A8009986F1 /* US2ConditionPassword.h */,
 				5B23E097184641A8009986F1 /* US2ConditionPassword.m */,
 				DE07953A162759E100841F88 /* US2ConditionOr.h */,
@@ -421,6 +424,7 @@
 				4C59DD7A1487BD7B0047C698 /* US2ValidatorEmail.h in Headers */,
 				4C59DD7C1487BD7B0047C698 /* US2ValidatorNumeric.h in Headers */,
 				4C59DD7E1487BD7B0047C698 /* US2ValidatorRange.h in Headers */,
+				5B1F8BD4184749A8000A1FDF /* US2ConditionPassword_Private.h in Headers */,
 				4C301FED14B329CC005FE002 /* US2ValidatorDelegate.h in Headers */,
 				4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */,
 				4C8885C114B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h in Headers */,
