@@ -171,4 +171,5 @@ Create the implementation.
 	
 	
 	@end
-
+	
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/5c7741973650e3249271c084dcfd36e2 "githalytics.com")](http://githalytics.com/ustwo/US2FormValidator)
