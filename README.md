@@ -42,7 +42,7 @@ https://github.com/CocoaPods/CocoaPods
 
 Add the following line to your pod file:
 
-    pod 'US2FormValidator', '~> 1.0.8'
+    pod 'US2FormValidator', '~> 1.1.2'
 
 How-To
 ------
