@@ -144,7 +144,7 @@
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
-    if(!error)
+    if(!error && string != nil)
     {
         matches = [regex numberOfMatchesInString:string options:0 range:NSMakeRange(0, string.length)];
     }
