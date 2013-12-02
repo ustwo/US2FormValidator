@@ -116,11 +116,13 @@
 */
 - (void)removeConditionsOfClass:(Class<US2ConditionProtocol>)conditionClass
 {
-    for (US2Condition *condition in _conditionCollection)
+    for (NSInteger index = 0; index < _conditionCollection.count; index++)
     {
+        US2Condition *condition = [_conditionCollection conditionAtIndex:index];
         if ([condition isKindOfClass:conditionClass])
         {
             [_conditionCollection removeCondition:condition];
+            index--;
         }
     }
 }
