@@ -51,7 +51,9 @@
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
     if ([_delegate respondsToSelector:@selector(textViewShouldBeginEditing:)])
+    {
         return [_delegate textViewShouldBeginEditing:_validatorTextView];
+    }
     
     return YES;
 }
@@ -59,7 +61,9 @@
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView
 {
     if ([_delegate respondsToSelector:@selector(textViewShouldEndEditing:)])
+    {
         return [_delegate textViewShouldEndEditing:_validatorTextView];
+    }
     
     return YES;
 }
@@ -67,7 +71,9 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     if ([_delegate respondsToSelector:@selector(textViewDidBeginEditing:)])
+    {
         [_delegate textViewDidBeginEditing:_validatorTextView];
+    }
 }
 
 /**
@@ -84,7 +90,9 @@
     [self textViewDidChange:nil];
     
     if ([_delegate respondsToSelector:@selector(textViewDidEndEditing:)])
+    {
         [_delegate textViewDidEndEditing:_validatorTextView];
+    }
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
