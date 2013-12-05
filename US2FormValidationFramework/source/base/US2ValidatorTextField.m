@@ -103,16 +103,15 @@
 
 #pragma mark - Delegate
 
-- (void)setValidatorDelegate:(id<US2ValidatorDelegate, UITextFieldDelegate>)validatorDelegate
+- (void)setDelegate:(id<US2ValidatorDelegate, UITextFieldDelegate>)delegate
 {
-    _validatorTextFieldPrivate.delegate = validatorDelegate;
+    _validatorTextFieldPrivate.delegate = delegate;
 }
 
-- (id<US2ValidatorDelegate>)setValidatorDelegate
+- (id<US2ValidatorDelegate, UITextFieldDelegate>)delegate
 {
     return _validatorTextFieldPrivate.delegate;
 }
-
 
 #pragma mark - Set validator
 

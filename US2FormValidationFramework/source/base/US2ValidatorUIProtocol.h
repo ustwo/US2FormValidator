@@ -42,14 +42,14 @@
 /**
  @param validatorDelegate The validator UI delegate conforming US2ValidatorDelegate
  */
-- (void)setValidatorDelegate:(id <US2ValidatorDelegate>)validatorDelegate;
+- (void)setDelegate:(id<US2ValidatorDelegate>)delegate;
 
 /**
  Return the delegate
  
  @return Returns the validator UI delegate
  */
-- (id <US2ValidatorDelegate>)validatorDelegate;
+- (id<US2ValidatorDelegate>)delegate;
 
 /**
  @param validator Validator to check the text of text UI conforming US2ValidatorUIProtocol

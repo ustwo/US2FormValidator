@@ -49,7 +49,7 @@
 /**
  Set delegate implementing US2ValidatorDelegate
  */
-@property (nonatomic, weak) id <US2ValidatorDelegate, UITextViewDelegate> validatorDelegate;
+@property (nonatomic, weak) id <US2ValidatorDelegate, UITextViewDelegate> delegate;
 
 /**
  Set the validator to check the text of the text field with

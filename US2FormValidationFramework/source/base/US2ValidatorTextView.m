@@ -98,12 +98,12 @@
 /**
  Set interested instance. The private class US2ValidatorTextViewPrivate will serve the delegate after validation.
  */
-- (void)setValidatorDelegate:(id<US2ValidatorDelegate, UITextViewDelegate>)validatorDelegate
+- (void)setDelegate:(id<US2ValidatorDelegate, UITextViewDelegate>)delegate
 {
-    _validatorTextViewPrivate.delegate = validatorDelegate;
+    _validatorTextViewPrivate.delegate = delegate;
 }
 
-- (id <US2ValidatorDelegate, UITextViewDelegate>)validatorDelegate
+- (id<US2ValidatorDelegate, UITextViewDelegate>)delegate
 {
     return _validatorTextViewPrivate.delegate;
 }
