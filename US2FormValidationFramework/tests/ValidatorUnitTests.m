@@ -37,14 +37,8 @@
 
 
 @implementation US2ValidatableMock
-
-
-- (NSString *)validatableText
-{
-    return self.text;
-}
-
 @end
+
 
 @implementation ValidatorUnitTests
 
@@ -182,14 +176,14 @@
     validatable2.validator = validator2;
     validatable2.text = failureTestString1;
     
-    [form addValidatable:validatable1 validator:validatable1.validator];
+    [form addValidatable:validatable1];
     
-    US2ConditionCollection *collection = [form checkConditions];
+    US2ConditionCollection *collection = [form violatedConditions];
     STAssertNil(collection, @"Collection must be nil", nil);
     
-    [form addValidatable:validatable2 validator:validatable2.validator];
+    [form addValidatable:validatable2];
     
-    collection = [form checkConditions];
+    collection = [form violatedConditions];
     STAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 

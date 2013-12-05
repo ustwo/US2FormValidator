@@ -24,8 +24,8 @@
 //  
 
 #import <UIKit/UIKit.h>
-#import "US2ValidatorDelegate.h"
-#import "US2ValidatorUIProtocol.h"
+#import "US2ValidatorTextViewDelegate.h"
+#import "US2Validatable.h"
 
 @class US2ValidatorTextView;
 
@@ -49,7 +49,7 @@
  Origin delegate which was set through US2ValidatorTextView and will
  be served by this private class US2ValidatorTextViewPrivate.
  */
-@property (nonatomic, weak) id <US2ValidatorDelegate, UITextViewDelegate> delegate;
+@property (nonatomic, weak) id <US2ValidatorTextViewDelegate> delegate;
 
 /**
  Represents the main validation text field which wants to know what went

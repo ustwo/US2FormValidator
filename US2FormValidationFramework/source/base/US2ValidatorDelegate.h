@@ -26,7 +26,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@protocol US2ValidatorUIProtocol;
+@protocol US2Validatable;
 
 @class US2ConditionCollection;
 
@@ -45,7 +45,7 @@
  
  @param validatorUI Instance of the sending validator text UI of type US2ValidatorTextField
  */
-- (void)validatorUIDidChange:(id <US2ValidatorUIProtocol>)validatorUI;
+- (void)validatableDidChange:(id<US2Validatable>)validatable;
 
 /**
  Will be called when a status changes from true to false or false to true.
@@ -53,7 +53,7 @@
  @param validatorTextView Instance of the sending validator text field of type US2ValidatorTextView
  @param isValid Returns the status of the validation check
  */
-- (void)validatorUI:(id <US2ValidatorUIProtocol>)validatorUI changedValidState:(BOOL)isValid;
+- (void)validatable:(id<US2Validatable>)validatable changedValidState:(BOOL)isValid;
 
 /**
  Will be called if the text field check failed.
@@ -61,7 +61,7 @@
  @param validatorTextView Instance of the sending validator text field of type US2ValidatorTextView
  @param conditions Collection of type US2ConditionCollection listing all violated conditions.
  */
-- (void)validatorUI:(id <US2ValidatorUIProtocol>)validatorUI violatedConditions:(US2ConditionCollection *)conditions;
+- (void)validatable:(id<US2Validatable>)validatable violatedConditions:(US2ConditionCollection *)conditions;
 
 
 @end

@@ -28,35 +28,24 @@
 #import "US2Validatable.h"
 
 /**
-    A form entry for US2Form.
- */
-@interface US2FormEntry : NSObject
-
-@property (nonatomic, strong) id<US2Validatable> validatable;
-@property (nonatomic, strong) id<US2ValidatorProtocol> validator;
-
-@end
-
-/**
-    A form to assist in validating a validatable objects current state.
+ A form to assist in validating a validatable objects current state.
  */
 @interface US2Form : NSObject
 
-/**
-    Add a validatable to be validated with the given validator. 
- */
-- (void)addValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator;
+- (id)initWithValidatable:(id<US2Validatable>)validatable;
 
 /**
-    Add a validatable to be validated.  The default validator for the validatable will be used as a validator.
+ Add a validatable to be validated with the given validator.
  */
 - (void)addValidatable:(id<US2Validatable>)validatable;
 
+- (id<US2Validatable>)validatableAtIndex:(NSInteger)index;
+
+- (NSUInteger)count;
+
 /**
-    Check conditions for all validatables.
+ Check conditions for all validatables.
  */
-- (US2ConditionCollection *)checkConditions;
-
-
+- (US2ConditionCollection *)violatedConditions;
 
 @end

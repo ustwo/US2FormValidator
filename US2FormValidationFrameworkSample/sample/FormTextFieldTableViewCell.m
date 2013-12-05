@@ -42,18 +42,18 @@ static const float  kFormTextFieldX  = 110.0;
 {    
     [super layoutSubviews];
     
-    if (nil != _textUI)
+    if (nil != self.validatable)
     {
         // Collapse text field height to content
-        CGSize size = [@"#" sizeWithFont:((US2ValidatorTextField *)_textUI).font
+        CGSize size = [@"#" sizeWithFont:((US2ValidatorTextField *)self.validatable).font
                        constrainedToSize:CGSizeMake(UINT16_MAX, UINT16_MAX)
                            lineBreakMode:NSLineBreakByClipping];
         
         // Set dimension of text field
         CGFloat verticalCenter = round((self.contentView.frame.size.height - size.height) / 2.0);
-        _textUI.frame = CGRectMake(kFormTextFieldX, verticalCenter, self.contentView.frame.size.width - kFormTextFieldX - 40.0, size.height);
+        self.validatable.frame = CGRectMake(kFormTextFieldX, verticalCenter, self.contentView.frame.size.width - kFormTextFieldX - 40.0, size.height);
         
-        ((US2ValidatorTextField *)_textUI).font  = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
+        ((US2ValidatorTextField *)self.validatable).font  = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
     }
     
     if (nil != _iconButton)
@@ -70,12 +70,12 @@ static const float  kFormTextFieldX  = 110.0;
 
 - (void)setTextField:(US2ValidatorTextField *)textField
 {
-    self.textUI = textField;
+    self.validatable = textField;
 }
 
 - (US2ValidatorTextField *)textField
 {
-    return (US2ValidatorTextField *)self.textUI;
+    return (US2ValidatorTextField *)self.validatable;
 }
 
 

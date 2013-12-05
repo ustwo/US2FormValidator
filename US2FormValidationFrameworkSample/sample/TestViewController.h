@@ -35,27 +35,11 @@
 #import "TooltipView.h"
 #import "FormTableViewCell.h"
 #import "US2ValidatorDelegate.h"
-#import "US2ValidatorUIProtocol.h"
+#import "US2Validatable.h"
 
 
-@interface TestViewController : UIViewController <US2ValidatorDelegate,
-                                                  UITextFieldDelegate,
-                                                  UITextViewDelegate,
-                                                  FormTableViewCellDelegate,
-                                                  UITableViewDelegate,
-                                                  UITableViewDataSource>
-{
-@private
-    NSMutableArray *_textUICollection;
-    NSMutableArray *_typeStringCollection;
-    
-    TooltipView    *_tooltipView;
-    id <US2ValidatorUIProtocol> _tooltipConnectedTextUI;
-    
-    BOOL           _didSubmit;
-}
+@interface TestViewController : UIViewController
 
 @property (nonatomic, strong, readonly) TestView *testView;
-
 
 @end

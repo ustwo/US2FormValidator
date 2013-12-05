@@ -44,7 +44,7 @@
 		4C59DD661487BD7B0047C698 /* US2ValidatorTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */; };
 		4C59DD671487BD7B0047C698 /* US2ValidatorTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */; };
 		4C59DD681487BD7B0047C698 /* US2ValidatorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */; };
-		4C59DD691487BD7B0047C698 /* US2ValidatorUIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */; };
+		4C59DD691487BD7B0047C698 /* US2Validatable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD481487BD7B0047C698 /* US2Validatable.h */; };
 		4C59DD6A1487BD7B0047C698 /* US2ConditionAlphabetic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD4A1487BD7B0047C698 /* US2ConditionAlphabetic.h */; };
 		4C59DD6B1487BD7B0047C698 /* US2ConditionAlphabetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD4B1487BD7B0047C698 /* US2ConditionAlphabetic.m */; };
 		4C59DD6C1487BD7B0047C698 /* US2ConditionAlphanumeric.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD4C1487BD7B0047C698 /* US2ConditionAlphanumeric.h */; };
@@ -84,14 +84,14 @@
 		5B1F8BD4184749A8000A1FDF /* US2ConditionPassword_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */; };
 		5B23E098184641A8009986F1 /* US2ConditionPassword.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B23E096184641A8009986F1 /* US2ConditionPassword.h */; };
 		5B23E099184641A8009986F1 /* US2ConditionPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B23E097184641A8009986F1 /* US2ConditionPassword.m */; };
+		5B33112D1850C51B00FF62C5 /* US2ValidatorTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B33112C1850C51B00FF62C5 /* US2ValidatorTextFieldDelegate.h */; };
+		5B33112F1850C9C600FF62C5 /* US2ValidatorTextViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B33112E1850C9C600FF62C5 /* US2ValidatorTextViewDelegate.h */; };
 		5BD39959147EA5C000EB75DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5BD3995A147EA5C700EB75DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */ = {isa = PBXBuildFile; fileRef = DE079490162636D400841F88 /* US2ValidatorComposite.h */; };
 		DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = DE079491162636D400841F88 /* US2ValidatorComposite.m */; };
 		DE0794D91626567D00841F88 /* US2Form.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794D71626567D00841F88 /* US2Form.h */; };
 		DE0794DA1626567D00841F88 /* US2Form.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794D81626567D00841F88 /* US2Form.m */; };
-		DE0794E21626585B00841F88 /* US2Validatable.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0794E01626585900841F88 /* US2Validatable.h */; };
-		DE0794E31626585B00841F88 /* US2Validatable.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0794E11626585A00841F88 /* US2Validatable.m */; };
 		DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953A162759E100841F88 /* US2ConditionOr.h */; };
 		DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */ = {isa = PBXBuildFile; fileRef = DE07953B162759E300841F88 /* US2ConditionOr.m */; };
 		DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = DE07953E162759F100841F88 /* US2ConditionAnd.h */; };
@@ -152,7 +152,7 @@
 		4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextField.m; sourceTree = "<group>"; };
 		4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextView.h; sourceTree = "<group>"; };
 		4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorTextView.m; sourceTree = "<group>"; };
-		4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorUIProtocol.h; sourceTree = "<group>"; };
+		4C59DD481487BD7B0047C698 /* US2Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validatable.h; sourceTree = "<group>"; };
 		4C59DD4A1487BD7B0047C698 /* US2ConditionAlphabetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAlphabetic.h; sourceTree = "<group>"; };
 		4C59DD4B1487BD7B0047C698 /* US2ConditionAlphabetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionAlphabetic.m; sourceTree = "<group>"; };
 		4C59DD4C1487BD7B0047C698 /* US2ConditionAlphanumeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAlphanumeric.h; sourceTree = "<group>"; };
@@ -194,6 +194,8 @@
 		5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword_Private.h; sourceTree = "<group>"; };
 		5B23E096184641A8009986F1 /* US2ConditionPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword.h; sourceTree = "<group>"; };
 		5B23E097184641A8009986F1 /* US2ConditionPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPassword.m; sourceTree = "<group>"; };
+		5B33112C1850C51B00FF62C5 /* US2ValidatorTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextFieldDelegate.h; sourceTree = "<group>"; };
+		5B33112E1850C9C600FF62C5 /* US2ValidatorTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewDelegate.h; sourceTree = "<group>"; };
 		5BD39846147E98EF00EB75DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BD39848147E98EF00EB75DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,8 +203,6 @@
 		DE079491162636D400841F88 /* US2ValidatorComposite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ValidatorComposite.m; sourceTree = "<group>"; };
 		DE0794D71626567D00841F88 /* US2Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Form.h; sourceTree = "<group>"; };
 		DE0794D81626567D00841F88 /* US2Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Form.m; sourceTree = "<group>"; };
-		DE0794E01626585900841F88 /* US2Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Validatable.h; sourceTree = "<group>"; };
-		DE0794E11626585A00841F88 /* US2Validatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Validatable.m; sourceTree = "<group>"; };
 		DE07953A162759E100841F88 /* US2ConditionOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionOr.h; sourceTree = "<group>"; };
 		DE07953B162759E300841F88 /* US2ConditionOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionOr.m; sourceTree = "<group>"; };
 		DE07953E162759F100841F88 /* US2ConditionAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionAnd.h; sourceTree = "<group>"; };
@@ -253,26 +253,26 @@
 		4C59DD3F1487BD7B0047C698 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				4C59DD481487BD7B0047C698 /* US2Validatable.h */,
 				4C59DD401487BD7B0047C698 /* US2Condition.h */,
 				4C59DD411487BD7B0047C698 /* US2Condition.m */,
 				4C59DD421487BD7B0047C698 /* US2Validator.h */,
 				4C59DD431487BD7B0047C698 /* US2Validator.m */,
+				5B33112C1850C51B00FF62C5 /* US2ValidatorTextFieldDelegate.h */,
 				4C59DD441487BD7B0047C698 /* US2ValidatorTextField.h */,
 				4C59DD451487BD7B0047C698 /* US2ValidatorTextField.m */,
 				4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */,
 				4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */,
 				4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */,
+				5B33112E1850C9C600FF62C5 /* US2ValidatorTextViewDelegate.h */,
 				4C59DD461487BD7B0047C698 /* US2ValidatorTextView.h */,
 				4C59DD471487BD7B0047C698 /* US2ValidatorTextView.m */,
 				4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */,
 				4C8885BC14B4599D005E5934 /* US2ValidatorTextViewPrivate.h */,
 				4C8885BD14B4599D005E5934 /* US2ValidatorTextViewPrivate.m */,
-				4C59DD481487BD7B0047C698 /* US2ValidatorUIProtocol.h */,
 				4C301FEC14B329CC005FE002 /* US2ValidatorDelegate.h */,
 				DE0794D71626567D00841F88 /* US2Form.h */,
 				DE0794D81626567D00841F88 /* US2Form.m */,
-				DE0794E01626585900841F88 /* US2Validatable.h */,
-				DE0794E11626585A00841F88 /* US2Validatable.m */,
 				2CCA57AD1640F48000EA1D88 /* US2Localization.h */,
 			);
 			path = base;
@@ -406,14 +406,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B33112D1850C51B00FF62C5 /* US2ValidatorTextFieldDelegate.h in Headers */,
 				4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */,
 				4C8885BE14B4599D005E5934 /* US2ValidatorTextViewPrivate.h in Headers */,
 				4C59DD611487BD7B0047C698 /* US2Condition.h in Headers */,
 				4C59DD631487BD7B0047C698 /* US2Validator.h in Headers */,
 				4C59DD651487BD7B0047C698 /* US2ValidatorTextField.h in Headers */,
 				4C59DD671487BD7B0047C698 /* US2ValidatorTextView.h in Headers */,
-				4C59DD691487BD7B0047C698 /* US2ValidatorUIProtocol.h in Headers */,
+				4C59DD691487BD7B0047C698 /* US2Validatable.h in Headers */,
 				4C59DD6A1487BD7B0047C698 /* US2ConditionAlphabetic.h in Headers */,
+				5B33112F1850C9C600FF62C5 /* US2ValidatorTextViewDelegate.h in Headers */,
 				4C59DD6C1487BD7B0047C698 /* US2ConditionAlphanumeric.h in Headers */,
 				4C59DD6E1487BD7B0047C698 /* US2ConditionCollection.h in Headers */,
 				4C59DD701487BD7B0047C698 /* US2ConditionEmail.h in Headers */,
@@ -438,7 +440,6 @@
 				4C0F37D815BD5F86007ADAC5 /* US2ValidatorPostcodeUK.h in Headers */,
 				DE079492162636D400841F88 /* US2ValidatorComposite.h in Headers */,
 				DE0794D91626567D00841F88 /* US2Form.h in Headers */,
-				DE0794E21626585B00841F88 /* US2Validatable.h in Headers */,
 				DE07953C162759E600841F88 /* US2ConditionOr.h in Headers */,
 				DE07954016275A0800841F88 /* US2ConditionAnd.h in Headers */,
 				DE2FAA6216275CBD007F2FE0 /* US2ConditionNot.h in Headers */,
@@ -619,7 +620,6 @@
 				4C0F37D915BD5F86007ADAC5 /* US2ValidatorPostcodeUK.m in Sources */,
 				DE079493162636D400841F88 /* US2ValidatorComposite.m in Sources */,
 				DE0794DA1626567D00841F88 /* US2Form.m in Sources */,
-				DE0794E31626585B00841F88 /* US2Validatable.m in Sources */,
 				DE07953D162759E600841F88 /* US2ConditionOr.m in Sources */,
 				DE07954116275A0800841F88 /* US2ConditionAnd.m in Sources */,
 				DE2FAA6316275CBD007F2FE0 /* US2ConditionNot.m in Sources */,

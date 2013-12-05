@@ -43,11 +43,11 @@ static const float kFormTextViewX = 102.0;
 {
     [super layoutSubviews];
     
-    if (nil != _textUI)
+    if (nil != self.validatable)
     {
         // Set dimension of text field
-        _textUI.frame = CGRectMake(kFormTextViewX, 0.0, self.contentView.frame.size.width - kFormTextViewX - 40.0, self.contentView.frame.size.height);
-        ((US2ValidatorTextView *)_textUI).font  = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
+        self.validatable.frame = CGRectMake(kFormTextViewX, 0.0, self.contentView.frame.size.width - kFormTextViewX - 40.0, self.contentView.frame.size.height);
+        ((US2ValidatorTextView *)self.validatable).font  = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
     }
     
     if (nil != _iconButton)
@@ -64,12 +64,12 @@ static const float kFormTextViewX = 102.0;
 
 - (void)setTextView:(US2ValidatorTextView *)textView
 {
-    self.textUI = textView;
+    self.validatable = textView;
 }
 
 - (US2ValidatorTextView *)textView
 {
-    return (US2ValidatorTextView *)self.textUI;
+    return (US2ValidatorTextView *)self.validatable;
 }
 
 

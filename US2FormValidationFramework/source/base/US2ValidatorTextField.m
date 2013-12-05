@@ -68,10 +68,7 @@
 
 - (void)dealloc
 {
-    // Remove observers
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
-    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
+    [self US2__removeObservers];
 }
 
 
@@ -82,11 +79,22 @@
     // Validate immediately as default
     _validateOnFocusLossOnly = NO;
     
-    // Create listening instance 
+    [self US2__setupDelegationForwarding];
+    [self US2__addObservers];
+}
+
+
+#pragma mark - Internal observing
+
+- (void)US2__setupDelegationForwarding
+{
     _validatorTextFieldPrivate = [[US2ValidatorTextFieldPrivate alloc] init];
     _validatorTextFieldPrivate.validatorTextField = self;
     super.delegate = (id)_validatorTextFieldPrivate;
-    
+}
+
+- (void)US2__addObservers
+{
     // Listen for update of inherited UITextField
     [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate
                                              selector:@selector(textFieldDidChange:)
@@ -100,18 +108,26 @@
                                                object:self];
 }
 
+- (void)US2__removeObservers
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];
+    [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidEndEditingNotification object:self];
+}
+
 
 #pragma mark - Delegate
 
-- (void)setDelegate:(id<US2ValidatorDelegate, UITextFieldDelegate>)delegate
+- (void)setDelegate:(id<US2ValidatorTextFieldDelegate>)delegate
 {
     _validatorTextFieldPrivate.delegate = delegate;
 }
 
-- (id<US2ValidatorDelegate, UITextFieldDelegate>)delegate
+- (id<US2ValidatorTextFieldDelegate>)delegate
 {
     return _validatorTextFieldPrivate.delegate;
 }
+
 
 #pragma mark - Set validator
 

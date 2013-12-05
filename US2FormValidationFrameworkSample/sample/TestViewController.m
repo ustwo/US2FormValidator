@@ -43,16 +43,20 @@
 #import "SubmitButtonTableViewCell.h"
 
 
-@interface TestViewController ()
-- (void)buildView;
-- (void)initData;
-- (void)initUserInterface;
-- (void)dismissTooltip;
-- (void)submitButtonTouched:(UIButton *)button;
-- (FormTableViewCell *)formTextFieldTableViewCellFromTableView:(UITableView *)tableView;
-- (FormTableViewCell *)formTextViewTableViewCellFromTableView:(UITableView *)tableView;
-- (SubmitButtonTableViewCell *)submitButtonTableViewCellFromTableView:(UITableView *)tableView;
-
+@interface TestViewController () <US2ValidatorTextFieldDelegate,
+                                  US2ValidatorTextViewDelegate,
+                                  FormTableViewCellDelegate,
+                                  UITableViewDelegate,
+                                  UITableViewDataSource>
+{
+    NSMutableArray *_typeStringCollection;
+    TooltipView    *_tooltipView;
+    BOOL           _didSubmit;
+    
+    id<US2Validatable> _tooltipConnectedValidatable;
+    
+    US2Form *_form;
+}
 @end
 
 
@@ -110,63 +114,69 @@
     
     // Set type string for every form item
     _typeStringCollection = [[NSMutableArray alloc] init];
-    [_typeStringCollection addObject:@"Name"];
+    [_typeStringCollection addObject:@"US2 Class"];
     [_typeStringCollection addObject:@"Post Code"];
     [_typeStringCollection addObject:@"About"];
     
+//    _validatableCollection = [[NSMutableArray alloc] init];
+    
+    [self createForm];
+    
     // Set text fields which will be used in form
-    _textUICollection = [[NSMutableArray alloc] init];
+    [self createUS2ClassNameField];
+    [self createPostcodeField];
+    [self createAboutTextField];
+}
+
+- (void)createForm
+{
+    _form = [[US2Form alloc] init];
+}
+
+- (void)createUS2ClassNameField
+{
+    NSString *classPrefix = @"US2";
     
-    // Create a validator which only allows numbers and min 2 and max 6 characters. The user is not able to enter more than 6 numbers.
-    US2Validator *validator = [[US2Validator alloc] init];
+    US2ConditionRange *rangeCondition = [US2ConditionRange condition];
+    rangeCondition.range = US2TextRangeMake(classPrefix.length, 256);
+    rangeCondition.shouldAllowViolation = NO;
     
-    US2ConditionRange *maxRangeCondition = [US2ConditionRange condition];
-    maxRangeCondition.range = US2TextRangeMake(0, 6);
-    maxRangeCondition.shouldAllowViolation = NO;
-    [validator addCondition:maxRangeCondition];
+    US2Validator *classNameValidator = [[US2Validator alloc] initWithCondition:rangeCondition];
     
-    US2ConditionRange *minRangeCondition = [US2ConditionRange condition];
-    minRangeCondition.range = US2TextRangeMake(2, NSUIntegerMax);
-    minRangeCondition.shouldAllowViolation = YES;
-    [validator addCondition:minRangeCondition];
+    US2ValidatorTextField *classNameTextField  = [[US2ValidatorTextField alloc] init];
+    classNameTextField.validator               = classNameValidator;
+    classNameTextField.delegate                = self;
+    classNameTextField.validateOnFocusLossOnly = NO;
+    classNameTextField.text                    = classPrefix;
+    classNameTextField.placeholder             = @"US2 Class Name";
+    [_form addValidatable:classNameTextField];
+}
+
+- (void)createPostcodeField
+{
+    US2ConditionPostcodeUK *ukPostcodeCondition = [US2ConditionPostcodeUK condition];
+    US2Validator *validator = [[US2Validator alloc] initWithCondition:ukPostcodeCondition];
     
-    US2ConditionNumeric *numericCondition = [US2ConditionNumeric condition];
-    numericCondition.shouldAllowViolation = YES;
-    [validator addCondition:numericCondition];
-    
-    // Add first name text field
-    US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] initWithFrame:CGRectZero];
-    firstNameTextField.validator               = validator;
-    firstNameTextField.text                    = @"123";
-    firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
-    firstNameTextField.delegate = self;
-    [_textUICollection addObject:firstNameTextField];
-    
-    US2Validator *secondValidator = [[US2Validator alloc] init];
-    [secondValidator addCondition:maxRangeCondition];
-    
-    minRangeCondition = [[US2ConditionRange alloc] init];
-    minRangeCondition.range = US2TextRangeMake(2, NSUIntegerMax);
-    minRangeCondition.shouldAllowViolation = NO;
-    [secondValidator addCondition:minRangeCondition];
-    
-    [secondValidator addCondition:numericCondition];
-    
-    // Add post code text field    
     US2ValidatorTextField *postcodeTextField  = [[US2ValidatorTextField alloc] init];
-    postcodeTextField.validator               = secondValidator;
-    postcodeTextField.text                    = @"123";
-    postcodeTextField.placeholder             = @"A number between 2 and 6 digits";
+    postcodeTextField.validator               = validator;
+    postcodeTextField.delegate                = self;
+    postcodeTextField.validateOnFocusLossOnly = YES;
+    postcodeTextField.text                    = @"";
+    postcodeTextField.placeholder             = @"Postcode";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
-    postcodeTextField.delegate       = self;
-    [_textUICollection addObject:postcodeTextField];
+    [_form addValidatable:postcodeTextField];
+}
+
+- (void)createAboutTextField
+{
+    US2ConditionPresent *presentCondition = [US2ConditionPresent condition];
+    US2Validator *validator = [[US2Validator alloc] initWithCondition:presentCondition];
     
-    // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
-    aboutTextView.validator               = [[MyProjectValidatorAbout alloc] init];
+    aboutTextView.validator               = validator;
+    aboutTextView.delegate                = self;
     aboutTextView.validateOnFocusLossOnly = YES;
-    aboutTextView.delegate       = self;
-    [_textUICollection addObject:aboutTextView];
+    [_form addValidatable:aboutTextView];
 }
 
 
@@ -189,13 +199,13 @@
 {
     // Hide tooltip 
     if (nil != _tooltipView
-        && ![_tooltipConnectedTextUI isEqual:textField])
+        && ![_tooltipConnectedValidatable isEqual:textField])
     {
         [_tooltipView removeFromSuperview];
         _tooltipView = nil;
     }
     
-    _tooltipConnectedTextUI = nil;
+    _tooltipConnectedValidatable = nil;
     
     return YES;
 }
@@ -204,13 +214,13 @@
 {
     // Hide tooltip 
     if (nil != _tooltipView
-        && ![_tooltipConnectedTextUI isEqual:textView])
+        && ![_tooltipConnectedValidatable isEqual:textView])
     {
         [_tooltipView removeFromSuperview];
         _tooltipView = nil;
     }
     
-    _tooltipConnectedTextUI = nil;
+    _tooltipConnectedValidatable = nil;
     
     return YES;
 }
@@ -219,18 +229,18 @@
  Called for every valid or violated state change
  React to this information by showing up warnings or disabling a 'send' button e.g.
 */
-- (void)validatorUI:(id<US2ValidatorUIProtocol>)validatorUI changedValidState:(BOOL)isValid
+- (void)validatable:(id<US2Validatable>)validatable changedValidState:(BOOL)isValid
 {
     NSLog(@"validatorUI changedValidState: %d", isValid);
     
     // 1st super view UITableViewCellContentView
     // 2nd super view FormTextFieldTableViewCell
-    id cell = ((UIView *)validatorUI).superview.superview;
+    id cell = ((UIView *)validatable).superview.superview;
     if ([cell isKindOfClass:[FormTableViewCell class]])
     {
         FormTableViewCell *formTableViewCell = (FormTableViewCell *)cell;
         kFormTableViewCellStatus status = isValid == YES ? kFormTableViewCellStatusValid : kFormTableViewCellStatusInvalid;
-        status = validatorUI.text.length == 0 ? kFormTableViewCellStatusWaiting : status;
+        status = validatable.text.length == 0 ? kFormTableViewCellStatusWaiting : status;
         [formTableViewCell updateValidationIconByValidStatus:status];
     }
     
@@ -245,7 +255,7 @@
  Called on every violation of the highest prioritised validator condition.
  Update UI like showing alert messages or disabling buttons.
 */
-- (void)validatorUI:(id<US2ValidatorUIProtocol>)validatorUI violatedConditions:(US2ConditionCollection *)conditions
+- (void)validatable:(id<US2Validatable>)validatable violatedConditions:(US2ConditionCollection *)conditions
 {
     NSLog(@"validatorUI violatedConditions: \n%@", conditions);
 }
@@ -380,10 +390,10 @@
     {
         FormTableViewCell *cell;
         
-        id <US2ValidatorUIProtocol> textUI = [_textUICollection objectAtIndex:indexPath.row];
+        id<US2Validatable> validatable = [_form validatableAtIndex:indexPath.row];
 
         // Determine the kind of validation text UI and create regarding cell
-        if ([textUI isKindOfClass:[US2ValidatorTextField class]])
+        if ([validatable isKindOfClass:[US2ValidatorTextField class]])
         {
             cell = [self formTextFieldTableViewCellFromTableView:tableView];
         }
@@ -393,7 +403,7 @@
         }
 
         // Set validation text UI from collection to created cell
-        cell.textUI = textUI;
+        cell.validatable = validatable;
 
         // Set type string of form element
         cell.textLabel.text       = [_typeStringCollection objectAtIndex:indexPath.row];
@@ -453,7 +463,7 @@
 
 #pragma mark - Form table view cell delegate
 
-- (void)formTableViewCell:(FormTableViewCell *)cell touchedIconButton:(UIButton *)button aligningTextUI:(id <US2ValidatorUIProtocol>)textUI
+- (void)formTableViewCell:(FormTableViewCell *)cell touchedIconButton:(UIButton *)button aligningValidatable:(id<US2Validatable>)validatable
 {
     // Show tooltip if status changed to invalid
     // Hide tooltip if status changed to valid
@@ -464,9 +474,9 @@
     }
     
     // Do not show tooltip again, because it was toggled off
-    if ([_tooltipConnectedTextUI isEqual:textUI])
+    if ([_tooltipConnectedValidatable isEqual:validatable])
     {
-        _tooltipConnectedTextUI = nil;
+        _tooltipConnectedValidatable = nil;
         
         return;
     }
@@ -476,8 +486,8 @@
     
     // Create tooltip
     // Set text to tooltip
-    US2Validator *validator = [textUI validator];
-    US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:[textUI text]];
+    US2Validator *validator = validatable.validator;
+    US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:validatable.text];
     CGRect tooltipViewFrame = CGRectMake(6.0, point.y, 309.0, _tooltipView.frame.size.height);
     if (nil == conditionCollection)
     {
@@ -498,7 +508,7 @@
     [self.testView.tableView addSubview:_tooltipView];
     
     // Remember text UI to which the tooltip was connected
-    _tooltipConnectedTextUI = textUI;
+    _tooltipConnectedValidatable = validatable;
 }
 
 - (void)dismissTooltip
@@ -509,7 +519,7 @@
         _tooltipView = nil;
     }
     
-    _tooltipConnectedTextUI = nil;
+    _tooltipConnectedValidatable = nil;
 }
 
 
@@ -524,22 +534,22 @@
     NSMutableString *errorString = [NSMutableString string];
     
     // Validate every text UI in custom text UI collection
-    for (NSUInteger i = 0; i < _textUICollection.count; i++)
+    for (NSUInteger i = 0; i < _form.count; i++)
     {
-        id <US2ValidatorUIProtocol> textUI = [_textUICollection objectAtIndex:i];
-        id cell = ((UIView *)textUI).superview.superview;
+        id<US2Validatable> validatable = [_form validatableAtIndex:i];
+        id cell = ((UIView *)validatable).superview.superview;
         if ([cell isKindOfClass:[FormTableViewCell class]])
         {
             FormTableViewCell *formTableViewCell = (FormTextFieldTableViewCell *)cell;
-            kFormTableViewCellStatus status = textUI.isValid == YES ? kFormTableViewCellStatusValid : kFormTableViewCellStatusInvalid;
+            kFormTableViewCellStatus status = validatable.isValid == YES ? kFormTableViewCellStatusValid : kFormTableViewCellStatusInvalid;
             [formTableViewCell updateValidationIconByValidStatus:status];
             
             // If the text UI has invalid text remember the violated condition with highest priority
-            if (textUI.isValid == NO
+            if (validatable.isValid == NO
                 && errorString.length == 0)
             {
-                US2Validator *validator = [textUI validator];
-                US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:[textUI text]];
+                US2Validator *validator = [validatable validator];
+                US2ConditionCollection *conditionCollection = [validator violatedConditionsUsingString:[validatable text]];
                 US2Condition *violatedCondition = [conditionCollection conditionAtIndex:0];
                 
                 NSMutableString *violatedString = [NSMutableString string];

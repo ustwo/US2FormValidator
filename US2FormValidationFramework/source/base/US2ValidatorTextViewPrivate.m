@@ -165,13 +165,13 @@
             
             // Inform delegate about valid state change
             if ([_delegate respondsToSelector:@selector(validatorUI:changedValidState:)])
-                [_delegate validatorUI:_validatorTextView changedValidState:isValid];
+                [_delegate validatable:_validatorTextView changedValidState:isValid];
             
             // Inform delegate about violation
             if (!isValid)
             {
                 if ([_delegate respondsToSelector:@selector(validatorUI:violatedConditions:)])
-                    [_delegate validatorUI:_validatorTextView violatedConditions:conditions];
+                    [_delegate validatable:_validatorTextView violatedConditions:conditions];
             }
         }
     }
@@ -179,7 +179,7 @@
     // Inform delegate about changes
     if ([_delegate respondsToSelector:@selector(validatorUIDidChange:)])
     {
-        [_delegate validatorUIDidChange:_validatorTextView];
+        [_delegate validatableDidChange:_validatorTextView];
     }
 }
 

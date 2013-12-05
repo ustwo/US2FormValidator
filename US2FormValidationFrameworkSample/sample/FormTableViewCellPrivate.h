@@ -30,7 +30,7 @@
 
 - (void)_initUserInterface;
 - (void)_updateUserInterface;
-- (void)_addTextUI;
-- (void)_removeTextUI;
+- (void)_addValidatable;
+- (void)_removeValidatable;
 
 @end

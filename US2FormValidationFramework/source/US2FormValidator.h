@@ -29,7 +29,7 @@
 #import "US2ValidatorTextField.h"
 #import "US2ValidatorTextView.h"
 #import "US2Form.h"
-#import "US2ValidatorUIProtocol.h"
+#import "US2Validatable.h"
 #import "US2ValidatorDelegate.h"
 
 // Conditions

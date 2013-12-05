@@ -26,10 +26,6 @@
 #import "US2Form.h"
 
 
-@implementation US2FormEntry
-@end
-
-
 @interface US2Form ()
 {
     NSMutableArray *_entries;
@@ -55,39 +51,48 @@
     _entries = nil;
 }
 
-- (id)initWithValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
+- (id)initWithValidatable:(id<US2Validatable>)validatable
 {
     self = [super init];
     if (self)
     {
-        [self addValidatable:validatable validator:validator];
+        [self addValidatable:validatable];
     }
     
     return self;
 }
 
-- (void)addValidatable:(id<US2Validatable>)validatable validator:(id<US2ValidatorProtocol>)validator
-{
-    if (validatable != nil && validator != nil)
-    {
-        US2FormEntry *entry = [[US2FormEntry alloc] init];
-        [entry setValidatable:validatable];
-        [entry setValidator:validator];
-        [_entries addObject:entry];
-    }
-}
-
 - (void)addValidatable:(id<US2Validatable>)validatable
 {
-    [self addValidatable:validatable validator:[validatable validator]];
+    if (!validatable)
+    {
+        [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added nil object <%@>  as validatable to form.", [validatable class]], nil];
+    }
+    
+    if (![validatable conformsToProtocol:@protocol(US2Validatable)])
+    {
+        [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added incompatible validatable <%@> to form.", [validatable class]], nil];
+    }
+    
+    [_entries addObject:validatable];
 }
 
-- (US2ConditionCollection *)checkConditions
+- (id<US2Validatable>)validatableAtIndex:(NSInteger)index
+{
+    return [_entries objectAtIndex:index];
+}
+
+- (NSUInteger)count
+{
+    return _entries.count;
+}
+
+- (US2ConditionCollection *)violatedConditions
 {
     US2ConditionCollection *conditions = nil;
-    for (US2FormEntry *entry in _entries)
+    for (id<US2Validatable> validatable in _entries)
     {
-        US2ConditionCollection *entryConditions = [entry.validator violatedConditionsUsingString:[entry.validatable validatableText]];
+        US2ConditionCollection *entryConditions = [validatable.validator violatedConditionsUsingString:validatable.text];
         if (entryConditions && conditions == nil)
         {
             conditions = [[US2ConditionCollection alloc] init];

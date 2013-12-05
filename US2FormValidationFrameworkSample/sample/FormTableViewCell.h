@@ -24,7 +24,7 @@
 //  
 
 #import <UIKit/UIKit.h>
-#import "US2ValidatorUIProtocol.h"
+#import "US2Validatable.h"
 
 
 extern const CGRect kIconButtonFrame;
@@ -49,14 +49,14 @@ typedef kFormTableViewCellStatus;
 @interface FormTableViewCell : UITableViewCell
 {
 @protected
+    id<US2Validatable>             _validatable;
     UIImage                        *_icon;
-    id<US2ValidatorUIProtocol>     _textUI;
     UIButton                       *_iconButton;
     BOOL                           _hasToUpdateIcon;
 }
 
 @property (nonatomic, weak) id <FormTableViewCellDelegate> delegate;
-@property (nonatomic, strong) id<US2ValidatorUIProtocol> textUI;
+@property (nonatomic, strong) id<US2Validatable> validatable;
 @property (nonatomic, strong) UIImage *icon;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
@@ -70,6 +70,6 @@ typedef kFormTableViewCellStatus;
 @protocol FormTableViewCellDelegate <NSObject>
 
 @optional
-- (void)formTableViewCell:(FormTableViewCell *)cell touchedIconButton:(UIButton *)button aligningTextUI:(id <US2ValidatorUIProtocol>)textUI;
+- (void)formTableViewCell:(FormTableViewCell *)cell touchedIconButton:(UIButton *)button aligningValidatable:(id<US2Validatable>)validatable;
 
 @end

@@ -25,8 +25,7 @@
 
 #import <UIKit/UIKit.h>
 #import "US2ValidatorTextFieldPrivateDelegate.h"
-#import "US2ValidatorDelegate.h"
-#import "US2ValidatorUIProtocol.h"
+#import "US2ValidatorTextFieldDelegate.h"
 #import "US2Validatable.h"
 
 @protocol US2ValidatorDelegate;
@@ -44,12 +43,12 @@
  served with this information. The validatorTextFieldDelegate is of type US2ValidatorTextFieldDelegate
  and returns what went wrong and in which status the validation text field is at the moment.
 */
-@interface US2ValidatorTextField : UITextField <US2ValidatorUIProtocol, US2ValidatorTextFieldPrivateDelegate, US2Validatable>
+@interface US2ValidatorTextField : UITextField <US2Validatable, US2ValidatorTextFieldPrivateDelegate>
 
 /**
  Set delegate implementing US2ValidatorDelegate
 */
-@property (nonatomic, weak) id <US2ValidatorDelegate, UITextFieldDelegate> delegate;
+@property (nonatomic, weak) id<US2ValidatorTextFieldDelegate> delegate;
 
 /**
  Set the validator to check the text of the text field with

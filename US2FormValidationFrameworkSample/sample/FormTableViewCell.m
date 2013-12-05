@@ -46,7 +46,7 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 
 - (void)dealloc
 {    
-    [self _removeTextUI];
+    [self _removeValidatable];
 }
 
 
@@ -91,9 +91,9 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
     if (selected)
     {
         // Select text field
-        if (nil != _textUI)
+        if (nil != _validatable)
         {
-            [((UIView *)_textUI) becomeFirstResponder];
+            [((UIView *)_validatable) becomeFirstResponder];
         }
     }
 }
@@ -112,38 +112,38 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 /**
  Remove text field from cell
 */
-- (void)_removeTextUI
+- (void)_removeValidatable
 {
-    if (nil != _textUI)
+    if (nil != _validatable)
     {
-        [((UIView *)_textUI) removeFromSuperview];
-        _textUI = nil;
+        [((UIView *)_validatable) removeFromSuperview];
+        _validatable = nil;
     }
 }
 
 /**
  Add text field to cell
 */
-- (void)_addTextUI
+- (void)_addValidatable
 {
-    ((UIView *)_textUI).backgroundColor = [UIColor clearColor];
+    ((UIView *)_validatable).backgroundColor = [UIColor clearColor];
     
-    [self.contentView addSubview:((UIView *)_textUI)];
+    [self.contentView addSubview:((UIView *)_validatable)];
 }
 
 /**
  The text field UI will be set from outside and added to the cell
 */
-- (void)setTextUI:(id <US2ValidatorUIProtocol>)textUI
+- (void)setValidatable:(id<US2Validatable>)validatable
 {
-    [self _removeTextUI];
+    [self _removeValidatable];
     
-    _textUI = textUI;
+    _validatable = validatable;
     
-    [self _addTextUI];
+    [self _addValidatable];
     
-    kFormTableViewCellStatus status = _textUI.isValid == YES ? kFormTableViewCellStatusValid : kFormTableViewCellStatusInvalid;
-    status = _textUI.text.length == 0 ? kFormTableViewCellStatusWaiting : status;
+    kFormTableViewCellStatus status = _validatable.isValid == YES ? kFormTableViewCellStatusValid : kFormTableViewCellStatusInvalid;
+    status = _validatable.text.length == 0 ? kFormTableViewCellStatusWaiting : status;
     [self updateValidationIconByValidStatus:status];
     
     [self setNeedsDisplay];
@@ -152,9 +152,9 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 /**
  Return the set text field
 */
-- (id <US2ValidatorUIProtocol>)textUI
+- (id<US2Validatable>)validatable
 {
-    return _textUI;
+    return _validatable;
 }
 
 
@@ -204,9 +204,9 @@ const CGRect kIconButtonFrame = {{0.0, 0.0}, {44.0, 44.0}};
 
 - (void)iconButtonTouched:(UIButton *)button
 {
-    if ([_delegate respondsToSelector:@selector(formTableViewCell:touchedIconButton:aligningTextUI:)])
+    if ([_delegate respondsToSelector:@selector(formTableViewCell:touchedIconButton:aligningValidatable:)])
     {
-        [_delegate formTableViewCell:self touchedIconButton:_iconButton aligningTextUI:_textUI];
+        [_delegate formTableViewCell:self touchedIconButton:_iconButton aligningValidatable:_validatable];
     }
 }
 
