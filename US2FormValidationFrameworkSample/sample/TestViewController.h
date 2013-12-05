@@ -34,7 +34,7 @@
 #import "TestView.h"
 #import "TooltipView.h"
 #import "FormTableViewCell.h"
-#import "US2ValidatorDelegate.h"
+#import "US2ValidatableDelegate.h"
 #import "US2Validatable.h"
 
 

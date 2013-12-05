@@ -28,7 +28,7 @@
 #import "US2ValidatorTextViewDelegate.h"
 #import "US2Validatable.h"
 
-@protocol US2ValidatorDelegate;
+@protocol US2ValidatableDelegate;
 
 @class US2Validator;
 @class US2ValidatorTextViewPrivate;
@@ -46,7 +46,7 @@
 @interface US2ValidatorTextView : UITextView <US2Validatable, US2ValidatorTextViewPrivateDelegate>
 
 /**
- Set delegate implementing US2ValidatorDelegate
+ Set delegate implementing US2ValidatableDelegate
  */
 @property (nonatomic, weak) id<US2ValidatorTextViewDelegate> delegate;
 

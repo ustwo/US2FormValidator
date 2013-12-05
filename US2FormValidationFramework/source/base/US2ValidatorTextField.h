@@ -28,7 +28,7 @@
 #import "US2ValidatorTextFieldDelegate.h"
 #import "US2Validatable.h"
 
-@protocol US2ValidatorDelegate;
+@protocol US2ValidatableDelegate;
 
 @class US2Validator;
 @class US2ValidatorTextFieldPrivate;
@@ -46,7 +46,7 @@
 @interface US2ValidatorTextField : UITextField <US2Validatable, US2ValidatorTextFieldPrivateDelegate>
 
 /**
- Set delegate implementing US2ValidatorDelegate
+ Set delegate implementing US2ValidatableDelegate
 */
 @property (nonatomic, weak) id<US2ValidatorTextFieldDelegate> delegate;
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 ustwo™. All rights reserved.
 //
 
-#import "US2ValidatorDelegate.h"
+#import "US2ValidatableDelegate.h"
 
 
-@protocol US2ValidatorTextViewDelegate <US2ValidatorDelegate, UITextViewDelegate>
+@protocol US2ValidatorTextViewDelegate <US2ValidatableDelegate, UITextViewDelegate>
 @end
