@@ -121,12 +121,12 @@
     US2Validator *validator = [[US2Validator alloc] init];
     
     US2ConditionRange *maxRangeCondition = [US2ConditionRange condition];
-    maxRangeCondition.range = NSMakeRange(0, 6);
+    maxRangeCondition.range = US2TextRangeMake(0, 6);
     maxRangeCondition.shouldAllowViolation = NO;
     [validator addCondition:maxRangeCondition];
     
     US2ConditionRange *minRangeCondition = [US2ConditionRange condition];
-    minRangeCondition.range = NSMakeRange(2, NSUIntegerMax);
+    minRangeCondition.range = US2TextRangeMake(2, NSUIntegerMax);
     minRangeCondition.shouldAllowViolation = YES;
     [validator addCondition:minRangeCondition];
     
@@ -139,14 +139,15 @@
     firstNameTextField.validator               = validator;
     firstNameTextField.text                    = @"123";
     firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
-    firstNameTextField.validatorDelegate       = self;
+//    firstNameTextField.validatorDelegate       = self;
+    firstNameTextField.delegate = self;
     [_textUICollection addObject:firstNameTextField];
     
     US2Validator *secondValidator = [[US2Validator alloc] init];
     [secondValidator addCondition:maxRangeCondition];
     
     minRangeCondition = [[US2ConditionRange alloc] init];
-    minRangeCondition.range = NSMakeRange(2, NSUIntegerMax);
+    minRangeCondition.range = US2TextRangeMake(2, NSUIntegerMax);
     minRangeCondition.shouldAllowViolation = NO;
     [secondValidator addCondition:minRangeCondition];
     
@@ -158,14 +159,16 @@
     postcodeTextField.text                    = @"123";
     postcodeTextField.placeholder             = @"A number between 2 and 6 digits";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
-    postcodeTextField.validatorDelegate       = self;
+//    postcodeTextField.validatorDelegate       = self;
+    postcodeTextField.delegate       = self;
     [_textUICollection addObject:postcodeTextField];
     
     // Add last name text field
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
     aboutTextView.validator               = [[MyProjectValidatorAbout alloc] init];
     aboutTextView.validateOnFocusLossOnly = YES;
-    aboutTextView.validatorDelegate       = self;
+//    aboutTextView.validatorDelegate       = self;
+    aboutTextView.delegate       = self;
     [_textUICollection addObject:aboutTextView];
 }
 

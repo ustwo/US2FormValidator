@@ -38,7 +38,7 @@
     if (self)
     {
         US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
-        rangeCondition.range                = NSMakeRange(2, UINT16_MAX);
+        rangeCondition.range                = US2TextRangeMake(2, UINT16_MAX);
         rangeCondition.shouldAllowViolation = YES;
         
         [self addCondition:rangeCondition];

@@ -39,7 +39,7 @@
     if (self)
     {
         US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
-        rangeCondition.range                = NSMakeRange(0, 8);
+        rangeCondition.range                = US2TextRangeMake(0, 8);
         rangeCondition.shouldAllowViolation = NO;
         
         [self addCondition:rangeCondition];

@@ -41,7 +41,7 @@
         [self addCondition:[[MyProjectConditionName alloc] init]];
         
         US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
-        rangeCondition.range                = NSMakeRange(1, 12);
+        rangeCondition.range                = US2TextRangeMake(1, 12);
         rangeCondition.shouldAllowViolation = YES;
         [self addCondition:rangeCondition];
     }
