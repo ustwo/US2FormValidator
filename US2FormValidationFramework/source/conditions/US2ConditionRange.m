@@ -25,15 +25,6 @@
 
 #import "US2ConditionRange.h"
 
-US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max)
-{
-    US2TextRange range;
-    range.min = min;
-    range.max = max;
-    
-    return range;
-}
-
 
 @implementation US2ConditionRange
 
@@ -79,3 +70,13 @@ US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max)
 
 
 @end
+
+
+US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max)
+{
+    US2TextRange range;
+    range.min = min;
+    range.max = max;
+    
+    return range;
+}

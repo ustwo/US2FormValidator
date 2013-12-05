@@ -26,14 +26,20 @@
 #import <Foundation/Foundation.h>
 #import "US2Condition.h"
 
+
+/**
+ The US2TextRange describes the range of a string
+ */
 typedef struct
 {
     NSUInteger min;
     NSUInteger max;
 } US2TextRange;
 
+/**
+ A convenient US2TextRange creator
+ */
 US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max);
-
 
 /**
  The US2ConditionRange validates the length of a string.
