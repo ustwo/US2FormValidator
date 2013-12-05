@@ -30,10 +30,7 @@
 
 
 @interface FormTextViewTableViewCell : FormTableViewCell <US2ValidatorDelegate>
-{
-}
 
 @property (nonatomic, strong) US2ValidatorTextView *textView;
-
 
 @end
