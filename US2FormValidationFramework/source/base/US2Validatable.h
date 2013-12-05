@@ -91,14 +91,4 @@
 */
 - (NSString *)text;
 
-/**
- @param frame Boundary to set as frame to text UI
-*/
-- (void)setFrame:(CGRect)frame;
-
-/**
- Set CGRect value
-*/
-- (CGRect)frame;
-
 @end
