@@ -82,7 +82,7 @@
     
     // Create second condition
     US2ConditionRange *condition2 = [[US2ConditionRange alloc] init];
-    condition2.range = NSMakeRange(3, 12);
+    condition2.range = US2TextRangeMake(3, 12);
     
     // Create string to test
     NSString *successTestString1 = @"abcdefgh";
@@ -131,7 +131,7 @@
     
     // Create second validator
     US2ValidatorRange *validator2 = [[US2ValidatorRange alloc] init];
-    validator2.range = NSMakeRange(3, 12);
+    validator2.range = US2TextRangeMake(3, 12);
     
     // Create string to test
     NSString *successTestString1 = @"abcdefgh";
@@ -168,7 +168,7 @@
     
     // Create second validator
     US2ValidatorRange *validator2 = [[US2ValidatorRange alloc] init];
-    validator2.range = NSMakeRange(3, 12);
+    validator2.range = US2TextRangeMake(3, 12);
     
     // Create string to test
     NSString *successTestString1 = @"abcdefgh";

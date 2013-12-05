@@ -308,7 +308,7 @@
     NSString *failureTestString4 = @"";
     
     US2ConditionRange *condition = [[US2ConditionRange alloc] init];
-    condition.range = NSMakeRange(3, 10);
+    condition.range = US2TextRangeMake(3, 10);
     STAssertTrue([condition check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString2], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
     
@@ -331,7 +331,7 @@
     NSString *failureTestString1 = @"1A234";
     
     US2ConditionRange *condition = [[US2ConditionRange alloc] init];
-    condition.range = NSMakeRange(0, 4);
+    condition.range = US2TextRangeMake(0, 4);
     STAssertTrue([condition check:successTestString1], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString2], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
     STAssertTrue([condition check:successTestString3], @"The US2ConditionRange should respond with TRUE and not FALSE", nil);
@@ -396,7 +396,7 @@
     NSString *failureTestString1 = @"1A234";
     
     US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
-    conditionRange.range = NSMakeRange(0, 4);
+    conditionRange.range = US2TextRangeMake(0, 4);
     
     US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
     
@@ -424,7 +424,7 @@
     NSString *failureTestString1 = @"1A234";
     
     US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
-    conditionRange.range = NSMakeRange(0, 4);
+    conditionRange.range = US2TextRangeMake(0, 4);
     
     US2ConditionAlphanumeric *conditionAlphanumeric = [[US2ConditionAlphanumeric alloc] init];
     
@@ -453,7 +453,7 @@
     NSString *failureTestString1 = @"1A234";
     
     US2ConditionRange *conditionRange = [[US2ConditionRange alloc] init];
-    conditionRange.range = NSMakeRange(0, 4);
+    conditionRange.range = US2TextRangeMake(0, 4);
     
     US2ConditionNot *conditionNot = [[US2ConditionNot alloc] initWithCondition: conditionRange];
     NSString *expectedLocalizedViolationString = @"Must not be between 0 through 4.";
