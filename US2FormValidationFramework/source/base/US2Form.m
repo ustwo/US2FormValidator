@@ -89,12 +89,16 @@
 
 - (US2ConditionCollection *)violatedConditions
 {
-    US2ConditionCollection *violatedConditions = [[US2ConditionCollection alloc] init];
+    US2ConditionCollection *violatedConditions = nil;
     for (id<US2Validatable> validatable in _entries)
     {
         US2ConditionCollection *validatableConditions = [validatable.validator violatedConditionsUsingString:validatable.text];
         for (id<US2ConditionProtocol> condition in validatableConditions)
         {
+            if (!violatedConditions)
+            {
+                violatedConditions = [[US2ConditionCollection alloc] init];
+            }
             [violatedConditions addCondition:condition];
         }
     }
