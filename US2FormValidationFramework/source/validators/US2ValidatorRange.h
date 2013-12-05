@@ -26,6 +26,7 @@
 #import <Foundation/Foundation.h>
 
 #import "US2Validator.h"
+#import "US2ConditionRange.h"
 
 
 #pragma mark - Validator interface
@@ -48,11 +49,11 @@
 /**
  The range to check for.
 */
-@property (nonatomic) NSRange range;
+@property (nonatomic) US2TextRange range;
 
 /**
  Initialize the range validator with a range.
  */
-- (id)initWithRange:(NSRange)range;
+- (id)initWithRange:(US2TextRange)range;
 
 @end

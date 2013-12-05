@@ -38,7 +38,7 @@
     return self;
 }
 
-- (id)initWithRange:(NSRange)range
+- (id)initWithRange:(US2TextRange)range
 {
     self = [self init];
     if(self)
@@ -52,7 +52,7 @@
 
 #pragma mark - Range
 
-- (void)setRange:(NSRange)range
+- (void)setRange:(US2TextRange)range
 {
     _range = range;
     

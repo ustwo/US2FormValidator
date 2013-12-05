@@ -26,6 +26,15 @@
 #import <Foundation/Foundation.h>
 #import "US2Condition.h"
 
+typedef struct
+{
+    NSUInteger min;
+    NSUInteger max;
+} US2TextRange;
+
+US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max);
+
+
 /**
  The US2ConditionRange validates the length of a string.
  
@@ -46,7 +55,7 @@
 /**
  The range to check for.
 */
-@property (nonatomic) NSRange range;
+@property (nonatomic) US2TextRange range;
 
 
 @end

@@ -25,6 +25,15 @@
 
 #import "US2ConditionRange.h"
 
+US2TextRange US2TextRangeMake(NSUInteger min, NSUInteger max)
+{
+    US2TextRange range;
+    range.min = min;
+    range.max = max;
+    
+    return range;
+}
+
 
 @implementation US2ConditionRange
 
@@ -34,7 +43,7 @@
     self = [super init];
     if (self)
     {
-        _range = NSMakeRange(0, 0);
+        _range = US2TextRangeMake(0, 0);
     }
     
     return self;
@@ -52,7 +61,7 @@
         string = [NSString string];
     }
     
-    if(string.length >= _range.location && string.length <= _range.length)
+    if(string.length >= _range.min && string.length <= _range.max)
     {
         success = YES;
     }
@@ -65,7 +74,7 @@
 
 - (NSString *)createLocalizedViolationString
 {    
-    return [NSString stringWithFormat:US2LocalizedString(@"US2KeyConditionViolationRange", nil), _range.location, _range.length];
+    return [NSString stringWithFormat:US2LocalizedString(@"US2KeyConditionViolationRange", nil), _range.min, _range.max];
 }
 
 
