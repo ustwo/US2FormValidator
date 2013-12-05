@@ -139,7 +139,6 @@
     firstNameTextField.validator               = validator;
     firstNameTextField.text                    = @"123";
     firstNameTextField.placeholder             = @"A number between 2 and 6 digits";
-//    firstNameTextField.validatorDelegate       = self;
     firstNameTextField.delegate = self;
     [_textUICollection addObject:firstNameTextField];
     
@@ -159,7 +158,6 @@
     postcodeTextField.text                    = @"123";
     postcodeTextField.placeholder             = @"A number between 2 and 6 digits";
     postcodeTextField.autocapitalizationType  = UITextAutocapitalizationTypeAllCharacters;
-//    postcodeTextField.validatorDelegate       = self;
     postcodeTextField.delegate       = self;
     [_textUICollection addObject:postcodeTextField];
     
@@ -167,7 +165,6 @@
     US2ValidatorTextView *aboutTextView   = [[US2ValidatorTextView alloc] init];
     aboutTextView.validator               = [[MyProjectValidatorAbout alloc] init];
     aboutTextView.validateOnFocusLossOnly = YES;
-//    aboutTextView.validatorDelegate       = self;
     aboutTextView.delegate       = self;
     [_textUICollection addObject:aboutTextView];
 }
