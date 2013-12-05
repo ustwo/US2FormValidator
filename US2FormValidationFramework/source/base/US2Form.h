@@ -32,6 +32,8 @@
  */
 @interface US2Form : NSObject
 
+@property (nonatomic, readonly) BOOL isValid;
+
 - (id)initWithValidatable:(id<US2Validatable>)validatable;
 
 /**

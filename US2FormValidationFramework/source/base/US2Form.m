@@ -89,21 +89,30 @@
 
 - (US2ConditionCollection *)violatedConditions
 {
-    US2ConditionCollection *conditions = nil;
+    US2ConditionCollection *violatedConditions = [[US2ConditionCollection alloc] init];
     for (id<US2Validatable> validatable in _entries)
     {
-        US2ConditionCollection *entryConditions = [validatable.validator violatedConditionsUsingString:validatable.text];
-        if (entryConditions && conditions == nil)
+        US2ConditionCollection *validatableConditions = [validatable.validator violatedConditionsUsingString:validatable.text];
+        for (id<US2ConditionProtocol> condition in validatableConditions)
         {
-            conditions = [[US2ConditionCollection alloc] init];
-        }
-        for (id<US2ConditionProtocol> condition in entryConditions)
-        {
-            [conditions addCondition:condition];
+            [violatedConditions addCondition:condition];
         }
     }
     
-    return conditions;
+    return violatedConditions;
+}
+
+- (BOOL)isValid
+{
+    for (id<US2Validatable> validatable in _entries)
+    {
+        if (validatable.isValid == NO)
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 @end
