@@ -58,7 +58,7 @@
     self.validators = [NSMutableArray arrayWithArray:validators];
 }
 
-- (void)addValidator:(id<US2ValidatorProtocol>)validator
+- (void)addValidator:(US2Validator *)validator
 {
     [self.validators addObject:validator];
 }

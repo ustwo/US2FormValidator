@@ -34,7 +34,7 @@
 @interface US2ValidatableMock : NSObject <US2Validatable>
 
 @property (nonatomic, copy) NSString *text;
-@property (nonatomic, strong) id<US2ValidatorProtocol> validator;
+@property (nonatomic, strong) US2Validator *validator;
 
 @end
 

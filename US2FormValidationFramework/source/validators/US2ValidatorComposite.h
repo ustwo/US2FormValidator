@@ -46,7 +46,7 @@
 /**
     Add validator to collection of validators to check.
  */
-- (void)addValidator:(id<US2ValidatorProtocol>)validator;
+- (void)addValidator:(US2Validator *)validator;
 
 /**
     Add validators from an array to collection of validators to check.

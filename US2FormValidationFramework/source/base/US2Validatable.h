@@ -34,7 +34,7 @@
  At the moment the framework supports UITextField and UITextView by using US2ValidatorTextField
  and US2ValidatorTextView.
 */
-@protocol US2Validatable <UIAppearance, UIAppearanceContainer>
+@protocol US2Validatable <NSObject>
 @required
 
 /**
