@@ -34,6 +34,8 @@
 
 @property (nonatomic, readonly) BOOL isValid;
 
+@property (nonatomic, copy) void(^didChangeValidState)(BOOL isValid);
+
 - (id)initWithValidatable:(id<US2Validatable>)validatable;
 
 /**

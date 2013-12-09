@@ -131,6 +131,11 @@
 - (void)createForm
 {
     _form = [[US2ValidatorForm alloc] init];
+    
+    [_form setDidChangeValidState:^(BOOL isValid) {
+        
+        NSLog(@"form's state changed to: %@", (isValid ? @"YES" : @"NO"));
+    }];
 }
 
 - (void)createUS2ClassNameField

@@ -29,6 +29,7 @@
 @interface US2ValidatorForm ()
 {
     NSMutableArray *_entries;
+    BOOL _lastValidState;
 }
 @end
 
@@ -41,6 +42,7 @@
     if (self)
     {
         _entries = [[NSMutableArray alloc] initWithCapacity:1];
+        _lastValidState = YES;
     }
     
     return self;
@@ -75,6 +77,26 @@
     }
     
     [_entries addObject:validatable];
+    
+    [self US2__listenForTextDidChangeNotification:validatable];
+}
+
+- (void)US2__listenForTextDidChangeNotification:(id<US2Validatable>)validatable
+{
+    NSString *notificationName;
+    if ([validatable isKindOfClass:[UITextField class]])
+    {
+        notificationName = UITextFieldTextDidChangeNotification;
+    }
+    else if ([validatable isKindOfClass:[UITextView class]])
+    {
+        notificationName = UITextViewTextDidChangeNotification;
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textUIChanged:)
+                                                 name:notificationName
+                                               object:validatable];
 }
 
 - (id<US2Validatable>)validatableAtIndex:(NSInteger)index
@@ -117,6 +139,20 @@
     }
     
     return YES;
+}
+
+
+#pragma mark - Text changed
+
+- (void)textUIChanged:(NSNotification *)notification
+{
+    if (_lastValidState == self.isValid) return;
+    _lastValidState = !_lastValidState;
+    
+    if (_didChangeValidState)
+    {
+        _didChangeValidState(self.isValid);
+    }
 }
 
 @end
