@@ -30,7 +30,7 @@
 #import "US2ValidatorComposite.h"
 #import "US2ValidatorAlphabetic.h"
 #import "US2ValidatorRange.h"
-#import "US2Form.h"
+#import "US2ValidatorForm.h"
 #import "US2ValidatorTextField.h"
 #import "US2ValidatorTextView.h"
 #import "US2ValidatorPostcodeUK.h"
@@ -152,7 +152,7 @@
  */
 - (void)testForm
 {
-    US2Form *form = [[US2Form alloc] init];
+    US2ValidatorForm *form = [[US2ValidatorForm alloc] init];
     
     // Test for existing form
     STAssertNotNil(form, @"Form instance must not be nil", nil);

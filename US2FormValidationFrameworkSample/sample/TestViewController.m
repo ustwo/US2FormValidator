@@ -55,7 +55,7 @@
     
     id<US2Validatable> _tooltipConnectedValidatable;
     
-    US2Form *_form;
+    US2ValidatorForm *_form;
 }
 @end
 
@@ -130,7 +130,7 @@
 
 - (void)createForm
 {
-    _form = [[US2Form alloc] init];
+    _form = [[US2ValidatorForm alloc] init];
 }
 
 - (void)createUS2ClassNameField

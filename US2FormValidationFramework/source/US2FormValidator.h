@@ -28,7 +28,7 @@
 #import "US2Validator.h"
 #import "US2ValidatorTextField.h"
 #import "US2ValidatorTextView.h"
-#import "US2Form.h"
+#import "US2ValidatorForm.h"
 #import "US2Validatable.h"
 #import "US2ValidatableDelegate.h"
 

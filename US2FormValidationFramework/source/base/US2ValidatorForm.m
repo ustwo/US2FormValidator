@@ -23,17 +23,17 @@
 //  SOFTWARE.
 //
 
-#import "US2Form.h"
+#import "US2ValidatorForm.h"
 
 
-@interface US2Form ()
+@interface US2ValidatorForm ()
 {
     NSMutableArray *_entries;
 }
 @end
 
 
-@implementation US2Form
+@implementation US2ValidatorForm
 
 - (id)init
 {

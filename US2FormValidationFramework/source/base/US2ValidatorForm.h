@@ -30,7 +30,7 @@
 /**
  A form to assist in validating a validatable objects current state.
  */
-@interface US2Form : NSObject
+@interface US2ValidatorForm : NSObject
 
 @property (nonatomic, readonly) BOOL isValid;
 
