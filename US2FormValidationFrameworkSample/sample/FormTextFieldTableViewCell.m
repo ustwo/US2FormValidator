@@ -51,7 +51,7 @@ static const float  kFormTextFieldX  = 110.0;
         
         // Set dimension of text field
         CGFloat verticalCenter = round((self.contentView.frame.size.height - size.height) / 2.0);
-        self.validatable.frame = CGRectMake(kFormTextFieldX, verticalCenter, self.contentView.frame.size.width - kFormTextFieldX - 40.0, size.height);
+        ((UIView *)self.validatable).frame = CGRectMake(kFormTextFieldX, verticalCenter, self.contentView.frame.size.width - kFormTextFieldX - 40.0, size.height);
         
         ((US2ValidatorTextField *)self.validatable).font  = [UIFont fontWithName:@"HelveticaNeue" size:15.0];
     }
