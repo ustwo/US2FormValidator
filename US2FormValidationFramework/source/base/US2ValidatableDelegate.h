@@ -27,8 +27,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol US2Validatable;
-
-@class US2ConditionCollection;
+@class    US2ConditionCollection;
 
 
 #pragma mark - Validator UI delegate
@@ -62,6 +61,5 @@
  @param conditions Collection of type US2ConditionCollection listing all violated conditions.
  */
 - (void)validatable:(id<US2Validatable>)validatable violatedConditions:(US2ConditionCollection *)conditions;
-
 
 @end

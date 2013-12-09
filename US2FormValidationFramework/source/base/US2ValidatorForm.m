@@ -36,6 +36,9 @@
 
 @implementation US2ValidatorForm
 
+
+#pragma mark - Initialization
+
 - (instancetype)init
 {
     self = [super init];
@@ -84,6 +87,11 @@
     [self US2__listenForTextDidChangeNotification:validatable];
 }
 
+- (id<US2Validatable>)validatableAtIndex:(NSInteger)index
+{
+    return [_entries objectAtIndex:index];
+}
+
 - (void)US2__listenForTextDidChangeNotification:(id<US2Validatable>)validatable
 {
     NSString *notificationName;
@@ -102,15 +110,16 @@
                                                object:validatable];
 }
 
-- (id<US2Validatable>)validatableAtIndex:(NSInteger)index
-{
-    return [_entries objectAtIndex:index];
-}
+
+#pragma mark - Count
 
 - (NSUInteger)count
 {
     return _entries.count;
 }
+
+
+#pragma mark - Validation state
 
 - (US2ConditionCollection *)violatedConditions
 {
@@ -145,7 +154,7 @@
 }
 
 
-#pragma mark - Text changed
+#pragma mark - Text events
 
 - (void)textUIChanged:(NSNotification *)notification
 {
