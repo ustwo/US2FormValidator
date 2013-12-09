@@ -45,7 +45,7 @@
 /**
  Initialize the form by adding initial validatables.
  */
-- (id)initWithValidatables:(NSSet *)validatables;
+- (instancetype)initWithValidatables:(NSSet *)validatables;
 
 /**
  Add a validatable to be validated with the given validator.

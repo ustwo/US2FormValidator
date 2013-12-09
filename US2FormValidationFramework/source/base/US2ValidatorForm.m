@@ -36,7 +36,7 @@
 
 @implementation US2ValidatorForm
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
@@ -53,12 +53,15 @@
     _entries = nil;
 }
 
-- (id)initWithValidatable:(id<US2Validatable>)validatable
+- (instancetype)initWithValidatables:(NSSet *)validatables
 {
     self = [super init];
     if (self)
     {
-        [self addValidatable:validatable];
+        for (id<US2Validatable> validatable in validatables)
+        {
+            [self addValidatable:validatable];
+        }
     }
     
     return self;
