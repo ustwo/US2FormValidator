@@ -32,23 +32,38 @@
  */
 @interface US2ValidatorForm : NSObject
 
+/**
+ Determines the current validation state of the form.
+ */
 @property (nonatomic, readonly) BOOL isValid;
 
+/**
+ Calls the block as soon as the state changed. Initially the state change from valid to invalid is taken into account.
+ */
 @property (nonatomic, copy) void(^didChangeValidState)(BOOL isValid);
 
-- (id)initWithValidatable:(id<US2Validatable>)validatable;
+/**
+ Initialize the form by adding initial validatables.
+ */
+- (id)initWithValidatables:(NSSet *)validatables;
 
 /**
  Add a validatable to be validated with the given validator.
  */
 - (void)addValidatable:(id<US2Validatable>)validatable;
 
+/**
+ Returns a validatable at a given index.
+ */
 - (id<US2Validatable>)validatableAtIndex:(NSInteger)index;
 
+/**
+ Returns the count of contained validatables.
+ */
 - (NSUInteger)count;
 
 /**
- Check conditions for all validatables.
+ Returns all violated conditions for all validatables.
  */
 - (US2ConditionCollection *)violatedConditions;
 
