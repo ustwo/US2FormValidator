@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  MyProjectViewController.h
 //  US2FormValidator
 //
 //  Copyright (C) 2012 ustwo™
@@ -31,15 +31,11 @@
 //  the delegate instance will receive this information.
 //
 
-#import "TestView.h"
-#import "TooltipView.h"
-#import "FormTableViewCell.h"
-#import "US2ValidatableDelegate.h"
-#import "US2Validatable.h"
+#import "MyProjectView.h"
 
 
-@interface TestViewController : UIViewController
+@interface MyProjectViewController : UIViewController
 
-@property (nonatomic, strong, readonly) TestView *testView;
+@property (nonatomic, strong) MyProjectView *testView;
 
 @end

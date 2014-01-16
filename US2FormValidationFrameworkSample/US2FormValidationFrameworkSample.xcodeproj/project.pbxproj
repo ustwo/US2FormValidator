@@ -8,24 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		066D89D716413C3100B398B4 /* US2Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066D89C916413C3100B398B4 /* US2Localizable.strings */; };
-		4C09FB4D149A346600C3E817 /* SubmitButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */; };
 		4CC9C13E14910CF300F7AF39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9C13C14910CF300F7AF39 /* InfoPlist.strings */; };
 		4CCDDE69148CE2BA001F8FF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE68148CE2BA001F8FF1 /* UIKit.framework */; };
 		4CCDDE6B148CE2BA001F8FF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE6A148CE2BA001F8FF1 /* Foundation.framework */; };
 		4CCDDE6D148CE2BA001F8FF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */; };
 		4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */; };
-		4CCDDEA1148CE2DE001F8FF1 /* FormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */; };
-		4CCDDEA2148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */; };
-		4CCDDEA3148CE2DE001F8FF1 /* FormTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */; };
 		4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE90148CE2DE001F8FF1 /* main.m */; };
 		4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */; };
 		4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */; };
 		4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */; };
-		4CCDDEAD148CE2DE001F8FF1 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE98148CE2DE001F8FF1 /* TestView.m */; };
-		4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */; };
-		4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */; };
-		4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39E71490F309006699E6 /* InvalidTooltipView.m */; };
-		4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CED39EB1490F457006699E6 /* ValidTooltipView.m */; };
+		4CCDDEAD148CE2DE001F8FF1 /* MyProjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */; };
+		4CCDDEAE148CE2DE001F8FF1 /* MyProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */; };
 		5BE612611845135C00B274A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612521845135C00B274A6 /* Default-568h@2x.png */; };
 		5BE612621845135C00B274A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612531845135C00B274A6 /* Default.png */; };
 		5BE612631845135C00B274A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612541845135C00B274A6 /* Default@2x.png */; };
@@ -41,6 +34,7 @@
 		5BE6126D1845135C00B274A6 /* image_tooltip_invalid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6125E1845135C00B274A6 /* image_tooltip_invalid@2x.png */; };
 		5BE6126E1845135C00B274A6 /* image_tooltip_valid.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6125F1845135C00B274A6 /* image_tooltip_valid.png */; };
 		5BE6126F1845135C00B274A6 /* image_tooltip_valid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612601845135C00B274A6 /* image_tooltip_valid@2x.png */; };
+		5BF4B70B1885AF46005C0D4D /* MyProjectView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF4B70A1885AF46005C0D4D /* MyProjectView+Layout.m */; };
 		CF7395CE172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7395CD172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +52,6 @@
 		066D89D416413C3100B398B4 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/US2Localizable.strings; sourceTree = "<group>"; };
 		066D89D516413C3100B398B4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/US2Localizable.strings; sourceTree = "<group>"; };
 		066D89D616413C3100B398B4 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/US2Localizable.strings; sourceTree = "<group>"; };
-		4C09FB4B149A346600C3E817 /* SubmitButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitButtonTableViewCell.h; sourceTree = "<group>"; };
-		4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitButtonTableViewCell.m; sourceTree = "<group>"; };
 		4CC9C13D14910CF300F7AF39 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CCDDE64148CE2BA001F8FF1 /* US2FormValidationFrameworkSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = US2FormValidationFrameworkSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCDDE68148CE2BA001F8FF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -67,13 +59,6 @@
 		4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4CCDDE84148CE2DE001F8FF1 /* FormTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewCell.h; sourceTree = "<group>"; };
-		4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewCell.m; sourceTree = "<group>"; };
-		4CCDDE86148CE2DE001F8FF1 /* FormTableViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewCellPrivate.h; sourceTree = "<group>"; };
-		4CCDDE87148CE2DE001F8FF1 /* FormTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTextFieldTableViewCell.h; sourceTree = "<group>"; };
-		4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTextFieldTableViewCell.m; sourceTree = "<group>"; };
-		4CCDDE89148CE2DE001F8FF1 /* FormTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTextViewTableViewCell.h; sourceTree = "<group>"; };
-		4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTextViewTableViewCell.m; sourceTree = "<group>"; };
 		4CCDDE90148CE2DE001F8FF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectConditionName.h; sourceTree = "<group>"; };
 		4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectConditionName.m; sourceTree = "<group>"; };
@@ -81,19 +66,12 @@
 		4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorAbout.m; sourceTree = "<group>"; };
 		4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectValidatorName.h; sourceTree = "<group>"; };
 		4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorName.m; sourceTree = "<group>"; };
-		4CCDDE97148CE2DE001F8FF1 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		4CCDDE98148CE2DE001F8FF1 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		4CCDDE99148CE2DE001F8FF1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		4CCDDE9B148CE2DE001F8FF1 /* TooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipView.h; sourceTree = "<group>"; };
-		4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TooltipView.m; sourceTree = "<group>"; };
+		4CCDDE97148CE2DE001F8FF1 /* MyProjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectView.h; sourceTree = "<group>"; };
+		4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectView.m; sourceTree = "<group>"; };
+		4CCDDE99148CE2DE001F8FF1 /* MyProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectViewController.h; sourceTree = "<group>"; };
+		4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectViewController.m; sourceTree = "<group>"; };
 		4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "US2FormValidationFrameworkSample-Info.plist"; sourceTree = "<group>"; };
 		4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "US2FormValidationFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
-		4CED39E61490F309006699E6 /* InvalidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidTooltipView.h; sourceTree = "<group>"; };
-		4CED39E71490F309006699E6 /* InvalidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidTooltipView.m; sourceTree = "<group>"; };
-		4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipViewPrivate.h; sourceTree = "<group>"; };
-		4CED39EA1490F457006699E6 /* ValidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidTooltipView.h; sourceTree = "<group>"; };
-		4CED39EB1490F457006699E6 /* ValidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidTooltipView.m; sourceTree = "<group>"; };
 		5BE612521845135C00B274A6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5BE612531845135C00B274A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5BE612541845135C00B274A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +87,9 @@
 		5BE6125E1845135C00B274A6 /* image_tooltip_invalid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_invalid@2x.png"; sourceTree = "<group>"; };
 		5BE6125F1845135C00B274A6 /* image_tooltip_valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_tooltip_valid.png; sourceTree = "<group>"; };
 		5BE612601845135C00B274A6 /* image_tooltip_valid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_valid@2x.png"; sourceTree = "<group>"; };
+		5BF4B7091885AF46005C0D4D /* MyProjectView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyProjectView+Layout.h"; sourceTree = "<group>"; };
+		5BF4B70A1885AF46005C0D4D /* MyProjectView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyProjectView+Layout.m"; sourceTree = "<group>"; };
+		5BF4B70C1885AFE4005C0D4D /* MyProjectView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProjectView_Private.h; sourceTree = "<group>"; };
 		CF7395CD172540C30027521F /* libUS2FormValidationFrameworkStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUS2FormValidationFrameworkStaticLibrary.a; path = "../US2FormValidationFramework/build/Release-iphoneos/libUS2FormValidationFrameworkStaticLibrary.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,32 +153,19 @@
 				5BE612511845135C00B274A6 /* Resources */,
 				4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */,
 				4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */,
-				4C09FB4B149A346600C3E817 /* SubmitButtonTableViewCell.h */,
-				4C09FB4C149A346600C3E817 /* SubmitButtonTableViewCell.m */,
-				4CCDDE84148CE2DE001F8FF1 /* FormTableViewCell.h */,
-				4CCDDE85148CE2DE001F8FF1 /* FormTableViewCell.m */,
-				4CCDDE86148CE2DE001F8FF1 /* FormTableViewCellPrivate.h */,
-				4CCDDE87148CE2DE001F8FF1 /* FormTextFieldTableViewCell.h */,
-				4CCDDE88148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m */,
-				4CCDDE89148CE2DE001F8FF1 /* FormTextViewTableViewCell.h */,
-				4CCDDE8A148CE2DE001F8FF1 /* FormTextViewTableViewCell.m */,
 				4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */,
 				4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */,
 				4CCDDE93148CE2DE001F8FF1 /* MyProjectValidatorAbout.h */,
 				4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */,
 				4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */,
 				4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */,
-				4CCDDE97148CE2DE001F8FF1 /* TestView.h */,
-				4CCDDE98148CE2DE001F8FF1 /* TestView.m */,
-				4CCDDE99148CE2DE001F8FF1 /* TestViewController.h */,
-				4CCDDE9A148CE2DE001F8FF1 /* TestViewController.m */,
-				4CED39E91490F41F006699E6 /* TooltipViewPrivate.h */,
-				4CCDDE9B148CE2DE001F8FF1 /* TooltipView.h */,
-				4CCDDE9C148CE2DE001F8FF1 /* TooltipView.m */,
-				4CED39E61490F309006699E6 /* InvalidTooltipView.h */,
-				4CED39E71490F309006699E6 /* InvalidTooltipView.m */,
-				4CED39EA1490F457006699E6 /* ValidTooltipView.h */,
-				4CED39EB1490F457006699E6 /* ValidTooltipView.m */,
+				4CCDDE97148CE2DE001F8FF1 /* MyProjectView.h */,
+				4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */,
+				5BF4B70C1885AFE4005C0D4D /* MyProjectView_Private.h */,
+				5BF4B7091885AF46005C0D4D /* MyProjectView+Layout.h */,
+				5BF4B70A1885AF46005C0D4D /* MyProjectView+Layout.m */,
+				4CCDDE99148CE2DE001F8FF1 /* MyProjectViewController.h */,
+				4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -324,20 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF4B70B1885AF46005C0D4D /* MyProjectView+Layout.m in Sources */,
 				4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */,
-				4CCDDEA1148CE2DE001F8FF1 /* FormTableViewCell.m in Sources */,
-				4CCDDEA2148CE2DE001F8FF1 /* FormTextFieldTableViewCell.m in Sources */,
-				4CCDDEA3148CE2DE001F8FF1 /* FormTextViewTableViewCell.m in Sources */,
 				4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */,
 				4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */,
 				4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */,
 				4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */,
-				4CCDDEAD148CE2DE001F8FF1 /* TestView.m in Sources */,
-				4CCDDEAE148CE2DE001F8FF1 /* TestViewController.m in Sources */,
-				4CCDDEAF148CE2DE001F8FF1 /* TooltipView.m in Sources */,
-				4CED39E81490F309006699E6 /* InvalidTooltipView.m in Sources */,
-				4CED39EC1490F457006699E6 /* ValidTooltipView.m in Sources */,
-				4C09FB4D149A346600C3E817 /* SubmitButtonTableViewCell.m in Sources */,
+				4CCDDEAD148CE2DE001F8FF1 /* MyProjectView.m in Sources */,
+				4CCDDEAE148CE2DE001F8FF1 /* MyProjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

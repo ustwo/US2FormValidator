@@ -1,8 +1,8 @@
 //
-//  ValidTooltipView.m
-//  US2FormValidationFramework
+//  MyProjectView.h
+//  US2FormValidator
 //
-//  Copyright (C) 2012 ustwo™
+//  Copyright (C) ustwo™
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
@@ -23,21 +23,25 @@
 //  SOFTWARE.
 //  
 
-#import "ValidTooltipView.h"
-#import "TooltipViewPrivate.h"
+//
+//  A simple test view containing sample validator text fields.
+//  The kind validator of validator is set in the controller. 
+//
+
+#import <Foundation/Foundation.h>
+#import "US2FormValidator.h"
 
 
-@implementation ValidTooltipView
+@interface MyProjectView : UIView
 
-
-#pragma mark - Update user interface
-
-- (void)_buildUserInterface
-{
-    [super _buildUserInterface];
-    
-    // Set image
-    self.image = [[UIImage imageNamed:@"image_tooltip_valid.png"] stretchableImageWithLeftCapWidth:48.0 topCapHeight:18.0];
-}
+@property (nonatomic, strong) US2ValidatorTextField *aboutTextField;
+@property (nonatomic, strong) UILabel *aboutErrorLabel;
+@property (nonatomic, strong) US2ValidatorTextField *emailTextField;
+@property (nonatomic, strong) UILabel *emailErrorLabel;
+@property (nonatomic, strong) US2ValidatorTextField *ukPostcodeTextField;
+@property (nonatomic, strong) UILabel *ukPostcodeErrorLabel;
+@property (nonatomic, strong) US2ValidatorTextField *visaCreditCardTextField;
+@property (nonatomic, strong) UILabel *visaCreditCardErrorLabel;
+@property (nonatomic, strong) UIButton *submitButton;
 
 @end

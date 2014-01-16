@@ -33,7 +33,7 @@
 {
     [UIApplication sharedApplication].statusBarHidden = NO;
     
-    _testViewController = [[TestViewController alloc] init];
+    _testViewController = [[MyProjectViewController alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = _testViewController;
