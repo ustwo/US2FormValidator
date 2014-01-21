@@ -14,11 +14,10 @@
 		4CCDDE6D148CE2BA001F8FF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDE6C148CE2BA001F8FF1 /* CoreGraphics.framework */; };
 		4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */; };
 		4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE90148CE2DE001F8FF1 /* main.m */; };
-		4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */; };
-		4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */; };
-		4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */; };
 		4CCDDEAD148CE2DE001F8FF1 /* MyProjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */; };
 		4CCDDEAE148CE2DE001F8FF1 /* MyProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */; };
+		5B818CA5188ECA2F00EFA44B /* MyProjectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */; };
+		5B818CA8188ECC0100EFA44B /* MyProjectTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */; };
 		5BE612611845135C00B274A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612521845135C00B274A6 /* Default-568h@2x.png */; };
 		5BE612621845135C00B274A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612531845135C00B274A6 /* Default.png */; };
 		5BE612631845135C00B274A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612541845135C00B274A6 /* Default@2x.png */; };
@@ -60,18 +59,16 @@
 		4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4CCDDE90148CE2DE001F8FF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectConditionName.h; sourceTree = "<group>"; };
-		4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectConditionName.m; sourceTree = "<group>"; };
-		4CCDDE93148CE2DE001F8FF1 /* MyProjectValidatorAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectValidatorAbout.h; sourceTree = "<group>"; };
-		4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorAbout.m; sourceTree = "<group>"; };
-		4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectValidatorName.h; sourceTree = "<group>"; };
-		4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectValidatorName.m; sourceTree = "<group>"; };
 		4CCDDE97148CE2DE001F8FF1 /* MyProjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectView.h; sourceTree = "<group>"; };
 		4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectView.m; sourceTree = "<group>"; };
 		4CCDDE99148CE2DE001F8FF1 /* MyProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectViewController.h; sourceTree = "<group>"; };
 		4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectViewController.m; sourceTree = "<group>"; };
 		4CCDDEB1148CE324001F8FF1 /* US2FormValidationFrameworkSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "US2FormValidationFrameworkSample-Info.plist"; sourceTree = "<group>"; };
 		4CCDDEB2148CE324001F8FF1 /* US2FormValidationFrameworkSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "US2FormValidationFrameworkSample-Prefix.pch"; sourceTree = "<group>"; };
+		5B818CA3188ECA2F00EFA44B /* MyProjectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectButton.h; sourceTree = "<group>"; };
+		5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectButton.m; sourceTree = "<group>"; };
+		5B818CA6188ECC0100EFA44B /* MyProjectTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectTextField.h; sourceTree = "<group>"; };
+		5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectTextField.m; sourceTree = "<group>"; };
 		5BE612521845135C00B274A6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5BE612531845135C00B274A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5BE612541845135C00B274A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -153,12 +150,6 @@
 				5BE612511845135C00B274A6 /* Resources */,
 				4CCDDE80148CE2DE001F8FF1 /* AppDelegate.h */,
 				4CCDDE81148CE2DE001F8FF1 /* AppDelegate.m */,
-				4CCDDE91148CE2DE001F8FF1 /* MyProjectConditionName.h */,
-				4CCDDE92148CE2DE001F8FF1 /* MyProjectConditionName.m */,
-				4CCDDE93148CE2DE001F8FF1 /* MyProjectValidatorAbout.h */,
-				4CCDDE94148CE2DE001F8FF1 /* MyProjectValidatorAbout.m */,
-				4CCDDE95148CE2DE001F8FF1 /* MyProjectValidatorName.h */,
-				4CCDDE96148CE2DE001F8FF1 /* MyProjectValidatorName.m */,
 				4CCDDE97148CE2DE001F8FF1 /* MyProjectView.h */,
 				4CCDDE98148CE2DE001F8FF1 /* MyProjectView.m */,
 				5BF4B70C1885AFE4005C0D4D /* MyProjectView_Private.h */,
@@ -166,6 +157,10 @@
 				5BF4B70A1885AF46005C0D4D /* MyProjectView+Layout.m */,
 				4CCDDE99148CE2DE001F8FF1 /* MyProjectViewController.h */,
 				4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */,
+				5B818CA3188ECA2F00EFA44B /* MyProjectButton.h */,
+				5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */,
+				5B818CA6188ECC0100EFA44B /* MyProjectTextField.h */,
+				5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -293,11 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF4B70B1885AF46005C0D4D /* MyProjectView+Layout.m in Sources */,
+				5B818CA8188ECC0100EFA44B /* MyProjectTextField.m in Sources */,
+				5B818CA5188ECA2F00EFA44B /* MyProjectButton.m in Sources */,
 				4CCDDE9F148CE2DE001F8FF1 /* AppDelegate.m in Sources */,
 				4CCDDEA9148CE2DE001F8FF1 /* main.m in Sources */,
-				4CCDDEAA148CE2DE001F8FF1 /* MyProjectConditionName.m in Sources */,
-				4CCDDEAB148CE2DE001F8FF1 /* MyProjectValidatorAbout.m in Sources */,
-				4CCDDEAC148CE2DE001F8FF1 /* MyProjectValidatorName.m in Sources */,
 				4CCDDEAD148CE2DE001F8FF1 /* MyProjectView.m in Sources */,
 				4CCDDEAE148CE2DE001F8FF1 /* MyProjectViewController.m in Sources */,
 			);

@@ -61,6 +61,7 @@
     [self US2_buildAboutSection];
     [self US2_buildEmailSection];
     [self US2_buildUKPostcodeSection];
+    [self US2_buildSubmitButton];
     [self US2_buildLayout];
 }
 
@@ -84,7 +85,7 @@
 - (void)US2_buildAboutTextField
 {
     _aboutTextField = [self US2_textField];
-    _aboutTextField.text = @"test";
+    _aboutTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     [self addSubview:_aboutTextField];
 }
 
@@ -114,6 +115,9 @@
 - (void)US2_buildEmailTextField
 {
     _emailTextField = [self US2_textField];
+    _emailTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    _emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
+    _emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     [self addSubview:_emailTextField];
 }
 
@@ -143,6 +147,8 @@
 - (void)US2_buildUKPostcodeTextField
 {
     _ukPostcodeTextField = [self US2_textField];
+    _ukPostcodeTextField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+    _ukPostcodeTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     [self addSubview:_ukPostcodeTextField];
 }
 
@@ -158,16 +164,16 @@
 - (UILabel *)US2_headlineLabel
 {
     UILabel *label = [[UILabel alloc] init];
+    label.font = [UIFont fontWithName:@"AvenirNext-Regular" size:14.0];
     label.textColor = [UIColor blackColor];
     label.translatesAutoresizingMaskIntoConstraints = NO;
     
     return label;
 }
 
-- (US2ValidatorTextField *)US2_textField
+- (MyProjectTextField *)US2_textField
 {
-    US2ValidatorTextField *textField = [[US2ValidatorTextField alloc] init];
-    textField.textColor = [UIColor blackColor];
+    MyProjectTextField *textField = [[MyProjectTextField alloc] init];
     textField.translatesAutoresizingMaskIntoConstraints = NO;
     
     return textField;
@@ -176,8 +182,10 @@
 - (UILabel *)US2_errorLabel
 {
     UILabel *label = [[UILabel alloc] init];
+    label.font = [UIFont fontWithName:@"AvenirNext-Regular" size:14.0];
     label.translatesAutoresizingMaskIntoConstraints = NO;
     label.textColor = [UIColor redColor];
+    label.numberOfLines = 0;
     
     return label;
 }
@@ -187,8 +195,8 @@
 
 - (void)US2_buildSubmitButton
 {
-    _submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_submitButton setTitle:@"Submit" forState:UIControlStateNormal];
+    _submitButton = [MyProjectButton button];
+    _submitButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_submitButton];
 }
 

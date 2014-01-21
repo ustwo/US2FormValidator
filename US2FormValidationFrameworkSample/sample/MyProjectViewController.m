@@ -34,8 +34,6 @@
 #import "US2FormValidator.h"
 
 #import "MyProjectViewController.h"
-#import "MyProjectValidatorName.h"
-#import "MyProjectValidatorAbout.h"
 #import "US2ValidatableDelegate.h"
 #import "US2Validatable.h"
 
@@ -83,7 +81,7 @@
 */
 - (void)buildView
 {
-    self.testView = [[MyProjectView alloc] initWithFrame:self.view.frame];
+    self.myProjectView = [[MyProjectView alloc] initWithFrame:self.view.frame];
 }
 
 /**
@@ -119,8 +117,13 @@
 {
     _form = [[US2ValidatorForm alloc] init];
     
+    typeof(self) __weak weakSelf = self;
     [_form setDidChangeValidState:^(BOOL isValid) {
         
+        typeof(self) __strong strongSelf = weakSelf;
+        if (!strongSelf) return;
+        
+        [strongSelf US2_updateUserInterface];
         NSLog(@"form's state changed to: %@", (isValid ? @"YES" : @"NO"));
     }];
 }
@@ -130,7 +133,6 @@
 
 - (void)US2_initUserInterface
 {
-    
     // Set text fields which will be used in form
     [self US2_initAboutValidator];
     [self US2_initEmailValidator];
@@ -142,12 +144,11 @@
 {
     US2ValidatorPresent *validator = [[US2ValidatorPresent alloc] init];
     
-    self.testView.aboutTextField.validator               = validator;
-    self.testView.aboutTextField.delegate                = self;
-    self.testView.aboutTextField.validateOnFocusLossOnly = YES;
-    self.testView.aboutTextField.text                    = @"";
-    self.testView.aboutTextField.placeholder             = @"At least something about you";
-    [_form addValidatable:self.testView.aboutTextField];
+    self.myProjectView.aboutTextField.validator               = validator;
+    self.myProjectView.aboutTextField.delegate                = self;
+    self.myProjectView.aboutTextField.validateOnFocusLossOnly = YES;
+    self.myProjectView.aboutTextField.placeholder             = @"At least something about you";
+    [_form addValidatable:self.myProjectView.aboutTextField];
 }
 
 - (void)US2_initEmailValidator
@@ -158,12 +159,11 @@
     [compositeValidator addCondition:presentCondition];
     [compositeValidator addCondition:emailCondition];
     
-    self.testView.emailTextField.validator               = compositeValidator;
-    self.testView.emailTextField.delegate                = self;
-    self.testView.emailTextField.validateOnFocusLossOnly = YES;
-    self.testView.emailTextField.text                    = @"";
-    self.testView.emailTextField.placeholder             = @"piglet@ustwo.co.uk";
-    [_form addValidatable:self.testView.emailTextField];
+    self.myProjectView.emailTextField.validator               = compositeValidator;
+    self.myProjectView.emailTextField.delegate                = self;
+    self.myProjectView.emailTextField.validateOnFocusLossOnly = YES;
+    self.myProjectView.emailTextField.placeholder             = @"piglet@ustwo.co.uk";
+    [_form addValidatable:self.myProjectView.emailTextField];
 }
 
 - (void)US2_initUKPostcodeValidator
@@ -174,19 +174,18 @@
     [compositeValidator addCondition:presentCondition];
     [compositeValidator addCondition:ukPostcodeCondition];
     
-    self.testView.ukPostcodeTextField.validator               = compositeValidator;
-    self.testView.ukPostcodeTextField.delegate                = self;
-    self.testView.ukPostcodeTextField.validateOnFocusLossOnly = YES;
-    self.testView.ukPostcodeTextField.text                    = @"";
-    self.testView.ukPostcodeTextField.placeholder             = @"Postcode";
-    [_form addValidatable:self.testView.ukPostcodeTextField];
+    self.myProjectView.ukPostcodeTextField.validator               = compositeValidator;
+    self.myProjectView.ukPostcodeTextField.delegate                = self;
+    self.myProjectView.ukPostcodeTextField.validateOnFocusLossOnly = YES;
+    self.myProjectView.ukPostcodeTextField.placeholder             = @"Postcode";
+    [_form addValidatable:self.myProjectView.ukPostcodeTextField];
 }
 
 - (void)US2_initSubmitButton
 {
-    [self.testView.submitButton addTarget:self
-                                   action:@selector(US2_submitButtonTouched:)
-                         forControlEvents:UIControlEventTouchUpInside];
+    [self.myProjectView.submitButton addTarget:self
+                                        action:@selector(US2_submitButtonTouched:)
+                              forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -199,21 +198,11 @@
 
 - (void)US2_updateSubmitButton
 {
-    self.testView.submitButton.enabled = _form.isValid;
+    self.myProjectView.submitButton.enabled = _form.isValid;
 }
 
 
 #pragma mark - Validator text field protocol
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    return YES;
-}
-
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
-{
-    return YES;
-}
 
 /**
  Called for every valid or violated state change
@@ -223,8 +212,18 @@
 {
     NSLog(@"validatorUI changedValidState: %d", isValid);
     
-    // 1st super view UITableViewCellContentView
-    // 2nd super view FormTextFieldTableViewCell
+    if (validatable == self.myProjectView.aboutTextField)
+    {
+        self.myProjectView.aboutErrorLabel.text = @"";
+    }
+    else if (validatable == self.myProjectView.emailTextField)
+    {
+        self.myProjectView.emailErrorLabel.text = @"";
+    }
+    else if (validatable == self.myProjectView.ukPostcodeTextField)
+    {
+        self.myProjectView.ukPostcodeErrorLabel.text = @"";
+    }
 }
 
 /**
@@ -234,20 +233,20 @@
 - (void)validatable:(id<US2Validatable>)validatable violatedConditions:(US2ConditionCollection *)conditions
 {
     NSLog(@"validatorUI violatedConditions: \n%@", conditions);
-}
-
-/**
- Update violation status of text field after ending editing
-*/
-- (void)textFieldDidEndEditing:(US2ValidatorTextField *)validatorTextField
-{
-}
-
-/**
- Update violation status of text view after ending editing
-*/
-- (void)textViewDidEndEditing:(US2ValidatorTextView *)validatorTextView
-{
+    
+    US2Condition *condition = [conditions conditionAtIndex:0];
+    if (validatable == self.myProjectView.aboutTextField)
+    {
+        self.myProjectView.aboutErrorLabel.text = condition.localizedViolationString;
+    }
+    else if (validatable == self.myProjectView.emailTextField)
+    {
+        self.myProjectView.emailErrorLabel.text = condition.localizedViolationString;
+    }
+    else if (validatable == self.myProjectView.ukPostcodeTextField)
+    {
+        self.myProjectView.ukPostcodeErrorLabel.text = condition.localizedViolationString;
+    }
 }
 
 

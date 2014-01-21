@@ -30,18 +30,20 @@
 
 #import <Foundation/Foundation.h>
 #import "US2FormValidator.h"
+#import "MyProjectTextField.h"
+#import "MyProjectButton.h"
 
 
 @interface MyProjectView : UIView
 
-@property (nonatomic, strong) US2ValidatorTextField *aboutTextField;
+@property (nonatomic, strong) MyProjectTextField *aboutTextField;
 @property (nonatomic, strong) UILabel *aboutErrorLabel;
-@property (nonatomic, strong) US2ValidatorTextField *emailTextField;
+@property (nonatomic, strong) MyProjectTextField *emailTextField;
 @property (nonatomic, strong) UILabel *emailErrorLabel;
-@property (nonatomic, strong) US2ValidatorTextField *ukPostcodeTextField;
+@property (nonatomic, strong) MyProjectTextField *ukPostcodeTextField;
 @property (nonatomic, strong) UILabel *ukPostcodeErrorLabel;
-@property (nonatomic, strong) US2ValidatorTextField *visaCreditCardTextField;
+@property (nonatomic, strong) MyProjectTextField *visaCreditCardTextField;
 @property (nonatomic, strong) UILabel *visaCreditCardErrorLabel;
-@property (nonatomic, strong) UIButton *submitButton;
+@property (nonatomic, strong) MyProjectButton *submitButton;
 
 @end
