@@ -45,7 +45,7 @@
     if (self)
     {
         _entries = [[NSMutableArray alloc] initWithCapacity:1];
-        _lastValidState = YES;
+        _lastValidState = NO;
     }
     
     return self;
