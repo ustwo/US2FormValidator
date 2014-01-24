@@ -37,6 +37,7 @@
 @interface MyProjectView : UIView
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *keyboardConstraint;
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @property (nonatomic, strong) MyProjectTextField *aboutTextField;
 @property (nonatomic, strong) UILabel *aboutErrorLabel;

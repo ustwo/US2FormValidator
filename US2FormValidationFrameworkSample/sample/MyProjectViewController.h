@@ -38,7 +38,4 @@
 
 @property (nonatomic, weak) IBOutlet MyProjectView *myProjectView;
 
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *content1WidthConstraint;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *content2HeightConstraint;
-
 @end

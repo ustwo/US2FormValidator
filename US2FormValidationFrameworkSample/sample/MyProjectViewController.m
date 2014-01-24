@@ -41,11 +41,6 @@
 @interface MyProjectViewController () <US2ValidatorTextFieldDelegate,
                                        US2ValidatorTextViewDelegate>
 {
-    NSMutableArray *_typeStringCollection;
-    BOOL           _didSubmit;
-    
-    id<US2Validatable> _tooltipConnectedValidatable;
-    
     US2ValidatorForm *_form;
 }
 @end
@@ -61,9 +56,8 @@
     [super viewDidLoad];
     
     [self US2_initData];
+    [self US2_initKeyboardListeners];
     [self US2_initUserInterface];
-    
-    self.content2HeightConstraint.constant = 10;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,9 +72,6 @@
 
 - (void)US2_initData
 {
-    // Flag whether 'submit' button was touched to validate every text UI
-    _didSubmit = NO;
-    
     [self createForm];
 }
 
@@ -104,13 +95,13 @@
 
 - (void)US2_initUserInterface
 {
-//    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     
     // Set text fields which will be used in form
-//    [self US2_initAboutValidator];
-//    [self US2_initEmailValidator];
-//    [self US2_initUKPostcodeValidator];
-//    [self US2_initSubmitButton];
+    [self US2_initAboutValidator];
+    [self US2_initEmailValidator];
+    [self US2_initUKPostcodeValidator];
+    [self US2_initSubmitButton];
 }
 
 - (void)US2_initAboutValidator
@@ -175,6 +166,41 @@
 }
 
 
+#pragma mark - Keyboard
+
+- (void)US2_initKeyboardListeners
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *info = [notification userInfo];
+    NSValue *kbFrame = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect keyboardFrame = [kbFrame CGRectValue];
+    
+    CGFloat height = keyboardFrame.size.height;
+    self.myProjectView.keyboardConstraint.constant = height + 20;
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.myProjectView layoutIfNeeded];
+    }];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    NSDictionary *info = [notification userInfo];
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    self.myProjectView.keyboardConstraint.constant = 0.0;
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.myProjectView layoutIfNeeded];
+    }];
+}
+
+
 #pragma mark - Validator text field protocol
 
 /**
@@ -227,9 +253,9 @@
 
 - (void)US2_submitButtonTouched:(UIButton *)button
 {
-    // Set flag to YES
-    _didSubmit = YES;
+    [self.myProjectView.aboutTextField resignFirstResponder];
+    [self.myProjectView.emailTextField resignFirstResponder];
+    [self.myProjectView.ukPostcodeTextField resignFirstResponder];
 }
-
 
 @end
