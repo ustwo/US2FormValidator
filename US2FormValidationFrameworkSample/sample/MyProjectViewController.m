@@ -182,7 +182,7 @@
     CGRect keyboardFrame = [kbFrame CGRectValue];
     
     CGFloat height = keyboardFrame.size.height;
-    self.myProjectView.keyboardConstraint.constant = height + 20;
+    self.myProjectView.keyboardConstraint.constant = height;
     
     [UIView animateWithDuration:animationDuration animations:^{
         [self.myProjectView layoutIfNeeded];

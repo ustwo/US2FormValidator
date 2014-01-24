@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYB-Lc-9HW">
-                                <rect key="frame" x="20" y="20" width="280" height="528"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tk3-2X-qvb" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="LAk-Af-XH4"/>
+                                            <constraint firstAttribute="width" constant="320" id="LAk-Af-XH4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.76181099100000005" blue="0.74460205310000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Tk3-2X-qvb" firstAttribute="top" secondItem="dYB-Lc-9HW" secondAttribute="top" id="1aY-iA-FRK"/>
                                     <constraint firstAttribute="trailing" secondItem="Tk3-2X-qvb" secondAttribute="trailing" id="ZJC-et-JUo"/>
@@ -38,12 +38,11 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.48251414860000003" green="0.87272391729999998" blue="0.29232076940000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="leading" secondItem="Dzt-gn-qwl" secondAttribute="leading" constant="20" id="P3H-TA-I11"/>
-                            <constraint firstAttribute="bottom" secondItem="dYB-Lc-9HW" secondAttribute="bottom" constant="20" id="do9-KZ-PEk"/>
-                            <constraint firstAttribute="trailing" secondItem="dYB-Lc-9HW" secondAttribute="trailing" constant="20" id="gSn-E0-hQG"/>
-                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="top" secondItem="Dzt-gn-qwl" secondAttribute="top" constant="20" id="v16-NK-jep"/>
+                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="leading" secondItem="Dzt-gn-qwl" secondAttribute="leading" id="P3H-TA-I11"/>
+                            <constraint firstAttribute="bottom" secondItem="dYB-Lc-9HW" secondAttribute="bottom" id="do9-KZ-PEk"/>
+                            <constraint firstAttribute="trailing" secondItem="dYB-Lc-9HW" secondAttribute="trailing" id="gSn-E0-hQG"/>
+                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="top" secondItem="Dzt-gn-qwl" secondAttribute="top" id="v16-NK-jep"/>
                         </constraints>
                         <connections>
                             <outlet property="containerView" destination="Tk3-2X-qvb" id="0iR-au-ZHI"/>
