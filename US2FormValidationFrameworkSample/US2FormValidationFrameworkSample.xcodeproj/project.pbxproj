@@ -18,6 +18,7 @@
 		4CCDDEAE148CE2DE001F8FF1 /* MyProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDDE9A148CE2DE001F8FF1 /* MyProjectViewController.m */; };
 		5B818CA5188ECA2F00EFA44B /* MyProjectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */; };
 		5B818CA8188ECC0100EFA44B /* MyProjectTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */; };
+		5B818CAA188EE6BC00EFA44B /* MyProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B818CA9188EE6BC00EFA44B /* MyProjectStoryboard.storyboard */; };
 		5BE612611845135C00B274A6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612521845135C00B274A6 /* Default-568h@2x.png */; };
 		5BE612621845135C00B274A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612531845135C00B274A6 /* Default.png */; };
 		5BE612631845135C00B274A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE612541845135C00B274A6 /* Default@2x.png */; };
@@ -69,6 +70,7 @@
 		5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectButton.m; sourceTree = "<group>"; };
 		5B818CA6188ECC0100EFA44B /* MyProjectTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProjectTextField.h; sourceTree = "<group>"; };
 		5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProjectTextField.m; sourceTree = "<group>"; };
+		5B818CA9188EE6BC00EFA44B /* MyProjectStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyProjectStoryboard.storyboard; sourceTree = "<group>"; };
 		5BE612521845135C00B274A6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5BE612531845135C00B274A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5BE612541845135C00B274A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				5B818CA4188ECA2F00EFA44B /* MyProjectButton.m */,
 				5B818CA6188ECC0100EFA44B /* MyProjectTextField.h */,
 				5B818CA7188ECC0100EFA44B /* MyProjectTextField.m */,
+				5B818CA9188EE6BC00EFA44B /* MyProjectStoryboard.storyboard */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE6126F1845135C00B274A6 /* image_tooltip_valid@2x.png in Resources */,
+				5B818CAA188EE6BC00EFA44B /* MyProjectStoryboard.storyboard in Resources */,
 				5BE612681845135C00B274A6 /* image_icon_validation_valid.png in Resources */,
 				5BE6126C1845135C00B274A6 /* image_tooltip_invalid.png in Resources */,
 				5BE6126B1845135C00B274A6 /* image_icon_validation_waiting@2x.png in Resources */,

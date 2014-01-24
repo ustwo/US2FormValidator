@@ -28,17 +28,8 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [UIApplication sharedApplication].statusBarHidden = NO;
-    
-    _testViewController = [[MyProjectViewController alloc] init];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = _testViewController;
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

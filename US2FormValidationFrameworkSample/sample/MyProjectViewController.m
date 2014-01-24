@@ -53,37 +53,6 @@
 
 @implementation MyProjectViewController
 
-
-#pragma mark - View setter and getter
-
-- (void)setMyProjectView:(MyProjectView *)view
-{
-    self.view = view;
-}
-
-- (MyProjectView *)myProjectView
-{
-    return (MyProjectView *)self.view;
-}
-
-
-#pragma mark - View lifecycle
-
-- (void)loadView
-{
-    [super loadView];
-    
-    [self buildView];
-}
-
-/**
- Build custom view with test validator text fields added
-*/
-- (void)buildView
-{
-    self.myProjectView = [[MyProjectView alloc] initWithFrame:self.view.frame];
-}
-
 /**
  Initialize the UI components after view did load
 */
@@ -93,6 +62,8 @@
     
     [self US2_initData];
     [self US2_initUserInterface];
+    
+    self.content2HeightConstraint.constant = 10;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -133,11 +104,13 @@
 
 - (void)US2_initUserInterface
 {
+//    self.automaticallyAdjustsScrollViewInsets = YES;
+    
     // Set text fields which will be used in form
-    [self US2_initAboutValidator];
-    [self US2_initEmailValidator];
-    [self US2_initUKPostcodeValidator];
-    [self US2_initSubmitButton];
+//    [self US2_initAboutValidator];
+//    [self US2_initEmailValidator];
+//    [self US2_initUKPostcodeValidator];
+//    [self US2_initSubmitButton];
 }
 
 - (void)US2_initAboutValidator

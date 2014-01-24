@@ -38,15 +38,11 @@
 
 #pragma mark - Initialization
 
-- (id)initWithFrame:(CGRect)frame
+- (void)awakeFromNib
 {
-    self = [super initWithFrame:frame];
-    if (self)
-    {
-        [self US2_buildUserInterface];
-    }
+    [super awakeFromNib];
     
-    return self;
+    [self US2_buildUserInterface];
 }
 
 
@@ -54,10 +50,6 @@
 
 - (void)US2_buildUserInterface
 {
-    // Set auto resizing - storyboarding
-    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.backgroundColor = [UIColor whiteColor];
-    
     [self US2_buildAboutSection];
     [self US2_buildEmailSection];
     [self US2_buildUKPostcodeSection];
@@ -79,20 +71,20 @@
 {
     _aboutHeadlineLabel = [self US2_headlineLabel];
     _aboutHeadlineLabel.text = @"* About";
-    [self addSubview:_aboutHeadlineLabel];
+    [self.containerView addSubview:_aboutHeadlineLabel];
 }
 
 - (void)US2_buildAboutTextField
 {
     _aboutTextField = [self US2_textField];
     _aboutTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
-    [self addSubview:_aboutTextField];
+    [self.containerView addSubview:_aboutTextField];
 }
 
 - (void)US2_buildAboutErrorLabel
 {
     _aboutErrorLabel = [self US2_errorLabel];
-    [self addSubview:_aboutErrorLabel];
+    [self.containerView addSubview:_aboutErrorLabel];
 }
 
 
@@ -109,7 +101,7 @@
 {
     _emailHeadlineLabel = [self US2_headlineLabel];
     _emailHeadlineLabel.text = @"* Email";
-    [self addSubview:_emailHeadlineLabel];
+    [self.containerView addSubview:_emailHeadlineLabel];
 }
 
 - (void)US2_buildEmailTextField
@@ -118,13 +110,13 @@
     _emailTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     _emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
     _emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    [self addSubview:_emailTextField];
+    [self.containerView addSubview:_emailTextField];
 }
 
 - (void)US2_buildEmailErrorLabel
 {
     _emailErrorLabel = [self US2_errorLabel];
-    [self addSubview:_emailErrorLabel];
+    [self.containerView addSubview:_emailErrorLabel];
 }
 
 
@@ -141,7 +133,7 @@
 {
     _ukPostcodeHeadlineLabel = [self US2_headlineLabel];
     _ukPostcodeHeadlineLabel.text = @"* UK Postcode (e.g. E1 6JJ)";
-    [self addSubview:_ukPostcodeHeadlineLabel];
+    [self.containerView addSubview:_ukPostcodeHeadlineLabel];
 }
 
 - (void)US2_buildUKPostcodeTextField
@@ -149,13 +141,13 @@
     _ukPostcodeTextField = [self US2_textField];
     _ukPostcodeTextField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
     _ukPostcodeTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    [self addSubview:_ukPostcodeTextField];
+    [self.containerView addSubview:_ukPostcodeTextField];
 }
 
 - (void)US2_buildUKPostcodeErrorLabel
 {
     _ukPostcodeErrorLabel = [self US2_errorLabel];
-    [self addSubview:_ukPostcodeErrorLabel];
+    [self.containerView addSubview:_ukPostcodeErrorLabel];
 }
 
 
@@ -197,7 +189,7 @@
 {
     _submitButton = [MyProjectButton button];
     _submitButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:_submitButton];
+    [self.containerView addSubview:_submitButton];
 }
 
 

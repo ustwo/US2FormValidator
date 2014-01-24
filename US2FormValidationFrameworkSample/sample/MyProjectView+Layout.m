@@ -23,15 +23,15 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self US2_buildAboutHeadlineLabelLayout];
     [self US2_buildAboutTextFieldLayout];
     [self US2_buildAboutErrorLabelLayout];
-    
+
     [self US2_buildEmailHeadlineLabelLayout];
     [self US2_buildEmailTextFieldLayout];
     [self US2_buildEmailErrorLabelLayout];
-    
+
     [self US2_buildUKPostcodeHeadlineLabelLayout];
     [self US2_buildUKPostcodeTextFieldLayout];
     [self US2_buildUKPostcodeErrorLabelLayout];
-    
+
     [self US2_buildSubmitButtonLayout];
 }
 
@@ -115,9 +115,11 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self US2_setToFullWidth:self.submitButton];
     [self US2_setView:self.submitButton toExactHeight:kDefaultButtonHeight];
     [self US2_setView:self.submitButton underView:self.ukPostcodeErrorLabel withMargin:kDefaultMargin];
+    [self US2_setViewToBottom:self.submitButton];
 }
 
 
+#pragma mark - Layout helpers
 
 - (void)US2_setViewToTop:(UIView *)view
 {
@@ -126,7 +128,17 @@ static const CGFloat kDefaultMargin                 = 12.0;
                                                                    options:0
                                                                    metrics:nil
                                                                      views:NSDictionaryOfVariableBindings(view)];
-    [self addConstraints:constraints];
+    [self.containerView addConstraints:constraints];
+}
+
+- (void)US2_setViewToBottom:(UIView *)view
+{
+    NSString *formatString = @"V:[view]-48-|";
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
+                                                                   options:0
+                                                                   metrics:nil
+                                                                     views:NSDictionaryOfVariableBindings(view)];
+    [self.containerView addConstraints:constraints];
 }
 
 - (void)US2_setToFullWidth:(UIView *)view
@@ -136,7 +148,17 @@ static const CGFloat kDefaultMargin                 = 12.0;
                                                                    options:0
                                                                    metrics:nil
                                                                      views:NSDictionaryOfVariableBindings(view)];
-    [self addConstraints:constraints];
+    [self.containerView addConstraints:constraints];
+}
+
+- (void)US2_setToFullHeight:(UIView *)view
+{
+    NSString *formatString = @"V:|-[view]-|";
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
+                                                                   options:0
+                                                                   metrics:nil
+                                                                     views:NSDictionaryOfVariableBindings(view)];
+    [self.containerView addConstraints:constraints];
 }
 
 - (void)US2_setView:(UIView *)view toExactHeight:(CGFloat)height
@@ -147,7 +169,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
                                                                    options:0
                                                                    metrics:NSDictionaryOfVariableBindings(toHeight)
                                                                      views:NSDictionaryOfVariableBindings(view)];
-    [self addConstraints:constraints];
+    [self.containerView addConstraints:constraints];
 }
 
 - (void)US2_setView:(UIView *)view toMaximumHeight:(CGFloat)height
@@ -158,7 +180,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
                                                                    options:0
                                                                    metrics:NSDictionaryOfVariableBindings(toHeight)
                                                                      views:NSDictionaryOfVariableBindings(view)];
-    [self addConstraints:constraints];
+    [self.containerView addConstraints:constraints];
 }
 
 - (void)US2_setView:(UIView *)view1 underView:(UIView *)view2 withMargin:(CGFloat)margin
@@ -169,7 +191,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
                                                                    options:0
                                                                    metrics:NSDictionaryOfVariableBindings(toMargin)
                                                                      views:NSDictionaryOfVariableBindings(view2, view1)];
-    [self addConstraints:constraints];
+    [self.containerView addConstraints:constraints];
 }
 
 @end

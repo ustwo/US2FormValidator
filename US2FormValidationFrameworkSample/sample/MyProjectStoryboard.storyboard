@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="whK-IZ-rdT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--My Project View Controller-->
+        <scene sceneID="KiX-Cl-R2t">
+            <objects>
+                <viewController id="whK-IZ-rdT" customClass="MyProjectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vS7-3j-46V"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdg-AA-qNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dzt-gn-qwl" customClass="MyProjectView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYB-Lc-9HW">
+                                <rect key="frame" x="20" y="20" width="280" height="528"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tk3-2X-qvb" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="LAk-Af-XH4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.76181099100000005" blue="0.74460205310000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tk3-2X-qvb" secondAttribute="trailing" id="JQ4-vQ-BsW"/>
+                                    <constraint firstItem="Tk3-2X-qvb" firstAttribute="top" secondItem="dYB-Lc-9HW" secondAttribute="top" id="KEF-KQ-2CG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tk3-2X-qvb" secondAttribute="bottom" id="Xm8-1c-RRv"/>
+                                    <constraint firstItem="Tk3-2X-qvb" firstAttribute="leading" secondItem="dYB-Lc-9HW" secondAttribute="leading" id="rdF-Pj-HXN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48251414860000003" green="0.87272391729999998" blue="0.29232076940000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="leading" secondItem="Dzt-gn-qwl" secondAttribute="leading" constant="20" id="GhB-QK-mfg"/>
+                            <constraint firstAttribute="bottom" secondItem="dYB-Lc-9HW" secondAttribute="bottom" constant="20" id="doo-1x-9Vd"/>
+                            <constraint firstAttribute="trailing" secondItem="dYB-Lc-9HW" secondAttribute="trailing" constant="20" id="hqh-7L-Z67"/>
+                            <constraint firstItem="dYB-Lc-9HW" firstAttribute="top" secondItem="Dzt-gn-qwl" secondAttribute="top" constant="20" id="liT-fA-SuG"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="containerView" destination="Tk3-2X-qvb" id="0iR-au-ZHI"/>
+                            <outlet property="scrollView" destination="dYB-Lc-9HW" id="xqH-y3-JCT"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="myProjectView" destination="Dzt-gn-qwl" id="rw2-K8-byw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JH5-Pg-vxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="-112"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
