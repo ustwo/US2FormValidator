@@ -25,13 +25,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class TestViewController;
+@class MyProjectViewController;
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) TestViewController *testViewController;
+@property (strong, nonatomic) MyProjectViewController *myProjectViewController;
 
 @end
