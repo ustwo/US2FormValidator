@@ -24,16 +24,14 @@
 //  
 
 #import <UIKit/UIKit.h>
-#import "MyProjectViewController.h"
+
+@class TestViewController;
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    UIWindow           *_window;
-    MyProjectViewController *_testViewController;
-}
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) TestViewController *testViewController;
 
 @end

@@ -24,19 +24,19 @@
 //  
 
 #import "AppDelegate.h"
+#import "TestViewController.h"
 
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [UIApplication sharedApplication].statusBarHidden = NO;
     
-    _testViewController = [[MyProjectViewController alloc] init];
+    self.testViewController = [[TestViewController alloc] init];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = _testViewController;
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = self.testViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
