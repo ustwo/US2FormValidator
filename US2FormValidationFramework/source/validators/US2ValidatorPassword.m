@@ -45,7 +45,7 @@
     if(_minimalLowerCase != minimalLowerCase)
     {
         _minimalLowerCase = minimalLowerCase;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
@@ -54,7 +54,7 @@
     if(_minimalUpperCase != minimalUpperCase)
     {
         _minimalUpperCase = minimalUpperCase;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
@@ -63,7 +63,7 @@
     if(_minimalNumbers != minimalNumbers)
     {
         _minimalNumbers = minimalNumbers;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
@@ -72,7 +72,7 @@
     if(_minimalSymbols != minimalSymbols)
     {
         _minimalSymbols = minimalSymbols;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
@@ -81,7 +81,7 @@
     if(_minimalLength != minimalLength)
     {
         _minimalLength = minimalLength;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
@@ -90,14 +90,14 @@
     if(_requiredStrength != requiredStrength)
     {
         _requiredStrength = requiredStrength;
-        [self US2__modifyCondition];
+        [self us2_modifyCondition];
     }
 }
 
 
 #pragma mark - Modification of condition
 
-- (void)US2__modifyCondition
+- (void)us2_modifyCondition
 {
     // Remove all added password strength coniditons
     [self removeConditionsOfClass:[US2ConditionPassword class]];

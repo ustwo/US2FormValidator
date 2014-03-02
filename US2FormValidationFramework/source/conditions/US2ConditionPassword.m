@@ -52,7 +52,7 @@
 {
     BOOL passed = NO;
     
-    if([self US2__strengthOfPasswordString:string] >= _requiredStrength)
+    if([self us2_strengthOfPasswordString:string] >= _requiredStrength)
     {
         passed = YES;
     }
@@ -71,15 +71,15 @@
 
 #pragma mark - Strength check
 
-- (US2PasswordStrength)US2__strengthOfPasswordString:(NSString *)string
+- (US2PasswordStrength)us2_strengthOfPasswordString:(NSString *)string
 {
     NSUInteger strength = 0;
     
     // Run regex on string to check for matches of lowercase, uppercase, numeric and special chars
-    NSUInteger numberMatchesCount = [self US2__numberOfNumericCharactersInString:string];
-    NSUInteger lowercaseMatchesCount = [self US2__numberOfLowercaseCharactersInString:string];
-    NSUInteger uppercaseMatchesCount = [self US2__numberOfUppercaseCharactersInString:string];
-    NSUInteger specialCharacterMatchesCount = [self US2__numberOfSpecialCharactersInString:string];
+    NSUInteger numberMatchesCount = [self us2_numberOfNumericCharactersInString:string];
+    NSUInteger lowercaseMatchesCount = [self us2_numberOfLowercaseCharactersInString:string];
+    NSUInteger uppercaseMatchesCount = [self us2_numberOfUppercaseCharactersInString:string];
+    NSUInteger specialCharacterMatchesCount = [self us2_numberOfSpecialCharactersInString:string];
     
     // For each match of each type, move the strength value up one (higher = stronger)
     if (numberMatchesCount >= _minimalNumbers)
@@ -117,27 +117,27 @@
 
 #pragma mark - Regular expressions
 
-- (NSUInteger)US2__numberOfNumericCharactersInString:(NSString *)string
+- (NSUInteger)us2_numberOfNumericCharactersInString:(NSString *)string
 {
-    return [self US2__numberOfMatchesWithPattern:@"\\d" inString:string];
+    return [self us2_numberOfMatchesWithPattern:@"\\d" inString:string];
 }
 
-- (NSUInteger)US2__numberOfLowercaseCharactersInString:(NSString *)string
+- (NSUInteger)us2_numberOfLowercaseCharactersInString:(NSString *)string
 {
-    return [self US2__numberOfMatchesWithPattern:@"[a-z]" inString:string];
+    return [self us2_numberOfMatchesWithPattern:@"[a-z]" inString:string];
 }
 
-- (NSUInteger)US2__numberOfUppercaseCharactersInString:(NSString *)string
+- (NSUInteger)us2_numberOfUppercaseCharactersInString:(NSString *)string
 {
-    return [self US2__numberOfMatchesWithPattern:@"[A-Z]" inString:string];
+    return [self us2_numberOfMatchesWithPattern:@"[A-Z]" inString:string];
 }
 
-- (NSUInteger)US2__numberOfSpecialCharactersInString:(NSString *)string
+- (NSUInteger)us2_numberOfSpecialCharactersInString:(NSString *)string
 {
-    return [self US2__numberOfMatchesWithPattern:@"[^a-zA-Z\\d]" inString:string];
+    return [self us2_numberOfMatchesWithPattern:@"[^a-zA-Z\\d]" inString:string];
 }
 
-- (NSUInteger)US2__numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string
+- (NSUInteger)us2_numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string
 {
     NSError *error = NULL;
     NSUInteger matches = 0;
