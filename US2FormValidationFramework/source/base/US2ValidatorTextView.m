@@ -46,7 +46,7 @@
     self = [super initWithFrame: frame];
     if (self)
     {
-        [self US2__startUp];
+        [self us2_startUp];
     }
     
     return self;
@@ -57,7 +57,7 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        [self US2__startUp];
+        [self us2_startUp];
     }
     
     return self;
@@ -78,7 +78,7 @@
 /**
  Set interested instance. The private class US2ValidatorTextViewPrivate will serve the delegate after validation.
 */
-- (void)US2__startUp
+- (void)us2_startUp
 {
     // Validate immediately
     _validateOnFocusLossOnly = NO;

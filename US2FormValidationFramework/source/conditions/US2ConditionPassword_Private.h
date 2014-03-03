@@ -28,46 +28,46 @@
 @interface US2ConditionPassword ()
 
 /**
- @methodName US2__strengthOfPasswordString:
+ @methodName us2_strengthOfPasswordString:
  @param string The string to check for password strength
  @return Strength of password
  */
-- (US2PasswordStrength)US2__strengthOfPasswordString:(NSString *)string;
+- (US2PasswordStrength)us2_strengthOfPasswordString:(NSString *)string;
 
 /**
- @methodName US2__numberOfNumericCharactersInString:
+ @methodName us2_numberOfNumericCharactersInString:
  @param string The string to check for numbers
  @return Number of contained numbers
  */
-- (NSUInteger)US2__numberOfNumericCharactersInString:(NSString *)string;
+- (NSUInteger)us2_numberOfNumericCharactersInString:(NSString *)string;
 
 /**
- @methodName US2__numberOfLowercaseCharactersInString:
+ @methodName us2_numberOfLowercaseCharactersInString:
  @param string The string to check for lowercaser letters
  @return Number of contained lowercase letters
  */
-- (NSUInteger)US2__numberOfLowercaseCharactersInString:(NSString *)string;
+- (NSUInteger)us2_numberOfLowercaseCharactersInString:(NSString *)string;
 
 /**
- @methodName US2__numberOfUppercaseCharactersInString:
+ @methodName us2_numberOfUppercaseCharactersInString:
  @param string The string to check for uppercase letters
  @return Number of contained uppercase letters
  */
-- (NSUInteger)US2__numberOfUppercaseCharactersInString:(NSString *)string;
+- (NSUInteger)us2_numberOfUppercaseCharactersInString:(NSString *)string;
 
 /**
- @methodName US2__numberOfSpecialCharactersInString:
+ @methodName us2_numberOfSpecialCharactersInString:
  @param string The string to check for symbols
  @return Number of contained symbols
  */
-- (NSUInteger)US2__numberOfSpecialCharactersInString:(NSString *)string;
+- (NSUInteger)us2_numberOfSpecialCharactersInString:(NSString *)string;
 
 /**
- @methodName US2__numberOfMatchesWithPattern:
+ @methodName us2_numberOfMatchesWithPattern:
  @param pattern The pattern to check numbers of matches for
  @param string The string to check for a pattern
  @return Number of matches
  */
-- (NSUInteger)US2__numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string;
+- (NSUInteger)us2_numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string;
 
 @end

@@ -84,7 +84,7 @@
     
     [_entries addObject:validatable];
     
-    [self US2__listenForTextDidChangeNotification:validatable];
+    [self us2_listenForTextDidChangeNotification:validatable];
 }
 
 - (id<US2Validatable>)validatableAtIndex:(NSInteger)index
@@ -92,7 +92,7 @@
     return [_entries objectAtIndex:index];
 }
 
-- (void)US2__listenForTextDidChangeNotification:(id<US2Validatable>)validatable
+- (void)us2_listenForTextDidChangeNotification:(id<US2Validatable>)validatable
 {
     NSString *notificationName;
     if ([validatable isKindOfClass:[UITextField class]])

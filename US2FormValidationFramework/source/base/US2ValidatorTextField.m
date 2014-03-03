@@ -46,7 +46,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        [self US2__startUp];
+        [self us2_startUp];
     }
     
     return self;
@@ -57,7 +57,7 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        [self US2__startUp];
+        [self us2_startUp];
     }
     
     return self;
@@ -68,32 +68,32 @@
 
 - (void)dealloc
 {
-    [self US2__removeObservers];
+    [self us2_removeObservers];
 }
 
 
 #pragma mark - Start up
 
-- (void)US2__startUp
+- (void)us2_startUp
 {
     // Validate immediately as default
     _validateOnFocusLossOnly = NO;
     
-    [self US2__setupDelegationForwarding];
-    [self US2__addObservers];
+    [self us2_setupDelegationForwarding];
+    [self us2_addObservers];
 }
 
 
 #pragma mark - Internal observing
 
-- (void)US2__setupDelegationForwarding
+- (void)us2_setupDelegationForwarding
 {
     _validatorTextFieldPrivate = [[US2ValidatorTextFieldPrivate alloc] init];
     _validatorTextFieldPrivate.validatorTextField = self;
     super.delegate = (id)_validatorTextFieldPrivate;
 }
 
-- (void)US2__addObservers
+- (void)us2_addObservers
 {
     // Listen for update of inherited UITextField
     [[NSNotificationCenter defaultCenter] addObserver:_validatorTextFieldPrivate
@@ -108,7 +108,7 @@
                                                object:self];
 }
 
-- (void)US2__removeObservers
+- (void)us2_removeObservers
 {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter removeObserver:_validatorTextFieldPrivate name:UITextFieldTextDidChangeNotification object:self];

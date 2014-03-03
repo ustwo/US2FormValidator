@@ -24,12 +24,21 @@
 //  
 
 #import "AppDelegate.h"
+#import "MyProjectViewController.h"
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    
+    self.myProjectViewController = [[MyProjectViewController alloc] init];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = self.myProjectViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
