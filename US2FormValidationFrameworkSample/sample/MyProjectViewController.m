@@ -55,22 +55,22 @@
 {
     [super viewDidLoad];
     
-    [self US2_initData];
-    [self US2_initKeyboardListeners];
-    [self US2_initUserInterface];
+    [self us2_initData];
+    [self us2_initKeyboardListeners];
+    [self us2_initUserInterface];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    [self US2_updateUserInterface];
+    [self us2_updateUserInterface];
 }
 
 
 #pragma mark - Initialize data
 
-- (void)US2_initData
+- (void)us2_initData
 {
     [self createForm];
 }
@@ -85,7 +85,7 @@
         typeof(self) __strong strongSelf = weakSelf;
         if (!strongSelf) return;
         
-        [strongSelf US2_updateUserInterface];
+        [strongSelf us2_updateUserInterface];
         NSLog(@"form's state changed to: %@", (isValid ? @"YES" : @"NO"));
     }];
 }
@@ -93,18 +93,18 @@
 
 #pragma mark - Initialize user interface
 
-- (void)US2_initUserInterface
+- (void)us2_initUserInterface
 {
     self.automaticallyAdjustsScrollViewInsets = YES;
     
     // Set text fields which will be used in form
-    [self US2_initAboutValidator];
-    [self US2_initEmailValidator];
-    [self US2_initUKPostcodeValidator];
-    [self US2_initSubmitButton];
+    [self us2_initAboutValidator];
+    [self us2_initEmailValidator];
+    [self us2_initUKPostcodeValidator];
+    [self us2_initSubmitButton];
 }
 
-- (void)US2_initAboutValidator
+- (void)us2_initAboutValidator
 {
     US2ValidatorPresent *validator = [[US2ValidatorPresent alloc] init];
     
@@ -115,7 +115,7 @@
     [_form addValidatable:self.myProjectView.aboutTextField];
 }
 
-- (void)US2_initEmailValidator
+- (void)us2_initEmailValidator
 {
     US2Validator *compositeValidator = [[US2Validator alloc] init];
     US2ConditionPresent *presentCondition = [US2ConditionPresent condition];
@@ -130,7 +130,7 @@
     [_form addValidatable:self.myProjectView.emailTextField];
 }
 
-- (void)US2_initUKPostcodeValidator
+- (void)us2_initUKPostcodeValidator
 {
     US2Validator *compositeValidator = [[US2Validator alloc] init];
     US2ConditionPresent *presentCondition = [US2ConditionPresent condition];
@@ -145,22 +145,22 @@
     [_form addValidatable:self.myProjectView.ukPostcodeTextField];
 }
 
-- (void)US2_initSubmitButton
+- (void)us2_initSubmitButton
 {
     [self.myProjectView.submitButton addTarget:self
-                                        action:@selector(US2_submitButtonTouched:)
+                                        action:@selector(us2_submitButtonTouched:)
                               forControlEvents:UIControlEventTouchUpInside];
 }
 
 
 #pragma mark - Update user interface
 
-- (void)US2_updateUserInterface
+- (void)us2_updateUserInterface
 {
-    [self US2_updateSubmitButton];
+    [self us2_updateSubmitButton];
 }
 
-- (void)US2_updateSubmitButton
+- (void)us2_updateSubmitButton
 {
     self.myProjectView.submitButton.enabled = _form.isValid;
 }
@@ -168,7 +168,7 @@
 
 #pragma mark - Keyboard
 
-- (void)US2_initKeyboardListeners
+- (void)us2_initKeyboardListeners
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -251,7 +251,7 @@
 
 #pragma mark - Submit button
 
-- (void)US2_submitButtonTouched:(UIButton *)button
+- (void)us2_submitButtonTouched:(UIButton *)button
 {
     [self.myProjectView.aboutTextField resignFirstResponder];
     [self.myProjectView.emailTextField resignFirstResponder];

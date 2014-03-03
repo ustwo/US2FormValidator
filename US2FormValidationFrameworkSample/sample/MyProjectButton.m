@@ -24,12 +24,12 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        [self US2_build];
+        [self us2_build];
     }
     return self;
 }
 
-- (void)US2_build
+- (void)us2_build
 {
     self.layer.cornerRadius = 4.0;
     self.clipsToBounds = YES;

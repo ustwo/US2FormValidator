@@ -18,110 +18,110 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 @implementation MyProjectView (Layout)
 
-- (void)US2_buildLayout
+- (void)us2_buildLayout
 {
-    [self US2_buildAboutHeadlineLabelLayout];
-    [self US2_buildAboutTextFieldLayout];
-    [self US2_buildAboutErrorLabelLayout];
+    [self us2_buildAboutHeadlineLabelLayout];
+    [self us2_buildAboutTextFieldLayout];
+    [self us2_buildAboutErrorLabelLayout];
 
-    [self US2_buildEmailHeadlineLabelLayout];
-    [self US2_buildEmailTextFieldLayout];
-    [self US2_buildEmailErrorLabelLayout];
+    [self us2_buildEmailHeadlineLabelLayout];
+    [self us2_buildEmailTextFieldLayout];
+    [self us2_buildEmailErrorLabelLayout];
 
-    [self US2_buildUKPostcodeHeadlineLabelLayout];
-    [self US2_buildUKPostcodeTextFieldLayout];
-    [self US2_buildUKPostcodeErrorLabelLayout];
+    [self us2_buildUKPostcodeHeadlineLabelLayout];
+    [self us2_buildUKPostcodeTextFieldLayout];
+    [self us2_buildUKPostcodeErrorLabelLayout];
 
-    [self US2_buildSubmitButtonLayout];
+    [self us2_buildSubmitButtonLayout];
 }
 
 
 #pragma mark - About
 
-- (void)US2_buildAboutHeadlineLabelLayout
+- (void)us2_buildAboutHeadlineLabelLayout
 {
-    [self US2_setToFullWidth:_aboutHeadlineLabel];
-    [self US2_setView:_aboutHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self US2_setViewToTop:_aboutHeadlineLabel];
+    [self us2_setToFullWidth:_aboutHeadlineLabel];
+    [self us2_setView:_aboutHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setViewToTop:_aboutHeadlineLabel];
 }
 
-- (void)US2_buildAboutTextFieldLayout
+- (void)us2_buildAboutTextFieldLayout
 {
-    [self US2_setToFullWidth:self.aboutTextField];
-    [self US2_setView:self.aboutTextField toExactHeight:kDefaultTextFieldHeight];
-    [self US2_setView:self.aboutTextField underView:_aboutHeadlineLabel withMargin:0.0];
+    [self us2_setToFullWidth:self.aboutTextField];
+    [self us2_setView:self.aboutTextField toExactHeight:kDefaultTextFieldHeight];
+    [self us2_setView:self.aboutTextField underView:_aboutHeadlineLabel withMargin:0.0];
 }
 
-- (void)US2_buildAboutErrorLabelLayout
+- (void)us2_buildAboutErrorLabelLayout
 {
-    [self US2_setToFullWidth:self.aboutErrorLabel];
-    [self US2_setView:self.aboutErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
-    [self US2_setView:self.aboutErrorLabel underView:self.aboutTextField withMargin:0.0];
+    [self us2_setToFullWidth:self.aboutErrorLabel];
+    [self us2_setView:self.aboutErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
+    [self us2_setView:self.aboutErrorLabel underView:self.aboutTextField withMargin:0.0];
 }
 
 
 #pragma mark - Email
 
-- (void)US2_buildEmailHeadlineLabelLayout
+- (void)us2_buildEmailHeadlineLabelLayout
 {
-    [self US2_setToFullWidth:_emailHeadlineLabel];
-    [self US2_setView:_emailHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self US2_setView:_emailHeadlineLabel underView:self.aboutErrorLabel withMargin:kDefaultMargin];
+    [self us2_setToFullWidth:_emailHeadlineLabel];
+    [self us2_setView:_emailHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setView:_emailHeadlineLabel underView:self.aboutErrorLabel withMargin:kDefaultMargin];
 }
 
-- (void)US2_buildEmailTextFieldLayout
+- (void)us2_buildEmailTextFieldLayout
 {
-    [self US2_setToFullWidth:self.emailTextField];
-    [self US2_setView:self.emailTextField toExactHeight:kDefaultTextFieldHeight];
-    [self US2_setView:self.emailTextField underView:_emailHeadlineLabel withMargin:0.0];
+    [self us2_setToFullWidth:self.emailTextField];
+    [self us2_setView:self.emailTextField toExactHeight:kDefaultTextFieldHeight];
+    [self us2_setView:self.emailTextField underView:_emailHeadlineLabel withMargin:0.0];
 }
 
-- (void)US2_buildEmailErrorLabelLayout
+- (void)us2_buildEmailErrorLabelLayout
 {
-    [self US2_setToFullWidth:self.emailErrorLabel];
-    [self US2_setView:self.emailErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
-    [self US2_setView:self.emailErrorLabel underView:self.emailTextField withMargin:0.0];
+    [self us2_setToFullWidth:self.emailErrorLabel];
+    [self us2_setView:self.emailErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
+    [self us2_setView:self.emailErrorLabel underView:self.emailTextField withMargin:0.0];
 }
 
 
 #pragma mark - UK Postcode
 
-- (void)US2_buildUKPostcodeHeadlineLabelLayout
+- (void)us2_buildUKPostcodeHeadlineLabelLayout
 {
-    [self US2_setToFullWidth:_ukPostcodeHeadlineLabel];
-    [self US2_setView:_ukPostcodeHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self US2_setView:_ukPostcodeHeadlineLabel underView:self.emailErrorLabel withMargin:kDefaultMargin];
+    [self us2_setToFullWidth:_ukPostcodeHeadlineLabel];
+    [self us2_setView:_ukPostcodeHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setView:_ukPostcodeHeadlineLabel underView:self.emailErrorLabel withMargin:kDefaultMargin];
 }
 
-- (void)US2_buildUKPostcodeTextFieldLayout
+- (void)us2_buildUKPostcodeTextFieldLayout
 {
-    [self US2_setToFullWidth:self.ukPostcodeTextField];
-    [self US2_setView:self.ukPostcodeTextField toExactHeight:kDefaultTextFieldHeight];
-    [self US2_setView:self.ukPostcodeTextField underView:_ukPostcodeHeadlineLabel withMargin:0.0];
+    [self us2_setToFullWidth:self.ukPostcodeTextField];
+    [self us2_setView:self.ukPostcodeTextField toExactHeight:kDefaultTextFieldHeight];
+    [self us2_setView:self.ukPostcodeTextField underView:_ukPostcodeHeadlineLabel withMargin:0.0];
 }
 
-- (void)US2_buildUKPostcodeErrorLabelLayout
+- (void)us2_buildUKPostcodeErrorLabelLayout
 {
-    [self US2_setToFullWidth:self.ukPostcodeErrorLabel];
-    [self US2_setView:self.ukPostcodeErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
-    [self US2_setView:self.ukPostcodeErrorLabel underView:self.ukPostcodeTextField withMargin:0.0];
+    [self us2_setToFullWidth:self.ukPostcodeErrorLabel];
+    [self us2_setView:self.ukPostcodeErrorLabel toMaximumHeight:kDefaultErrorLabelHeight];
+    [self us2_setView:self.ukPostcodeErrorLabel underView:self.ukPostcodeTextField withMargin:0.0];
 }
 
 
 #pragma mark - Submit button
 
-- (void)US2_buildSubmitButtonLayout
+- (void)us2_buildSubmitButtonLayout
 {
-    [self US2_setToFullWidth:self.submitButton];
-    [self US2_setView:self.submitButton toExactHeight:kDefaultButtonHeight];
-    [self US2_setView:self.submitButton underView:self.ukPostcodeErrorLabel withMargin:kDefaultMargin];
-    [self US2_setViewToBottom:self.submitButton];
+    [self us2_setToFullWidth:self.submitButton];
+    [self us2_setView:self.submitButton toExactHeight:kDefaultButtonHeight];
+    [self us2_setView:self.submitButton underView:self.ukPostcodeErrorLabel withMargin:kDefaultMargin];
+    [self us2_setViewToBottom:self.submitButton];
 }
 
 
 #pragma mark - Layout helpers
 
-- (void)US2_setViewToTop:(UIView *)view
+- (void)us2_setViewToTop:(UIView *)view
 {
     NSString *formatString = @"V:|-28-[view]";
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
@@ -131,7 +131,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setViewToBottom:(UIView *)view
+- (void)us2_setViewToBottom:(UIView *)view
 {
     NSString *formatString = @"V:[view]-48-|";
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
@@ -141,7 +141,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setToFullWidth:(UIView *)view
+- (void)us2_setToFullWidth:(UIView *)view
 {
     NSString *formatString = @"H:|-[view]-|";
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
@@ -151,7 +151,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setToFullHeight:(UIView *)view
+- (void)us2_setToFullHeight:(UIView *)view
 {
     NSString *formatString = @"V:|-[view]-|";
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString
@@ -161,7 +161,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setView:(UIView *)view toExactHeight:(CGFloat)height
+- (void)us2_setView:(UIView *)view toExactHeight:(CGFloat)height
 {
     NSString *formatString = @"V:[view(==toHeight)]";
     NSNumber *toHeight = @(height);
@@ -172,7 +172,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setView:(UIView *)view toMaximumHeight:(CGFloat)height
+- (void)us2_setView:(UIView *)view toMaximumHeight:(CGFloat)height
 {
     NSString *formatString = @"V:[view(<=999)]";
     NSNumber *toHeight = @(height);
@@ -183,7 +183,7 @@ static const CGFloat kDefaultMargin                 = 12.0;
     [self.containerView addConstraints:constraints];
 }
 
-- (void)US2_setView:(UIView *)view1 underView:(UIView *)view2 withMargin:(CGFloat)margin
+- (void)us2_setView:(UIView *)view1 underView:(UIView *)view2 withMargin:(CGFloat)margin
 {
     NSString *formatString = @"V:[view2]-toMargin-[view1]";
     NSNumber *toMargin = @(margin);

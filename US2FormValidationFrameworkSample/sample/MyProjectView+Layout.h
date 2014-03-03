@@ -11,6 +11,6 @@
 
 @interface MyProjectView (Layout)
 
-- (void)US2_buildLayout;
+- (void)us2_buildLayout;
 
 @end
