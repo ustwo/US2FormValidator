@@ -32,20 +32,6 @@
 @implementation US2ValidatorTextViewPrivate
 
 
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        _lastCheckWasValid = -1;
-    }
-    
-    return self;
-}
-
-
 #pragma mark - Text view delegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
@@ -153,9 +139,10 @@
         BOOL isValid = conditions == nil;
         
         // Check only if the state changed to invalid
-        if (_lastCheckWasValid != isValid)
+        US2Condition *highestPriorityCondition = [conditions conditionAtIndex:0];
+        if (_lastHighestPriorityCondition != highestPriorityCondition)
         {
-            _lastCheckWasValid = isValid;
+            _lastHighestPriorityCondition = highestPriorityCondition;
             
             // Inform text field about valid state change
             if (isValid)

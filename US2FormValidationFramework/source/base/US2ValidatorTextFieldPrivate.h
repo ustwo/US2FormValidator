@@ -28,6 +28,7 @@
 #import "US2Validatable.h"
 
 @class US2ValidatorTextField;
+@class US2Condition;
 
 
 #pragma mark - Validator private text field interface
@@ -41,8 +42,8 @@
 */
 @interface US2ValidatorTextFieldPrivate : NSObject <UITextFieldDelegate>
 {
-    BOOL _lastCheckWasValid;
     BOOL _didEndEditing;
+    US2Condition *_lastHighestPriorityCondition;
 }
 
 /**

@@ -32,20 +32,6 @@
 @implementation US2ValidatorTextFieldPrivate
 
 
-#pragma mark - Initialization
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        _lastCheckWasValid = -1;
-    }
-    
-    return self;
-}
-
-
 #pragma mark - Text field delegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -105,10 +91,11 @@
         BOOL isValid = conditions == nil;
         
         // Check only if the state changed to invalid
-        if (_lastCheckWasValid != isValid)
+        US2Condition *highestPriorityCondition = [conditions conditionAtIndex:0];
+        if (_lastHighestPriorityCondition != highestPriorityCondition)
         {
-            _lastCheckWasValid = isValid;
-            
+            _lastHighestPriorityCondition = highestPriorityCondition;
+        
             // Inform text field about valid state change
             if (isValid)
             {

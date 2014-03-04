@@ -28,6 +28,7 @@
 #import "US2Validatable.h"
 
 @class US2ValidatorTextView;
+@class US2Condition;
 
 
 #pragma mark - Validator private text view interface
@@ -41,8 +42,8 @@
  */
 @interface US2ValidatorTextViewPrivate : NSObject <UITextViewDelegate>
 {
-    BOOL _lastCheckWasValid;
     BOOL _didEndEditing;
+    US2Condition *_lastHighestPriorityCondition;
 }
 
 /**
