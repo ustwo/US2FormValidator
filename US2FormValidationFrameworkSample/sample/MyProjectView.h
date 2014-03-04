@@ -29,9 +29,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "US2FormValidator.h"
-#import "MyProjectTextField.h"
-#import "MyProjectButton.h"
+
+@class MyProjectTextField;
+@class MyProjectButton;
 
 
 @interface MyProjectView : UIView
@@ -39,6 +39,7 @@
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *keyboardConstraint;
 @property (nonatomic, weak) IBOutlet UIView *containerView;
+
 @property (nonatomic, strong) MyProjectTextField *aboutTextField;
 @property (nonatomic, strong) UILabel *aboutErrorLabel;
 @property (nonatomic, strong) MyProjectTextField *emailTextField;

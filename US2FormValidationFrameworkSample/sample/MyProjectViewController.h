@@ -31,11 +31,11 @@
 //  the delegate instance will receive this information.
 //
 
-#import "MyProjectView.h"
+@class MyProjectView;
 
 
 @interface MyProjectViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet MyProjectView *myProjectView;
+@property (nonatomic, strong) IBOutlet MyProjectView *myProjectView;
 
 @end

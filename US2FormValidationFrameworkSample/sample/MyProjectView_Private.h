@@ -7,13 +7,16 @@
 //
 
 #import "MyProjectView.h"
+#import "US2FormValidator.h"
+#import "MyProjectTextField.h"
+#import "MyProjectButton.h"
 
 
 @interface MyProjectView ()
-{
-    UILabel *_aboutHeadlineLabel;
-    UILabel *_emailHeadlineLabel;
-    UILabel *_ukPostcodeHeadlineLabel;
-    UILabel *_visaCreditCardHeadlineLabel;
-}
+
+@property (nonatomic, strong) UILabel *aboutHeadlineLabel;
+@property (nonatomic, strong) UILabel *emailHeadlineLabel;
+@property (nonatomic, strong) UILabel *ukPostcodeHeadlineLabel;
+@property (nonatomic, strong) UILabel *visaCreditCardHeadlineLabel;
+
 @end

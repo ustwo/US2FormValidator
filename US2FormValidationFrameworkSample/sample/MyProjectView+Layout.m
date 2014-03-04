@@ -40,16 +40,20 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 - (void)us2_buildAboutHeadlineLabelLayout
 {
-    [self us2_setToFullWidth:_aboutHeadlineLabel];
-    [self us2_setView:_aboutHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self us2_setViewToTop:_aboutHeadlineLabel];
+    self.aboutHeadlineLabel.backgroundColor = [UIColor yellowColor];
+    self.aboutTextField.backgroundColor = [UIColor redColor];
+    self.aboutErrorLabel.backgroundColor = [UIColor greenColor];
+    
+    [self us2_setToFullWidth:self.aboutHeadlineLabel];
+    [self us2_setView:self.aboutHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setViewToTop:self.aboutHeadlineLabel];
 }
 
 - (void)us2_buildAboutTextFieldLayout
 {
     [self us2_setToFullWidth:self.aboutTextField];
     [self us2_setView:self.aboutTextField toExactHeight:kDefaultTextFieldHeight];
-    [self us2_setView:self.aboutTextField underView:_aboutHeadlineLabel withMargin:0.0];
+    [self us2_setView:self.aboutTextField underView:self.aboutHeadlineLabel withMargin:0.0];
 }
 
 - (void)us2_buildAboutErrorLabelLayout
@@ -64,16 +68,20 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 - (void)us2_buildEmailHeadlineLabelLayout
 {
-    [self us2_setToFullWidth:_emailHeadlineLabel];
-    [self us2_setView:_emailHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self us2_setView:_emailHeadlineLabel underView:self.aboutErrorLabel withMargin:kDefaultMargin];
+    self.emailHeadlineLabel.backgroundColor = [UIColor yellowColor];
+    self.emailTextField.backgroundColor = [UIColor redColor];
+    self.emailErrorLabel.backgroundColor = [UIColor greenColor];
+    
+    [self us2_setToFullWidth:self.emailHeadlineLabel];
+    [self us2_setView:self.emailHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setView:self.emailHeadlineLabel underView:self.aboutErrorLabel withMargin:kDefaultMargin];
 }
 
 - (void)us2_buildEmailTextFieldLayout
 {
     [self us2_setToFullWidth:self.emailTextField];
     [self us2_setView:self.emailTextField toExactHeight:kDefaultTextFieldHeight];
-    [self us2_setView:self.emailTextField underView:_emailHeadlineLabel withMargin:0.0];
+    [self us2_setView:self.emailTextField underView:self.emailHeadlineLabel withMargin:0.0];
 }
 
 - (void)us2_buildEmailErrorLabelLayout
@@ -88,16 +96,16 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 - (void)us2_buildUKPostcodeHeadlineLabelLayout
 {
-    [self us2_setToFullWidth:_ukPostcodeHeadlineLabel];
-    [self us2_setView:_ukPostcodeHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
-    [self us2_setView:_ukPostcodeHeadlineLabel underView:self.emailErrorLabel withMargin:kDefaultMargin];
+    [self us2_setToFullWidth:self.ukPostcodeHeadlineLabel];
+    [self us2_setView:self.ukPostcodeHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
+    [self us2_setView:self.ukPostcodeHeadlineLabel underView:self.emailErrorLabel withMargin:kDefaultMargin];
 }
 
 - (void)us2_buildUKPostcodeTextFieldLayout
 {
     [self us2_setToFullWidth:self.ukPostcodeTextField];
     [self us2_setView:self.ukPostcodeTextField toExactHeight:kDefaultTextFieldHeight];
-    [self us2_setView:self.ukPostcodeTextField underView:_ukPostcodeHeadlineLabel withMargin:0.0];
+    [self us2_setView:self.ukPostcodeTextField underView:self.ukPostcodeHeadlineLabel withMargin:0.0];
 }
 
 - (void)us2_buildUKPostcodeErrorLabelLayout

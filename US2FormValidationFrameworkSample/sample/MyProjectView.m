@@ -69,22 +69,22 @@
 
 - (void)us2_buildAboutHeadlineLabel
 {
-    _aboutHeadlineLabel = [self us2_headlineLabel];
-    _aboutHeadlineLabel.text = @"* About";
-    [self.containerView addSubview:_aboutHeadlineLabel];
+    self.aboutHeadlineLabel = [self us2_headlineLabel];
+    self.aboutHeadlineLabel.text = @"* About";
+    [self.containerView addSubview:self.aboutHeadlineLabel];
 }
 
 - (void)us2_buildAboutTextField
 {
-    _aboutTextField = [self us2_textField];
-    _aboutTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
-    [self.containerView addSubview:_aboutTextField];
+    self.aboutTextField = [self us2_textField];
+    self.aboutTextField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+    [self.containerView addSubview:self.aboutTextField];
 }
 
 - (void)us2_buildAboutErrorLabel
 {
-    _aboutErrorLabel = [self us2_errorLabel];
-    [self.containerView addSubview:_aboutErrorLabel];
+    self.aboutErrorLabel = [self us2_errorLabel];
+    [self.containerView addSubview:self.aboutErrorLabel];
 }
 
 
@@ -99,24 +99,24 @@
 
 - (void)us2_buildEmailHeadlineLabel
 {
-    _emailHeadlineLabel = [self us2_headlineLabel];
-    _emailHeadlineLabel.text = @"* Email";
-    [self.containerView addSubview:_emailHeadlineLabel];
+    self.emailHeadlineLabel = [self us2_headlineLabel];
+    self.emailHeadlineLabel.text = @"* Email";
+    [self.containerView addSubview:self.emailHeadlineLabel];
 }
 
 - (void)us2_buildEmailTextField
 {
-    _emailTextField = [self us2_textField];
-    _emailTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    _emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    _emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    [self.containerView addSubview:_emailTextField];
+    self.emailTextField = [self us2_textField];
+    self.emailTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
+    self.emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    [self.containerView addSubview:self.emailTextField];
 }
 
 - (void)us2_buildEmailErrorLabel
 {
-    _emailErrorLabel = [self us2_errorLabel];
-    [self.containerView addSubview:_emailErrorLabel];
+    self.emailErrorLabel = [self us2_errorLabel];
+    [self.containerView addSubview:self.emailErrorLabel];
 }
 
 
@@ -131,23 +131,23 @@
 
 - (void)us2_buildUKPostcodeHeadlineLabel
 {
-    _ukPostcodeHeadlineLabel = [self us2_headlineLabel];
-    _ukPostcodeHeadlineLabel.text = @"* UK Postcode (e.g. E1 6JJ)";
-    [self.containerView addSubview:_ukPostcodeHeadlineLabel];
+    self.ukPostcodeHeadlineLabel = [self us2_headlineLabel];
+    self.ukPostcodeHeadlineLabel.text = @"* UK Postcode (e.g. E1 6JJ)";
+    [self.containerView addSubview:self.ukPostcodeHeadlineLabel];
 }
 
 - (void)us2_buildUKPostcodeTextField
 {
-    _ukPostcodeTextField = [self us2_textField];
-    _ukPostcodeTextField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
-    _ukPostcodeTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    [self.containerView addSubview:_ukPostcodeTextField];
+    self.ukPostcodeTextField = [self us2_textField];
+    self.ukPostcodeTextField.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+    self.ukPostcodeTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    [self.containerView addSubview:self.ukPostcodeTextField];
 }
 
 - (void)us2_buildUKPostcodeErrorLabel
 {
-    _ukPostcodeErrorLabel = [self us2_errorLabel];
-    [self.containerView addSubview:_ukPostcodeErrorLabel];
+    self.ukPostcodeErrorLabel = [self us2_errorLabel];
+    [self.containerView addSubview:self.ukPostcodeErrorLabel];
 }
 
 
@@ -187,9 +187,9 @@
 
 - (void)us2_buildSubmitButton
 {
-    _submitButton = [MyProjectButton button];
-    _submitButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.containerView addSubview:_submitButton];
+    self.submitButton = [MyProjectButton button];
+    self.submitButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.containerView addSubview:self.submitButton];
 }
 
 
