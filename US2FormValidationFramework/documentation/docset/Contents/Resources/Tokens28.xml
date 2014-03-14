@@ -1,63 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ValidatorProtocol.html">
+	<File path="Classes/US2ValidatorTextField.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorProtocol</TokenIdentifier>
-			<Abstract type="html">A validator must conform to US2ValidatorProtocol protocol methods.</Abstract>
-			<DeclaredIn>US2Validator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextField</TokenIdentifier>
+			<Abstract type="html">The validator text field is the central object to use. It inherits UITextField and listens internally
+to all own changes. After every change it validates the changed text material. When a validator, which
+was added to the validator text field, reports a violation the validatorTextFieldDelegate will be
+served with this information. The validatorTextFieldDelegate is of type US2ValidatorTextFieldDelegate
+and returns what went wrong and in which status the validation text field is at the moment.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+            
 			
 			<NodeRef refid="28"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/addCondition:</TokenIdentifier>
-			<Abstract type="html">Add condition conform to US2ConditionProtocol</Abstract>
-			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/setDelegate:</TokenIdentifier>
+			<Abstract type="html">Set delegate implementing US2ValidatableDelegate</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
 			
-			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>condition</Name>
-					<Abstract type="html">Condition conform to US2ConditionProtocol</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/addCondition:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/removeConditionOfClass:</TokenIdentifier>
-			<Abstract type="html">Remove all conditions subclassing conditionClass from validation queue.</Abstract>
-			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/delegate</TokenIdentifier>
+			<Abstract type="html">Set delegate implementing US2ValidatableDelegate</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
 			
-			<Declaration>- (void)removeConditionOfClass:(Class&lt;US2ConditionProtocol&gt;)conditionClass</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>conditionClass</Name>
-					<Abstract type="html">Remove all conditions which are kind of conditionClass</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/removeConditionOfClass:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="28"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorProtocol/checkConditions:</TokenIdentifier>
-			<Abstract type="html">Add condition subclass of US2Condition for validation queue.</Abstract>
-			<DeclaredIn>US2Validator.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextField/delegate</TokenIdentifier>
+			<Abstract type="html">Set delegate implementing US2ValidatableDelegate</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
 			
-			<Declaration>- (US2ConditionCollection *)checkConditions:(NSString *)string</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>string</Name>
-					<Abstract type="html">String to check for all added conditons</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Returns nil if no conditon was violated or a condition collection of type US2ConditionCollection for each violated conditon</Abstract></ReturnValue>
-			<Anchor>//api/name/checkConditions:</Anchor>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="28"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/setValidator:</TokenIdentifier>
+			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2Validator *validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/validator</TokenIdentifier>
+			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2Validator *validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextField/validator</TokenIdentifier>
+			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2Validator *validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/setValid:</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isValid) BOOL valid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/valid</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/isValid</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isValid) BOOL valid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/valid</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextField/valid</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, getter=isValid) BOOL valid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/valid</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/setValidateOnFocusLossOnly:</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/validateOnFocusLossOnly</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextField/validateOnFocusLossOnly</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/setValidatableText:</TokenIdentifier>
+			<Abstract type="html">Text for validation</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *validatableText</Declaration>
+			
+			
+			<Anchor>//api/name/validatableText</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextField/validatableText</TokenIdentifier>
+			<Abstract type="html">Text for validation</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *validatableText</Declaration>
+			
+			
+			<Anchor>//api/name/validatableText</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextField/validatableText</TokenIdentifier>
+			<Abstract type="html">Text for validation</Abstract>
+			<DeclaredIn>US2ValidatorTextField.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *validatableText</Declaration>
+			
+			
+			<Anchor>//api/name/validatableText</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

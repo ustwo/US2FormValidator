@@ -1,79 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ConditionCollectionProtocol.html">
+	<File path="Classes/US2ValidatorRange.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ConditionCollectionProtocol</TokenIdentifier>
-			<Abstract type="html">A condition collection must conform to US2ConditionCollection protocol methods.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorRange</TokenIdentifier>
+			<Abstract type="html">The range validator checks for string length.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
+            
 			
 			<NodeRef refid="26"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/addCondition:</TokenIdentifier>
-			<Abstract type="html">Add a condition to collection.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorRange/setRange:</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
-			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>condition</Name>
-					<Abstract type="html">US2Condition instance to add</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
 			
-			<Anchor>//api/name/addCondition:</Anchor>
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="26"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeCondition:</TokenIdentifier>
-			<Abstract type="html">Remove a condition from collection.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorRange/range</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
-			<Declaration>- (void)removeCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>condition</Name>
-					<Abstract type="html">US2Condition instance to remove</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
 			
-			<Anchor>//api/name/removeCondition:</Anchor>
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="26"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/removeConditionAtIndex:</TokenIdentifier>
-			<Abstract type="html">Remove a condition from collection at index.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorRange/range</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
-			<Declaration>- (void)removeConditionAtIndex:(NSUInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract type="html">US2Condition instance to remove at index</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
 			
-			<Anchor>//api/name/removeConditionAtIndex:</Anchor>
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="26"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ConditionCollectionProtocol/conditionAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a condition of collection at index.</Abstract>
-			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorRange/initWithRange:</TokenIdentifier>
+			<Abstract type="html">Initialize the range validator with a range.</Abstract>
+			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
 			
-			<Declaration>- (US2Condition *)conditionAtIndex:(NSUInteger)index</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>index</Name>
-					<Abstract type="html">Index of condition</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">Return US2Condition instance at index</Abstract></ReturnValue>
-			<Anchor>//api/name/conditionAtIndex:</Anchor>
+			<Declaration>- (id)initWithRange:(US2TextRange)range</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRange:</Anchor>
+            <NodeRef refid="26"/>
 		</Token>
 		
+        
 	</File>
 </Tokens>

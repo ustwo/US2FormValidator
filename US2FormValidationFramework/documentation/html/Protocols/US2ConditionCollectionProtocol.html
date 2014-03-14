@@ -4,10 +4,9 @@
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
 		<title>US2ConditionCollectionProtocol Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -46,7 +45,11 @@
 	
 	<option value="//api/name/addCondition:">&nbsp;&nbsp;&nbsp;&nbsp;- addCondition:</option>
 	
+	<option value="//api/name/addCondition:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- addCondition:atIndex:</option>
+	
 	<option value="//api/name/conditionAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- conditionAtIndex:</option>
+	
+	<option value="//api/name/removeAllConditions">&nbsp;&nbsp;&nbsp;&nbsp;- removeAllConditions</option>
 	
 	<option value="//api/name/removeCondition:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCondition:</option>
 	
@@ -82,7 +85,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCondition:">addCondition:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCondition:atIndex:">addCondition:atIndex:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/conditionAtIndex:">conditionAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeAllConditions">removeAllConditions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCondition:">removeCondition:</a></span></li>
 	
@@ -119,8 +126,8 @@
 </tr>
 						</tbody></table></div>
 					
-					
-					
+                    
+                    
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
@@ -143,29 +150,37 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/addCondition:atIndex:">&ndash;&nbsp;addCondition:atIndex:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/addCondition:">&ndash;&nbsp;addCondition:</a></code>
-		<span class="tooltip"><p>Add a condition to collection.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeCondition:">&ndash;&nbsp;removeCondition:</a></code>
-		<span class="tooltip"><p>Remove a condition from collection.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeConditionAtIndex:">&ndash;&nbsp;removeConditionAtIndex:</a></code>
-		<span class="tooltip"><p>Remove a condition from collection at index.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/conditionAtIndex:">&ndash;&nbsp;conditionAtIndex:</a></code>
-		<span class="tooltip"><p>Returns a condition of collection at index.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeAllConditions">&ndash;&nbsp;removeAllConditions</a></code>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -233,6 +248,17 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/addCondition:atIndex:" title="addCondition:atIndex:"></a>
+	<h3 class="subsubtitle method-title">addCondition:atIndex:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)<em>condition</em> atIndex:(NSUInteger)<em>index</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/conditionAtIndex:" title="conditionAtIndex:"></a>
 	<h3 class="subsubtitle method-title">conditionAtIndex:</h3>
 	
@@ -264,6 +290,42 @@
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>Return <a href="../Classes/US2Condition.html">US2Condition</a> instance at index</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2ConditionCollection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeAllConditions" title="removeAllConditions"></a>
+	<h3 class="subsubtitle method-title">removeAllConditions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove all conditions from collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeAllConditions</code></div>
+
+    
+	
+	
 	
 	
 	
@@ -378,6 +440,8 @@
 					</div>
 					
 					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -388,9 +452,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 ustwo™. All rights reserved. (Last updated: 2012-10-21)</span><br />
+						<p><span class="copyright">&copy; 2014 ustwo™. All rights reserved. (Last updated: 2014-03-14)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>

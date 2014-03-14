@@ -1,143 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorTextView.html">
+	<File path="Classes/US2ValidatorPassword.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextView</TokenIdentifier>
-			<Abstract type="html">The validator text view is the central object to use. It inherits UITextView and listens internally
-to all own changes. After every change it validates the changed text material. When a validator, which
-was added to the validator text view, reports a violation the validatorTextViewDelegate will be
-served with this information. The validatorTextViewDelegate is of type US2ValidatorTextViewDelegate
-and returns what went wrong and in which status the validation text field is at the moment.</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorPassword</TokenIdentifier>
+			<Abstract type="html">The password strength validator contains a password strength condition (see US2ConditionPassword.
+A valid string matches or is above the required strength.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+            
 			
 			<NodeRef refid="23"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidatorUIDelegate:</TokenIdentifier>
-			<Abstract type="html">Set delegate implementing US2ValidatorUIDelegate</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setMinimalLowerCase:</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextViewDelegate&gt; validatorUIDelegate</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
 			
 			
-			<Anchor>//api/name/validatorUIDelegate</Anchor>
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validatorUIDelegate</TokenIdentifier>
-			<Abstract type="html">Set delegate implementing US2ValidatorUIDelegate</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/minimalLowerCase</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) id&lt;US2ValidatorUIDelegate,UITextViewDelegate&gt; validatorUIDelegate</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
 			
 			
-			<Anchor>//api/name/validatorUIDelegate</Anchor>
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidator:</TokenIdentifier>
-			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/minimalLowerCase</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) US2Validator *validator</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
 			
 			
-			<Anchor>//api/name/validator</Anchor>
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validator</TokenIdentifier>
-			<Abstract type="html">Set the validator to check the text of the text field with</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setMinimalUpperCase:</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, retain) US2Validator *validator</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
 			
 			
-			<Anchor>//api/name/validator</Anchor>
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setShouldAllowViolations:</TokenIdentifier>
-			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
-the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
-parameters of the conditions considered.</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/minimalUpperCase</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolations</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
 			
 			
-			<Anchor>//api/name/shouldAllowViolations</Anchor>
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/shouldAllowViolations</TokenIdentifier>
-			<Abstract type="html">Determines whether text inputs can be made either by violating the conditions.
-Is this parameter NO it overrides the &apos;shouldAllowViolation&apos; parameter of
-the conditions added to the validator. If set to YES the &apos;shouldAllowViolation&apos;
-parameters of the conditions considered.</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/minimalUpperCase</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolations</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
 			
 			
-			<Anchor>//api/name/shouldAllowViolations</Anchor>
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setIsValid:</TokenIdentifier>
-			<Abstract type="html">Return whether the text is valid.
-*</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setMinimalNumbers:</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isValid</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
 			
-			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
-			<Anchor>//api/name/isValid</Anchor>
+			
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/isValid</TokenIdentifier>
-			<Abstract type="html">Return whether the text is valid.
-*</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/minimalNumbers</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isValid</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
 			
-			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
-			<Anchor>//api/name/isValid</Anchor>
+			
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextView/setValidateOnFocusLossOnly:</TokenIdentifier>
-			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
-or while editing. After a violation appeared after leaving the text field
-the text field will from now on validate while editing. Because the user
-knows now that a violation occurrs when using this text field.</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/minimalNumbers</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL validateOnFocusLossOnly</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
 			
 			
-			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextView/validateOnFocusLossOnly</TokenIdentifier>
-			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
-or while editing. After a violation appeared after leaving the text field
-the text field will from now on validate while editing. Because the user
-knows now that a violation occurrs when using this text field.</Abstract>
-			<DeclaredIn>US2ValidatorTextView.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setMinimalSymbols:</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL validateOnFocusLossOnly</Declaration>
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
 			
 			
-			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="23"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/minimalSymbols</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
+			
+			
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/minimalSymbols</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
+			
+			
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setMinimalLength:</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/minimalLength</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/minimalLength</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/setRequiredStrength:</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPassword/requiredStrength</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPassword/requiredStrength</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ValidatorPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

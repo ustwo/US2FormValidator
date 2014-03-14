@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionRange.html">
+	<File path="Classes/US2ConditionOr.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionRange</TokenIdentifier>
-			<Abstract type="html">The US2ConditionRange validates the length of a string.</Abstract>
-			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionOr</TokenIdentifier>
+			<Abstract type="html">A condition that returns the result of either operands.</Abstract>
+			<DeclaredIn>US2ConditionOr.h</DeclaredIn>
+            
 			
 			<NodeRef refid="9"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionRange/setRange:</TokenIdentifier>
-			<Abstract type="html">The range to check for.</Abstract>
-			<DeclaredIn>US2ConditionRange.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionOr/initWithConditions:</TokenIdentifier>
+			<Abstract type="html">Initialize with an array of conditions.</Abstract>
+			<DeclaredIn>US2ConditionOr.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			<Declaration>- (id)initWithConditions:(NSArray *)originalConditions</Declaration>
 			
 			
-			<Anchor>//api/name/range</Anchor>
+			<Anchor>//api/name/initWithConditions:</Anchor>
+            <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionRange/range</TokenIdentifier>
-			<Abstract type="html">The range to check for.</Abstract>
-			<DeclaredIn>US2ConditionRange.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionOr/initWithConditionOne:two:</TokenIdentifier>
+			<Abstract type="html">Initialize with two conditions to Or.</Abstract>
+			<DeclaredIn>US2ConditionOr.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			<Declaration>- (id)initWithConditionOne:(id&lt;US2ConditionProtocol&gt;)one two:(id&lt;US2ConditionProtocol&gt;)two</Declaration>
 			
 			
-			<Anchor>//api/name/range</Anchor>
+			<Anchor>//api/name/initWithConditionOne:two:</Anchor>
+            <NodeRef refid="9"/>
 		</Token>
 		
+        
 	</File>
 </Tokens>

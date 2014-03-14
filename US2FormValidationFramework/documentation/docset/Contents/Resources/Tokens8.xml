@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionPostcodeUK.html">
+	<File path="Classes/US2ConditionNumeric.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionPostcodeUK</TokenIdentifier>
-			<Abstract type="html">The US2ConditionPostcodeUK checks a string for UK post code.</Abstract>
-			<DeclaredIn>US2ConditionPostcodeUK.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionNumeric</TokenIdentifier>
+			<Abstract type="html">The US2ConditionNumeric checks a string for numbers.</Abstract>
+			<DeclaredIn>US2ConditionNumeric.h</DeclaredIn>
+            
 			
 			<NodeRef refid="8"/>
 		</Token>
 		
 		
+        
 	</File>
 </Tokens>

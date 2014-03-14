@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionNumeric.html">
+	<File path="Classes/US2ConditionEmail.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionNumeric</TokenIdentifier>
-			<Abstract type="html">The US2ConditionNumeric checks a string for numbers.</Abstract>
-			<DeclaredIn>US2ConditionNumeric.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionEmail</TokenIdentifier>
+			<Abstract type="html">The US2ConditionEmail checks a string for an email.</Abstract>
+			<DeclaredIn>US2ConditionEmail.h</DeclaredIn>
+            
 			
 			<NodeRef refid="6"/>
 		</Token>
 		
 		
+        
 	</File>
 </Tokens>

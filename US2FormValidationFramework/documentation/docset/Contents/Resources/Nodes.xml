@@ -36,16 +36,6 @@
 						<NodeRef refid="23"/>
 						<NodeRef refid="24"/>
 						<NodeRef refid="25"/>
-						
-					</Subnodes>
-				</Node>
-				
-				
-				
-				<Node type="folder">
-					<Name>Protocols</Name>
-					<Path>index.html</Path>
-					<Subnodes>
 						<NodeRef refid="26"/>
 						<NodeRef refid="27"/>
 						<NodeRef refid="28"/>
@@ -57,141 +47,827 @@
 					</Subnodes>
 				</Node>
 				
+				
+                
+				<Node>
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="33"/>
+						<NodeRef refid="34"/>
+						<NodeRef refid="35"/>
+						<NodeRef refid="36"/>
+						<NodeRef refid="37"/>
+						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
+						<NodeRef refid="40"/>
+						<NodeRef refid="41"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
 			</Subnodes>
         </Node>
     </TOC>
 	<Library>
 		
-		<Node id="1">
-			<Name>US2Condition</Name>
-			<Path>Classes/US2Condition.html</Path>
-		</Node>
-		<Node id="2">
-			<Name>US2ConditionAlphabetic</Name>
-			<Path>Classes/US2ConditionAlphabetic.html</Path>
-		</Node>
-		<Node id="3">
-			<Name>US2ConditionAlphanumeric</Name>
-			<Path>Classes/US2ConditionAlphanumeric.html</Path>
-		</Node>
-		<Node id="4">
-			<Name>US2ConditionCollection</Name>
-			<Path>Classes/US2ConditionCollection.html</Path>
-		</Node>
-		<Node id="5">
-			<Name>US2ConditionEmail</Name>
-			<Path>Classes/US2ConditionEmail.html</Path>
-		</Node>
-		<Node id="6">
-			<Name>US2ConditionNumeric</Name>
-			<Path>Classes/US2ConditionNumeric.html</Path>
-		</Node>
-		<Node id="7">
-			<Name>US2ConditionPasswordStrength</Name>
-			<Path>Classes/US2ConditionPasswordStrength.html</Path>
-		</Node>
-		<Node id="8">
-			<Name>US2ConditionPostcodeUK</Name>
-			<Path>Classes/US2ConditionPostcodeUK.html</Path>
-		</Node>
-		<Node id="9">
-			<Name>US2ConditionRange</Name>
-			<Path>Classes/US2ConditionRange.html</Path>
-		</Node>
-		<Node id="10">
-			<Name>US2ConditionShorthandURL</Name>
-			<Path>Classes/US2ConditionShorthandURL.html</Path>
-		</Node>
-		<Node id="11">
-			<Name>US2ConditionURL</Name>
-			<Path>Classes/US2ConditionURL.html</Path>
-		</Node>
-		<Node id="12">
-			<Name>US2Validator</Name>
-			<Path>Classes/US2Validator.html</Path>
-		</Node>
-		<Node id="13">
-			<Name>US2ValidatorAlphabetic</Name>
-			<Path>Classes/US2ValidatorAlphabetic.html</Path>
-		</Node>
-		<Node id="14">
-			<Name>US2ValidatorAlphanumeric</Name>
-			<Path>Classes/US2ValidatorAlphanumeric.html</Path>
-		</Node>
-		<Node id="15">
-			<Name>US2ValidatorEmail</Name>
-			<Path>Classes/US2ValidatorEmail.html</Path>
-		</Node>
-		<Node id="16">
-			<Name>US2ValidatorNumeric</Name>
-			<Path>Classes/US2ValidatorNumeric.html</Path>
-		</Node>
-		<Node id="17">
-			<Name>US2ValidatorPasswordStrength</Name>
-			<Path>Classes/US2ValidatorPasswordStrength.html</Path>
-		</Node>
-		<Node id="18">
-			<Name>US2ValidatorPostcodeUK</Name>
-			<Path>Classes/US2ValidatorPostcodeUK.html</Path>
-		</Node>
-		<Node id="19">
-			<Name>US2ValidatorRange</Name>
-			<Path>Classes/US2ValidatorRange.html</Path>
-		</Node>
-		<Node id="20">
-			<Name>US2ValidatorShorthandURL</Name>
-			<Path>Classes/US2ValidatorShorthandURL.html</Path>
-		</Node>
-		<Node id="21">
-			<Name>US2ValidatorTextField</Name>
-			<Path>Classes/US2ValidatorTextField.html</Path>
-		</Node>
-		<Node id="22">
-			<Name>US2ValidatorTextFieldPrivate</Name>
-			<Path>Classes/US2ValidatorTextFieldPrivate.html</Path>
-		</Node>
-		<Node id="23">
-			<Name>US2ValidatorTextView</Name>
-			<Path>Classes/US2ValidatorTextView.html</Path>
-		</Node>
-		<Node id="24">
-			<Name>US2ValidatorTextViewPrivate</Name>
-			<Path>Classes/US2ValidatorTextViewPrivate.html</Path>
-		</Node>
-		<Node id="25">
-			<Name>US2ValidatorURL</Name>
-			<Path>Classes/US2ValidatorURL.html</Path>
-		</Node>
+		<Node id="1" type="file" documentType="reference">
+            <Name>US2Condition</Name>
+            <Path>Classes/US2Condition.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2Condition.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2Condition.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2Condition.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2Condition.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2Condition.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>US2ConditionAlphabetic</Name>
+            <Path>Classes/US2ConditionAlphabetic.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionAlphabetic.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionAlphabetic.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionAlphabetic.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>US2ConditionAlphanumeric</Name>
+            <Path>Classes/US2ConditionAlphanumeric.html</Path>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>US2ConditionAnd</Name>
+            <Path>Classes/US2ConditionAnd.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionAnd.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionAnd.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionAnd.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="5" type="file" documentType="reference">
+            <Name>US2ConditionCollection</Name>
+            <Path>Classes/US2ConditionCollection.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionCollection.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionCollection.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionCollection.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionCollection.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="6" type="file" documentType="reference">
+            <Name>US2ConditionEmail</Name>
+            <Path>Classes/US2ConditionEmail.html</Path>
+            
+        </Node>
+		<Node id="7" type="file" documentType="reference">
+            <Name>US2ConditionNot</Name>
+            <Path>Classes/US2ConditionNot.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionNot.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionNot.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionNot.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionNot.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="8" type="file" documentType="reference">
+            <Name>US2ConditionNumeric</Name>
+            <Path>Classes/US2ConditionNumeric.html</Path>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
+            <Name>US2ConditionOr</Name>
+            <Path>Classes/US2ConditionOr.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionOr.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionOr.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionOr.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="10" type="file" documentType="reference">
+            <Name>US2ConditionPassword</Name>
+            <Path>Classes/US2ConditionPassword.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionPassword.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionPassword.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionPassword.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionPassword.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="11" type="file" documentType="reference">
+            <Name>US2ConditionPostcodeUK</Name>
+            <Path>Classes/US2ConditionPostcodeUK.html</Path>
+            
+        </Node>
+		<Node id="12" type="file" documentType="reference">
+            <Name>US2ConditionPresent</Name>
+            <Path>Classes/US2ConditionPresent.html</Path>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
+            <Name>US2ConditionRange</Name>
+            <Path>Classes/US2ConditionRange.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ConditionRange.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ConditionRange.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ConditionRange.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="14" type="file" documentType="reference">
+            <Name>US2ConditionShorthandURL</Name>
+            <Path>Classes/US2ConditionShorthandURL.html</Path>
+            
+        </Node>
+		<Node id="15" type="file" documentType="reference">
+            <Name>US2ConditionURL</Name>
+            <Path>Classes/US2ConditionURL.html</Path>
+            
+        </Node>
+		<Node id="16" type="file" documentType="reference">
+            <Name>US2Validator</Name>
+            <Path>Classes/US2Validator.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2Validator.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2Validator.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2Validator.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2Validator.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2Validator.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="17" type="file" documentType="reference">
+            <Name>US2ValidatorAlphabetic</Name>
+            <Path>Classes/US2ValidatorAlphabetic.html</Path>
+            
+        </Node>
+		<Node id="18" type="file" documentType="reference">
+            <Name>US2ValidatorAlphanumeric</Name>
+            <Path>Classes/US2ValidatorAlphanumeric.html</Path>
+            
+        </Node>
+		<Node id="19" type="file" documentType="reference">
+            <Name>US2ValidatorComposite</Name>
+            <Path>Classes/US2ValidatorComposite.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorComposite.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorComposite.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorComposite.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="20" type="file" documentType="reference">
+            <Name>US2ValidatorEmail</Name>
+            <Path>Classes/US2ValidatorEmail.html</Path>
+            
+        </Node>
+		<Node id="21" type="file" documentType="reference">
+            <Name>US2ValidatorForm</Name>
+            <Path>Classes/US2ValidatorForm.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorForm.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorForm.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorForm.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorForm.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="22" type="file" documentType="reference">
+            <Name>US2ValidatorNumeric</Name>
+            <Path>Classes/US2ValidatorNumeric.html</Path>
+            
+        </Node>
+		<Node id="23" type="file" documentType="reference">
+            <Name>US2ValidatorPassword</Name>
+            <Path>Classes/US2ValidatorPassword.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorPassword.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorPassword.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorPassword.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="24" type="file" documentType="reference">
+            <Name>US2ValidatorPostcodeUK</Name>
+            <Path>Classes/US2ValidatorPostcodeUK.html</Path>
+            
+        </Node>
+		<Node id="25" type="file" documentType="reference">
+            <Name>US2ValidatorPresent</Name>
+            <Path>Classes/US2ValidatorPresent.html</Path>
+            
+        </Node>
+		<Node id="26" type="file" documentType="reference">
+            <Name>US2ValidatorRange</Name>
+            <Path>Classes/US2ValidatorRange.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorRange.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorRange.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorRange.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorRange.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="27" type="file" documentType="reference">
+            <Name>US2ValidatorShorthandURL</Name>
+            <Path>Classes/US2ValidatorShorthandURL.html</Path>
+            
+        </Node>
+		<Node id="28" type="file" documentType="reference">
+            <Name>US2ValidatorTextField</Name>
+            <Path>Classes/US2ValidatorTextField.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextField.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextField.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextField.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="29" type="file" documentType="reference">
+            <Name>US2ValidatorTextFieldPrivate</Name>
+            <Path>Classes/US2ValidatorTextFieldPrivate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextFieldPrivate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextFieldPrivate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextFieldPrivate.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="30" type="file" documentType="reference">
+            <Name>US2ValidatorTextView</Name>
+            <Path>Classes/US2ValidatorTextView.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextView.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextView.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextView.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextView.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="31" type="file" documentType="reference">
+            <Name>US2ValidatorTextViewPrivate</Name>
+            <Path>Classes/US2ValidatorTextViewPrivate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextViewPrivate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextViewPrivate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/US2ValidatorTextViewPrivate.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="32" type="file" documentType="reference">
+            <Name>US2ValidatorURL</Name>
+            <Path>Classes/US2ValidatorURL.html</Path>
+            
+        </Node>
 		
 		
-		<Node id="26">
-			<Name>US2ConditionCollectionProtocol</Name>
-			<Path>Protocols/US2ConditionCollectionProtocol.html</Path>
-		</Node>
-		<Node id="27">
-			<Name>US2ConditionProtocol</Name>
-			<Path>Protocols/US2ConditionProtocol.html</Path>
-		</Node>
-		<Node id="28">
-			<Name>US2ValidatorProtocol</Name>
-			<Path>Protocols/US2ValidatorProtocol.html</Path>
-		</Node>
-		<Node id="29">
-			<Name>US2ValidatorTextFieldPrivateDelegate</Name>
-			<Path>Protocols/US2ValidatorTextFieldPrivateDelegate.html</Path>
-		</Node>
-		<Node id="30">
-			<Name>US2ValidatorTextViewPrivateDelegate</Name>
-			<Path>Protocols/US2ValidatorTextViewPrivateDelegate.html</Path>
-		</Node>
-		<Node id="31">
-			<Name>US2ValidatorUIDelegate</Name>
-			<Path>Protocols/US2ValidatorUIDelegate.html</Path>
-		</Node>
-		<Node id="32">
-			<Name>US2ValidatorUIProtocol</Name>
-			<Path>Protocols/US2ValidatorUIProtocol.html</Path>
-		</Node>
+        <Node id="33" type="file" documentType="reference">
+            <Name>US2ConditionCollectionProtocol</Name>
+            <Path>Protocols/US2ConditionCollectionProtocol.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ConditionCollectionProtocol.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ConditionCollectionProtocol.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ConditionCollectionProtocol.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="34" type="file" documentType="reference">
+            <Name>US2ConditionProtocol</Name>
+            <Path>Protocols/US2ConditionProtocol.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ConditionProtocol.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ConditionProtocol.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ConditionProtocol.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="35" type="file" documentType="reference">
+            <Name>US2Validatable</Name>
+            <Path>Protocols/US2Validatable.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2Validatable.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2Validatable.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2Validatable.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="36" type="file" documentType="reference">
+            <Name>US2ValidatableDelegate</Name>
+            <Path>Protocols/US2ValidatableDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatableDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatableDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ValidatableDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="37" type="file" documentType="reference">
+            <Name>US2ValidatorProtocol</Name>
+            <Path>Protocols/US2ValidatorProtocol.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorProtocol.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorProtocol.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorProtocol.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="38" type="file" documentType="reference">
+            <Name>US2ValidatorTextFieldDelegate</Name>
+            <Path>Protocols/US2ValidatorTextFieldDelegate.html</Path>
+            
+        </Node>
+		<Node id="39" type="file" documentType="reference">
+            <Name>US2ValidatorTextFieldPrivateDelegate</Name>
+            <Path>Protocols/US2ValidatorTextFieldPrivateDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextFieldPrivateDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextFieldPrivateDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextFieldPrivateDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="40" type="file" documentType="reference">
+            <Name>US2ValidatorTextViewDelegate</Name>
+            <Path>Protocols/US2ValidatorTextViewDelegate.html</Path>
+            
+        </Node>
+		<Node id="41" type="file" documentType="reference">
+            <Name>US2ValidatorTextViewPrivateDelegate</Name>
+            <Path>Protocols/US2ValidatorTextViewPrivateDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextViewPrivateDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextViewPrivateDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/US2ValidatorTextViewPrivateDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
 		
+        
 	</Library>
 </DocSetNodes>

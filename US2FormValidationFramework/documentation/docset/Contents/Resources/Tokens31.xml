@@ -1,70 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ValidatorUIDelegate.html">
+	<File path="Classes/US2ValidatorTextViewPrivate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorUIDelegate</TokenIdentifier>
-			<Abstract type="html">The main delegate protocol which serves the interested instance with information about changed validation states.
-The delegate inherits from UITextViewDelegate.</Abstract>
-			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextViewPrivate</TokenIdentifier>
+			<Abstract type="html">US2ValidatorTextViewPrivate is a private class within US2ValidatorTextView
+and calls the set validator. The result of the validator will be checked and
+forwarded to the origin delegate and US2ValidatorTextView.
+This private class is needed because the US2ValidatorTextView should not listen
+for itself.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
+            
 			
 			<NodeRef refid="31"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIDelegate/validatorUIDidChange:</TokenIdentifier>
-			<Abstract type="html">Will be called when the text in the text field changes. Has its origin in listening for UITextFieldTextDidChangeNotification.</Abstract>
-			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/setDelegate:</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextView and will
+be served by this private class US2ValidatorTextViewPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
 			
-			<Declaration>- (void)validatorUIDidChange:(id&lt;US2ValidatorUIProtocol&gt;)validatorUI</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>validatorUI</Name>
-					<Abstract type="html">Instance of the sending validator text UI of type US2ValidatorTextField</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextViewDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/validatorUIDidChange:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIDelegate/validatorUI:changedValidState:</TokenIdentifier>
-			<Abstract type="html">Will be called when a status changes from true to false or false to true.</Abstract>
-			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/delegate</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextView and will
+be served by this private class US2ValidatorTextViewPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
 			
-			<Declaration>- (void)validatorUI:(id&lt;US2ValidatorUIProtocol&gt;)validatorUI changedValidState:(BOOL)isValid</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>isValid</Name>
-					<Abstract type="html">Returns the status of the validation check</Abstract>
-				</Parameter><Parameter>
-					<Name>validatorTextView</Name>
-					<Abstract type="html">Instance of the sending validator text field of type US2ValidatorTextView</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextViewDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/validatorUI:changedValidState:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorUIDelegate/validatorUI:violatedConditions:</TokenIdentifier>
-			<Abstract type="html">Will be called if the text field check failed.</Abstract>
-			<DeclaredIn>US2ValidatorUIDelegate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextViewPrivate/delegate</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextView and will
+be served by this private class US2ValidatorTextViewPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
 			
-			<Declaration>- (void)validatorUI:(id&lt;US2ValidatorUIProtocol&gt;)validatorUI violatedConditions:(US2ConditionCollection *)conditions</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>conditions</Name>
-					<Abstract type="html">Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
-				</Parameter><Parameter>
-					<Name>validatorTextView</Name>
-					<Abstract type="html">Instance of the sending validator text field of type US2ValidatorTextView</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextViewDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/validatorUI:violatedConditions:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="31"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/setValidatorTextView:</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextViewPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextView *validatorTextView</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextView</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextViewPrivate/validatorTextView</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextViewPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextView *validatorTextView</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextView</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextViewPrivate/validatorTextView</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextViewPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextViewPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextView *validatorTextView</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextView</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

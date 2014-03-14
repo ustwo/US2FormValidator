@@ -6,10 +6,12 @@
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionAlphanumeric</TokenIdentifier>
 			<Abstract type="html">The US2ConditionAlphanumeric checks a string for occurrences of letters and/or numbers.</Abstract>
 			<DeclaredIn>US2ConditionAlphanumeric.h</DeclaredIn>
+            
 			
 			<NodeRef refid="3"/>
 		</Token>
 		
 		
+        
 	</File>
 </Tokens>

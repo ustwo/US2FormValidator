@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2Validatable.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2Validatable</TokenIdentifier>
+			<Abstract type="html">A text user interface element must conform to US2Validatable protocol methods.
+At the moment the framework supports UITextField and UITextView by using US2ValidatorTextField
+and US2ValidatorTextView.</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+            
+			
+			<NodeRef refid="35"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The validator UI delegate conforming US2ValidatableDelegate</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (void)setDelegate:(id&lt;US2ValidatableDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validatorDelegate</Name>
+					<Abstract type="html">The validator UI delegate conforming US2ValidatableDelegate</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDelegate:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/delegate</TokenIdentifier>
+			<Abstract type="html">Return the delegate</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (id&lt;US2ValidatableDelegate&gt;)delegate</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the validator UI delegate</Abstract></ReturnValue>
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/setValidator:</TokenIdentifier>
+			<Abstract type="html">Validator to check the text of text UI conforming US2Validatable</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (void)setValidator:(US2Validator *)validator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validator</Name>
+					<Abstract type="html">Validator to check the text of text UI conforming US2Validatable</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValidator:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/validator</TokenIdentifier>
+			<Abstract type="html">Set validator</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (US2Validator *)validator</Declaration>
+			
+			
+			<Anchor>//api/name/validator</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/isValid</TokenIdentifier>
+			<Abstract type="html">Return whether the text is valid.</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isValid</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the valid state of the text field</Abstract></ReturnValue>
+			<Anchor>//api/name/isValid</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/setValidateOnFocusLossOnly:</TokenIdentifier>
+			<Abstract type="html">Determines whether the text has to be validated after leaving the text field
+or while editing. After a violation appeared after leaving the text field
+the text field will from now on validate while editing. Because the user
+knows now that a violation occurrs when using this text field.</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (void)setValidateOnFocusLossOnly:(BOOL)validateOnFocusLossOnly</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>validateOnFocusLossOnly</Name>
+					<Abstract type="html">Boolean value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValidateOnFocusLossOnly:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/validateOnFocusLossOnly</TokenIdentifier>
+			<Abstract type="html">Set boolean value</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)validateOnFocusLossOnly</Declaration>
+			
+			
+			<Anchor>//api/name/validateOnFocusLossOnly</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/setText:</TokenIdentifier>
+			<Abstract type="html">String to set as text to text UI</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (void)setText:(NSString *)text</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>text</Name>
+					<Abstract type="html">String to set as text to text UI</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setText:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/US2Validatable/text</TokenIdentifier>
+			<Abstract type="html">Set string value</Abstract>
+			<DeclaredIn>US2Validatable.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

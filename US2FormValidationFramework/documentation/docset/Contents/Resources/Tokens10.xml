@@ -1,20 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionShorthandURL.html">
+	<File path="Classes/US2ConditionPassword.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionShorthandURL</TokenIdentifier>
-			<Abstract type="html">The US2ConditionShorthandURL checks a string for a valid URL like:
-http://www.example.com
-https://www.example.com
-www.example.com
-example.com
-subdomain.example.com</Abstract>
-			<DeclaredIn>US2ConditionShorthandURL.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionPassword</TokenIdentifier>
+			<Abstract type="html">The US2ConditionPassword checks for the strength of a password string.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+            
 			
 			<NodeRef refid="10"/>
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setMinimalLowerCase:</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/minimalLowerCase</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/minimalLowerCase</TokenIdentifier>
+			<Abstract type="html">How many lower case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLowerCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLowerCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setMinimalUpperCase:</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/minimalUpperCase</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/minimalUpperCase</TokenIdentifier>
+			<Abstract type="html">How many upper case characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalUpperCase</Declaration>
+			
+			
+			<Anchor>//api/name/minimalUpperCase</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setMinimalNumbers:</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
+			
+			
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/minimalNumbers</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
+			
+			
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/minimalNumbers</TokenIdentifier>
+			<Abstract type="html">How many numbers the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalNumbers</Declaration>
+			
+			
+			<Anchor>//api/name/minimalNumbers</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setMinimalSymbols:</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
+			
+			
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/minimalSymbols</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
+			
+			
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/minimalSymbols</TokenIdentifier>
+			<Abstract type="html">How many symbols the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalSymbols</Declaration>
+			
+			
+			<Anchor>//api/name/minimalSymbols</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setMinimalLength:</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/minimalLength</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/minimalLength</TokenIdentifier>
+			<Abstract type="html">How many characters the password should contain.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSUInteger minimalLength</Declaration>
+			
+			
+			<Anchor>//api/name/minimalLength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/setRequiredStrength:</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/requiredStrength</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionPassword/requiredStrength</TokenIdentifier>
+			<Abstract type="html">How strong the password needs to be to be valid.</Abstract>
+			<DeclaredIn>US2ConditionPassword.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2PasswordStrength requiredStrength</Declaration>
+			
+			
+			<Anchor>//api/name/requiredStrength</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_strengthOfPasswordString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_strengthOfPasswordString:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (US2PasswordStrength)us2_strengthOfPasswordString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for password strength</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Strength of password</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_strengthOfPasswordString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_numberOfNumericCharactersInString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_numberOfNumericCharactersInString:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)us2_numberOfNumericCharactersInString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for numbers</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Number of contained numbers</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_numberOfNumericCharactersInString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_numberOfLowercaseCharactersInString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_numberOfLowercaseCharactersInString:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)us2_numberOfLowercaseCharactersInString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for lowercaser letters</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Number of contained lowercase letters</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_numberOfLowercaseCharactersInString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_numberOfUppercaseCharactersInString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_numberOfUppercaseCharactersInString:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)us2_numberOfUppercaseCharactersInString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for uppercase letters</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Number of contained uppercase letters</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_numberOfUppercaseCharactersInString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_numberOfSpecialCharactersInString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_numberOfSpecialCharactersInString:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)us2_numberOfSpecialCharactersInString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for symbols</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Number of contained symbols</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_numberOfSpecialCharactersInString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionPassword/us2_numberOfMatchesWithPattern:inString:</TokenIdentifier>
+			<Abstract type="html">@methodName us2_numberOfMatchesWithPattern:</Abstract>
+			<DeclaredIn>US2ConditionPassword_Private.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)us2_numberOfMatchesWithPattern:(NSString *)pattern inString:(NSString *)string</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>pattern</Name>
+					<Abstract type="html">The pattern to check numbers of matches for</Abstract>
+				</Parameter><Parameter>
+					<Name>string</Name>
+					<Abstract type="html">The string to check for a pattern</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Number of matches</Abstract></ReturnValue>
+			<Anchor>//api/name/us2_numberOfMatchesWithPattern:inString:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

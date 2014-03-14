@@ -6,10 +6,48 @@
 			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionAlphabetic</TokenIdentifier>
 			<Abstract type="html">The US2ConditionAlphabetic checks a string for occurrences of letters.</Abstract>
 			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
+            
 			
 			<NodeRef refid="2"/>
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionAlphabetic/setAllowWhitespace:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL allowWhitespace</Declaration>
+			
+			
+			<Anchor>//api/name/allowWhitespace</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionAlphabetic/allowWhitespace</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL allowWhitespace</Declaration>
+			
+			
+			<Anchor>//api/name/allowWhitespace</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionAlphabetic/allowWhitespace</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ConditionAlphabetic.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL allowWhitespace</Declaration>
+			
+			
+			<Anchor>//api/name/allowWhitespace</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

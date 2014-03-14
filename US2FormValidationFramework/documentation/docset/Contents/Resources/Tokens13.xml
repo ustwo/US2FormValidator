@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorAlphabetic.html">
+	<File path="Classes/US2ConditionRange.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorAlphabetic</TokenIdentifier>
-			<Abstract type="html">The alphabetic validator contains an alphabetic condition (see US2ConditionAlphabetic.
-A valid string does only contain letters.</Abstract>
-			<DeclaredIn>US2ValidatorAlphabetic.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionRange</TokenIdentifier>
+			<Abstract type="html">The US2ConditionRange validates the length of a string.</Abstract>
+			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+            
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionRange/setRange:</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
+			
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionRange/range</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
+			
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionRange/range</TokenIdentifier>
+			<Abstract type="html">The range to check for.</Abstract>
+			<DeclaredIn>US2ConditionRange.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) US2TextRange range</Declaration>
+			
+			
+			<Anchor>//api/name/range</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

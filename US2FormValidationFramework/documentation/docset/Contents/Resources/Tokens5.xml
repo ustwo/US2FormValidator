@@ -1,15 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ConditionEmail.html">
+	<File path="Classes/US2ConditionCollection.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionEmail</TokenIdentifier>
-			<Abstract type="html">The US2ConditionEmail checks a string for an email.</Abstract>
-			<DeclaredIn>US2ConditionEmail.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionCollection</TokenIdentifier>
+			<Abstract type="html">The US2ConditionCollection is internally an array which contains conditions
+of type US2Condition. Use US2ConditionCollection like an array, but in a
+typecasted manner.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+            
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/addCondition:atIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition atIndex:(NSUInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/addCondition:atIndex:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/addCondition:</TokenIdentifier>
+			<Abstract type="html">Add a condition to collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)addCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>condition</Name>
+					<Abstract type="html">US2Condition instance to add</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addCondition:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/removeCondition:</TokenIdentifier>
+			<Abstract type="html">Remove a condition from collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)removeCondition:(id&lt;US2ConditionProtocol&gt;)condition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>condition</Name>
+					<Abstract type="html">US2Condition instance to remove</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeCondition:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/removeConditionAtIndex:</TokenIdentifier>
+			<Abstract type="html">Remove a condition from collection at index.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)removeConditionAtIndex:(NSUInteger)index</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">US2Condition instance to remove at index</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeConditionAtIndex:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/conditionAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a condition of collection at index.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (US2Condition *)conditionAtIndex:(NSUInteger)index</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">Index of condition</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Return US2Condition instance at index</Abstract></ReturnValue>
+			<Anchor>//api/name/conditionAtIndex:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/removeAllConditions</TokenIdentifier>
+			<Abstract type="html">Remove all conditions from collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>- (void)removeAllConditions</Declaration>
+			
+			
+			<Anchor>//api/name/removeAllConditions</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/setCount:</TokenIdentifier>
+			<Abstract type="html">Number of conditions in collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger count</Declaration>
+			
+			
+			<Anchor>//api/name/count</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ConditionCollection/count</TokenIdentifier>
+			<Abstract type="html">Number of conditions in collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger count</Declaration>
+			
+			
+			<Anchor>//api/name/count</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ConditionCollection/count</TokenIdentifier>
+			<Abstract type="html">Number of conditions in collection.</Abstract>
+			<DeclaredIn>US2ConditionCollection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSUInteger count</Declaration>
+			
+			
+			<Anchor>//api/name/count</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorEmail.html">
+	<File path="Classes/US2ConditionURL.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorEmail</TokenIdentifier>
-			<Abstract type="html">The email validator checks for email in a string.</Abstract>
-			<DeclaredIn>US2ValidatorEmail.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ConditionURL</TokenIdentifier>
+			<Abstract type="html">The US2ConditionURL checks a string for a valid URL like
+http://www.example.com
+https://www.example.com
+http://example.com</Abstract>
+			<DeclaredIn>US2ConditionURL.h</DeclaredIn>
+            
 			
 			<NodeRef refid="15"/>
 		</Token>
 		
 		
+        
 	</File>
 </Tokens>

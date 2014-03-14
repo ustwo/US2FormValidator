@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
-Path: /Users/Alex/Library/Developer/Shared/Documentation/DocSets/com.ustwo.US2FormValidationFramework.docset
-Time: 2012-10-21 16:21:59 +0000
+Path: /Users/martin/Library/Developer/Shared/Documentation/DocSets/com.ustwo.US2FormValidationFramework.docset
+Time: 2014-03-14 16:45:13 +0000

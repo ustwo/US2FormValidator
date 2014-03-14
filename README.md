@@ -1,21 +1,31 @@
-![ustwo US2FormValidator](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Form Validator Sample Preview.jpg)
+![ustwo US2FormValidator](https://github.com/ustwo/US2FormValidator/raw/light-arc/Documentation/Images/Form Validator Sample Preview.jpg)
 
 ustwo™ iOS Form Validator
 =========================
 
-[![Build Status](https://travis-ci.org/ustwo/US2FormValidator.png)](https://travis-ci.org/ustwo/US2FormValidator)
+[![Build Status](https://travis-ci.org/ustwo/US2FormValidator.png?branch=light-arc)](https://travis-ci.org/ustwo/US2FormValidator)
 
-This framework allows you to validate inputs of text fields and text views in a convenient way.
+The form validator framework allows you to conveniently validate entire forms with various types of fields.
+Bear in mind this is version 2 and is incompatible to version 1.x.
 
 Features
 --------
 
 * Simply use US2ValidatorTextField instead of UITextField (US2ValidatorTextView instead of UITextView)
-* Use a form to get notified as soon as all fields are valid
+* Use the form to get notified as soon as all fields are valid
 * Know what went wrong and where
 * Create own conditions using regular expressions for example
 * Create own validators which contain a collection of conditions
 * ARC only
+
+Changelog
+---------
+### 2.0
+* Simplified API
+* ARC compatible
+* Use text field's delegate property instead of validatorUIDelegate property to get called back
+* Conditions are valid when string is empty, combine with US2ConditionPresent to catch this case
+
 
 Installation using CocoaPods
 ----------------------------

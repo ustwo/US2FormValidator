@@ -11,6 +11,7 @@ for violations of every condition.
 Conditions are recommended working with regular expressions but can also contain
 their custom checking code for detecting violations in the string to check.</Abstract>
 			<DeclaredIn>US2Condition.h</DeclaredIn>
+            
 			
 			<NodeRef refid="1"/>
 		</Token>
@@ -18,25 +19,166 @@ their custom checking code for detecting violations in the string to check.</Abs
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/setShouldAllowViolation:</TokenIdentifier>
-			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.</Abstract>
-			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.
+The default is YES.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolation</Declaration>
+			<Declaration>@property (nonatomic) BOOL shouldAllowViolation</Declaration>
 			
 			
 			<Anchor>//api/name/shouldAllowViolation</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/shouldAllowViolation</TokenIdentifier>
+			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.
+The default is YES.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldAllowViolation</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAllowViolation</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/US2Condition/shouldAllowViolation</TokenIdentifier>
-			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.</Abstract>
-			<DeclaredIn>US2Condition.h</DeclaredIn>			
+			<Abstract type="html">If set to NO the user is not able to enter characters which would break the condition.
+The default is YES.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL shouldAllowViolation</Declaration>
+			<Declaration>@property (nonatomic) BOOL shouldAllowViolation</Declaration>
 			
 			
 			<Anchor>//api/name/shouldAllowViolation</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/setLocalizedViolationString:</TokenIdentifier>
+			<Abstract type="html">Returns a localized string which describes the kind of violation.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *localizedViolationString</Declaration>
+			
+			<ReturnValue><Abstract type="html">Localized violation string</Abstract></ReturnValue>
+			<Anchor>//api/name/localizedViolationString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/localizedViolationString</TokenIdentifier>
+			<Abstract type="html">Returns a localized string which describes the kind of violation.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *localizedViolationString</Declaration>
+			
+			<ReturnValue><Abstract type="html">Localized violation string</Abstract></ReturnValue>
+			<Anchor>//api/name/localizedViolationString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2Condition/localizedViolationString</TokenIdentifier>
+			<Abstract type="html">Returns a localized string which describes the kind of violation.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *localizedViolationString</Declaration>
+			
+			<ReturnValue><Abstract type="html">Localized violation string</Abstract></ReturnValue>
+			<Anchor>//api/name/localizedViolationString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/setRegexString:</TokenIdentifier>
+			<Abstract type="html">A regular expression string which the validated string is matched against
+Defaults to nil</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *regexString</Declaration>
+			
+			
+			<Anchor>//api/name/regexString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/regexString</TokenIdentifier>
+			<Abstract type="html">A regular expression string which the validated string is matched against
+Defaults to nil</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *regexString</Declaration>
+			
+			
+			<Anchor>//api/name/regexString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2Condition/regexString</TokenIdentifier>
+			<Abstract type="html">A regular expression string which the validated string is matched against
+Defaults to nil</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *regexString</Declaration>
+			
+			
+			<Anchor>//api/name/regexString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/US2Condition/condition</TokenIdentifier>
+			<Abstract type="html">Static shorthand for creating a condition.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)condition</Declaration>
+			
+			
+			<Anchor>//api/name/condition</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/initWithLocalizedViolationString:</TokenIdentifier>
+			<Abstract type="html">Initialize condition with a custom localized violation string.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString</Declaration>
+			
+			
+			<Anchor>//api/name/initWithLocalizedViolationString:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/initWithRegexString:</TokenIdentifier>
+			<Abstract type="html">Initialize condition with a custom regex string.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithRegexString:(NSString *)regexString</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRegexString:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2Condition/initWithLocalizedViolationString:andRegexString:</TokenIdentifier>
+			<Abstract type="html">Initialize condition with a custom localized violation string and regex string.</Abstract>
+			<DeclaredIn>US2Condition.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithLocalizedViolationString:(NSString *)localizedViolationString andRegexString:(NSString *)regexString</Declaration>
+			
+			
+			<Anchor>//api/name/initWithLocalizedViolationString:andRegexString:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

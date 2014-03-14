@@ -1,18 +1,18 @@
 <?xml version="1.0" standalone="no"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
-    <id>http://ustwo.github.com/US2FormValidationFramework/US2FormValidationFramework/20121021172159</id>
+    <id>http://ustwo.github.com/US2FormValidationFramework/US2FormValidationFramework/20140314164514</id>
     <title type="text">US2FormValidationFramework Documentation</title>
-    <rights>Copyright © 2012 ustwo™. All rights reserved.</rights>
+    <rights>Copyright © 2014 ustwo™. All rights reserved.</rights>
     <link rel="self" href="http://ustwo.github.com/US2FormValidationFramework/US2FormValidationFramework"></link>
     <docset:publisherName>ustwo™</docset:publisherName>
     <docset:publisherID>com.ustwo.documentation</docset:publisherID>
-    <updated>2012-10-21T17:21:59+01:00</updated>
+    <updated>2014-03-14T16:45:14+00:00</updated>
     <entry>
-        <id>tag:ustwo.github.com,2012-10-21:com.ustwo.US2FormValidationFramework/1.0.0</id>
+        <id>tag:ustwo.github.com,2014-03-14:com.ustwo.US2FormValidationFramework/1.0.0</id>
         <title type="text">US2FormValidationFramework Documentation</title>
-        <updated>2012-10-21T17:21:59+01:00</updated>
+        <updated>2014-03-14T16:45:14+00:00</updated>
         <content type="text">US2FormValidationFramework Documentation (v1.0.0)</content>
-        <link rel="enclosure" type="application/octet-stream" href="http://ustwo.github.com/US2FormValidationFramework/com.ustwo.US2FormValidationFramework-1.0.xar" length="158584"></link>
+        <link rel="enclosure" type="application/octet-stream" href="http:/ustwo.github.com/US2FormValidationFramework/com.ustwo.US2FormValidationFramework-1.0.xar" length="628543"></link>
         <docset:identifier>com.ustwo.US2FormValidationFramework</docset:identifier>
         <docset:version>1.0.0</docset:version>
         <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>

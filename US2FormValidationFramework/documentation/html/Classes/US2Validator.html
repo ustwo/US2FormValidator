@@ -4,10 +4,9 @@
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
 		<title>US2Validator Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -38,6 +37,16 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/localizedViolationString">&nbsp;&nbsp;&nbsp;&nbsp;localizedViolationString</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/validator">&nbsp;&nbsp;&nbsp;&nbsp;+ validator</option>
 	
 	
 	
@@ -46,9 +55,13 @@
 	
 	<option value="//api/name/addCondition:">&nbsp;&nbsp;&nbsp;&nbsp;- addCondition:</option>
 	
-	<option value="//api/name/checkConditions:">&nbsp;&nbsp;&nbsp;&nbsp;- checkConditions:</option>
+	<option value="//api/name/initWithCondition:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithCondition:</option>
 	
-	<option value="//api/name/removeConditionOfClass:">&nbsp;&nbsp;&nbsp;&nbsp;- removeConditionOfClass:</option>
+	<option value="//api/name/initWithConditions:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithConditions:</option>
+	
+	<option value="//api/name/removeConditionsOfClass:">&nbsp;&nbsp;&nbsp;&nbsp;- removeConditionsOfClass:</option>
+	
+	<option value="//api/name/violatedConditionsUsingString:">&nbsp;&nbsp;&nbsp;&nbsp;- violatedConditionsUsingString:</option>
 	
 	
 	
@@ -72,7 +85,19 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localizedViolationString">localizedViolationString</a></span></li>
+	
+</ul></li>
 
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validator">validator</a></span></li>
+	
+</ul></li>
 
 
 
@@ -80,9 +105,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCondition:">addCondition:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkConditions:">checkConditions:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithCondition:">initWithCondition:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeConditionOfClass:">removeConditionOfClass:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithConditions:">initWithConditions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeConditionsOfClass:">removeConditionsOfClass:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/violatedConditionsUsingString:">violatedConditionsUsingString:</a></span></li>
 	
 </ul></li>
 
@@ -118,14 +147,14 @@
 </tr>
 						</tbody></table></div>
 					
-					
-					
+                    
+                    
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>US2Validator is a holder for conditions of type <a href="../Classes/US2Condition.html">US2Condition</a> in a <a href="../Classes/US2ConditionCollection.html">US2ConditionCollection</a>.
-The validator checks for violation of each condition. Returned will be a collection of
+The <a href="#//api/name/validator">validator</a> checks for violation of each condition. Returned will be a collection of
 violated conditions or nil if the string to check is correct or no condition was added.</p>
 
 <p><em>Example:</em></p>
@@ -134,13 +163,12 @@ violated conditions or nil if the string to check is correct or no condition was
 
 US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
 [validator addCondition:condition];
-[condition release];
 
-US2ConditionCollection *conditionCollection1 = [validator checkConditions:@"HelloWorld"];
-US2ConditionCollection *conditionCollection2 = [validator checkConditions:@"Hello World 123"];
+US2ConditionCollection *conditionCollection1 = [validator violatedConditionsUsingString:@"HelloWorld"];
+US2ConditionCollection *conditionCollection2 = [validator violatedConditionsUsingString:@"Hello World 123"];
 
-BOOL isValid = conditionCollection1 == nil;                                                  // isValid == YES
-isValid = conditionCollection2 == nil;                                                       // isValid == NO
+BOOL isValid = conditionCollection1 == nil;   // isValid == YES
+isValid = conditionCollection2 == nil;        // isValid == NO
 
 // What went wrong?
 NSLog(@"conditionCollection2: %@", conditionCollection2);
@@ -162,24 +190,45 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/validator">+&nbsp;validator</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithCondition:">&ndash;&nbsp;initWithCondition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithConditions:">&ndash;&nbsp;initWithConditions:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/addCondition:">&ndash;&nbsp;addCondition:</a></code>
-		<span class="tooltip"><p>Add condition conform to <a href="../Protocols/US2ConditionProtocol.html">US2ConditionProtocol</a></p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/removeConditionOfClass:">&ndash;&nbsp;removeConditionOfClass:</a></code>
-		<span class="tooltip"><p>Remove all conditions subclassing conditionClass from validation queue.</p></span>
+		<code><a href="#//api/name/removeConditionsOfClass:">&ndash;&nbsp;removeConditionsOfClass:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/checkConditions:">&ndash;&nbsp;checkConditions:</a></code>
-		<span class="tooltip"><p>Add condition subclass of <a href="../Classes/US2Condition.html">US2Condition</a> for validation queue.</p></span>
+		<code><a href="#//api/name/violatedConditionsUsingString:">&ndash;&nbsp;violatedConditionsUsingString:</a></code>
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localizedViolationString">&nbsp;&nbsp;localizedViolationString</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -190,7 +239,96 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/localizedViolationString" title="localizedViolationString"></a>
+	<h3 class="subsubtitle method-title">localizedViolationString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a localized string which describes the kind of violation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *localizedViolationString</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Localized violation string</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2Validator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/validator" title="validator"></a>
+	<h3 class="subsubtitle method-title">validator</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static shorthand for creating a validator.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)validator</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2Validator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -245,8 +383,126 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/checkConditions:" title="checkConditions:"></a>
-	<h3 class="subsubtitle method-title">checkConditions:</h3>
+	<a name="//api/name/initWithCondition:" title="initWithCondition:"></a>
+	<h3 class="subsubtitle method-title">initWithCondition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with a condition or variable-argument number of conditions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithCondition:(id&lt;US2ConditionProtocol&gt;)<em>condition</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2Validator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithConditions:" title="initWithConditions:"></a>
+	<h3 class="subsubtitle method-title">initWithConditions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with an array of conditions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithConditions:(NSArray *)<em>conditions</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2Validator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeConditionsOfClass:" title="removeConditionsOfClass:"></a>
+	<h3 class="subsubtitle method-title">removeConditionsOfClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove all conditions subclassing conditionClass from validation queue.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeConditionsOfClass:(Class&lt;US2ConditionProtocol&gt;)<em>conditionClass</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>conditionClass</em></dt>
+			<dd><p>Remove all conditions which are kind of <em>conditionClass</em></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">US2Validator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/violatedConditionsUsingString:" title="violatedConditionsUsingString:"></a>
+	<h3 class="subsubtitle method-title">violatedConditionsUsingString:</h3>
 	
 	
 	
@@ -256,7 +512,7 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (US2ConditionCollection *)checkConditions:(NSString *)<em>string</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (US2ConditionCollection *)violatedConditionsUsingString:(NSString *)<em>string</em></code></div>
 
     
 	
@@ -295,55 +551,11 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/removeConditionOfClass:" title="removeConditionOfClass:"></a>
-	<h3 class="subsubtitle method-title">removeConditionOfClass:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Remove all conditions subclassing conditionClass from validation queue.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)removeConditionOfClass:(Class&lt;US2ConditionProtocol&gt;)<em>conditionClass</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>conditionClass</em></dt>
-			<dd><p>Remove all conditions which are kind of <em>conditionClass</em></p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">US2Validator.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -354,9 +566,9 @@ NSLog(@"conditionCollection2: %@", conditionCollection2);
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 ustwo™. All rights reserved. (Last updated: 2012-10-21)</span><br />
+						<p><span class="copyright">&copy; 2014 ustwo™. All rights reserved. (Last updated: 2014-03-14)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>

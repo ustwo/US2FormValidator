@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/US2ValidatorTextFieldDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorTextFieldDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>US2ValidatorTextFieldDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="38"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorPostcodeUK.html">
+	<File path="Classes/US2ValidatorAlphanumeric.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorPostcodeUK</TokenIdentifier>
-			<Abstract type="html">The UK post code validator contains a UK post code condition (see US2ConditionPostcodeUK.
-A valid string does only contain one valid UK post code and up to 8 characters.</Abstract>
-			<DeclaredIn>US2ValidatorPostcodeUK.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorAlphanumeric</TokenIdentifier>
+			<Abstract type="html">The alphanumeric validator contains an alphanumeric condition (see US2ConditionAlphanumeric.
+A valid string does only contain letters and/or numbers.</Abstract>
+			<DeclaredIn>US2ValidatorAlphanumeric.h</DeclaredIn>
+            
 			
 			<NodeRef refid="18"/>
 		</Token>
 		
 		
+        
 	</File>
 </Tokens>

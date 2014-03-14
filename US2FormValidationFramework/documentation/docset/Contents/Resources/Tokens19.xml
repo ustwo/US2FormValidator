@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorRange.html">
+	<File path="Classes/US2ValidatorComposite.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorRange</TokenIdentifier>
-			<Abstract type="html">The range validator checks for string length.</Abstract>
-			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorComposite</TokenIdentifier>
+			<Abstract type="html">    The composite validator takes in a collection of validators and checks each to validate.</Abstract>
+			<DeclaredIn>US2ValidatorComposite.h</DeclaredIn>
+            
 			
 			<NodeRef refid="19"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorRange/setRange:</TokenIdentifier>
-			<Abstract type="html">The range to check for.</Abstract>
-			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorComposite/initWithValidators:</TokenIdentifier>
+			<Abstract type="html">    Initialize with an array of validators.</Abstract>
+			<DeclaredIn>US2ValidatorComposite.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			<Declaration>- (id)initWithValidators:(NSArray *)validators</Declaration>
 			
 			
-			<Anchor>//api/name/range</Anchor>
+			<Anchor>//api/name/initWithValidators:</Anchor>
+            <NodeRef refid="19"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorRange/range</TokenIdentifier>
-			<Abstract type="html">The range to check for.</Abstract>
-			<DeclaredIn>US2ValidatorRange.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorComposite/addValidator:</TokenIdentifier>
+			<Abstract type="html">    Add validator to collection of validators to check.</Abstract>
+			<DeclaredIn>US2ValidatorComposite.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSRange range</Declaration>
+			<Declaration>- (void)addValidator:(US2Validator *)validator</Declaration>
 			
 			
-			<Anchor>//api/name/range</Anchor>
+			<Anchor>//api/name/addValidator:</Anchor>
+            <NodeRef refid="19"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorComposite/addValidatorsFromArray:</TokenIdentifier>
+			<Abstract type="html">    Add validators from an array to collection of validators to check.</Abstract>
+			<DeclaredIn>US2ValidatorComposite.h</DeclaredIn>
+			
+			<Declaration>- (void)addValidatorsFromArray:(NSArray *)validators</Declaration>
+			
+			
+			<Anchor>//api/name/addValidatorsFromArray:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

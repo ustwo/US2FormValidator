@@ -1,51 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/US2ValidatorTextFieldPrivateDelegate.html">
+	<File path="Classes/US2ValidatorTextFieldPrivate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/US2ValidatorTextFieldPrivateDelegate</TokenIdentifier>
-			<Abstract type="html">A private delegate protocol which is used by class US2ValidatorTextField and served by internal
-class US2ValidatorTextFieldPrivate</Abstract>
-			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorTextFieldPrivate</TokenIdentifier>
+			<Abstract type="html">US2ValidatorTextFieldPrivate is a private class within US2ValidatorTextField
+and calls the set validator. The result of the validator will be checked and
+forwarded to the origin delegate and US2ValidatorTextField.
+This private class is needed because the US2ValidatorTextField should not listen
+for itself.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
+            
 			
 			<NodeRef refid="29"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextFieldPrivateDelegate/validatorTextFieldPrivate:violatedConditions:</TokenIdentifier>
-			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
-			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextFieldPrivate/setDelegate:</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextField and will
+be served by this private class US2ValidatorTextFieldPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
 			
-			<Declaration>- (void)validatorTextFieldPrivate:(US2ValidatorTextFieldPrivate *)textFieldPrivate violatedConditions:(US2ConditionCollection *)conditions</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>textFieldPrivate</Name>
-					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
-				</Parameter><Parameter>
-					<Name>conditions</Name>
-					<Abstract type="html">Collection of type US2ConditionCollection listing all violated conditions.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/validatorTextFieldPrivate:violatedConditions:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="29"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/US2ValidatorTextFieldPrivateDelegate/validatorTextFieldPrivateSuccededConditions:</TokenIdentifier>
-			<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
-			<DeclaredIn>US2ValidatorTextFieldPrivateDelegate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextFieldPrivate/delegate</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextField and will
+be served by this private class US2ValidatorTextFieldPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
 			
-			<Declaration>- (void)validatorTextFieldPrivateSuccededConditions:(US2ValidatorTextFieldPrivate *)textFieldPrivate</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>textFieldPrivate</Name>
-					<Abstract type="html">Private instance in US2ValidatorTextField which checks the validation process.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
 			
-			<Anchor>//api/name/validatorTextFieldPrivateSuccededConditions:</Anchor>
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="29"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextFieldPrivate/delegate</TokenIdentifier>
+			<Abstract type="html">Origin delegate which was set through US2ValidatorTextField and will
+be served by this private class US2ValidatorTextFieldPrivate.</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;US2ValidatorTextFieldDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextFieldPrivate/setValidatorTextField:</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextFieldPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextField *validatorTextField</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextField</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorTextFieldPrivate/validatorTextField</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextFieldPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextField *validatorTextField</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextField</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorTextFieldPrivate/validatorTextField</TokenIdentifier>
+			<Abstract type="html">Represents the main validation text field which wants to know what went
+wrong when validating in this private class US2ValidatorTextFieldPrivate.
+Thus the validation text field is able to change its appearance e.g..</Abstract>
+			<DeclaredIn>US2ValidatorTextFieldPrivate.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) US2ValidatorTextField *validatorTextField</Declaration>
+			
+			
+			<Anchor>//api/name/validatorTextField</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+        
 	</File>
 </Tokens>

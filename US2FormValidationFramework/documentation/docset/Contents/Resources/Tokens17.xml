@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/US2ValidatorPasswordStrength.html">
+	<File path="Classes/US2ValidatorAlphabetic.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorPasswordStrength</TokenIdentifier>
-			<Abstract type="html">The password strength validator contains a password strength condition (see US2ConditionPasswordStrength.
-A valid string matches or is above the required strength.</Abstract>
-			<DeclaredIn>US2ValidatorPasswordStrength.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/US2ValidatorAlphabetic</TokenIdentifier>
+			<Abstract type="html">The alphabetic validator contains an alphabetic condition (see US2ConditionAlphabetic.
+A valid string does only contain letters.</Abstract>
+			<DeclaredIn>US2ValidatorAlphabetic.h</DeclaredIn>
+            
 			
 			<NodeRef refid="17"/>
 		</Token>
 		
 		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/US2ValidatorPasswordStrength/setRequiredStrength:</TokenIdentifier>
-			<Abstract type="html">The required password strength of the validator, options are:</Abstract>
-			<DeclaredIn>US2ValidatorPasswordStrength.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) US2PasswordStrength requiredStrength</Declaration>
-			
-			
-			<Anchor>//api/name/requiredStrength</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/US2ValidatorPasswordStrength/requiredStrength</TokenIdentifier>
-			<Abstract type="html">The required password strength of the validator, options are:</Abstract>
-			<DeclaredIn>US2ValidatorPasswordStrength.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign) US2PasswordStrength requiredStrength</Declaration>
-			
-			
-			<Anchor>//api/name/requiredStrength</Anchor>
-		</Token>
-		
+        
 	</File>
 </Tokens>
