@@ -1,4 +1,4 @@
-![Import framework screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Form Validator Sample Preview.png)
+![ustwo US2FormValidator](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Form Validator Sample Preview.jpg)
 
 ustwo™ iOS Form Validator
 =========================
@@ -11,12 +11,24 @@ Features
 --------
 
 * Simply use US2ValidatorTextField instead of UITextField (US2ValidatorTextView instead of UITextView)
+* Use a form to get notified as soon as all fields are valid
 * Know what went wrong and where
 * Create own conditions using regular expressions for example
 * Create own validators which contain a collection of conditions
+* ARC only
 
-Installation
-------------
+Installation using CocoaPods
+----------------------------
+
+How to use CocoaPods? Go to:
+https://github.com/CocoaPods/CocoaPods
+
+Add the following line to your pod file:
+
+    pod 'US2FormValidator', '~> 2.0'
+
+Manual installation
+-------------------
 
 ### Clone the project
 
@@ -34,32 +46,21 @@ Clone the project from the link above.
 
 ![Target dependencies screen](https://github.com/ustwo/US2FormValidator/raw/master/Documentation/Images/Bundle Resources.png)
 
-Installation using CocoaPods
-----------------------------
-
-How to use CocoaPods? Go to:
-https://github.com/CocoaPods/CocoaPods
-
-Add the following line to your pod file:
-
-    pod 'US2FormValidator', '~> 1.0.8'
-
 How-To
 ------
 
-### Add a condition to validator
+### Add a condition to a validator
 
     US2Validator *validator = [[US2Validator alloc] init];
     
     US2ConditionAlphabetic *condition = [[US2ConditionAlphabetic alloc] init];
     [validator addCondition:condition];
-    [condition release];
     
     US2ConditionCollection *conditionCollection1 = [validator checkConditions:@"HelloWorld"];
     US2ConditionCollection *conditionCollection2 = [validator checkConditions:@"Hello World 123"];
     
-    BOOL isValid = conditionCollection1 == nil;                                                  // isValid == YES
-    isValid = conditionCollection2 == nil;                                                       // isValid == NO
+    BOOL isValid = conditionCollection1 == nil; // isValid == YES
+    isValid = conditionCollection2 == nil;      // isValid == NO
     
     // What went wrong?
     NSLog(@"conditionCollection2: %@", conditionCollection2);
@@ -67,15 +68,14 @@ How-To
 ### Add a validation text field
 
     US2ValidatorTextField *firstNameTextField  = [[US2ValidatorTextField alloc] init];
-    firstNameTextField.validator               = [[[MyProjectValidatorName alloc] init] autorelease];
+    firstNameTextField.validator               = [[MyProjectValidatorName alloc] init];
     firstNameTextField.shouldAllowViolation    = YES;
     firstNameTextField.validateOnFocusLossOnly = YES;
     firstNameTextField.placeholder             = @"Enter first name";
-    firstNameTextField.validatorUIDelegate     = self;
-    [_textUICollection addObject:firstNameTextField];
-    [firstNameTextField release];
+    firstNameTextField.delegate                = self;
+    [self.textUICollection addObject:firstNameTextField];
 
-### Create own condition
+### Create an own condition
 
 Create the interface.
 
@@ -84,7 +84,6 @@ Create the interface.
 	
 	
 	@interface MyProjectConditionName : US2Condition
-	
 	@end
 
 Create the implementation.
@@ -97,7 +96,9 @@ Create the implementation.
 	- (BOOL)check:(NSString *)string
 	{
 		if (nil == string)
+		{
 			string = [NSString string];
+		}
 		
 		self.regexString = @"[a-zA-Z .-]";
 		
@@ -134,10 +135,6 @@ Create the interface.
 	#pragma mark - Validator interface
 	
 	@interface MyProjectValidatorName : US2Validator
-	{
-	}
-	
-	
 	@end
 
 Create the implementation.
@@ -157,10 +154,10 @@ Create the implementation.
 		self = [super init];
 		if (self)
 		{
-			[self addCondition:[[[MyProjectConditionName alloc] init] autorelease]];
+			[self addCondition:[[MyProjectConditionName alloc] init]];
 			
-			US2ConditionRange *rangeCondition   = [[[US2ConditionRange alloc] init] autorelease];
-			rangeCondition.range                = NSMakeRange(2, UINT16_MAX);
+			US2ConditionRange *rangeCondition   = [[US2ConditionRange alloc] init];
+			rangeCondition.range                = US2MakeRange(2, UINT16_MAX);
 			rangeCondition.shouldAllowViolation = YES;
 			
 			[self addCondition:rangeCondition];
