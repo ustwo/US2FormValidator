@@ -64,7 +64,7 @@
  (2) Add conditions to validator
  (3) Test completely valid string
  (3) Test partially valid string
- (4) Test invalid string
+ (4) Test invalid stringm
  */
 - (void)testValidator
 {
