@@ -47,5 +47,4 @@
  */
 
 @interface US2ConditionURL : US2Condition
-
 @end

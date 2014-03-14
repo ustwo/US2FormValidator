@@ -24,13 +24,16 @@
 //
 
 #import "US2ValidatorForm.h"
+#import "US2Validatable.h"
+#import "US2ConditionCollection.h"
+#import "US2Validator.h"
 
 
 @interface US2ValidatorForm ()
-{
-    NSMutableArray *_entries;
-    BOOL _lastValidState;
-}
+
+@property (nonatomic) NSMutableArray *entries;
+@property (nonatomic) BOOL           lastValidState;
+
 @end
 
 
@@ -44,8 +47,8 @@
     self = [super init];
     if (self)
     {
-        _entries = [[NSMutableArray alloc] initWithCapacity:1];
-        _lastValidState = NO;
+        self.entries = [[NSMutableArray alloc] initWithCapacity:1];
+        self.lastValidState = NO;
     }
     
     return self;
@@ -53,7 +56,7 @@
 
 - (void)dealloc
 {
-    _entries = nil;
+    self.entries = nil;
 }
 
 - (instancetype)initWithValidatables:(NSSet *)validatables
@@ -74,7 +77,7 @@
 {
     if (!validatable)
     {
-        [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added nil object <%@>  as validatable to form.", [validatable class]], nil];
+        [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added nil object <%@> as validatable to form.", [validatable class]], nil];
     }
     
     if (![validatable conformsToProtocol:@protocol(US2Validatable)])
@@ -82,15 +85,18 @@
         [NSException raise:NSGenericException format:[NSString stringWithFormat:@"Added incompatible validatable <%@> to form.", [validatable class]], nil];
     }
     
-    [_entries addObject:validatable];
+    [self.entries addObject:validatable];
     
     [self us2_listenForTextDidChangeNotification:validatable];
 }
 
 - (id<US2Validatable>)validatableAtIndex:(NSInteger)index
 {
-    return [_entries objectAtIndex:index];
+    return self.entries[index];
 }
+
+
+#pragma mark - Listener
 
 - (void)us2_listenForTextDidChangeNotification:(id<US2Validatable>)validatable
 {
@@ -115,7 +121,7 @@
 
 - (NSUInteger)count
 {
-    return _entries.count;
+    return self.entries.count;
 }
 
 
@@ -124,7 +130,7 @@
 - (US2ConditionCollection *)violatedConditions
 {
     US2ConditionCollection *violatedConditions = nil;
-    for (id<US2Validatable> validatable in _entries)
+    for (id<US2Validatable> validatable in self.entries)
     {
         US2ConditionCollection *validatableConditions = [validatable.validator violatedConditionsUsingString:validatable.text];
         for (id<US2ConditionProtocol> condition in validatableConditions)
@@ -142,7 +148,7 @@
 
 - (BOOL)isValid
 {
-    for (id<US2Validatable> validatable in _entries)
+    for (id<US2Validatable> validatable in self.entries)
     {
         if (validatable.isValid == NO)
         {
@@ -158,12 +164,13 @@
 
 - (void)textUIChanged:(NSNotification *)notification
 {
-    if (_lastValidState == self.isValid) return;
-    _lastValidState = !_lastValidState;
+    if (self.lastValidState == self.isValid) return;
     
-    if (_didChangeValidState)
+    self.lastValidState = !self.lastValidState;
+    
+    if (self.didChangeValidState)
     {
-        _didChangeValidState(self.isValid);
+        self.didChangeValidState(self.isValid);
     }
 }
 

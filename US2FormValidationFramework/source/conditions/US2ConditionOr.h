@@ -27,15 +27,11 @@
 #import <Foundation/Foundation.h>
 #import "US2Condition.h"
 
+
 /**
  A condition that returns the result of either operands.
  */
 @interface US2ConditionOr : US2Condition
-{
-    NSMutableArray *_conditions;
-}
-
-@property (strong, nonatomic) NSArray *conditions;
 
 /**
  Initialize with an array of conditions.

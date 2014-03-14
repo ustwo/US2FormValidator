@@ -41,5 +41,4 @@
  BOOL isValid = [postcodeValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
  */
 @interface US2ConditionPostcodeUK : US2Condition
-
 @end

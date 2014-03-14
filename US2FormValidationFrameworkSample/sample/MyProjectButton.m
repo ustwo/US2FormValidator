@@ -26,6 +26,7 @@
     {
         [self us2_build];
     }
+    
     return self;
 }
 

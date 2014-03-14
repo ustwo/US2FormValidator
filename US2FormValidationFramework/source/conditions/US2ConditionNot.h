@@ -27,19 +27,17 @@
 #import <Foundation/Foundation.h>
 #import "US2Condition.h"
 
+
 /**
  A condition that returns the opposite of the original condition.
  */
 @interface US2ConditionNot : US2Condition
-{
-    
-}
 
-@property (strong, nonatomic) id<US2ConditionProtocol> condition;
+@property (nonatomic) id<US2ConditionProtocol> condition;
 
 /**
  Initialize with an initial condition to apply Not.
  */
-- (id)initWithCondition:(id<US2ConditionProtocol>)originalCondition;
+- (id)initWithCondition:(id<US2ConditionProtocol>)condition;
 
 @end

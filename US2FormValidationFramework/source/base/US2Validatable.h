@@ -29,6 +29,7 @@
 @protocol US2ValidatableDelegate;
 @class US2Validator;
 
+
 /**
  A text user interface element must conform to US2Validatable protocol methods.
  At the moment the framework supports UITextField and UITextView by using US2ValidatorTextField

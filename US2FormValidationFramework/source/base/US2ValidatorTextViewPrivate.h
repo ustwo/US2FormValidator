@@ -24,11 +24,10 @@
 //  
 
 #import <UIKit/UIKit.h>
-#import "US2ValidatorTextViewDelegate.h"
-#import "US2Validatable.h"
+
+@protocol US2ValidatorTextViewDelegate;
 
 @class US2ValidatorTextView;
-@class US2Condition;
 
 
 #pragma mark - Validator private text view interface
@@ -40,11 +39,7 @@
  This private class is needed because the US2ValidatorTextView should not listen
  for itself.
  */
-@interface US2ValidatorTextViewPrivate : NSObject <UITextViewDelegate>
-{
-    BOOL _didEndEditing;
-    US2Condition *_lastHighestPriorityCondition;
-}
+@interface US2ValidatorTextViewPrivate : NSObject
 
 /**
  Origin delegate which was set through US2ValidatorTextView and will

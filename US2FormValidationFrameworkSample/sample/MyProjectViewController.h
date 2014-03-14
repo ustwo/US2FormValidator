@@ -36,6 +36,6 @@
 
 @interface MyProjectViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet MyProjectView *myProjectView;
+@property (nonatomic, weak) IBOutlet MyProjectView *myProjectView;
 
 @end

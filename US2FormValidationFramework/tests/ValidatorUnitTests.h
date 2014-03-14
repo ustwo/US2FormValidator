@@ -23,7 +23,7 @@
 //  SOFTWARE.
 //  
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "US2Validatable.h"
 
 @class US2Validator;
@@ -34,14 +34,12 @@
 @interface US2ValidatableMock : NSObject <US2Validatable>
 
 @property (nonatomic, copy) NSString *text;
-@property (nonatomic, strong) US2Validator *validator;
+@property (nonatomic) US2Validator *validator;
 
 @end
 
-@interface ValidatorUnitTests : SenTestCase
-{
-@private
-    US2Validator *_validator;
-}
+@interface ValidatorUnitTests : XCTestCase
+
+@property (nonatomic) US2Validator *validator;
 
 @end

@@ -28,6 +28,13 @@
 #import "US2ValidatorComposite.h"
 
 
+@interface US2ValidatorComposite ()
+
+@property (nonatomic) NSMutableArray *validators;
+
+@end
+
+
 @implementation US2ValidatorComposite
 
 
@@ -55,7 +62,7 @@
 
 - (void)setupWithValidators:(NSArray *)validators
 {
-    self.validators = [NSMutableArray arrayWithArray:validators];
+    self.validators = [validators mutableCopy];
 }
 
 - (void)addValidator:(US2Validator *)validator
@@ -81,7 +88,7 @@
     // Check violated conditions of each composite validator
     if (violatedConditions == nil)
     {
-        for (id<US2ValidatorProtocol> validator in _validators)
+        for (id<US2ValidatorProtocol> validator in self.validators)
         {
             US2ConditionCollection *violatedConditionsByValidator = [validator violatedConditionsUsingString:string];
             if (violatedConditionsByValidator != nil)

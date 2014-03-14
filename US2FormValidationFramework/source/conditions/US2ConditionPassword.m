@@ -39,7 +39,7 @@
     self = [super init];
     if(self)
     {
-        _requiredStrength = US2PasswordStrengthMedium;
+        self.requiredStrength = US2PasswordStrengthMedium;
     }
     
     return self;
@@ -52,7 +52,7 @@
 {
     BOOL passed = NO;
     
-    if([self us2_strengthOfPasswordString:string] >= _requiredStrength)
+    if([self us2_strengthOfPasswordString:string] >= self.requiredStrength)
     {
         passed = YES;
     }
@@ -73,7 +73,7 @@
 
 - (US2PasswordStrength)us2_strengthOfPasswordString:(NSString *)string
 {
-    NSUInteger strength = 0;
+    US2PasswordStrength strength = US2PasswordStrengthVeryWeak;
     
     // Run regex on string to check for matches of lowercase, uppercase, numeric and special chars
     NSUInteger numberMatchesCount = [self us2_numberOfNumericCharactersInString:string];
@@ -115,7 +115,7 @@
 }
 
 
-#pragma mark - Regular expressions
+#pragma mark - Rules match check
 
 - (NSUInteger)us2_numberOfNumericCharactersInString:(NSString *)string
 {

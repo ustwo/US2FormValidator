@@ -40,10 +40,6 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 - (void)us2_buildAboutHeadlineLabelLayout
 {
-    self.aboutHeadlineLabel.backgroundColor = [UIColor yellowColor];
-    self.aboutTextField.backgroundColor = [UIColor redColor];
-    self.aboutErrorLabel.backgroundColor = [UIColor greenColor];
-    
     [self us2_setToFullWidth:self.aboutHeadlineLabel];
     [self us2_setView:self.aboutHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
     [self us2_setViewToTop:self.aboutHeadlineLabel];
@@ -68,10 +64,6 @@ static const CGFloat kDefaultMargin                 = 12.0;
 
 - (void)us2_buildEmailHeadlineLabelLayout
 {
-    self.emailHeadlineLabel.backgroundColor = [UIColor yellowColor];
-    self.emailTextField.backgroundColor = [UIColor redColor];
-    self.emailErrorLabel.backgroundColor = [UIColor greenColor];
-    
     [self us2_setToFullWidth:self.emailHeadlineLabel];
     [self us2_setView:self.emailHeadlineLabel toExactHeight:kDefaultHeadlineLabelHeight];
     [self us2_setView:self.emailHeadlineLabel underView:self.aboutErrorLabel withMargin:kDefaultMargin];

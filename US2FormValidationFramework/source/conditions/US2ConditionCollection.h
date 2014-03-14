@@ -45,14 +45,14 @@
  
  @param condition US2Condition instance to add
 */
-- (void)addCondition:(id <US2ConditionProtocol>)condition;
+- (void)addCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove a condition from collection.
  
  @param condition US2Condition instance to remove
 */
-- (void)removeCondition:(id <US2ConditionProtocol>)condition;
+- (void)removeCondition:(id<US2ConditionProtocol>)condition;
 
 /**
  Remove a condition from collection at index.

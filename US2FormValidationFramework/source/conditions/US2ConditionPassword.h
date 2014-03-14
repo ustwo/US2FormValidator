@@ -30,7 +30,7 @@
 
 #pragma mark - Strength enumerator
 
-typedef enum
+enum US2PasswordStrength
 {
     US2PasswordStrengthVeryWeak   = 0,
     US2PasswordStrengthWeak       = 1,
@@ -38,7 +38,8 @@ typedef enum
     US2PasswordStrengthStrong     = 3,
     US2PasswordStrengthVeryStrong = 4,
     US2PasswordMatchesAll         = 5,
-} US2PasswordStrength;
+};
+typedef enum US2PasswordStrength US2PasswordStrength;
 
 
 #pragma mark - US2ConditionPassword interface

@@ -27,14 +27,24 @@
 #import "US2ConditionAnd.h"
 
 
+@interface US2ConditionAnd ()
+
+@property (nonatomic) NSArray *conditions;
+
+@end
+
+
 @implementation US2ConditionAnd
 
-- (id)initWithConditions:(NSArray *)originalConditions
+
+#pragma mark - Initialization
+
+- (id)initWithConditions:(NSArray *)conditions
 {
     self = [super init];
     if (self)
     {
-        self.conditions = [NSMutableArray arrayWithArray:originalConditions];
+        self.conditions = [conditions mutableCopy];
     }
     
     return self;
@@ -42,7 +52,7 @@
 
 - (id)initWithConditionOne:(id<US2ConditionProtocol>)one two:(id<US2ConditionProtocol>)two
 {
-    self = [self initWithConditions:[NSArray arrayWithObjects:one, two, nil]];
+    self = [self initWithConditions:@[one, two]];
     
     return self;
 }
@@ -51,7 +61,7 @@
 {
     BOOL result = YES;
     
-    for (id<US2ConditionProtocol> condition in _conditions)
+    for (id<US2ConditionProtocol> condition in self.conditions)
     {
         result = result && [condition check:string];
     }

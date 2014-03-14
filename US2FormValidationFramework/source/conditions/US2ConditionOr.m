@@ -3,6 +3,8 @@
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
+//  Modified by Martin Stolz
+//
 //  Copyright (C) 2012 ustwo™
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -27,14 +29,24 @@
 #import "US2ConditionOr.h"
 
 
+@interface US2ConditionOr ()
+
+@property (nonatomic) NSArray *conditions;
+
+@end
+
+
 @implementation US2ConditionOr
 
-- (id)initWithConditions:(NSArray *)originalConditions
+
+#pragma mark - Initialization
+
+- (id)initWithConditions:(NSArray *)conditions
 {
     self = [super init];
     if (self)
     {
-        [self setupWithConditions:originalConditions];
+        [self setupWithConditions:conditions];
     }
     
     return self;
@@ -45,24 +57,27 @@
     self = [super init];
     if (self)
     {
-        [self setupWithConditions:[NSArray arrayWithObjects:one, two, nil]];
+        [self setupWithConditions:@[one, two]];
     }
     
     return self;
 }
 
-- (void)setupWithConditions:(NSArray *)originalConditions
+- (void)setupWithConditions:(NSArray *)conditions
 {
-    _conditions = [NSMutableArray arrayWithArray:originalConditions];
+    self.conditions = [conditions mutableCopy];
 }
+
+
+#pragma mark - Check
 
 - (BOOL)check:(NSString *)string
 {
     BOOL result = NO;
     
-    for (id<US2ConditionProtocol> condition in _conditions)
+    for (id<US2ConditionProtocol> condition in self.conditions)
     {
-        result = result || [condition check: string];
+        result = result || [condition check:string];
     }
     
     return result;

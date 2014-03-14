@@ -41,5 +41,4 @@
     BOOL isValid = [emailValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */
 @interface US2ConditionEmail : US2Condition
-
 @end

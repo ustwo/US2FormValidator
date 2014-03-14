@@ -29,16 +29,22 @@
 
 @implementation US2ConditionNot
 
-- (id)initWithCondition:(id<US2ConditionProtocol>)originalCondition
+
+#pragma mark - Initialization
+
+- (id)initWithCondition:(id<US2ConditionProtocol>)condition
 {
     self = [super init];
     if (self)
     {
-        self.condition = originalCondition;
+        self.condition = condition;
     }
     
     return self;
 }
+
+
+#pragma mark - Check
 
 - (BOOL)check:(NSString *)string
 {

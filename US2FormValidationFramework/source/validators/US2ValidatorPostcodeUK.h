@@ -34,7 +34,4 @@
  A valid string does only contain one valid UK post code and up to 8 characters.
  */
 @interface US2ValidatorPostcodeUK : US2Validator
-{
-}
-
 @end

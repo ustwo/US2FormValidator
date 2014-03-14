@@ -53,14 +53,14 @@
 /**
  Set the validator to check the text of the text field with
 */
-@property (nonatomic, strong) US2Validator *validator;
+@property (nonatomic) US2Validator *validator;
 
 /**
  Return whether the text is valid.
  
  @return Returns the valid state of the text field
 */
-@property (nonatomic, readonly) BOOL isValid;
+@property (nonatomic, readonly, getter = isValid) BOOL valid;
 
 /**
  Determines whether the text has to be validated after leaving the text field

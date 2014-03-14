@@ -78,7 +78,6 @@
 		4CB213BD15B94C7900A0705E /* US2ConditionPostcodeUK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */; };
 		4CB213BE15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */; };
 		4CB213BF15B94C7900A0705E /* US2ConditionPostcodeUK.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */; };
-		4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */; };
 		4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39846147E98EF00EB75DB /* UIKit.framework */; };
 		4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD39848147E98EF00EB75DB /* Foundation.framework */; };
 		5B1F8BD4184749A8000A1FDF /* US2ConditionPassword_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */; };
@@ -189,8 +188,7 @@
 		4C8885C014B45A7B005E5934 /* US2ValidatorTextViewPrivateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ValidatorTextViewPrivateDelegate.h; sourceTree = "<group>"; };
 		4CB213BB15B94C7900A0705E /* US2ConditionPostcodeUK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPostcodeUK.h; sourceTree = "<group>"; };
 		4CB213BC15B94C7900A0705E /* US2ConditionPostcodeUK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPostcodeUK.m; sourceTree = "<group>"; };
-		4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = US2FormValidationFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = US2FormValidationFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1F8BD3184749A8000A1FDF /* US2ConditionPassword_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword_Private.h; sourceTree = "<group>"; };
 		5B23E096184641A8009986F1 /* US2ConditionPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ConditionPassword.h; sourceTree = "<group>"; };
 		5B23E097184641A8009986F1 /* US2ConditionPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ConditionPassword.m; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C26FB8A148CF4290087D957 /* libUS2FormValidationFrameworkStaticLibrary.a in Frameworks */,
-				4CDBC163148CF14300312190 /* SenTestingKit.framework in Frameworks */,
 				4CDBC164148CF14300312190 /* UIKit.framework in Frameworks */,
 				4CDBC165148CF14300312190 /* Foundation.framework in Frameworks */,
 			);
@@ -371,7 +368,7 @@
 		5BD39843147E98EF00EB75DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */,
+				4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.xctest */,
 				4C26FB89148CF4210087D957 /* libUS2FormValidationFrameworkStaticLibrary.a */,
 			);
 			name = Products;
@@ -383,7 +380,6 @@
 				5BD39846147E98EF00EB75DB /* UIKit.framework */,
 				5BD39848147E98EF00EB75DB /* Foundation.framework */,
 				5BD3984A147E98EF00EB75DB /* CoreGraphics.framework */,
-				4CCDDF02148CEFC6001F8FF1 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -469,8 +465,8 @@
 			);
 			name = US2FormValidationFrameworkTests;
 			productName = US2FormValidationFrameworkTests;
-			productReference = 4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 4CDBC162148CF14300312190 /* US2FormValidationFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5BD39923147E9EBA00EB75DB /* US2FormValidationFrameworkStaticLibrary */ = {
 			isa = PBXNativeTarget;
@@ -496,6 +492,7 @@
 		5BD39839147E98EF00EB75DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "ustwo™";
 			};
@@ -684,7 +681,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -705,7 +702,6 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -717,7 +713,7 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tests/US2FormValidationFrameworkTests-Prefix.pch";
@@ -732,7 +728,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "";
 				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

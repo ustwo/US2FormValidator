@@ -3,6 +3,8 @@
 //  US2FormValidator
 //
 //  Created by Matthew Purland <m.purland@gmail.com>
+//  Modified by Martin Stolz
+//
 //  Copyright (C) 2012 ustwo™
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -31,12 +33,6 @@
     The composite validator takes in a collection of validators and checks each to validate.
  */
 @interface US2ValidatorComposite : US2Validator
-{
-@private
-    NSMutableArray *_validators;
-}
-
-@property (strong, nonatomic) NSMutableArray *validators;
 
 /**
     Initialize with an array of validators.

@@ -29,6 +29,8 @@
 @implementation US2ConditionAlphanumeric
 
 
+#pragma mark - Check
+
 - (BOOL)check:(NSString *)string
 {
     if (nil == string || string.length == 0)
@@ -46,7 +48,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     return US2LocalizedString(@"US2KeyConditionViolationAlphanumeric", nil);
 }

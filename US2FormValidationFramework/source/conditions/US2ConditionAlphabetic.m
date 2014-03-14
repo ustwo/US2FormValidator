@@ -25,11 +25,14 @@
 
 #import "US2ConditionAlphabetic.h"
 
-#define REGEX_PATTERN @"[a-zA-Z]"
-#define REGEX_PATTERN_WHITESPACE @"[a-zA-Z\\s]"
+static NSString *const kRegExPattern = @"[a-zA-Z]";
+static NSString *const kRegExPatternWhitespace = @"[a-zA-Z\\s]";
 
 
 @implementation US2ConditionAlphabetic
+
+
+#pragma mark - Check
 
 - (BOOL)check:(NSString *)string
 {
@@ -38,10 +41,10 @@
         return YES;
     }
     
-    NSString *pattern = REGEX_PATTERN;
-    if (_allowWhitespace)
+    NSString *pattern = kRegExPattern;
+    if (self.allowWhitespace)
     {
-        pattern = REGEX_PATTERN_WHITESPACE;
+        pattern = kRegExPatternWhitespace;
     }
     
     NSError *error             = NULL;

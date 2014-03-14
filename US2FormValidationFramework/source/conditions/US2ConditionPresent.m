@@ -12,6 +12,8 @@
 @implementation US2ConditionPresent
 
 
+#pragma mark - Check
+
 - (BOOL)check:(NSString *)string
 {
     if (nil == string || string.length == 0)

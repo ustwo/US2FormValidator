@@ -24,8 +24,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "US2Validator.h"
-#import "US2Validatable.h"
+
+@protocol US2Validatable;
+@class US2ConditionCollection;
+
 
 /**
  A form to assist in validating a validatable objects current state.
@@ -35,10 +37,10 @@
 /**
  Determines the current validation state of the form.
  */
-@property (nonatomic, readonly) BOOL isValid;
+@property (nonatomic, readonly, getter = isValid) BOOL valid;
 
 /**
- Calls the block as soon as the state changed. Initially the state change from valid to invalid is taken into account.
+ Calls the block as soon as the state of the form changed. Initially the state change from valid to invalid is taken into account.
  */
 @property (nonatomic, copy) void(^didChangeValidState)(BOOL isValid);
 

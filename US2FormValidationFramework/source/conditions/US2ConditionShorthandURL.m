@@ -29,6 +29,8 @@
 @implementation US2ConditionShorthandURL
 
 
+#pragma mark - Check
+
 - (BOOL)check:(NSString *)string
 {
     if (nil == string || string.length == 0)
@@ -44,7 +46,7 @@
 
 #pragma mark - Localization
 
-- (NSString *) createLocalizedViolationString
+- (NSString *)createLocalizedViolationString
 {
     NSString *key = @"US2KeyConditionViolationShorthandURL";
     

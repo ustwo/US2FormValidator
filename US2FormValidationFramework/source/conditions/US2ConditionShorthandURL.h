@@ -49,5 +49,4 @@
  */
 
 @interface US2ConditionShorthandURL : US2Condition
-
 @end

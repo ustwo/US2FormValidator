@@ -34,14 +34,14 @@
     self = [super init];
     if (self)
     {
-        _range = US2TextRangeMake(0, 0);
+        self.range = US2TextRangeMake(0, 0);
     }
     
     return self;
 }
 
 
-#pragma mark - Violation check
+#pragma mark - Check
 
 - (BOOL)check:(NSString *)string
 {
@@ -52,7 +52,7 @@
         string = [NSString string];
     }
     
-    if(string.length >= _range.min && string.length <= _range.max)
+    if(string.length >= self.range.min && string.length <= self.range.max)
     {
         success = YES;
     }
@@ -65,7 +65,7 @@
 
 - (NSString *)createLocalizedViolationString
 {    
-    return [NSString stringWithFormat:US2LocalizedString(@"US2KeyConditionViolationRange", nil), _range.min, _range.max];
+    return [NSString stringWithFormat:US2LocalizedString(@"US2KeyConditionViolationRange", nil), self.range.min, self.range.max];
 }
 
 

@@ -40,11 +40,7 @@
  This private class is needed because the US2ValidatorTextField should not listen
  for itself.
 */
-@interface US2ValidatorTextFieldPrivate : NSObject <UITextFieldDelegate>
-{
-    BOOL _didEndEditing;
-    US2Condition *_lastHighestPriorityCondition;
-}
+@interface US2ValidatorTextFieldPrivate : NSObject
 
 /**
  Origin delegate which was set through US2ValidatorTextField and will

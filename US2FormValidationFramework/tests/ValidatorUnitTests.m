@@ -47,12 +47,12 @@
 {
     [super setUp];
     
-    _validator = [[US2Validator alloc] init];
+    self.validator = [[US2Validator alloc] init];
 }
 
 - (void)tearDown
 {
-    _validator = nil;
+    self.validator = nil;
     
     [super tearDown];
 }
@@ -69,7 +69,7 @@
 - (void)testValidator
 {
     // Test for existing validator
-    STAssertNotNil(_validator, @"Validator instance must not be nil", nil);
+    XCTAssertNotNil(self.validator, @"Validator instance must not be nil", nil);
     
     // Create first condition
     US2ConditionAlphabetic *condition1 = [[US2ConditionAlphabetic alloc] init];
@@ -85,28 +85,28 @@
     NSString *failureTestString2 = @"12";
     
     // Add first condition to validator
-    [_validator addCondition:condition1];
-    [_validator addCondition:condition2];
+    [self.validator addCondition:condition1];
+    [self.validator addCondition:condition2];
     
     US2ConditionCollection *collection = nil;
     
     // Validate whitespace first
     condition1.allowWhitespace = YES;
-    collection = [_validator violatedConditionsUsingString:successTestString2];
-    STAssertNil(collection, @"Collection must be nil", nil);
+    collection = [self.validator violatedConditionsUsingString:successTestString2];
+    XCTAssertNil(collection, @"Collection must be nil", nil);
     
-    collection = [_validator violatedConditionsUsingString:successTestString1];
-    STAssertNil(collection, @"Collection must be nil", nil);
+    collection = [self.validator violatedConditionsUsingString:successTestString1];
+    XCTAssertNil(collection, @"Collection must be nil", nil);
     condition1.allowWhitespace = NO;
     
-    collection = [_validator violatedConditionsUsingString:successTestString1];
-    STAssertNil(collection, @"Collection must be nil", nil);
+    collection = [self.validator violatedConditionsUsingString:successTestString1];
+    XCTAssertNil(collection, @"Collection must be nil", nil);
     
-    collection = [_validator violatedConditionsUsingString:failureTestString1];
-    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    collection = [self.validator violatedConditionsUsingString:failureTestString1];
+    XCTAssertNotNil(collection, @"Collection must not be nil", nil);
     
-    collection = [_validator violatedConditionsUsingString:failureTestString2];
-    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    collection = [self.validator violatedConditionsUsingString:failureTestString2];
+    XCTAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
 /**
@@ -118,7 +118,7 @@
     US2ValidatorComposite *validatorComposite = [[US2ValidatorComposite alloc] init];
     
     // Test for existing validator
-    STAssertNotNil(validatorComposite, @"Validator instance must not be nil", nil);
+    XCTAssertNotNil(validatorComposite, @"Validator instance must not be nil", nil);
     
     // Create first validator
     US2ValidatorAlphabetic *validator1 = [[US2ValidatorAlphabetic alloc] init];
@@ -138,13 +138,13 @@
     
     US2ConditionCollection *collection = nil;
     collection = [validatorComposite violatedConditionsUsingString:successTestString1];
-    STAssertNil(collection, @"Collection must be nil", nil);
+    XCTAssertNil(collection, @"Collection must be nil", nil);
     
     collection = [validatorComposite violatedConditionsUsingString:failureTestString1];
-    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    XCTAssertNotNil(collection, @"Collection must not be nil", nil);
     
     collection = [validatorComposite violatedConditionsUsingString:failureTestString2];
-    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    XCTAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
 /**
@@ -155,7 +155,7 @@
     US2ValidatorForm *form = [[US2ValidatorForm alloc] init];
     
     // Test for existing form
-    STAssertNotNil(form, @"Form instance must not be nil", nil);
+    XCTAssertNotNil(form, @"Form instance must not be nil", nil);
     
     // Create first validator
     US2ValidatorAlphabetic *validator1 = [[US2ValidatorAlphabetic alloc] init];
@@ -179,12 +179,12 @@
     [form addValidatable:validatable1];
     
     US2ConditionCollection *collection = [form violatedConditions];
-    STAssertNil(collection, @"Collection must be nil", nil);
+    XCTAssertNil(collection, @"Collection must be nil", nil);
     
     [form addValidatable:validatable2];
     
     collection = [form violatedConditions];
-    STAssertNotNil(collection, @"Collection must not be nil", nil);
+    XCTAssertNotNil(collection, @"Collection must not be nil", nil);
 }
 
 /**
@@ -199,21 +199,21 @@
     
     NSString *defaultLocalizedViolationString = @"US2KeyConditionViolationAlphabetic";
     
-    STAssertNotNil(defaultLocalizedViolationString, @"Default localized violation string must not be nil.");
+    XCTAssertNotNil(defaultLocalizedViolationString, @"Default localized violation string must not be nil.");
     
     NSString *successString1 = @"abcdef";
     NSString *failureString1 = @"abcde1";
     
     // Test success
     US2ConditionCollection *conditions = [validator1 violatedConditionsUsingString:successString1];
-    STAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
+    XCTAssertNil(conditions, @"Alphabetic validator must validate alphabetic.");
     
     // Test failure with expected customized localized string
     validator1.localizedViolationString = expectedLocalizedViolationString;
     conditions = [validator1 violatedConditionsUsingString:failureString1];
-    STAssertTrue([conditions count] > 0, nil);
+    XCTAssertTrue([conditions count] > 0);
     NSString *localizedViolationString = [validator1 localizedViolationString];
-    STAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
+    XCTAssertEqualObjects(localizedViolationString, expectedLocalizedViolationString, @"Condition must return custom/overriden localized violation string.");
 }
 
 /**
@@ -222,8 +222,8 @@
 - (void)testUS2ValidatorStatic
 {
     US2Validator *validator = [US2ValidatorAlphabetic validator];
-    STAssertNotNil(validator, @"Validator must not be nil.");
-    STAssertTrue([validator isKindOfClass: [US2Validator class]], @"Must be correct class.", nil);
+    XCTAssertNotNil(validator, @"Validator must not be nil.");
+    XCTAssertTrue([validator isKindOfClass: [US2Validator class]], @"Must be correct class.", nil);
 }
 
 @end

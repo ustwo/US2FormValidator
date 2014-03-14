@@ -41,5 +41,4 @@
     BOOL isValid = [numericValidator violatedConditionsUsingString:string] == nil;          // isValid == YES
 */
 @interface US2ConditionNumeric : US2Condition
-
 @end

@@ -29,6 +29,14 @@
 #import "US2Validator.h"
 
 
+@interface US2ValidatorTextFieldPrivate () <UITextFieldDelegate>
+
+@property (nonatomic) BOOL didEndEditing;
+@property (nonatomic) US2Condition *lastHighestPriorityCondition;
+
+@end
+
+
 @implementation US2ValidatorTextFieldPrivate
 
 
