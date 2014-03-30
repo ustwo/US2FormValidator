@@ -1,0 +1,33 @@
+//
+//  US2FormValidator
+//
+//  Copyright (C) 2012 ustwo™
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of
+//  this software and associated documentation files (the "Software"), to deal in
+//  the Software without restriction, including without limitation the rights to
+//  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+//  of the Software, and to permit persons to whom the Software is furnished to do
+//  so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+
+"US2KeyConditionViolationNumeric"="Sadece sayı girin";
+"US2KeyConditionViolationAlphanumeric"="Sadece sayı ve harf girin";
+"US2KeyConditionViolationAlphabetic"="Sadece harf girin";
+"US2KeyConditionViolationEmail"="example@example.com formatında geçerli bir e-posta adresi girin";
+"US2KeyConditionViolationURL"="http(s)://www.example.com formatında geçerli bir URL girin";
+"US2KeyConditionViolationShorthandURL"="www.example.com formatında geçerli bir URL girin";
+"US2KeyConditionViolationPasswordStrength"="Daha güvenli bir parola girin";
+"US2KeyConditionViolationPostcodeUK"="Birleşik Krallık'ta geçerli bir posta kodu girin";
+"US2KeyConditionViolationPresent"="Metin girin";
