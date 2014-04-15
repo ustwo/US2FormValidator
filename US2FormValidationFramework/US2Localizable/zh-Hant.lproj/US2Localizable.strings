@@ -1,0 +1,33 @@
+//
+//  US2FormValidator
+//
+//  Copyright (C) 2012 ustwo™
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of
+//  this software and associated documentation files (the "Software"), to deal in
+//  the Software without restriction, including without limitation the rights to
+//  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+//  of the Software, and to permit persons to whom the Software is furnished to do
+//  so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+
+"US2KeyConditionViolationNumeric"="只能輸入數字";
+"US2KeyConditionViolationAlphanumeric"="只能輸入數字與英文字母";
+"US2KeyConditionViolationAlphabetic"="只能輸入英文字母";
+"US2KeyConditionViolationEmail"="以 example@example.com 的格式輸入有效的電子郵件地址";
+"US2KeyConditionViolationURL"="以 http(s)://www.example.com 的格式輸入有效的 URL";
+"US2KeyConditionViolationShorthandURL"="以 www.example.com 的格式輸入有效的 URL";
+"US2KeyConditionViolationPasswordStrength"="輸入強度更高的密碼";
+"US2KeyConditionViolationPostcodeUK"="輸入有效的英國郵遞區號";
+"US2KeyConditionViolationPresent"="輸入一些文字";

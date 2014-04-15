@@ -1,0 +1,33 @@
+//
+//  US2FormValidator
+//
+//  Copyright (C) 2012 ustwo™
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of
+//  this software and associated documentation files (the "Software"), to deal in
+//  the Software without restriction, including without limitation the rights to
+//  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+//  of the Software, and to permit persons to whom the Software is furnished to do
+//  so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+
+"US2KeyConditionViolationNumeric"="הזן מספרים בלבד";
+"US2KeyConditionViolationAlphanumeric"="הזן מספרים ואותיות בלבד";
+"US2KeyConditionViolationAlphabetic"="הזן אותיות בלבד";
+"US2KeyConditionViolationEmail"="הזן כתובת דוא''ל תקפה בפורמט example@example.com";
+"US2KeyConditionViolationURL"="הזן כתובת URL תקפה בפורמט http(s)://www.example.com";
+"US2KeyConditionViolationShorthandURL"="הזן כתובת URL תקפה בפורמט www.example.com";
+"US2KeyConditionViolationPasswordStrength"="הזן סיסמה חזקה יותר";
+"US2KeyConditionViolationPostcodeUK"="הזן מיקוד בריטי תקף";
+"US2KeyConditionViolationPresent"="הזן טקסט כלשהו";
