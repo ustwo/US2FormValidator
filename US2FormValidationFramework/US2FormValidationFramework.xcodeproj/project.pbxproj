@@ -68,7 +68,7 @@
 		4C59DD7E1487BD7B0047C698 /* US2ValidatorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C59DD5F1487BD7B0047C698 /* US2ValidatorRange.h */; };
 		4C59DD7F1487BD7B0047C698 /* US2ValidatorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C59DD601487BD7B0047C698 /* US2ValidatorRange.m */; };
 		4C62433A148CF2FB0084BC01 /* ConditionUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624335148CF2FB0084BC01 /* ConditionUnitTests.m */; };
-		4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */; };
+		4C62433C148CF2FB0084BC01 /* ValidatorUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C624339148CF2FB0084BC01 /* ValidatorUnitTests.m */; settings = {COMPILER_FLAGS = "-Wno-protocol"; }; };
 		4C8885B614B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B514B454B0005E5934 /* US2ValidatorTextFieldPrivateDelegate.h */; };
 		4C8885BA14B456C9005E5934 /* US2ValidatorTextFieldPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8885B814B456C9005E5934 /* US2ValidatorTextFieldPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		4C8885BB14B456C9005E5934 /* US2ValidatorTextFieldPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8885B914B456C9005E5934 /* US2ValidatorTextFieldPrivate.m */; };
@@ -713,7 +713,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -726,18 +725,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "tests/US2FormValidationFrameworkTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
-				);
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -745,7 +737,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -753,24 +744,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tests/US2FormValidationFrameworkTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "tests/US2FormValidationFrameworkTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/US2FormValidationFramework-dbiegtxisormauhjwlitbbkypdsr/Build/Products/Debug-iphonesimulator\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		5BD39877147E98EF00EB75DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -780,7 +764,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -789,7 +773,7 @@
 		5BD39878147E98EF00EB75DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
@@ -806,13 +790,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/US2FormValidationFrameworkStaticLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/US2FormValidationFrameworkStaticLibrary-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -823,13 +805,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/US2FormValidationFrameworkStaticLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/US2FormValidationFrameworkStaticLibrary-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
